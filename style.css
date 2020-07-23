@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Unica+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #1d1d1d;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+em {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #FF2B89;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Background image and page size */
+.body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 75vw;
+    min-height: 100vh;
+    background: url(images/bg.jpg) no-repeat top right fixed;
+    background-size: cover;
+}
+
+/* Navigation bar */
+.navbar {
+    height: 4rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    height: 100%;
+}
+
+.navbar .logo img {
+    height: 100%;
+}
+
+.navbar .links {
+    margin: 0 1rem;
+}
+
+.navbar .links a {
+    font-family: 'Unica One', cursive;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Blurb */
+.blurb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+/* Main content boxes */
+.content {
+    display: flex;
+    justify-content: space-between;
+    min-height: 10rem;
+    flex-grow: 1.6;
+    flex-shrink: 0;
+    align-items: flex-start;
+}
+
+.content .card-height {
+    margin: 0 auto;
+    display: flex;
+}
+
+.content .card-height .gap {
+    width: 5rem;
+    height: 2.5rem;
+}
+
+.content .card-height .card {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    flex-grow: 0;
+    background-color: rgba(236, 233, 228, 0.8);
+    flex-direction: column;
+}
+
+
+.content .inset {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.button-light {
+    background-color: #00B19E;
+}
+
+.button-dark {
+    background-color: #00786B;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.75rem;
+    align-items: center;
+}
+
+/* Footer */
+.footer {
+    height: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer a {
+    font-family: 'Unica One', cursive;
+    text-transform: uppercase;
+    color: #a2a2a2;
+}
+
+
+
+@media (max-width: 990px) {
+    .body {
+        margin: 0 2.5rem;
+        width: auto;
+    }
+
+    .navbar {
+        height: 3.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    em {
+        font-size: 1rem;
+    }
+
+    .content .card-height {
+        flex-direction: column;
+    }
+}
+
+.temp-border {
+    /* border: 3px solid red; */
+}

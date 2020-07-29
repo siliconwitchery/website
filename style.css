@@ -242,7 +242,7 @@ a:hover {
         background-size: cover;
     }
 
-    .content .card-height {
+    .content .split {
         flex-direction: column;
     }
 }

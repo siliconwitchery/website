@@ -245,6 +245,10 @@ a:hover {
     .content .split {
         flex-direction: column;
     }
+
+    .footer {
+        flex-direction: column;
+    }
 }
 
 .temp-border {

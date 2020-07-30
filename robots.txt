@@ -1,6 +1,7 @@
+# Silicon Witchery robots file are coming
+
 User-agent: *
-Sitemap: https://www.siliconwitchery.com/sitemap.xml
-Disallow: /.git
-Disallow: /.gitignore
-Disallow: /CNAME
+
 Disallow: /README.md
+
+Sitemap: https://www.siliconwitchery.com/sitemap.xml

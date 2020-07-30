@@ -52,15 +52,13 @@ a:hover {
 }
 
 .module-background {
-    background: url(images/bg.jpg) no-repeat top right fixed;
+    background: url(images/module-bg.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
 .service-background {
-    background: url(images/services.jpg) no-repeat fixed;
-    background-position: right 70vw bottom 0; 
-    background-size: contain;
-    background-color: #F2F0EC;
+    background: url(images/services-bg.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* Navigation bar */
@@ -91,22 +89,12 @@ a:hover {
     text-transform: uppercase;
 }
 
-/* Services page layout */
-.service-column {
-    display: flex;
-    flex-direction: column;
-    width: 55vw;
-    min-height: 10rem;
-    flex-grow: 1;
-    flex-shrink: 0;
-    align-self: flex-end;
-}
-
 /* Blurb Header */
 .blurb {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    flex-grow: 0.6;
     padding: 3rem 0;
 }
 
@@ -115,7 +103,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     min-height: 10rem;
-    flex-grow: 1.6;
+    flex-grow: 1;
     flex-shrink: 0;
     align-items: flex-start;
 }
@@ -152,11 +140,9 @@ a:hover {
     margin-bottom: 0.75rem;
 }
 
-.card li{
+.card li {
     list-style: disc;
     list-style-position: inside;
-    /* font-weight: 600; */
-    color: #FF2B89;
 }
 
 .card a {
@@ -231,15 +217,6 @@ a:hover {
 
     em {
         font-size: 1rem;
-    }
-
-    .service-column {
-        width: inherit;
-    }
-
-    .service-background {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(images/services.jpg) no-repeat fixed;
-        background-size: cover;
     }
 
     .content .split {

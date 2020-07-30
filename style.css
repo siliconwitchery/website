@@ -16,18 +16,21 @@ h1 {
     font-size: 3rem;
     font-weight: 700;
     text-transform: capitalize;
+    margin-bottom: 0.75rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    font-family: 'Unica One', cursive;
 }
 
 em {
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     color: #FF2B89;
 }
 
@@ -138,11 +141,15 @@ a:hover {
 
 .card ul {
     margin-bottom: 0.75rem;
+    font-weight: 600;
 }
 
 .card li {
     list-style: disc;
     list-style-position: inside;
+    color: #00786B;
+    padding: 0.15rem 0;
+    margin-left: 1rem;
 }
 
 .card a {

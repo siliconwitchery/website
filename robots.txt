@@ -3,5 +3,6 @@
 User-agent: *
 
 Disallow: /README.md
+Disallow: /LICENSE
 
 Sitemap: https://www.siliconwitchery.com/sitemap.xml

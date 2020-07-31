@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Unica+One&display=swap');
 
 * {
     padding: 0;
@@ -9,18 +9,19 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    color: #1d1d1d;
+    color: white;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: uppercase;
     margin-bottom: 0.75rem;
+    font-family: 'Unica One', cursive;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
     text-transform: uppercase;
@@ -30,8 +31,8 @@ h2 {
 em {
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 700;
-    color: #FF2B89;
+    font-weight: 600;
+    color: #E37933;
 }
 
 p {
@@ -41,7 +42,7 @@ p {
 }
 
 a:hover {
-    color: #FF2B89 !important;
+    color: #E37933 !important;
     transition: 0.2s;
 }
 
@@ -52,10 +53,11 @@ a:hover {
     margin: 0 auto;
     width: 75vw;
     min-height: 100vh;
+    background-color: black;
 }
 
 .module-background {
-    background: url(images/module-bg.jpg) no-repeat center center fixed;
+    background: url(images/home-bg.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -127,7 +129,7 @@ a:hover {
     display: flex;
     width: 100%;
     flex-grow: 0;
-    background-color: rgba(236, 233, 228, 0.8);
+    background-color: rgba(78, 78, 78, 0.5);
     flex-direction: column;
 }
 
@@ -141,14 +143,13 @@ a:hover {
 
 .card ul {
     margin-bottom: 0.75rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .card li {
     list-style: disc;
     list-style-position: inside;
-    color: #00786B;
-    padding: 0.15rem 0;
+    padding: 0.2rem 0;
     margin-left: 1rem;
 }
 
@@ -157,12 +158,12 @@ a:hover {
 }
 
 /* Buttons */
-.button-light {
-    background-color: #00B19E;
+.button-dark {
+    background-color: #5B4536;
 }
 
-.button-dark {
-    background-color: #00786B;
+.button-bright {
+    background-color: #E37933;
 }
 
 .button {
@@ -179,7 +180,7 @@ a:hover {
 
 .button:hover {
     background-color: rgb(243, 243, 243);
-    color: #00786B;
+    color: #E37933;
     transition: 0.2s;
 }
 
@@ -197,7 +198,7 @@ a:hover {
 .footer a {
     font-family: 'Unica One', cursive;
     text-transform: uppercase;
-    color: #a2a2a2;
+    color: #CCCCCC;
 }
 
 .footer img {
@@ -215,11 +216,11 @@ a:hover {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     em {

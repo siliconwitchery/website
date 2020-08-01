@@ -14,22 +14,25 @@
 
 h1 {
     font-size: 4rem;
+    line-height: 4rem;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 0.75rem;
-    font-family: 'Unica One', cursive;
+    font-family: 'Unica One', sans-serif;
 }
 
 h2 {
     font-size: 2.5rem;
+    line-height: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
     text-transform: uppercase;
-    font-family: 'Unica One', cursive;
+    font-family: 'Unica One', sans-serif;
 }
 
 em {
     font-size: 1.5rem;
+    line-height: 2rem;
     font-style: normal;
     font-weight: 600;
     color: #E37933;
@@ -53,16 +56,15 @@ a:hover {
     margin: 0 auto;
     width: 75vw;
     min-height: 100vh;
-    background-color: black;
 }
 
 .home-background {
-    background: url(images/home-bg.jpg) no-repeat center center fixed;
+    background: url(images/home-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .service-background {
-    background: url(images/services-bg.jpg) no-repeat center center fixed;
+    background: url(images/services-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -89,7 +91,7 @@ a:hover {
 }
 
 .navbar .links a {
-    font-family: 'Unica One', cursive;
+    font-family: 'Unica One', sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
 }
@@ -196,7 +198,7 @@ a:hover {
 }
 
 .footer a {
-    font-family: 'Unica One', cursive;
+    font-family: 'Unica One', sans-serif;
     text-transform: uppercase;
     color: #CCCCCC;
 }
@@ -217,14 +219,17 @@ a:hover {
 
     h1 {
         font-size: 3rem;
+        line-height: 3rem;
     }
 
     h2 {
         font-size: 2rem;
+        line-height: 2rem;
     }
 
     em {
         font-size: 1rem;
+        line-height: 1.4rem;
     }
 
     .content .split {

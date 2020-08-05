@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 
     <!-- SEO title & description -->
@@ -38,20 +37,30 @@
 </head>
 
 <body style="background-color:rgb(40,40,40);">
-    <!-- Logo and nav bar -->
-    <nav>
-        <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
-        <ul>
-            <li><a href="#">Module</a></li>
-            <li><a href="#">RTOS</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Docs</a></li>
-            <li><a href="#">Jobs</a></li>
-        </ul>
-    </nav>
 
     <!-- Masthead -->
-    <div class="content" style="background-image:url(images/mast-bg.jpg);">
+    <div class="content" style="background-image:url(images/services-bg.jpg);">
+        <!-- Logo and nav bar -->
+        <nav>
+            <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
+            <input class="menu-btn" type="checkbox" />
+            
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Module</a></li>
+                    <li><a href="#">RTOS</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Jobs</a></li>
+                </ul>
+            </div>
+
+        </nav>
 
         <div class="masthead">
             <h1>Silicon Witchery is a Wearable<br>Electronics Lab building<br>tomorrow's wearables today.</h1>
@@ -107,27 +116,25 @@
 
 
     <!-- Footer links -->
-    <div class="wide">
-        <footer>
-            <div>
-                <p>Nybrogaten 8</p>
-                <p>11434 Stockholm</p>
-            </div>
+    <div class="content footer" style="background: black;">
+        <div>
+            <p>Nybrogaten 8</p>
+            <p>11434 Stockholm</p>
+        </div>
 
-            <div>
-                <p style="text-align: right;">info@siliconwitchery.com</p>
-                <p>
-                    <ul>
-                        <li><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></li>
-                        <li><a href="https://twitter.com/SiliconWitchery" target="_blank">YouTube.</a></li>
-                        <li><a href="https://twitter.com/SiliconWitchery" target="_blank">GitHub.</a></li>
-                        <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
-                                Policy.</a></li>
-                    </ul>
-                </p>
-            </div>
+        <div>
+            <p style="text-align: right;">info@siliconwitchery.com</p>
+            <p>
+                <ul>
+                    <li><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></li>
+                    <li><a href="https://twitter.com/SiliconWitchery" target="_blank">YouTube.</a></li>
+                    <li><a href="https://twitter.com/SiliconWitchery" target="_blank">GitHub.</a></li>
+                    <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
+                            Policy.</a></li>
+                </ul>
+            </p>
+        </div>
 
-        </footer>
     </div>
 
 </body>

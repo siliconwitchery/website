@@ -14,21 +14,20 @@
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 3rem;
     text-transform: capitalize;
 }
 
 h2 {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-family: 'Unica One', sans-serif;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.6;
     margin-top: 1rem;
 }
 
@@ -56,12 +55,10 @@ body {
 }
 
 nav {
-    width: 80vw;
-    position: fixed;
     display: flex;
     align-items: center;
-    padding-top: 1rem;
     justify-content: space-between;
+    padding-top: 1rem;
 }
 
 nav img {
@@ -73,13 +70,15 @@ nav li {
     padding-left: 1rem;
 }
 
+nav .menu-btn {
+    visibility: hidden;
+}
+
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
     width: 100vw;
-    min-height: 120vh;
+
     padding-left: 10vw;
     padding-right: 10vw;
 
@@ -94,6 +93,8 @@ nav li {
     align-items: center;
     flex-shrink: 0;
 
+    min-height: 100vh;
+
     padding-left: 20vw;
     padding-right: 20vw;
 }
@@ -105,7 +106,7 @@ nav li {
 }
 
 .masthead {
-    padding-top: 20rem;
+    padding-top: 14rem;
     padding-bottom: 5rem;
 }
 
@@ -116,10 +117,10 @@ nav li {
 .video {
     margin: 8rem;
     margin-left: 0;
-    align-self: flex-start;
+    align-self: center;
     position: relative;
-    width: 50vw;
-    padding-bottom: 28.13%;
+    width: 65vw;
+    padding-bottom: 36.56%;
 }
 
 .video iframe {
@@ -131,37 +132,120 @@ nav li {
     border: 0;
 }
 
-
-footer {
-    width: 80vw;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    display: flex;
+.footer {
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    background-color: black;
 }
 
-footer li {
+.footer li {
     float: left;
     padding-left: 1rem;
 }
 
 @media (max-width: 900px) {
+
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 2.5rem;
     }
 
-    .content {
-        align-items: center;
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    nav img {
+        height: 3rem;
+    }
+
+    nav li {
+        float: none;
+        padding: 1rem;
         text-align: center;
+    }
+
+    nav .hamburger {
+        position: absolute;
+        top: 1rem;
+        right: 5vw;
+
+        width: 3rem;
+        height: 3rem;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+        visibility: visible;
+        z-index: 2;
+    }
+
+    nav .hamburger .bar {
+        background: white;
+        height: 4px;
+        width: 2rem;
+    }
+
+    nav .menu-btn {
+        position: absolute;
+        top: 1rem;
+        right: 5vw;
+
+        z-index: 3;
+        opacity: 0;
+        visibility: visible;
+
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+
+    nav .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        z-index: 1;
+        opacity: 0;
+        padding: 2rem;
+        transition: all 0.1s;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: black;
+
+        visibility: hidden;
+    }
+
+    nav .menu-btn:checked~.menu {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .content {
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
 
     .narrow-row {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    
+
         padding-left: 10vw;
         padding-right: 10vw;
     }
@@ -172,5 +256,39 @@ footer li {
         margin-left: 0;
         margin-top: 2rem;
     }
-    
+
+    .masthead {
+        padding-top: 13rem;
+        padding-bottom: 7rem;
+    }
+
+    .submast {
+        text-align: left;
+        padding-bottom: 1rem;
+    }
+
+    .video {
+        margin: 1rem;
+        margin-left: 0;
+        align-self: flex-start;
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.27%;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .footer li {
+        float: none;
+        text-align: center;
+        padding-left: 0rem;
+        padding-top: 1rem;
+    }
 }

@@ -37,94 +37,99 @@
     </script>
 </head>
 
-<body class="body home-background temp-border" style="background-color:rgb(30,30,10);">
-    <!-- Nav bar section -->
-    <div class="navbar temp-border">
-        <div class="logo temp-border">
-            <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
+<body style="background-color:rgb(40,40,40);">
+    <!-- Logo and nav bar -->
+    <nav>
+        <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
+        <ul>
+            <li><a href="#">Module</a></li>
+            <li><a href="#">RTOS</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Jobs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Masthead -->
+    <div class="content" style="background-image:url(images/mast-bg.jpg);">
+
+        <div class="masthead">
+            <h1>Silicon Witchery is a Wearable<br>Electronics Lab building<br>tomorrow's wearables today.</h1>
         </div>
-        <div class="links temp-border">
-            <a href="#" style="display:none;">Jobs</a>
+
+        <div class="submast">
+            <h2>Devices / RTOS / Design Services</h2>
         </div>
+
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/S3JMwz3LCvc" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
     </div>
 
-    <!-- Blurb -->
-    <div class="blurb temp-border">
-        <h1>Enabling Ultra Small Wearable Systems</h1>
-        <em>A hardware & firmware ecosystem for fast deployment, long battery life, and advanced algorithms.</em>
+    <div class="content narrow-row" style="background:black;">
+        <div>
+            <h2>Wearable Module</h2>
+            <p>Wireless with FPGA fabric and complete battery management.<br>
+                A wearable computer - ready for deployment.</p>
+            <p>
+                <a>Learn More</a>&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;<a>Datasheet</a>
+            </p>
+        </div>
+        <img src="images/module.png" alt="">
     </div>
 
-    <!-- Content cards -->
-    <div class="content temp-border">
-        <div class="split">
-            <div class="card temp-border">
-                <div class="inset temp-border">
-                    <h2>S1 Wearable Module</h2>
-                    <p>The S1 is flat, bendable system-on-FPC which comes preconfigured out of the box for remote
-                        deployment. Simply plug, solder or sew it into your product and you'll be flying.</p>
-                    <ul>
-                        <li>Bluetooth 5.2</li>
-                        <li>Bluetooth Direction-Finding</li>
-                        <li>4k LUT FPGA with DSP</li>
-                        <li>4Mb Flash</li>
-                        <li>Battery Charger</li>
-                        <li>DC/DC Boost</li>
-                        <li>I2C / I3C / SPI / USB</li>
-                    </ul>
-                    <div class="group-buttons temp-border">
-                        <a href="#" target="_blank" style="display:none;">
-                            <div class="button button-dark">
-                                Watch the video<i class="material-icons icon" style="color:inherit;">arrow_forward</i>
-                            </div>
-                        </a>
-                        <a href="https://docs.siliconwitchery.com/hardware/s1-module/s1-module/" target="_blank">
-                            <div class="button button-dark">
-                                Datasheet / Order<i class="material-icons icon" style="color:inherit;">arrow_forward</i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="content narrow-row" style="background-image:url(images/clouds-bg.jpg);">
+        <div>
+            <h2>RTOS</h2>
+            <p>Remotely deploy your DSP and machine learnt models to the field.<br>
+                Read sensors & take actions.<br>
+                Without writing any C code.</p>
+            <p>
+                <a>Learn More</a>&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;<a>API Documentation</a>
+            </p>
+        </div>
+        <img src="images/superstack.png" alt="">
+    </div>
 
-            <div class="gap temp-border"></div>
-
-            <div class="card temp-border">
-                <div class="inset temp-border">
-                    <h2>SuperStack RTOS</h2>
-                    <p>Remotely deploy AI & ML algorithms onto all of our modules and configure them on the fly.</p>
-                    <ul>
-                        <li>Simple JSON API</li>
-                        <li>Smart power management</li>
-                        <li>Remotely configurable</li>
-                        <li>Data privacy features</li>
-                        <li>Security features</li>
-                        <li>OTA ready</li>
-                    </ul>
-                    <div class="group-buttons temp-border">
-                        <a href="https://docs.siliconwitchery.com/superstack/superstack/" target="_blank">
-                            <div class="button button-dark">
-                                API Documentation<i class="material-icons icon" style="color:inherit;">arrow_forward</i>
-                            </div>
-                        </a>
-                        <a href="https://www.siliconwitchery.com/services">
-                            <div class="button button-bright">
-                                Need something special?<i class="material-icons icon"
-                                    style="color:inherit;">arrow_forward</i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="content narrow-row" style="background-image:url(images/services-bg.jpg);">
+        <div>
+            <h2>Design Services</h2>
+            <p>Hardware is hard, and wearables even more so.<br>
+                We can lend a hand.</p>
+            <p>
+                <a>Our Capabilities</a>&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;<a>Email us</a>
+            </p>
         </div>
     </div>
+
 
     <!-- Footer links -->
-    <div class="footer temp-border">
-        <a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy Policy</a>
-        <a href="https://goo.gl/maps/pbhCJhJ61isLdw8N6" target="_blank">©Silicon Witchery AB</a>
-        <a href="https://twitter.com/SiliconWitchery" target="_blank">@siliconwitchery <img
-                src="images/twitter.svg"></a>
+    <div class="wide">
+        <footer>
+            <div>
+                <p>Nybrogaten 8</p>
+                <p>11434 Stockholm</p>
+            </div>
+
+            <div>
+                <p style="text-align: right;">info@siliconwitchery.com</p>
+                <p>
+                    <ul>
+                        <li><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></li>
+                        <li><a href="https://twitter.com/SiliconWitchery" target="_blank">YouTube.</a></li>
+                        <li><a href="https://twitter.com/SiliconWitchery" target="_blank">GitHub.</a></li>
+                        <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
+                                Policy.</a></li>
+                    </ul>
+                </p>
+            </div>
+
+        </footer>
     </div>
+
 </body>
 
 </html>

@@ -31,6 +31,11 @@ p {
     margin-top: 1rem;
 }
 
+b {
+    font-weight: 600;
+    color: #F20D5E;
+}
+
 a {
     font-weight: 600;
     color: rgb(215, 220, 220);
@@ -112,11 +117,11 @@ nav .menu-btn {
 
 .submast {
     text-align: right;
+    margin-bottom: 5rem;
 }
 
 .video {
-    margin: 8rem;
-    margin-left: 0;
+    margin-bottom: 8rem;
     align-self: center;
     position: relative;
     width: 65vw;
@@ -265,11 +270,11 @@ nav .menu-btn {
     .submast {
         text-align: left;
         padding-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     .video {
-        margin: 1rem;
-        margin-left: 0;
+        margin-bottom: 3rem;
         align-self: flex-start;
         position: relative;
         width: 100%;

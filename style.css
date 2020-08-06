@@ -25,7 +25,8 @@ h2 {
     font-family: 'Unica One', sans-serif;
 }
 
-p {
+p,
+.footer ul {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-top: 1rem;
@@ -164,7 +165,8 @@ nav .menu-btn {
         font-size: 1.2rem;
     }
 
-    p {
+    p,
+    .footer ul {
         font-size: 1rem;
     }
 
@@ -285,6 +287,7 @@ nav .menu-btn {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
 
         padding-top: 5rem;
         padding-bottom: 5rem;
@@ -292,7 +295,6 @@ nav .menu-btn {
 
     .footer li {
         float: none;
-        text-align: center;
         padding-left: 0rem;
         padding-top: 1rem;
     }

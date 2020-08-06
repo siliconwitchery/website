@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Unica+One&display=swap');
 
 * {
     padding: 0;
@@ -10,237 +10,285 @@
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     color: white;
+    font-weight: 300;
 }
 
 h1 {
-    font-size: 4rem;
-    line-height: 4rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 0.75rem;
-    font-family: 'Unica One', sans-serif;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-transform: capitalize;
 }
 
 h2 {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-family: 'Unica One', sans-serif;
-}
-
-em {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-style: normal;
-    font-weight: 600;
-    color: #E37933;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+a {
+    font-weight: 600;
+    color: rgb(215, 220, 220);
+    cursor: pointer;
 }
 
 a:hover {
-    color: #E37933 !important;
+    color: white !important;
     transition: 0.2s;
 }
 
-/* Background images and page size */
-.body {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 75vw;
-    min-height: 100vh;
-}
-
-.home-background {
-    background: url(images/home-bg.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.service-background {
-    background: url(images/services-bg.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-/* Navigation bar */
-.navbar {
-    height: 4rem;
-    margin-top: 1rem;
-    display: flex;
-    flex-shrink: 0;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar .logo {
-    height: 100%;
-}
-
-.navbar .logo img {
-    height: 100%;
-}
-
-.navbar .links {
-    margin: 0 1rem;
-}
-
-.navbar .links a {
+nav a {
     font-family: 'Unica One', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
 }
 
-/* Blurb Header */
-.blurb {
+body {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    flex-grow: 0.6;
-    padding: 3rem 0;
+    align-items: center;
 }
 
-/* Main content area */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+nav img {
+    height: 4rem;
+}
+
+nav li {
+    float: left;
+    padding-left: 1rem;
+}
+
+nav .menu-btn {
+    visibility: hidden;
+}
+
 .content {
     display: flex;
-    justify-content: space-between;
-    min-height: 10rem;
-    flex-grow: 1;
-    flex-shrink: 0;
-    align-items: flex-start;
-}
-
-/* Sub cards */
-.content .split {
-    margin: 0 auto;
-    display: flex;
-}
-
-.content .split .gap {
-    width: 5rem;
-    height: 2.5rem;
-}
-
-.card {
-    margin: 0 auto;
-    display: flex;
-    width: 100%;
-    flex-grow: 0;
-    background-color: rgba(78, 78, 78, 0.5);
     flex-direction: column;
+    width: 100vw;
+
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.card .inset {
-    margin: 2rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+.narrow-row {
+    flex-direction: row;
     justify-content: space-between;
-}
-
-.card ul {
-    margin-bottom: 0.75rem;
-    font-weight: 500;
-}
-
-.card li {
-    list-style: disc;
-    list-style-position: inside;
-    padding: 0.2rem 0;
-    margin-left: 1rem;
-}
-
-.card a {
-    font-weight: 600;
-}
-
-/* Buttons */
-.button-dark {
-    background-color: #5B4536;
-}
-
-.button-bright {
-    background-color: #E37933;
-}
-
-.button {
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    width: 100%;
-    padding: 1rem;
-    margin-top: 0.75rem;
     align-items: center;
+    flex-shrink: 0;
+
+    min-height: 100vh;
+
+    padding-left: 20vw;
+    padding-right: 20vw;
 }
 
-.button:hover {
-    background-color: rgb(243, 243, 243);
-    color: #E37933;
-    transition: 0.2s;
+.narrow-row img {
+    align-self: center;
+    width: 30%;
+    margin-left: 2rem;
 }
 
-/* Footer */
+.masthead {
+    padding-top: 14rem;
+    padding-bottom: 5rem;
+}
+
+.submast {
+    text-align: right;
+}
+
+.video {
+    margin: 8rem;
+    margin-left: 0;
+    align-self: center;
+    position: relative;
+    width: 65vw;
+    padding-bottom: 36.56%;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 .footer {
-    height: 4rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-shrink: 0;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    background-color: black;
 }
 
-.footer a {
-    font-family: 'Unica One', sans-serif;
-    text-transform: uppercase;
-    color: #CCCCCC;
+.footer li {
+    float: left;
+    padding-left: 1rem;
 }
 
-.footer img {
-    height: 0.7rem;
-}
-
-@media (max-width: 990px) {
-    .body {
-        margin: 0 2.5rem;
-        width: auto;
-    }
-
-    .navbar {
-        height: 3.5rem;
-    }
+@media (max-width: 900px) {
 
     h1 {
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
     }
 
     h2 {
-        font-size: 2rem;
-        line-height: 2rem;
+        font-size: 1.2rem;
     }
 
-    em {
+    p {
         font-size: 1rem;
-        line-height: 1.4rem;
     }
 
-    .content .split {
+    nav img {
+        height: 3rem;
+    }
+
+    nav li {
+        float: none;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    nav .hamburger {
+        position: absolute;
+        top: 1rem;
+        right: 5vw;
+
+        width: 3rem;
+        height: 3rem;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         flex-direction: column;
+
+        visibility: visible;
+        z-index: 2;
+    }
+
+    nav .hamburger .bar {
+        background: white;
+        height: 4px;
+        width: 2rem;
+    }
+
+    nav .menu-btn {
+        position: absolute;
+        top: 1rem;
+        right: 5vw;
+
+        z-index: 3;
+        opacity: 0;
+        visibility: visible;
+
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+
+    nav .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        z-index: 1;
+        opacity: 0;
+        padding: 2rem;
+        transition: all 0.1s;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: black;
+
+        visibility: hidden;
+    }
+
+    nav .menu-btn:checked~.menu {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .content {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .narrow-row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .narrow-row img {
+        align-self: center;
+        width: 50%;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .masthead {
+        padding-top: 13rem;
+        padding-bottom: 7rem;
+    }
+
+    .submast {
+        text-align: left;
+        padding-bottom: 1rem;
+    }
+
+    .video {
+        margin: 1rem;
+        margin-left: 0;
+        align-self: flex-start;
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.27%;
     }
 
     .footer {
         flex-direction: column;
-    }
-}
+        justify-content: center;
+        align-items: center;
 
-.temp-border {
-    /* border: 3px solid red; */
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .footer li {
+        float: none;
+        text-align: center;
+        padding-left: 0rem;
+        padding-top: 1rem;
+    }
 }

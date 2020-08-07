@@ -1,57 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Unica+One&display=swap');
 
 * {
+    /* Clear default settings */
     padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box;
     outline: none;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     list-style: none;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
     color: white;
-    font-weight: 300;
 }
 
 h1 {
+    /* Masthead */
     font-size: 2rem;
-    line-height: 3rem;
     text-transform: capitalize;
+    line-height: 3rem;
+    padding-top: 14rem;
+    padding-bottom: 5rem;
+}
+
+h3 {
+    /* Sub-mast */
+    font-size: 2rem;
+    font-family: 'Unica One', sans-serif;
+    text-transform: uppercase;
+    text-align: right;
+    margin-bottom: 5rem;
 }
 
 h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
+    /* Headings */
+    font-size: 3rem;
     font-family: 'Unica One', sans-serif;
+    text-transform: uppercase;
 }
 
 p,
 .footer ul {
+    /* Main body text slightly bigger than normal */
     font-size: 1.2rem;
     line-height: 1.6;
     margin-top: 1rem;
 }
 
 b {
-    font-weight: 600;
+    /* Bold and coloured text */
+    font-weight: 500;
     color: #F20D5E;
 }
 
 a {
-    font-weight: 600;
+    /* Link is heavy */
+    font-weight: 700;
     color: rgb(215, 220, 220);
     cursor: pointer;
 }
 
 a:hover {
+    /* Link glows white */
     color: white !important;
     transition: 0.2s;
-}
-
-nav a {
-    font-family: 'Unica One', sans-serif;
-    font-size: 1.3rem;
-    text-transform: uppercase;
 }
 
 body {
@@ -68,19 +81,30 @@ nav {
 }
 
 nav img {
+    /* Logo size */
     height: 4rem;
 }
 
+nav a {
+    /* Nav links are bigger with different font */
+    font-family: 'Unica One', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
 nav li {
+    /* Align the nav links right */
     float: left;
     padding-left: 1rem;
 }
 
 nav .menu-btn {
+    /* Hide hamburger checkbox in desktop mode */
     visibility: hidden;
 }
 
 .content {
+    /* Main content width and layout */
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -94,6 +118,7 @@ nav .menu-btn {
 }
 
 .narrow-row {
+    /* Narrow content width and layout */
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -106,30 +131,24 @@ nav .menu-btn {
 }
 
 .narrow-row img {
+    /* Images inside content areas */
     align-self: center;
     width: 30%;
     margin-left: 2rem;
 }
 
-.masthead {
-    padding-top: 14rem;
-    padding-bottom: 5rem;
-}
-
-.submast {
-    text-align: right;
-    margin-bottom: 5rem;
-}
-
 .video {
+    /* Video aspect ratio is anamorphic */
     margin-bottom: 8rem;
     align-self: center;
     position: relative;
     width: 65vw;
     padding-bottom: 36.56%;
+    /* 2.39:1 */
 }
 
 .video iframe {
+    /* Make sure video scales with screen size */
     position: absolute;
     top: 0;
     left: 0;
@@ -139,6 +158,7 @@ nav .menu-btn {
 }
 
 .footer {
+    /* Footer spacing and alignment */
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
@@ -150,30 +170,97 @@ nav .menu-btn {
 }
 
 .footer li {
+    /* Align social links right */
     float: left;
     padding-left: 1rem;
 }
 
+/* Settings for mobile view */
 @media (max-width: 900px) {
 
     h1 {
+        /* Smaller masthead */
         font-size: 1.5rem;
         line-height: 2.5rem;
+
+        padding-top: 13rem;
+        padding-bottom: 7rem;
+    }
+
+    h3 {
+        /* Smaller sub-mast and left align */
+        font-size: 1.5rem;
+        text-align: left;
+
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     h2 {
-        font-size: 1.2rem;
+        /* Smaller headings */
+        font-size: 2.5rem;
     }
 
     p,
     .footer ul {
+        /* Standard main body text */
         font-size: 1rem;
     }
 
     nav img {
+        /* Smaller logo */
         height: 3rem;
     }
 
+    .content {
+        /* Content width is wider */
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .narrow-row {
+        /* Narrow content also wider */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .narrow-row img {
+        /* Side images bigger */
+        width: 50%;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .video {
+        /* Video set to better aspect ratio */
+        margin-bottom: 3rem;
+        width: 100%;
+        padding-bottom: 56.27%;
+    }
+
+    .footer {
+        /* Footer becomes center justified */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .footer li {
+        /* Get rid of right align and space apart */
+        float: none;
+        padding-left: 0rem;
+        padding-top: 1rem;
+    }
+
+    /* Things related to navigation hamburger menu */
     nav li {
         float: none;
         padding: 1rem;
@@ -241,61 +328,5 @@ nav .menu-btn {
     nav .menu-btn:checked~.menu {
         visibility: visible;
         opacity: 1;
-    }
-
-    .content {
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-
-    .narrow-row {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
-
-    .narrow-row img {
-        align-self: center;
-        width: 50%;
-        margin-left: 0;
-        margin-top: 2rem;
-    }
-
-    .masthead {
-        padding-top: 13rem;
-        padding-bottom: 7rem;
-    }
-
-    .submast {
-        text-align: left;
-        padding-bottom: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .video {
-        margin-bottom: 3rem;
-        align-self: flex-start;
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.27%;
-    }
-
-    .footer {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
-
-    .footer li {
-        float: none;
-        padding-left: 0rem;
-        padding-top: 1rem;
     }
 }

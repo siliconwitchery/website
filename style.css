@@ -108,6 +108,7 @@ nav .menu-btn {
     display: flex;
     flex-direction: column;
     width: 100vw;
+    min-height: 100vh;
 
     padding-left: 10vw;
     padding-right: 10vw;
@@ -124,10 +125,7 @@ nav .menu-btn {
     align-items: center;
     flex-shrink: 0;
 
-    min-height: 100vh;
-
-    padding-left: 20vw;
-    padding-right: 20vw;
+    padding: 20vh 20vw;
 }
 
 .narrow-row img {
@@ -181,7 +179,7 @@ nav .menu-btn {
         font-size: 1.5rem;
         line-height: 2.5rem;
 
-        padding-top: 13rem;
+        padding-top: 10rem;
         padding-bottom: 7rem;
     }
 
@@ -222,8 +220,7 @@ nav .menu-btn {
         justify-content: center;
         align-items: center;
 
-        padding-left: 10vw;
-        padding-right: 10vw;
+        padding: 10vh 10vw;
     }
 
     .narrow-row img {

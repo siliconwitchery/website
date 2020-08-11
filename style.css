@@ -57,6 +57,7 @@ b {
 a {
     /* Link is heavy */
     font-weight: 700;
+    text-transform: capitalize;
     color: rgb(215, 220, 220);
     cursor: pointer;
 }

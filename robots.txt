@@ -1,4 +1,4 @@
-# Silicon Witchery robots file are coming
+# Silicon Witchery robots file
 
 User-agent: *
 

@@ -90,6 +90,7 @@ a:hover {
     color: white !important;
     border: solid 2px white;
     padding: 1rem;
+    margin-top: 2rem;
     margin-left: 1rem;
     float: right;
 }
@@ -239,7 +240,7 @@ nav .menu-btn {
         font-size: 1.5rem;
         line-height: 2.5rem;
 
-        padding-top: 10rem;
+        padding-top: 7rem;
         padding-bottom: 7rem;
     }
 
@@ -261,6 +262,11 @@ nav .menu-btn {
     .footer ul {
         /* Standard main body text */
         font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 0.8rem;
     }
 
     nav img {
@@ -290,6 +296,15 @@ nav .menu-btn {
         margin-top: 2rem;
     }
 
+    .article-thumbnail {
+        flex-direction: column;
+    }
+
+    .narrow-row img {
+        width: 100%;
+        margin-left: 0;
+    }
+    
     .video {
         /* Video set to better aspect ratio */
         margin-bottom: 3rem;

@@ -9,12 +9,22 @@
 
 <url>
   <loc>https://www.siliconwitchery.com/</loc>
-  <lastmod>2020-07-30T11:34:29+00:00</lastmod>
+  <lastmod>2020-10-14T17:26:05+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://www.siliconwitchery.com/module</loc>
+  <lastmod>2020-10-14T17:26:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.siliconwitchery.com/devkit</loc>
+  <lastmod>2020-10-14T17:26:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.siliconwitchery.com/services</loc>
-  <lastmod>2020-07-30T11:34:29+00:00</lastmod>
+  <lastmod>2020-10-14T17:26:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 

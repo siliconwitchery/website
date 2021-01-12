@@ -41,7 +41,8 @@
         grid-template-areas:
             "heading s1-img"
             "article-1 article-2"
-            "services services";
+            "services services"
+            "docs docs";
     }
 
     .div1 {
@@ -56,7 +57,7 @@
 
     .div4 {
         grid-area: article-1;
-        background: url(images/devkit-bg.jpg);
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url(images/devkit-bg.jpg);
         background-size: cover;
         background-position: right center;
         padding: 3rem 3rem;
@@ -66,7 +67,7 @@
 
     .div5 {
         grid-area: article-2;
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/raj-twitter-post.png);
+        background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6) ), url(images/raj-twitter-post.png);
         background-size: cover;
         padding: 3rem 3rem;
         border-radius: 16px;
@@ -76,6 +77,15 @@
     .div6 {
         grid-area: services;
         background-color:#EEEEEE;
+        padding: 7rem 5rem;
+        border-radius: 16px;
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+    }
+
+    .div7 {
+        grid-area: docs;
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url(images/devkit-bg.jpg);
+
         padding: 7rem 5rem;
         border-radius: 16px;
         box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
@@ -96,12 +106,11 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="https://www.siliconwitchery.com/module">Module</a></li>
-                <li><a href="https://www.siliconwitchery.com/devkit">DevKit</a></li>
-                <!-- <li><a href="https://www.siliconwitchery.com/rtos">RTOS</a></li> -->
-                <li><a href="https://www.siliconwitchery.com/services">Services</a></li>
-                <li><a href="https://docs.siliconwitchery.com/">Docs</a></li>
-                <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs">Jobs</a></li>
+                <li><a href="https://www.siliconwitchery.com/module">Module.</a></li>
+                <li><a href="https://www.siliconwitchery.com/services">Services.</a></li>
+                <li><a href="https://www.siliconwitchery.com/about">About.</a></li>
+                <li><a href="https://docs.siliconwitchery.com/">Docs.</a></li>
+                <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs">Jobs.</a></li>
             </ul>
         </div>
     </nav>
@@ -109,24 +118,26 @@
     <div class="grid">
 
         <div class="div1">
-            <h1>The new S1 module.<br><b>▸ Bluetooth<br>▸ FPGA<br>▸ Power Management</b></h1>
+            <h1>The new S1 module.</h1>
+            <p><b>▸ Bluetooth<br>▸ FPGA<br>▸ Power Management</b></p>
+            <a href="https://www.siliconwitchery.com/services" class="btn">Learn More</a>
         </div>
 
         <div class="div2">
-            <img style="width: 70%;" src="images/s1-module.jpg" alt="">
+            <!-- <img style="width: 70%;" src="images/s1-module.jpg" alt=""> -->
         </div>
 
         <div class="div4">
-            <p>Featured.</p>
-            <h2>S1 Development Kit</h2>
-            <p><b>Quickly get up and running with<br>our S1 breakout board.</b></p>
+            <p><b>Featured </b>Product</p>
+            <h2>Development Kit</h2>
+            <p>Quickly get up and running with<br>our S1 breakout board.</p>
             <a href="https://www.siliconwitchery.com/services" class="btn">Learn More</a>
         </div>
 
         <div class="div5">
-            <p>Featured.</p>
+            <p><b>Featured </b>News</p>
             <h2>S1 in the news</h2>
-            <p><b>Quickly get up and running with<br>our S1 breakout board.</b></p>
+            <p>Quickly get up and running with<br>our S1 breakout board.</p>
             <a href="https://www.siliconwitchery.com/services" class="btn">Read More</a>
         </div>
 
@@ -140,16 +151,24 @@
             </p>
         </div>
 
+        <div class="div7">
+            <h2>Documentation Center</h2>
+            <p><b>Your key partner for Wearable and IoT projects.</b> We can provide specialized assistance at any stage
+                in your design, including advanced capabilities in RF hardware and signal processing. Get in touch
+                today, and let's transform your next wearable or IoT product into something groundbreaking.</p>
+            <p>
+                <a href="https://www.siliconwitchery.com/services" class="btn">Capabilities</a>
+            </p>
+        </div>
+
     </div>
 
     <!-- Footer Area -->
     <div class="footer">
         <div>
-            <p>Nybrogaten 8</p>
-            <p>114 34 Stockholm</p>
+            <p>2021 © <b>Silicon Witchery AB</b>.</p>
         </div>
         <div>
-            <p style="text-align: right;">info@siliconwitchery.com</p>
             <ul>
                 <li><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></li>
                 <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">YouTube.</a>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Unica+One&display=swap');
 
 * {
     /* Clear default settings */
@@ -9,44 +9,42 @@
     outline: none;
 
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     list-style: none;
     text-decoration: none;
-    color: white;
+    color: #eee;
 }
 
-h1 {
-    font-size: 2rem;
-    text-transform: capitalize;
-    line-height: 3rem;
-}
-
+h1,
 h2 {
     font-size: 3rem;
-    font-family: 'Unica One', sans-serif;
-    text-transform: uppercase;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 1rem 0;
 }
 
-p,
-.footer ul {
-    /* Main body text slightly bigger than normal */
+p {
     font-size: 1.2rem;
     line-height: 1.6;
-    margin-top: 1rem;
+    color: #aaa;
 }
 
 b {
-    /* Bold and coloured text */
-    font-weight: 500;
-    color: white;
+    color: #eee;
 }
 
-a {
-    /* Link is heavy */
+nav a,
+.footer a {
     font-weight: 700;
+    font-size: 1.2rem;
     text-transform: capitalize;
     color: rgb(215, 220, 220);
-    cursor: pointer;
+}
+
+nav li,
+.footer li {
+    float: left;
+    padding-left: 1.2rem;
 }
 
 .light-text p,
@@ -54,7 +52,7 @@ a {
 .light-text b,
 .light-text h1,
 .light-text h2 {
-    color: black;
+    color: #09080f;
 }
 
 a:hover {
@@ -103,7 +101,7 @@ a:hover {
 }
 
 body {
-    background-color:#111111;
+    background-color: #0f0e15;
     padding-left: 10vw;
     padding-right: 10vw;
 }
@@ -118,19 +116,6 @@ nav {
 nav img {
     /* Logo size */
     height: 4rem;
-}
-
-nav a {
-    /* Nav links are bigger with different font */
-    font-family: 'Unica One', sans-serif;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-}
-
-nav li {
-    /* Align the nav links right */
-    float: left;
-    padding-left: 1rem;
 }
 
 nav .menu-btn {
@@ -181,17 +166,11 @@ nav .menu-btn {
     padding-bottom: 5rem;
 }
 
-.footer li {
-    /* Align social links right */
-    float: left;
-    padding-left: 1rem;
-}
 
 /* Settings for mobile view */
 @media (max-width: 900px) {
 
     h1 {
-        /* Smaller masthead */
         font-size: 1.5rem;
         line-height: 2.5rem;
 
@@ -259,7 +238,7 @@ nav .menu-btn {
         width: 100%;
         margin-left: 0;
     }
-    
+
     .video {
         /* Video set to better aspect ratio */
         margin-bottom: 3rem;

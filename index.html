@@ -36,77 +36,101 @@
     </script>
 </head>
 
-<body style="background-color:#111111;">
+<style>
+    .grid {
+        grid-template-areas:
+            "heading s1-img"
+            "article-1 article-2"
+            "services services";
+    }
 
-    <!-- Section 1 -->
-    <div class="content">
+    .div1 {
+        grid-area: heading;
+        padding: 10rem 0;
+    }
 
-        <!-- Logo & Navigation Bar -->
-        <nav>
-            <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
-            <input class="menu-btn" type="checkbox" />
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="https://www.siliconwitchery.com/module">Module</a></li>
-                    <li><a href="https://www.siliconwitchery.com/devkit">DevKit</a></li>
-                    <!-- <li><a href="https://www.siliconwitchery.com/rtos">RTOS</a></li> -->
-                    <li><a href="https://www.siliconwitchery.com/services">Services</a></li>
-                    <li><a href="https://docs.siliconwitchery.com/">Docs</a></li>
-                    <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs">Jobs</a></li>
-                </ul>
-            </div>
-        </nav>
+    .div2 {
+        grid-area: s1-img;
+        text-align: right;
+    }
 
-        <!-- Masthead, Sub-masthead & Video -->
-        <h1>Your partner for ultra small embedded solutions.</h1>
+    .div4 {
+        grid-area: article-1;
+        background: url(images/devkit-bg.jpg);
+        background-size: cover;
+        background-position: right center;
+        padding: 3rem 3rem;
+        border-radius: 16px;
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+    }
 
-        <h3>Modules, Software & Design Services.</h3>
+    .div5 {
+        grid-area: article-2;
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/raj-twitter-post.png);
+        background-size: cover;
+        padding: 3rem 3rem;
+        border-radius: 16px;
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+    }
 
-        <div class="video">
-            <iframe
-                src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1"
-                allowfullscreen></iframe>
+    .div6 {
+        grid-area: services;
+        background-color:#EEEEEE;
+        padding: 7rem 5rem;
+        border-radius: 16px;
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+    }
+
+</style>
+
+<body>
+
+    <!-- Logo & Navigation Bar -->
+    <nav>
+        <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
+        <input class="menu-btn" type="checkbox" />
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="https://www.siliconwitchery.com/module">Module</a></li>
+                <li><a href="https://www.siliconwitchery.com/devkit">DevKit</a></li>
+                <!-- <li><a href="https://www.siliconwitchery.com/rtos">RTOS</a></li> -->
+                <li><a href="https://www.siliconwitchery.com/services">Services</a></li>
+                <li><a href="https://docs.siliconwitchery.com/">Docs</a></li>
+                <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs">Jobs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="grid">
+
+        <div class="div1">
+            <h1>The new S1 module.<br><b>▸ Bluetooth<br>▸ FPGA<br>▸ Power Management</b></h1>
         </div>
 
-    </div>
-
-    <!-- Section 2 -->
-    <div class="content narrow-row" style="background-image:url(images/module-bg.jpg); background-position:20% 0%;">
-        <div>
-            <h2>S1 Module</h2>
-            <p><b>Designed to empower the smallest wireless devices.</b> Drop into your design and rest assured your
-                product will be low power, AI-ready, and avoid complicated HDI boards.</p>
-            <p><b>– Bluetooth 5</b></p>
-            <p><b>– FPGA</b></p>
-            <p><b>– Power Management</b></p>
-            <p><b>– 6x12mm Footprint</b></p>
-            <p><a href="https://www.siliconwitchery.com/module" class="btn">Features</a></p>
+        <div class="div2">
+            <img style="width: 70%;" src="images/s1-module.jpg" alt="">
         </div>
-    </div>
 
-    <!-- Section 3 -->
-    <div class="content narrow-row" style="background-image:url(images/server-bg.jpg);">
-        <div>
-            <h2>SuperStack RTOS</h2>
-            <p><b>Deploy algorithms, not boilerplate code.</b> A fully built stack ready for deployment and pre-loaded
-                on our modules. Using a simple JSON API, you can upload algorithms, read sensors, manage power, and have
-                full control, all without writing a single line of C code.</p>
-            <p>
-                <a href="https://docs.siliconwitchery.com/#get-in-the-know-" target="_blank" class="btn">Coming Soon</a>
-                <!-- <a href="https://www.siliconwitchery.com/rtos" target="_blank" class="btn">Features</a> -->
-            </p>
+        <div class="div4">
+            <p>Featured.</p>
+            <h2>S1 Development Kit</h2>
+            <p><b>Quickly get up and running with<br>our S1 breakout board.</b></p>
+            <a href="https://www.siliconwitchery.com/services" class="btn">Learn More</a>
         </div>
-        <img src="images/superstack.png" alt="Diagram of SuperStack RTOS Architecture">
-    </div>
 
-    <!-- Section 4 -->
-    <div class="content narrow-row light-text" style="background-color:#EEEEEE;">
-        <div>
+        <div class="div5">
+            <p>Featured.</p>
+            <h2>S1 in the news</h2>
+            <p><b>Quickly get up and running with<br>our S1 breakout board.</b></p>
+            <a href="https://www.siliconwitchery.com/services" class="btn">Read More</a>
+        </div>
+
+        <div class="div6 light-text">
             <h2>Here to help</h2>
             <p><b>Your key partner for Wearable and IoT projects.</b> We can provide specialized assistance at any stage
                 in your design, including advanced capabilities in RF hardware and signal processing. Get in touch
@@ -115,10 +139,11 @@
                 <a href="https://www.siliconwitchery.com/services" class="btn">Capabilities</a>
             </p>
         </div>
+
     </div>
 
     <!-- Footer Area -->
-    <div class="content footer">
+    <div class="footer">
         <div>
             <p>Nybrogaten 8</p>
             <p>114 34 Stockholm</p>

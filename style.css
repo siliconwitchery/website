@@ -16,25 +16,12 @@
 }
 
 h1 {
-    /* Masthead */
     font-size: 2rem;
     text-transform: capitalize;
     line-height: 3rem;
-    padding-top: 14rem;
-    padding-bottom: 5rem;
-}
-
-h3 {
-    /* Sub-mast */
-    font-size: 2rem;
-    font-family: 'Unica One', sans-serif;
-    text-transform: uppercase;
-    text-align: right;
-    margin-bottom: 5rem;
 }
 
 h2 {
-    /* Headings */
     font-size: 3rem;
     font-family: 'Unica One', sans-serif;
     text-transform: uppercase;
@@ -66,8 +53,7 @@ a {
 .light-text p a,
 .light-text b,
 .light-text h1,
-.light-text h2,
-.light-text h3 {
+.light-text h2 {
     color: black;
 }
 
@@ -117,9 +103,9 @@ a:hover {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color:#111111;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 nav {
@@ -152,48 +138,15 @@ nav .menu-btn {
     visibility: hidden;
 }
 
-.content {
-    /* Main content width and layout */
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    min-height: 100vh;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5rem;
 
-    padding-left: 10vw;
-    padding-right: 10vw;
-
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.narrow-row {
-    /* Narrow content width and layout */
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
 
-    padding: 20vh 20vw;
-}
-
-.narrow-row img {
-    /* Images inside content areas */
-    align-self: center;
-    width: 30%;
-    margin-left: 2rem;
-}
-
-.article-thumbnail {
-    display: flex;
-    justify-content: stretch;
-    align-items: center;
-}
-
-.article-thumbnail img {
-    align-self: flex-end;
-    width: 40%;
-    margin: 1rem 0 1rem 2rem;
 }
 
 .video {
@@ -218,6 +171,7 @@ nav .menu-btn {
 
 .footer {
     /* Footer spacing and alignment */
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;

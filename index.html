@@ -37,12 +37,25 @@
 </head>
 
 <style>
+    
     .grid {
         grid-template-areas:
             "heading s1-img"
             "article-1 article-2"
             "services services"
             "docs docs";
+    }
+
+    @media (max-width: 950px) {
+        .grid {
+            grid-template-areas:
+                "heading"
+                "s1-img"
+                "article-1"
+                "article-2"
+                "services"
+                "docs";
+        }
     }
 
     .div1 {
@@ -57,38 +70,31 @@
 
     .div4 {
         grid-area: article-1;
-        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url(images/devkit-bg.jpg);
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
         background-size: cover;
         background-position: right center;
         padding: 3rem 3rem;
-        border-radius: 16px;
-        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+
     }
 
     .div5 {
         grid-area: article-2;
-        background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6) ), url(images/raj-twitter-post.png);
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(images/raj-twitter-post.png);
         background-size: cover;
         padding: 3rem 3rem;
-        border-radius: 16px;
-        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
     }
 
     .div6 {
         grid-area: services;
-        background-color:#EEEEEE;
+        background-color: #EEEEEE;
         padding: 7rem 5rem;
-        border-radius: 16px;
-        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
     }
 
     .div7 {
         grid-area: docs;
-        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url(images/devkit-bg.jpg);
-
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
+        background-size: cover;
         padding: 7rem 5rem;
-        border-radius: 16px;
-        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
     }
 
 </style>
@@ -115,6 +121,7 @@
         </div>
     </nav>
 
+    <!-- Content -->
     <div class="grid">
 
         <div class="div1">
@@ -127,21 +134,21 @@
             <!-- <img style="width: 70%;" src="images/s1-module.jpg" alt=""> -->
         </div>
 
-        <div class="div4">
+        <div class="div4 shadow">
             <p><b>Featured </b>Product</p>
             <h2>Development Kit</h2>
             <p>Quickly get up and running with<br>our S1 breakout board.</p>
             <a href="https://www.siliconwitchery.com/services" class="btn">Learn More</a>
         </div>
 
-        <div class="div5">
+        <div class="div5 shadow">
             <p><b>Featured </b>News</p>
             <h2>S1 in the news</h2>
             <p>Quickly get up and running with<br>our S1 breakout board.</p>
             <a href="https://www.siliconwitchery.com/services" class="btn">Read More</a>
         </div>
 
-        <div class="div6 light-text">
+        <div class="div6 light-text shadow">
             <h2>Here to help</h2>
             <p><b>Your key partner for Wearable and IoT projects.</b> We can provide specialized assistance at any stage
                 in your design, including advanced capabilities in RF hardware and signal processing. Get in touch
@@ -151,7 +158,7 @@
             </p>
         </div>
 
-        <div class="div7">
+        <div class="div7 shadow">
             <h2>Documentation Center</h2>
             <p><b>Your key partner for Wearable and IoT projects.</b> We can provide specialized assistance at any stage
                 in your design, including advanced capabilities in RF hardware and signal processing. Get in touch
@@ -163,7 +170,7 @@
 
     </div>
 
-    <!-- Footer Area -->
+    <!-- Footer -->
     <div class="footer">
         <div>
             <p>2021 © <b>Silicon Witchery AB</b>.</p>

@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 * {
-    /* Clear default settings */
     padding: 0;
     margin: 0;
     border: 0;
@@ -15,22 +14,53 @@
     color: #eee;
 }
 
+body {
+    background-color: #0f0e15;
+    padding: 0 10vw;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 5rem;
+    align-items: center;
+}
+
+.shadow {
+    border-radius: 16px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
 h1,
 h2 {
     font-size: 3rem;
     font-weight: 700;
     text-transform: capitalize;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 
 p {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #aaa;
+    margin-bottom: 1rem;
 }
 
 b {
     color: #eee;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+
+nav img {
+    /* Logo size */
+    height: 4rem;
 }
 
 nav a,
@@ -41,81 +71,16 @@ nav a,
     color: rgb(215, 220, 220);
 }
 
+nav a:hover,
+.footer a:hover {
+    color: white !important;
+    transition: 0.2s;
+}
+
 nav li,
 .footer li {
     float: left;
     padding-left: 1.2rem;
-}
-
-.light-text p,
-.light-text p a,
-.light-text b,
-.light-text h1,
-.light-text h2 {
-    color: #09080f;
-}
-
-a:hover {
-    /* Link glows white */
-    color: white !important;
-    transition: 0.2s;
-}
-
-.light-text p a:hover {
-    color: #666666 !important;
-}
-
-.btn {
-    /* Clear button with white box */
-    font-size: 1rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.19rem;
-    color: white !important;
-    border: solid 2px white;
-    padding: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    float: right;
-}
-
-.light-text .btn {
-    color: black !important;
-    border: solid 2px black;
-}
-
-.btn:hover {
-    /* Button becomes black on white */
-    color: black !important;
-    background-color: white;
-    border: solid 2px white;
-    transition: 0.2s;
-}
-
-.light-text .btn:hover {
-    /* Button becomes white on black */
-    color: white !important;
-    background-color: black;
-    border: solid 2px black;
-}
-
-body {
-    background-color: #0f0e15;
-    padding-left: 10vw;
-    padding-right: 10vw;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1rem;
-}
-
-nav img {
-    /* Logo size */
-    height: 4rem;
 }
 
 nav .menu-btn {
@@ -123,15 +88,54 @@ nav .menu-btn {
     visibility: hidden;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-column-gap: 2rem;
-    grid-row-gap: 5rem;
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: auto;
+    padding: 5rem 0 4rem 0;
+}
 
-    align-items: center;
+.footer p,
+.footer ul {
+    line-height: 1;
+}
 
+.light-text h1,
+.light-text h2,
+.light-text p,
+.light-text p a,
+.light-text b {
+    color: #09080f;
+}
+
+.btn {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.19rem;
+    color: white !important;
+    border: solid 2px white;
+    padding: 1rem;
+    float: right;
+}
+
+.btn:hover {
+    color: black !important;
+    background-color: white;
+    border: solid 2px white;
+    transition: 0.2s;
+}
+
+.light-text .btn {
+    color: #09080f !important;
+    border: solid 2px #09080f;
+}
+
+.light-text .btn:hover {
+    color: white !important;
+    background-color: #09080f;
+    border: solid 2px #09080f;
 }
 
 .video {
@@ -154,89 +158,35 @@ nav .menu-btn {
     border: 0;
 }
 
-.footer {
-    /* Footer spacing and alignment */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-
-    min-height: auto;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-}
-
-
 /* Settings for mobile view */
-@media (max-width: 900px) {
+@media (max-width: 950px) {
 
-    h1 {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-
-        padding-top: 7rem;
-        padding-bottom: 7rem;
+    body {
+        padding: 0 5vw;
     }
 
-    h3 {
-        /* Smaller sub-mast and left align */
-        font-size: 1.5rem;
-        text-align: left;
-
-        padding-bottom: 1rem;
-        margin-bottom: 2rem;
+    .grid {
+        grid-template-columns: 1fr;
+        grid-gap: 5vw;
     }
 
+    .div0,
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div6,
+    .div7,
+    .div8,
+    .div9 {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    h1,
     h2 {
-        /* Smaller headings */
         font-size: 2.5rem;
-    }
-
-    p,
-    .footer ul {
-        /* Standard main body text */
-        font-size: 1rem;
-    }
-
-    .btn {
-        font-size: 0.8rem;
-        padding: 0.8rem;
-    }
-
-    nav img {
-        /* Smaller logo */
-        height: 3rem;
-    }
-
-    .content {
-        /* Content width is wider */
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-
-    .narrow-row {
-        /* Narrow content also wider */
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        padding: 10vh 10vw;
-    }
-
-    .narrow-row img {
-        /* Side images bigger */
-        width: 70%;
-        margin-left: 0;
-        margin-top: 2rem;
-    }
-
-    .article-thumbnail {
-        flex-direction: column;
-    }
-
-    .narrow-row img {
-        width: 100%;
-        margin-left: 0;
     }
 
     .video {
@@ -248,23 +198,18 @@ nav .menu-btn {
 
     .footer {
         /* Footer becomes center justified */
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
         text-align: center;
-
-        padding-top: 5rem;
-        padding-bottom: 5rem;
     }
 
     .footer li {
         /* Get rid of right align and space apart */
         float: none;
-        padding-left: 0rem;
-        padding-top: 1rem;
+        padding: 0rem 0 2rem 0;
     }
 
-    /* Things related to navigation hamburger menu */
     nav li {
         float: none;
         padding: 1rem;
@@ -273,7 +218,7 @@ nav .menu-btn {
 
     nav .hamburger {
         position: absolute;
-        top: 1rem;
+        top: 3.55rem;
         right: 5vw;
 
         width: 3rem;
@@ -296,7 +241,7 @@ nav .menu-btn {
 
     nav .menu-btn {
         position: absolute;
-        top: 1rem;
+        top: 3.55rem;
         right: 5vw;
 
         z-index: 3;

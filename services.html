@@ -36,81 +36,187 @@
     </script>
 </head>
 
-<body style="background-color:#111111;">
+<style>
 
-    <!-- Section 1 -->
-    <div class="content" style="background-image:url(images/services-bg.jpg);">
+    .grid {
+        grid-template-areas:
+            "heading heading"
+            "hardware software"
+            "advanced advanced"
+            "rf pen-testing"
+            "about about"
+            "supply find-us";
+    }
 
-        <!-- Logo & Navigation Bar -->
-        <nav>
-            <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
-            <input class="menu-btn" type="checkbox" />
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="https://www.siliconwitchery.com/module">Module</a></li>
-                    <li><a href="https://www.siliconwitchery.com/devkit">DevKit</a></li>
-                    <!-- <li><a href="https://www.siliconwitchery.com/rtos">RTOS</a></li> -->
-                    <li><a href="https://www.siliconwitchery.com/services">Services</a></li>
-                    <li><a href="https://docs.siliconwitchery.com/">Docs</a></li>
-                    <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs">Jobs</a></li>
-                </ul>
-            </div>
-        </nav>
+    @media (max-width: 950px) {
+        .grid {
+            grid-template-areas:
+                "heading"
+                "hardware"
+                "software"
+                "advanced"
+                "rf"
+                "pen-testing"
+                "about"
+                "supply"
+                "find-us";
+        }
+    }
 
-        <h1><b>A powerful R&D team here to help you build for every uncertainty.</b> We can help all the way through
-            production, testing, and compliance.</h1>
+    .div1 {
+        grid-area: heading;
+        padding: 10rem 0;
+    }
 
-        <h3>Wearable & Wireless IoT experts.</h3>
+    .div2 {
+        grid-area: hardware;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
+        background-size: cover;
+        background-position: right center;
+        padding: 3rem 3rem;
+    }
+
+    .div3 {
+        grid-area: software;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
+        background-size: cover;
+        background-position: right center;
+        padding: 3rem 3rem;
+    }
+
+    .div4 {
+        grid-area: advanced;
+        padding: 7rem 5rem;
+    }
+
+    .div5 {
+        grid-area: rf;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
+        background-size: cover;
+        background-position: right center;
+        padding: 3rem 3rem;
+    }
+
+    .div6 {
+        grid-area: pen-testing;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
+        background-size: cover;
+        background-position: right center;
+        padding: 3rem 3rem;
+    }
+
+    .div7 {
+        grid-area: about;
+        padding: 20rem 50% 20rem 5rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(images/raj-bg.jpg);
+        background-size: cover;
+        background-position: right center;
+    }
+
+    .div8 {
+        grid-area: supply;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
+        background-size: cover;
+        background-position: right center;
+        padding: 3rem 3rem;
+    }
+
+    .div9 {
+        grid-area: find-us;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
+        background-size: cover;
+        background-position: right center;
+        padding: 3rem 3rem;
+    }
+
+</style>
+
+<body>
+
+    <!-- Logo & Navigation Bar -->
+    <nav>
+        <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
+        <input class="menu-btn" type="checkbox" />
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="https://www.siliconwitchery.com/module">Module.</a></li>
+                <li><a href="https://www.siliconwitchery.com/services">Services.</a></li>
+                <li><a href="https://docs.siliconwitchery.com/">Docs.</a></li>
+                <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs">Jobs.</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="grid">
+
+        <div class="div1">
+            <h1>Embedded Engineering Services.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae sit maiores! Ipsa atque cum reprehenderit ad veniam distinctio, voluptatum commodi expedita placeat aliquam! Eveniet ad odit hic laboriosam qui?</p>
+        </div>
+
+        <div class="div2 shadow">
+            <p>Capabilities</p>
+            <h2>Hardware Layout</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae sit maiores! Ipsa atque cum reprehenderit ad veniam distinctio, voluptatum commodi expedita placeat aliquam! Eveniet ad odit hic laboriosam qui?</p>
+        </div>
+
+        <div class="div3 shadow">
+            <p>Capabilities</p>
+            <h2>Embedded Software</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae sit maiores! Ipsa atque cum reprehenderit ad veniam distinctio, voluptatum commodi expedita placeat aliquam! Eveniet ad odit hic laboriosam qui?</p>
+        </div>
+
+        <div class="div4 light shadow">
+            <h2>Advanced Workflows</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae sit maiores! Ipsa atque cum reprehenderit ad veniam distinctio, voluptatum commodi expedita placeat aliquam! Eveniet ad odit hic laboriosam qui?</p>
+            <a href="https://www.siliconwitchery.com/services" class="btn">Learn More</a>
+        </div>
+
+        <div class="div5 shadow">
+            <p>Expertise</p>
+            <h2>RF Design</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae sit maiores! Ipsa atque cum reprehenderit ad veniam distinctio, voluptatum commodi expedita placeat aliquam! Eveniet ad odit hic laboriosam qui?</p>
+        </div>
+
+        <div class="div6 shadow">
+            <p>Expertise</p>
+            <h2>IoT Penetration Testing</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae sit maiores! Ipsa atque cum reprehenderit ad veniam distinctio, voluptatum commodi expedita placeat aliquam! Eveniet ad odit hic laboriosam qui?</p>
+        </div>
+
+        <div class="div7 shadow">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repudiandae sit maiores! Ipsa atque cum reprehenderit ad veniam distinctio, voluptatum commodi expedita placeat aliquam! Eveniet ad odit hic laboriosam qui?</p>
+        </div>
+
+        <div class="div8 shadow">
+            <p>Supply Chain Management</p>
+            <h2>DFM Capabilities</h2>
+        </div>
+
+        <div class="div9 shadow">
+            <p>Contact Information</p>
+            <h2>Find us</h2>
+        </div>
 
     </div>
 
-    <!-- Section 2 -->
-    <div class="content narrow-row" style="background:#111111;">
+    <!-- Footer -->
+    <div class="footer">
         <div>
-            <h2>Capabilities</h2><br>
-
-            <p><b>We can prototype your boards in house and deliver fast.</b> If you are struggling with EMC issues or
-                RF performance, we have to tools to analyze as soon as we receive your devices.</p><br>
-
-            <p><b>Our multidisciplinary team pushes tiny devices to their limits,</b> building great UX as well as
-                architecture. We can support low-level code and HDL for wireless, sensors, and graphics, as well as low
-                power Linux deployments for all major embedded architectures.</p><br>
-
-            <p><b>We've built powerful workflows for the most demanding applications,</b> and are making machine
-                learning on
-                embedded devices more capable and consume less power. We can integrate with your existing MATLAB,
-                Simulink, or TensorFlow workflows to deliver models fast.</p><br>
-
-            <p><a href="mailto:info@siliconwitchery.com" class="btn">Get in touch</a></p>
-        </div>
-    </div>
-
-    <!-- Section 3 -->
-    <div class="content narrow-row light-text" style="background-color:#EEEEEE;">
-        <div>
-            <h2>Confidence</h2>
-            <p>We hold strong values in professionalism and reliable high-quality solutions. All projects are subject to
-                NDA and you can rest assured sensitive information will be kept confidential. <b>ISO 9001 compliance is
-                in our company roadmap, and on track for 2021.</b></p>
-        </div>
-    </div>
-
-    <!-- Footer Area -->
-    <div class="content footer" style="background-color:black;">
-        <div>
-            <p>Nybrogaten 8</p>
-            <p>114 34 Stockholm</p>
+            <p>2021 © <b>Silicon Witchery AB</b>.</p>
         </div>
         <div>
-            <p style="text-align: right;">info@siliconwitchery.com</p>
             <ul>
                 <li><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></li>
-                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">YouTube.</a></li>
+                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">YouTube.</a>
+                </li>
                 <li><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></li>
                 <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
                         Policy.</a></li>

@@ -102,11 +102,15 @@ nav .menu-btn {
     line-height: 1;
 }
 
-.light-text h1,
-.light-text h2,
-.light-text p,
-.light-text p a,
-.light-text b {
+.light {
+    background-color: #EEEEEE;
+}
+
+.light h1,
+.light h2,
+.light p,
+.light p a,
+.light b {
     color: #09080f;
 }
 
@@ -127,12 +131,12 @@ nav .menu-btn {
     transition: 0.2s;
 }
 
-.light-text .btn {
+.light .btn {
     color: #09080f !important;
     border: solid 2px #09080f;
 }
 
-.light-text .btn:hover {
+.light .btn:hover {
     color: white !important;
     background-color: #09080f;
     border: solid 2px #09080f;
@@ -140,10 +144,11 @@ nav .menu-btn {
 
 .video {
     /* Video aspect ratio is anamorphic */
-    margin-bottom: 8rem;
+    /* margin-bottom: 8rem; */
     align-self: center;
+    text-align: center;
     position: relative;
-    width: 65vw;
+    width: 50vw;
     padding-bottom: 36.56%;
     /* 2.39:1 */
 }

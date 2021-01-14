@@ -37,64 +37,87 @@
 </head>
 
 <style>
-
     .grid {
         grid-template-areas:
-            "heading s1-img"
-            "article-1 article-2"
-            "services services"
-            "docs docs";
+            "heading heading"
+            "video video"
+            "ble ble-img"
+            "fpga fpga-img"
+            "power power"
+            "power-img power-img"
+            "dev-kit docs"
+            "order order";
     }
 
     @media (max-width: 950px) {
         .grid {
             grid-template-areas:
                 "heading"
-                "s1-img"
-                "article-1"
-                "article-2"
-                "services"
-                "docs";
+                "video"
+                "ble"
+                "ble-img"
+                "fpga"
+                "fpga-img"
+                "power"
+                "power-img"
+                "dev-kit"
+                "docs"
+                "order";
         }
     }
 
-    .div1 {
+    .div0 {
         grid-area: heading;
-        padding: 10rem 0;
+        padding: 10rem 0 0 0;
+    }
+
+    .div1 {
+        grid-area: video;
+        text-align: center;
+        padding-bottom: 5rem;
     }
 
     .div2 {
-        grid-area: s1-img;
+        grid-area: ble;
+    }
+
+    .div3 {
+        grid-area: ble-img;
         text-align: right;
     }
 
     .div4 {
-        grid-area: article-1;
+        grid-area: fpga;
+    }
+
+    .div5 {
+        grid-area: fpga-img;
+        text-align: right;
+    }
+
+    .div6 {
+        grid-area: power;
+    }
+
+    .div7 {
+        grid-area: power-img;
+    }
+
+    .div8 {
+        grid-area: dev-kit;
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
         background-size: cover;
         background-position: right center;
         padding: 3rem 3rem;
-
     }
 
-    .div5 {
-        grid-area: article-2;
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(images/raj-twitter-post.png);
-        background-size: cover;
+    .div9 {
+        grid-area: docs;
         padding: 3rem 3rem;
     }
 
-    .div6 {
-        grid-area: services;
-        background-color: #EEEEEE;
-        padding: 7rem 5rem;
-    }
-
-    .div7 {
-        grid-area: docs;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
-        background-size: cover;
-        padding: 7rem 5rem;
+    .div10 {
+        grid-area: order;
     }
 
 </style>
@@ -115,7 +138,7 @@
                 <li><a href="https://www.siliconwitchery.com/module">Module.</a></li>
                 <li><a href="https://www.siliconwitchery.com/services">Services.</a></li>
                 <li><a href="https://docs.siliconwitchery.com/">Docs.</a></li>
-                <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs">Jobs.</a></li>
+                <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs" target="_blank">Jobs.</a></li>
             </ul>
         </div>
     </nav>
@@ -123,41 +146,59 @@
     <!-- Content -->
     <div class="grid">
 
-        <div class="div1">
+        <div class="div0">
             <h1>The new S1 module.</h1>
-            <p><b>▸ Bluetooth<br>▸ FPGA<br>▸ Power Management</b></p>
-            <a href="https://www.siliconwitchery.com/services" class="btn">Learn More</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, at dolorem? Ducimus repellendus aliquid
+                itaque rerum, pariatur doloremque saepe facilis ab. Aliquam ea perferendis quo alias, ex impedit.
+                Accusantium, nobis.</p>
+        </div>
+
+        <div class="div1">
+            <iframe
+                src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1"
+                allowfullscreen></iframe>
         </div>
 
         <div class="div2">
-            <!-- <img style="width: 70%;" src="images/s1-module.jpg" alt=""> -->
+            <p><b>Featured </b>Product</p>
+            <h2>Bluetooth</h2>
+            <p>Quickly get up and running with<br>our S1 breakout board.</p>
         </div>
 
-        <div class="div4 shadow">
+        <div class="div3">
+            <img style="width: 70%;" src="images/s1-module.jpg" alt="">
+        </div>
+
+        <div class="div4">
             <p><b>Featured </b>Product</p>
+            <h2>FPGA</h2>
+            <p>Quickly get up and running with<br>our S1 breakout board.</p>
+        </div>
+
+        <div class="div5">
+            <img style="width: 70%;" src="images/s1-module.jpg" alt="">
+        </div>
+
+        <div class="div6">
+            <p><b>Featured </b>Product</p>
+            <h2>Power Management</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit aperiam molestiae iste reprehenderit
+                reiciendis est voluptas nulla voluptates repellendus. Ipsam aliquam, natus placeat vel nobis excepturi
+                impedit quisquam ducimus est.</p>
+        </div>
+
+        <div class="div7">
+            <img style="width: 100%;" src="images/s1-module.jpg" alt="">
+
+        </div>
+
+        <div class="div8 shadow">
             <h2>Development Kit</h2>
             <p>Quickly get up and running with<br>our S1 breakout board.</p>
             <a href="https://www.siliconwitchery.com/services" class="btn">Learn More</a>
         </div>
 
-        <div class="div5 shadow">
-            <p><b>Featured </b>News</p>
-            <h2>S1 in the news</h2>
-            <p>Quickly get up and running with<br>our S1 breakout board.</p>
-            <a href="https://www.siliconwitchery.com/services" class="btn">Read More</a>
-        </div>
-
-        <div class="div6 light-text shadow">
-            <h2>Here to help</h2>
-            <p><b>Your key partner for Wearable and IoT projects.</b> We can provide specialized assistance at any stage
-                in your design, including advanced capabilities in RF hardware and signal processing. Get in touch
-                today, and let's transform your next wearable or IoT product into something groundbreaking.</p>
-            <p>
-                <a href="https://www.siliconwitchery.com/services" class="btn">Capabilities</a>
-            </p>
-        </div>
-
-        <div class="div7 shadow">
+        <div class="div9 shadow light">
             <h2>Documentation Center</h2>
             <p><b>Your key partner for Wearable and IoT projects.</b> We can provide specialized assistance at any stage
                 in your design, including advanced capabilities in RF hardware and signal processing. Get in touch
@@ -165,6 +206,14 @@
             <p>
                 <a href="https://www.siliconwitchery.com/services" class="btn">Capabilities</a>
             </p>
+        </div>
+
+        <div class="div10">
+            <h1>Order</h1>
+            <p>A tiny wireless module that packs a punch. A perfect solution for deploying advanced algorithms on
+                wearables and small form factor IoT devices.</p>
+            <a href="https://www.siliconwitchery.com/services" class="btn">Learn More</a>
+            <a href="https://www.siliconwitchery.com/services" class="btn">Learn More</a>
         </div>
 
     </div>

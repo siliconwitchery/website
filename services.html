@@ -39,8 +39,9 @@
 <style>
     .grid {
         grid-template-areas:
-            "heading heading"
-            "hardware software"
+            "probe-img heading"
+            "hardware xray"
+            "software software"
             "advanced advanced"
             "rf pen-testing"
             "about about"
@@ -51,7 +52,9 @@
         .grid {
             grid-template-areas:
                 "heading"
+                "probe-img"
                 "hardware"
+                "xray"
                 "software"
                 "advanced"
                 "rf"
@@ -62,71 +65,84 @@
         }
     }
 
+    .div0 {
+        grid-area: probe-img;
+        background: url(images/probe.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+        padding: 10rem 0rem;
+    }
+
     .div1 {
         grid-area: heading;
-        padding: 10rem 0;
+        height: 100%;
+        padding: 10rem 0 0 0;
     }
 
     .div2 {
         grid-area: hardware;
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(images/hardware-bg.jpg);
-        background-size: cover;
-        background-position: right center;
-        padding: 3rem 3rem;
+        padding: 3rem 0;
         height: 100%;
     }
 
     .div3 {
-        grid-area: software;
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.0)), url(images/server-bg.jpg);
+        grid-area: xray;
+        background: url(images/s1-xray.jpg);
         background-size: cover;
-        background-position: right center;
-        padding: 3rem 3rem;
+        background-position: center center;
         height: 100%;
+        padding: 10rem 0rem;
     }
 
     .div4 {
-        grid-area: advanced;
-        padding: 7rem 5rem;
-    }
-
-    .div5 {
-        grid-area: rf;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
-        background-size: cover;
-        background-position: right center;
-        padding: 3rem 3rem;
+        grid-area: software;
+        padding: 3rem 0;
         height: 100%;
     }
 
+    .div5 {
+        grid-area: advanced;
+        padding: 7rem 5rem;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8)), url(images/simulink.png) no-repeat;
+        background-color: #EEEEEE;
+        background-size: contain;
+        background-position: center right;
+    }
+
     .div6 {
-        grid-area: pen-testing;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(images/devkit-bg.jpg);
-        background-size: cover;
-        background-position: right center;
-        padding: 3rem 3rem;
+        grid-area: rf;
+        padding: 3rem 0;
         height: 100%;
     }
 
     .div7 {
-        grid-area: about;
-        padding: 20rem 50% 20rem 5rem;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(images/raj-bg.jpg);
-        background-size: cover;
-        background-position: right center;
-    }
-
-    .div8 {
-        padding: 3rem 3rem;
+        grid-area: pen-testing;
+        padding: 3rem 0;
         height: 100%;
     }
 
     .div9 {
+        grid-area: about;
+        padding: 7rem 5rem;
+    }
+
+    .div9 iframe {
+        /* Anamorphic ratio */
+        margin-top: 5rem;
+        height: calc(50vw / 2.36);
+    }
+
+    .div10 {
+        grid-area: find-us;
+        height: 100%;
+    }
+
+    .div11 {
         grid-area: map;
         background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(images/map.png);
         background-size: cover;
         background-position: right center;
-        padding: 3rem 3rem;
         height: 100%;
     }
 </style>
@@ -155,13 +171,17 @@
     <!-- Content -->
     <div class="grid">
 
+        <div class="div0">
+            <!-- Probe image -->
+        </div>
+
         <div class="div1">
             <h1>Embedded Engineering Services.</h1>
             <p><b>A powerful R&D team here to help you build for every uncertainty.</b> From design through to
                 production, and compliance.</p>
         </div>
 
-        <div class="div2 shadow">
+        <div class="div2">
             <p>Capabilities</p>
             <h2>Hardware Layout</h2>
             <p>Experienced in <b>HDI</b>, <b>RF</b> and <b>high speed</b> layout. Our team is able to design production
@@ -172,6 +192,10 @@
         </div>
 
         <div class="div3 shadow">
+            <!-- X-Ray image -->
+        </div>
+
+        <div class="div4">
             <p>Capabilities</p>
             <h2>Embedded Software</h2>
             <p>We ensure that <b>firmware design starts from day one</b> of the hardware design, to ensure all
@@ -182,7 +206,7 @@
                     RTOS</b>.</p>
         </div>
 
-        <div class="div4 light shadow">
+        <div class="div5 light shadow">
             <p>Control Systems & DSP</p>
             <h2>Advanced Workflows</h2>
             <p>To really push hardware to the limit, we've adopted state of the art signal processing workflows. Using
@@ -195,7 +219,7 @@
                 Model Based Design?</a>
         </div>
 
-        <div class="div5 shadow">
+        <div class="div6">
             <p>Expertise</p>
             <h2>RF Design</h2>
             <p>We employ advanced RF tools to ensure top wireless performance. We're able to able to test and measure
@@ -205,7 +229,7 @@
                 your product will reach global markets.</p>
         </div>
 
-        <div class="div6 shadow">
+        <div class="div7">
             <p>Expertise</p>
             <h2>IoT Penetration Testing</h2>
             <p>Remote devices can become a dangerous entry point into your secure infrastructure. We check a magnitude
@@ -214,18 +238,30 @@
                 you send over that I2C line, and what would happen if someone were to exploit it? We can check.</p>
         </div>
 
-        <div class="div7 shadow">
+        <div class="div8">
+
+        </div>
+
+        <div class="div9 shadow light">
             <h2>About Us</h2>
             <p>Silicon Witchery was founded in 2019 by Raj Nakarja, an ex-wireless systems engineer of Silicon Labs Inc.
                 After years of experience developing devices for Wearables and IoT, he found many customers were
-                struggling to integrate the advanced features of many of today's modern silicon devices into their products. With a unique
+                struggling to integrate the advanced features of many of today's modern silicon devices into their
+                products. With a unique
                 background of both chip and product, he has formed a team of expert designers to help companies big and
                 small bring their products to market.</p>
             <p>Today, Silicon Witchery works with customers large and small across the globe, as well as develops it's
                 own module based products for accelerating wearable and IoT products to market.</p>
+
+            <div style="text-align: center;">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
 
-        <div class="div8">
+        <div class="div10">
             <p>Come find us</p>
             <h2>Contact Information</h2>
             <p>Based in central Stockholm. The capital of Sweden.</p>
@@ -233,7 +269,8 @@
             <a href="mailto:info@siliconwitchery.com" class="btn">Email Us</a>
         </div>
 
-        <div class="div9 shadow">
+        <div class="div11 shadow">
+            <!-- Map -->
         </div>
 
     </div>

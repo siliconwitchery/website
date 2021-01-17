@@ -38,8 +38,7 @@
 
 <style>
     .grid {
-        grid-template-rows: 7rem 1fr 1fr 1fr 4rem;
-
+        grid-template-rows: 7rem 1fr 1fr 1fr 14rem;
         grid-template-areas:
             "nav nav nav"
             "heading heading heading"
@@ -51,7 +50,6 @@
     @media (max-width: 960px) {
         .grid {
             grid-template-rows: 7rem 1fr 1fr 1fr 1fr 1fr 4rem;
-
             grid-template-areas:
                 "nav"
                 "heading"
@@ -64,67 +62,43 @@
     }
 
     .nav {
-        background-color: #b4becb;
+        background-color: var(--color-bg-grey);
     }
 
     .div1 {
         grid-area: heading;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         /* background: url(images/s1-module.png) no-repeat; */
         background-size: contain;
         background-position: center right;
-        background-color: #b4becb;
+        background-color: var(--color-bg-grey);
+    }
+
+    .div2 {
+        grid-area: s1;
+        background-color: var(--color-bg-red);
     }
 
     .div3 {
-        grid-area: s1;
-        background-color: #D5B795;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        grid-area: dev-kit;
+        background-color: var(--color-bg-green);
     }
 
     .div4 {
-        grid-area: dev-kit;
-        padding: 3rem 3rem;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: #A7CEEF;
-        justify-content: space-between;
-    }
-
-    .div6 {
         grid-area: docs;
-        padding: 3rem 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: #ACB5AC;
+        background-color: var(--color-bg-blue);
     }
 
-    .div8 {
+    .div5 {
         grid-area: services;
+        padding-bottom: 0 !important;
         /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/soldering.jpg); */
         /* background-size: cover; */
         /* background-position: center top; */
-        /* padding: 7rem 5rem; */
-        background-color: #f2f7f7;
-    }
-
-    .footer {
-        background-color: #f2f7f7;
     }
 </style>
 
 <body>
-
     <div class="grid">
-
         <div class="nav">
             <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
             <input class="menu-btn" type="checkbox" />
@@ -157,7 +131,7 @@
             <p>An expert engineering lab for making cool stuff.</p>
         </div>
 
-        <div class="div3">
+        <div class="div2">
             <h2>S1 system on module device</h2>
             <hr>
             <p>An expert engineering lab for making cool stuff.</p>
@@ -165,7 +139,7 @@
             <p><a href="https://www.siliconwitchery.com/module">Learn More</a></p>
         </div>
 
-        <div class="div4">
+        <div class="div3">
             <h2>Quickly get started</h2>
             <hr>
             <p>An expert engineering lab for making cool stuff.</p>
@@ -173,33 +147,28 @@
             <p><a href="https://www.siliconwitchery.com/module">Learn More</a></p>
         </div>
 
-        <div class="div6">
+        <div class="div4">
             <h2>Documentation Center</h2>
             <hr>
-            <p>An expert engineering lab for making cool stuff.</p>
-            <img src="images/simulink.png" width="100%">
-            <p><a href="https://www.siliconwitchery.com/module">Learn More</a></p>
-        </div>
-
-        <!-- <div class="div7">
-            <h2>Documentation Center</h2>
             <p>Get detailed specifications and design guidelines around all of our products. You'll also find links to
                 <b>examples</b> and useful <b>video tutorials</b> within our documentation center.</p>
-            <a href="https://docs.siliconwitchery.com/" target="_blank" class="btn">Go to Docs Center</a>
-        </div> -->
+            <img src="images/simulink.png" width="100%">
+            <p><a href="https://docs.siliconwitchery.com/" target="_blank">Go to Docs Center</a></p>
+        </div>
 
-        <div class="div8 light">
+        <div class="div5 light">
             <p>Here to help</p>
             <h2>Engineering Services</h2>
             <p>We can provide specialized assistance at any stage in your design. From schematic and layout, all the way
                 to RF and signal processing. Get in touch today, and let's transform your next product into something
                 groundbreaking.</p>
-            <a href="https://www.siliconwitchery.com/services" class="btn">Capabilities</a>
+            <p><a href="https://docs.siliconwitchery.com/" target="_blank">Go to Docs Center</a></p>
+            <hr>
         </div>
 
         <div class="footer">
             <div>
-                <p>2021 © <b>Silicon Witchery AB</b>.</p>
+                <p>2021 © Silicon Witchery AB</p>
             </div>
             <div>
                 <ul>
@@ -221,7 +190,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>

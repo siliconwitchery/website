@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+:root {
+    --color-bg-grey: #B4BECB;
+    --color-bg-gold: #D5B795;
+    --color-bg-blue: #A7CEEF;
+    --color-bg-green: #ACB5AC;
+    --color-bg-red: #C9A3A4;
+    --color-bg-light: #F2F7F7;
+    --color-type-dark: #0B2436;
+    --color-type-grey: #858585;
+    --color-type-light: white;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +23,7 @@
     font-weight: 400;
     list-style: none;
     text-decoration: none;
-    color: white;
+    color: var(--color-type-light);
 }
 
 .grid {
@@ -29,13 +41,13 @@
 }
 
 .grid img {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
     width: 100%;
 }
 
 hr {
-    border-top: 2px solid white;
-    padding-bottom: 1rem;
+    border-top: 2px solid var(--color-type-light);
+    margin-top: 1rem;
 }
 
 h1,
@@ -43,27 +55,30 @@ h2 {
     font-size: 3rem;
     font-weight: 700;
     text-transform: capitalize;
-    margin-bottom: 1rem;
+    letter-spacing:0.08rem;
 }
 
 h2 {
     font-size: 2.5rem;
 }
 
+b {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing:0.1rem;
+}
+
 p {
     font-size: 1.2rem;
     line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-b {
-    font-weight: 700;
+    margin-top: 1rem;
 }
 
 p a {
     position: relative;
     text-transform: capitalize;
     font-weight: 700;
+    letter-spacing:0.08rem;
 }
 
 p a:after {
@@ -73,7 +88,7 @@ p a:after {
     height: 2px;
     display: block;
     left: 0;
-    background: white;
+    background: var(--color-type-light);
     transition: width .2s ease-in-out;
     -webkit-transition: width .2s ease-in-out;
 }
@@ -82,11 +97,21 @@ p a:hover:after {
     width: 2rem;
 }
 
-.nav {
+.nav,
+.footer {
     grid-area: nav;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: var(--color-bg-white);
+}
+
+.footer p {
+    padding-bottom: 1rem;
 }
 
 .nav img {
@@ -106,32 +131,24 @@ p a:hover:after {
     visibility: hidden;
 }
 
-.footer {
-    grid-area: footer;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    padding: 5rem 0 4rem 0;
-}
-
-.footer p,
-.footer ul {
-    line-height: 1;
-}
-
-.light {
-    background-color: #EEEEEE;
-}
-
 .light h1,
 .light h2,
 .light p,
 .light p a,
-.light b {
-    color: #0b2436;
+.light b,
+.footer p,
+.footer b,
+.footer a {
+    color: var(--color-type-dark);
 }
 
-.light p b {
-    font-weight: 700;
+.light p a:after,
+.footer p a:after {
+    background: var(--color-type-dark);
+}
+
+.light hr {
+    border-top: 2px solid var(--color-type-dark);
 }
 
 iframe {

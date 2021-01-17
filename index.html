@@ -48,15 +48,18 @@
             "footer footer footer";
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 960px) {
         .grid {
+            grid-template-rows: 7rem 1fr 1fr 1fr 1fr 1fr 4rem;
+
             grid-template-areas:
                 "nav"
                 "heading"
                 "s1"
                 "dev-kit"
                 "docs"
-                "services";
+                "services"
+                "footer";
         }
     }
 
@@ -83,7 +86,6 @@
         flex-direction: column;
         justify-content: space-between;
     }
-
 
     .div4 {
         grid-area: dev-kit;
@@ -116,16 +118,11 @@
 
     .footer {
         background-color: #f2f7f7;
-
     }
 </style>
 
 <body>
 
-    <!-- Logo & Navigation Bar -->
-
-
-    <!-- Content -->
     <div class="grid">
 
         <div class="nav">
@@ -138,10 +135,18 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="https://www.siliconwitchery.com/module">Module.</a></li>
-                    <li><a href="https://www.siliconwitchery.com/services">Services.</a></li>
-                    <li><a href="https://docs.siliconwitchery.com/">Docs.</a></li>
-                    <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs" target="_blank">Jobs.</a></li>
+                    <li>
+                        <p><a href="https://www.siliconwitchery.com/module">Module.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.siliconwitchery.com/services">Services.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://docs.siliconwitchery.com/">Docs.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs" target="_blank">Jobs.</a></p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -157,7 +162,7 @@
             <hr>
             <p>An expert engineering lab for making cool stuff.</p>
             <img src="images/simulink.png" width="100%">
-            <a href="https://www.siliconwitchery.com/module">Learn More</a>
+            <p><a href="https://www.siliconwitchery.com/module">Learn More</a></p>
         </div>
 
         <div class="div4">
@@ -165,7 +170,7 @@
             <hr>
             <p>An expert engineering lab for making cool stuff.</p>
             <img src="images/simulink.png" width="100%">
-            <a href="https://www.siliconwitchery.com/module">Learn More</a>
+            <p><a href="https://www.siliconwitchery.com/module">Learn More</a></p>
         </div>
 
         <div class="div6">
@@ -173,7 +178,7 @@
             <hr>
             <p>An expert engineering lab for making cool stuff.</p>
             <img src="images/simulink.png" width="100%">
-            <a href="https://www.siliconwitchery.com/module">Learn More</a>
+            <p><a href="https://www.siliconwitchery.com/module">Learn More</a></p>
         </div>
 
         <!-- <div class="div7">
@@ -198,18 +203,24 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></li>
-                    <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">YouTube.</a></li>
-                    <li><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></li>
-                    <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
-                            Policy.</a></li>
+                    <li>
+                        <p><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw"
+                                target="_blank">YouTube.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
+                                Policy.</a></p>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <!-- Footer -->
-
 
 </body>
 

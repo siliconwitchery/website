@@ -28,6 +28,11 @@
     padding: 4rem 4rem;
 }
 
+.grid img {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
 hr {
     border-top: 2px solid white;
     padding-bottom: 1rem;
@@ -55,12 +60,13 @@ b {
     font-weight: 700;
 }
 
-a {
+p a {
     position: relative;
-
+    text-transform: capitalize;
+    font-weight: 700;
 }
 
-a:after {
+p a:after {
     content: '';
     position: absolute;
     width: 0;
@@ -72,7 +78,7 @@ a:after {
     -webkit-transition: width .2s ease-in-out;
 }
 
-a:hover:after {
+p a:hover:after {
     width: 2rem;
 }
 
@@ -80,25 +86,13 @@ a:hover:after {
     grid-area: nav;
     flex-direction: row !important;
     justify-content: space-between !important;
-    align-items: center;
+    align-items: center !important;
 }
 
 .nav img {
     /* Logo size */
     height: 4rem;
-}
-
-.nav a,
-.footer a {
-    font-weight: 700;
-    font-size: 1.2rem;
-    text-transform: capitalize;
-}
-
-.nav a:hover,
-.footer a:hover {
-    color: white !important;
-    transition: 0.2s;
+    width: auto;
 }
 
 .nav li,
@@ -140,35 +134,6 @@ a:hover:after {
     font-weight: 700;
 }
 
-.btn {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.19rem;
-    color: white !important;
-    border: solid 2px white;
-    padding: 1rem;
-    margin-top: 1rem;
-    float: right;
-}
-
-.btn:hover {
-    color: black !important;
-    background-color: white;
-    border: solid 2px white;
-    transition: 0.2s;
-}
-
-.light .btn {
-    color: #09080f !important;
-    border: solid 2px #09080f;
-}
-
-.light .btn:hover {
-    color: white !important;
-    background-color: #09080f;
-    border: solid 2px #09080f;
-}
-
 iframe {
     /* 16:9 aspect ratio */
     width: 50vw;
@@ -176,22 +141,14 @@ iframe {
 }
 
 /* Settings for mobile view */
-@media (max-width: 1200px) {
-
-    body {
-        padding: 0 5vw;
-    }
+@media (max-width: 960px) {
 
     .grid {
         grid-template-columns: 1fr;
-        /* grid-gap: 5vw; */
-        grid-row-gap: 3rem;
-        grid-column-gap: 5rem;
     }
 
     .grid>div {
-        padding-left: 2rem !important;
-        padding-right: 2rem !important;
+        padding: 2rem 2rem;
     }
 
     h1,
@@ -207,8 +164,8 @@ iframe {
 
     .footer {
         /* Footer becomes center justified */
-        flex-direction: column-reverse;
-        justify-content: center;
+        flex-direction: column-reverse !important;
+        justify-content: center !important;
         align-items: center;
         text-align: center;
     }
@@ -219,13 +176,13 @@ iframe {
         padding: 0rem 0 2rem 0;
     }
 
-    nav li {
+    .nav li {
         float: none;
         padding: 1rem;
         text-align: center;
     }
 
-    nav .hamburger {
+    .nav .hamburger {
         position: absolute;
         top: 3.55rem;
         right: 5vw;
@@ -242,13 +199,13 @@ iframe {
         z-index: 2;
     }
 
-    nav .hamburger .bar {
+    .nav .hamburger .bar {
         background: white;
         height: 4px;
         width: 2rem;
     }
 
-    nav .menu-btn {
+    .nav .menu-btn {
         position: absolute;
         top: 3.55rem;
         right: 5vw;
@@ -262,7 +219,7 @@ iframe {
         cursor: pointer;
     }
 
-    nav .menu {
+    .nav .menu {
         position: fixed;
         top: 0;
         left: 0;
@@ -283,7 +240,7 @@ iframe {
         visibility: hidden;
     }
 
-    nav .menu-btn:checked~.menu {
+    .nav .menu-btn:checked~.menu {
         visibility: visible;
         opacity: 1;
     }

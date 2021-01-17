@@ -11,26 +11,26 @@
     font-weight: 400;
     list-style: none;
     text-decoration: none;
-    color: #eee;
-}
-
-body {
-    background-color: #0f0e15;
-    padding: 0 7vw;
+    color: white;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-row-gap: 10rem;
-    grid-column-gap: 3rem;
-    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.shadow {
-    border-radius: 1rem;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+.grid>div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: contain;
+    padding: 4rem 4rem;
+}
+
+hr {
+    border-top: 2px solid white;
+    padding-bottom: 1rem;
 }
 
 h1,
@@ -41,60 +41,81 @@ h2 {
     margin-bottom: 1rem;
 }
 
+h2 {
+    font-size: 2.5rem;
+}
+
 p {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #aaa;
     margin-bottom: 1rem;
 }
 
 b {
-    color: #eee;
+    font-weight: 700;
 }
 
-nav {
-    display: flex;
+a {
+    position: relative;
+
+}
+
+a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    left: 0;
+    background: white;
+    transition: width .2s ease-in-out;
+    -webkit-transition: width .2s ease-in-out;
+}
+
+a:hover:after {
+    width: 2rem;
+}
+
+.nav {
+    grid-area: nav;
+    flex-direction: row !important;
+    justify-content: space-between !important;
     align-items: center;
-    justify-content: space-between;
-    padding: 3rem 0;
 }
 
-nav img {
+.nav img {
     /* Logo size */
     height: 4rem;
 }
 
-nav a,
+.nav a,
 .footer a {
     font-weight: 700;
     font-size: 1.2rem;
     text-transform: capitalize;
-    color: rgb(215, 220, 220);
 }
 
-nav a:hover,
+.nav a:hover,
 .footer a:hover {
     color: white !important;
     transition: 0.2s;
 }
 
-nav li,
+.nav li,
 .footer li {
     float: left;
     padding-left: 1.2rem;
 }
 
-nav .menu-btn {
+.nav .menu-btn {
     /* Hide hamburger checkbox in desktop mode */
     visibility: hidden;
 }
 
 .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    min-height: auto;
+    grid-area: footer;
+    flex-direction: row !important;
+    justify-content: space-between !important;
     padding: 5rem 0 4rem 0;
 }
 
@@ -112,7 +133,7 @@ nav .menu-btn {
 .light p,
 .light p a,
 .light b {
-    color: #09080f;
+    color: #0b2436;
 }
 
 .light p b {
@@ -168,7 +189,7 @@ iframe {
         grid-column-gap: 5rem;
     }
 
-    .grid > div {
+    .grid>div {
         padding-left: 2rem !important;
         padding-right: 2rem !important;
     }

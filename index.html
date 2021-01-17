@@ -38,190 +38,152 @@
 
 <style>
     .grid {
+        grid-template-rows: 7rem 1fr 1fr 1fr 4rem;
+
         grid-template-areas:
-            "heading s1-img"
-            "news-1 news-2"
-            "dev-kit-img dev-kit"
-            "docs docs"
-            "services services";
+            "nav nav nav"
+            "heading heading heading"
+            "s1 dev-kit docs"
+            "services services services"
+            "footer footer footer";
     }
 
     @media (max-width: 1200px) {
         .grid {
             grid-template-areas:
+                "nav"
                 "heading"
-                "s1-img"
-                "news-1"
-                "news-2"
+                "s1"
                 "dev-kit"
-                "dev-kit-img"
                 "docs"
                 "services";
         }
     }
 
-    .div1 {
-        grid-area: heading;
-        height: 100%;
-        padding: 10rem 0 0 0;
+    .nav {
+        background-color: #b4becb;
     }
 
-    .div2 {
-        grid-area: s1-img;
-        background: url(images/s1-module.png) no-repeat;
+    .div1 {
+        grid-area: heading;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* background: url(images/s1-module.png) no-repeat; */
         background-size: contain;
-        background-position: center center;
-        height: 100%;
-        padding: 10rem 0rem;
+        background-position: center right;
+        background-color: #b4becb;
     }
 
     .div3 {
-        grid-area: news-1;
-        padding: 3rem 3rem;
+        grid-area: s1;
+        background-color: #D5B795;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    .div33 {
-        background:  url(images/hackster-io-article.png);
-        background-size: cover;
-        background-position: top center;
-        padding: 7rem 0;
-        margin: 1rem 0;
-        height: 100%;
-    }
 
     .div4 {
-        grid-area: news-2;
+        grid-area: dev-kit;
         padding: 3rem 3rem;
         height: 100%;
         display: flex;
         flex-direction: column;
+        background-color: #A7CEEF;
         justify-content: space-between;
-    }
-
-    .div44 {
-        background:  url(images/reddit-post.png);
-        background-size: cover;
-        background-position: top center;
-        padding: 7rem 0;
-        margin: 1rem 0;
-        height: 100%;
-    }
-
-    .div5 {
-        grid-area: dev-kit-img;
-        background: url(images/devkit-wired.jpg);
-        background-size: cover;
-        background-position: center center;
-        padding: 10rem 0;
-        height: 100%;
     }
 
     .div6 {
-        grid-area: dev-kit;
+        grid-area: docs;
         padding: 3rem 0;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-
-    .div7 {
-        grid-area: docs;
-        padding: 3rem 0rem;
+        background-color: #ACB5AC;
     }
 
     .div8 {
         grid-area: services;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/soldering.jpg);
-        background-size: cover;
-        background-position: center top;
-        padding: 7rem 5rem;
+        /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/soldering.jpg); */
+        /* background-size: cover; */
+        /* background-position: center top; */
+        /* padding: 7rem 5rem; */
+        background-color: #f2f7f7;
+    }
+
+    .footer {
+        background-color: #f2f7f7;
+
     }
 </style>
 
 <body>
 
     <!-- Logo & Navigation Bar -->
-    <nav>
-        <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
-        <input class="menu-btn" type="checkbox" />
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="https://www.siliconwitchery.com/module">Module.</a></li>
-                <li><a href="https://www.siliconwitchery.com/services">Services.</a></li>
-                <li><a href="https://docs.siliconwitchery.com/">Docs.</a></li>
-                <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs" target="_blank">Jobs.</a></li>
-            </ul>
-        </div>
-    </nav>
+
 
     <!-- Content -->
     <div class="grid">
 
+        <div class="nav">
+            <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
+            <input class="menu-btn" type="checkbox" />
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="https://www.siliconwitchery.com/module">Module.</a></li>
+                    <li><a href="https://www.siliconwitchery.com/services">Services.</a></li>
+                    <li><a href="https://docs.siliconwitchery.com/">Docs.</a></li>
+                    <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs" target="_blank">Jobs.</a></li>
+                </ul>
+            </div>
+        </div>
+
         <div class="div1">
-            <h1>The new S1 module.</h1>
-            <p>A tiny wireless module that packs a punch. A perfect solution for deploying advanced algorithms on
-                wearables and small form factor IoT devices.</p>
-            <p><b>▸ Bluetooth 5.2<br>▸ FPGA<br>▸ Battery Management</b></p>
-            <a href="https://www.siliconwitchery.com/module" class="btn">Learn More</a>
+            <h1>Wireless, Sensing<br>& Signal processing</h1>
+            <hr>
+            <p>An expert engineering lab for making cool stuff.</p>
         </div>
 
-        <div class="div2">
+        <div class="div3">
+            <h2>S1 system on module device</h2>
+            <hr>
+            <p>An expert engineering lab for making cool stuff.</p>
+            <img src="images/simulink.png" width="100%">
+            <a href="https://www.siliconwitchery.com/module">Learn More</a>
         </div>
 
-        <div class="div3 shadow light">
-            <div>
-                <p>News | <b>S1 on Hackster</b></p>
-                <p>Read the electronics community's reactions and thoughts on the S1 module, as well as it's potential
-                    applications.</p>
-            </div>
-
-            <a href="https://www.hackster.io/news/siliconwitchery-s-raj-nakarja-pushes-the-envelope-on-hand-assembly-with-an-ultra-tiny-bluetooth-fpga-61753f283384" class="div33 shadow" target="_blank"></a>
-
-        </div>
-
-        <div class="div4 shadow light">
-            <div>
-                <p>News | <b>S1 on Reddit</b></p>
-                <p>Read the electronics community's reactions and thoughts on the S1 module, as well as it's potential
-                    applications.</p>
-            </div>
-
-            <a href="https://www.reddit.com/r/electronics/comments/it9ekh/hand_assembled_some_tiny_bluetooth_fpga_modules/" class="div44 shadow" target="_blank"></a>
-        </div>
-
-        <div class="div5">
+        <div class="div4">
+            <h2>Quickly get started</h2>
+            <hr>
+            <p>An expert engineering lab for making cool stuff.</p>
+            <img src="images/simulink.png" width="100%">
+            <a href="https://www.siliconwitchery.com/module">Learn More</a>
         </div>
 
         <div class="div6">
-            <div>
-                <p><b>Featured </b>Product</p>
-                <h2>Development Kit</h2>
-                <p>Quickly get up and running with the S1 breakout board. Access to all IO, as well as USB power/data,
-                    battery header and I2C port supporting StemmaQT and Qwiic sensor modules.</p>
-            </div>
-            <div>
-                <a href="#" class="btn">Coming Soon</a>
-            </div>
+            <h2>Documentation Center</h2>
+            <hr>
+            <p>An expert engineering lab for making cool stuff.</p>
+            <img src="images/simulink.png" width="100%">
+            <a href="https://www.siliconwitchery.com/module">Learn More</a>
         </div>
 
-        <div class="div7">
+        <!-- <div class="div7">
             <h2>Documentation Center</h2>
             <p>Get detailed specifications and design guidelines around all of our products. You'll also find links to
                 <b>examples</b> and useful <b>video tutorials</b> within our documentation center.</p>
             <a href="https://docs.siliconwitchery.com/" target="_blank" class="btn">Go to Docs Center</a>
-        </div>
+        </div> -->
 
-        <div class="div8 shadow">
+        <div class="div8 light">
             <p>Here to help</p>
             <h2>Engineering Services</h2>
             <p>We can provide specialized assistance at any stage in your design. From schematic and layout, all the way
@@ -230,23 +192,24 @@
             <a href="https://www.siliconwitchery.com/services" class="btn">Capabilities</a>
         </div>
 
+        <div class="footer">
+            <div>
+                <p>2021 © <b>Silicon Witchery AB</b>.</p>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">YouTube.</a></li>
+                    <li><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></li>
+                    <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
+                            Policy.</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
-    <div class="footer">
-        <div>
-            <p>2021 © <b>Silicon Witchery AB</b>.</p>
-        </div>
-        <div>
-            <ul>
-                <li><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></li>
-                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">YouTube.</a></li>
-                <li><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></li>
-                <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
-                        Policy.</a></li>
-            </ul>
-        </div>
-    </div>
+
 
 </body>
 

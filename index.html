@@ -68,8 +68,8 @@
 
     .div2 {
         grid-area: s1-img;
-        background: url(images/s1-module.jpg);
-        background-size: cover;
+        background: url(images/s1-module.png) no-repeat;
+        background-size: contain;
         background-position: center center;
         height: 100%;
         padding: 10rem 0rem;
@@ -84,6 +84,15 @@
         justify-content: space-between;
     }
 
+    .div33 {
+        background:  url(images/hackster-io-article.png);
+        background-size: cover;
+        background-position: top center;
+        padding: 7rem 0;
+        margin: 1rem 0;
+        height: 100%;
+    }
+
     .div4 {
         grid-area: news-2;
         padding: 3rem 3rem;
@@ -91,6 +100,15 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .div44 {
+        background:  url(images/reddit-post.png);
+        background-size: cover;
+        background-position: top center;
+        padding: 7rem 0;
+        margin: 1rem 0;
+        height: 100%;
     }
 
     .div5 {
@@ -118,7 +136,7 @@
 
     .div8 {
         grid-area: services;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/services-bg.jpg);
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/soldering.jpg);
         background-size: cover;
         background-position: center top;
         padding: 7rem 5rem;
@@ -166,10 +184,9 @@
                 <p>Read the electronics community's reactions and thoughts on the S1 module, as well as it's potential
                     applications.</p>
             </div>
-            <div>
-                <a href="https://www.hackster.io/news/siliconwitchery-s-raj-nakarja-pushes-the-envelope-on-hand-assembly-with-an-ultra-tiny-bluetooth-fpga-61753f283384"
-                    class="btn">Read on hackser.io</a>
-            </div>
+
+            <a href="https://www.hackster.io/news/siliconwitchery-s-raj-nakarja-pushes-the-envelope-on-hand-assembly-with-an-ultra-tiny-bluetooth-fpga-61753f283384" class="div33 shadow" target="_blank"></a>
+
         </div>
 
         <div class="div4 shadow light">
@@ -178,10 +195,8 @@
                 <p>Read the electronics community's reactions and thoughts on the S1 module, as well as it's potential
                     applications.</p>
             </div>
-            <div>
-                <a href="https://www.hackster.io/news/siliconwitchery-s-raj-nakarja-pushes-the-envelope-on-hand-assembly-with-an-ultra-tiny-bluetooth-fpga-61753f283384"
-                    class="btn">Read on reddit</a>
-            </div>
+
+            <a href="https://www.reddit.com/r/electronics/comments/it9ekh/hand_assembled_some_tiny_bluetooth_fpga_modules/" class="div44 shadow" target="_blank"></a>
         </div>
 
         <div class="div5">

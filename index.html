@@ -67,33 +67,38 @@
 
     .div1 {
         grid-area: heading;
-        /* background: url(images/s1-module.png) no-repeat; */
-        background-size: contain;
-        background-position: center right;
+        background: url(images/circuit.png) no-repeat;
+        background-size: auto 60% !important;
+        background-position: 90% 35%;
         background-color: var(--color-bg-grey);
+        padding-right: 60% !important;
+        justify-content: space-between !important;
     }
 
     .div2 {
         grid-area: s1;
         background-color: var(--color-bg-red);
+        justify-content: space-between !important;
     }
 
     .div3 {
         grid-area: dev-kit;
         background-color: var(--color-bg-green);
+        justify-content: space-between !important;
     }
 
     .div4 {
         grid-area: docs;
         background-color: var(--color-bg-blue);
+        justify-content: space-between !important;
     }
 
     .div5 {
         grid-area: services;
         padding-bottom: 0 !important;
-        /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/soldering.jpg); */
-        /* background-size: cover; */
-        /* background-position: center top; */
+        padding-right: 50% !important;
+        background: url(images/soldering.jpg);
+        background-size: auto 60% !important;
     }
 </style>
 
@@ -126,39 +131,44 @@
         </div>
 
         <div class="div1">
-            <h1>Wireless, Sensing<br>& Signal processing</h1>
-            <hr>
-            <p>An expert engineering lab for making cool stuff.</p>
+            <div></div>
+            <h1>Pushing the limits of embedded devices</h1>
+            <div>
+                <hr>
+                <p><b>Cutting edge wireless, sensing and signal processing</b></p>
+            </div>
+
         </div>
 
         <div class="div2">
-            <h2>S1 system on module device</h2>
-            <hr>
-            <p>An expert engineering lab for making cool stuff.</p>
-            <img src="images/simulink.png" width="100%">
-            <p><a href="https://www.siliconwitchery.com/module">Learn More</a></p>
+            <div>
+                <h2>Tiny module</h2>
+                <hr>
+            </div>
+            <img src="images/s1-module.png" alt="Silicon Witchery S1 System on Module">
+            <p><a href="https://www.siliconwitchery.com/module">Learn more</a></p>
         </div>
 
         <div class="div3">
-            <h2>Quickly get started</h2>
-            <hr>
-            <p>An expert engineering lab for making cool stuff.</p>
-            <img src="images/simulink.png" width="100%">
-            <p><a href="https://www.siliconwitchery.com/module">Learn More</a></p>
+            <div>
+                <h2>Development kit</h2>
+                <hr>
+            </div>
+            <img src="images/dev-kit.png" alt="Silicon Witchery S1 Development Kit">
+            <p><a href="#">Coming soon on Tindie</a></p>
         </div>
 
         <div class="div4">
-            <h2>Documentation Center</h2>
-            <hr>
-            <p>Get detailed specifications and design guidelines around all of our products. You'll also find links to
-                <b>examples</b> and useful <b>video tutorials</b> within our documentation center.</p>
-            <img src="images/simulink.png" width="100%">
-            <p><a href="https://docs.siliconwitchery.com/" target="_blank">Go to Docs Center</a></p>
+            <div>
+                <h2>Docs & examples</h2>
+                <hr>
+            </div>
+            <img src="images/devkit-wired.png" alt="Silicon Witchery S1 Development Kit Example">
+            <p><a href="https://docs.siliconwitchery.com/" target="_blank">Visit the Docs Center</a></p>
         </div>
 
         <div class="div5 light">
-            <p>Here to help</p>
-            <h2>Engineering Services</h2>
+            <h2>Specialized engineering services</h2>
             <p>We can provide specialized assistance at any stage in your design. From schematic and layout, all the way
                 to RF and signal processing. Get in touch today, and let's transform your next product into something
                 groundbreaking.</p>

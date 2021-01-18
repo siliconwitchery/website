@@ -38,192 +38,224 @@
 
 <style>
     .grid {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 7rem 1fr 1fr 1fr 1fr 1fr 14rem;
         grid-template-areas:
-            "probe-img heading"
-            "hardware xray"
-            "software software"
+            "nav nav"
+            "heading heading"
+            "hardware software"
             "advanced advanced"
-            "rf pen-testing"
-            "about about"
-            "find-us map";
+            "video video"
+            "about contact"
+            "footer footer";
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 960px) {
         .grid {
+            grid-template-rows: 7rem 1fr 1fr 1fr 1fr 1fr 4rem;
             grid-template-areas:
+                "nav"
                 "heading"
-                "probe-img"
-                "hardware"
-                "xray"
-                "software"
-                "advanced"
-                "rf"
-                "pen-testing"
-                "about"
-                "find-us"
-                "map";
+                "s1"
+                "dev-kit"
+                "docs"
+                "services"
+                "footer";
         }
     }
 
-    .div0 {
-        grid-area: probe-img;
-        background: url(images/probe.jpg);
-        background-size: cover;
-        background-position: center center;
-        height: 100%;
-        padding: 10rem 0rem;
+    .nav {
+        background-color: var(--color-bg-grey);
     }
 
     .div1 {
         grid-area: heading;
-        height: 100%;
-        padding: 10rem 0 0 0;
+        background: url(images/circuit.png) no-repeat;
+        background-size: auto 60% !important;
+        background-position: 90% 35%;
+        background-color: var(--color-bg-grey);
+        padding-right: 60% !important;
+        justify-content: space-between !important;
     }
 
     .div2 {
         grid-area: hardware;
-        padding: 3rem 0;
-        height: 100%;
+        background: url(images/s1-xray.jpg) no-repeat;
+        background-size: auto 100% !important;
+        background-position: 120% center;
+        padding-right: 60% !important;
+        justify-content: space-between !important;
     }
 
     .div3 {
-        grid-area: xray;
-        background: url(images/s1-xray.jpg);
-        background-size: cover;
-        background-position: center center;
-        height: 100%;
-        padding: 10rem 0rem;
+        grid-area: software;
+        background-color: var(--color-bg-green);
+        justify-content: space-between !important;
     }
 
     .div4 {
-        grid-area: software;
-        padding: 3rem 0;
-        height: 100%;
+        grid-area: advanced;
+        background: url(images/simulink.png) no-repeat;
+        background-size: 60% auto !important;
+        background-position: 130% 80%;
+        background-color: var(--color-bg-gold);
+        padding-right: 50% !important;
+        justify-content: space-between !important;
     }
 
     .div5 {
-        grid-area: advanced;
-        padding: 7rem 5rem;
-        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8)), url(images/simulink.png) no-repeat;
-        background-color: #EEEEEE;
-        background-size: contain;
-        background-position: center right;
+        grid-area: video;
+        justify-content: space-between !important;
     }
 
-    .div6 {
-        grid-area: rf;
-        padding: 3rem 0;
-        height: 100%;
-    }
-
-    .div7 {
-        grid-area: pen-testing;
-        padding: 3rem 0;
-        height: 100%;
-    }
-
-    .div9 {
-        grid-area: about;
-        padding: 7rem 5rem;
-    }
-
-    .div9 iframe {
+    .div5 iframe {
         /* Anamorphic ratio */
         margin-top: 5rem;
         height: calc(50vw / 2.36);
     }
 
-    .div10 {
-        grid-area: find-us;
-        height: 100%;
+    .div6 {
+        grid-area: about;
+        justify-content: space-between !important;
     }
 
-    .div11 {
-        grid-area: map;
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(images/map.png);
-        background-size: cover;
-        background-position: right center;
-        height: 100%;
+    .div7 {
+        grid-area: contact;
+        justify-content: space-between !important;
     }
 </style>
 
 <body>
-
-    <!-- Logo & Navigation Bar -->
-    <nav>
-        <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
-        <input class="menu-btn" type="checkbox" />
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="https://www.siliconwitchery.com/module">Module.</a></li>
-                <li><a href="https://www.siliconwitchery.com/services">Services.</a></li>
-                <li><a href="https://docs.siliconwitchery.com/">Docs.</a></li>
-                <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs" target="_blank">Jobs.</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Content -->
     <div class="grid">
-
-        <div class="div0">
-            <!-- Probe image -->
+        <div class="nav">
+            <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
+            <input class="menu-btn" type="checkbox" />
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <p><a href="https://www.siliconwitchery.com/module">Module.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.siliconwitchery.com/services">Services.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://docs.siliconwitchery.com/">Docs.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs" target="_blank">Jobs.</a></p>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div class="div1">
-            <h1>Embedded Engineering Services.</h1>
-            <p><b>A powerful R&D team here to help you build for every uncertainty.</b> From design through to
-                production and compliance.</p>
+            <div></div>
+            <h1>Helping you build for every uncertainty</h1>
+            <div>
+                <hr>
+                <p><b>Embedded hardware and systems engineers</b></p>
+            </div>
+
         </div>
 
-        <div class="div2">
-            <p>Capabilities</p>
-            <h2>Hardware Layout</h2>
-            <p>Experienced in <b>HDI</b>, <b>RF</b> and <b>high speed</b> layout. Our team is able to design production
-                ready boards and fully assemble prototypes in house.</p>
-            <p>We specialize in ultra-small features for wearables and tiny edge IoT devices. Our designs often
-                incorporate the leading-edge of integrated components including <b>chip scale packages</b> and <b>01005
-                    passives</b>.</p>
+        <div class="div2 light">
+            <div>
+                <h2>Hardware</h2>
+                <hr>
+                <p>Experienced in <b>HDI</b>, <b>RF</b> and <b>high speed</b> layout. Our team is able to design
+                    production
+                    ready boards and fully assemble prototypes in house.</p>
+                <p>We specialize in ultra-small features for wearables and tiny edge IoT devices. Our designs often
+                    incorporate the leading-edge of integrated components including <b>chip scale packages</b> and
+                    <b>01005
+                        passives</b>.</p>
+            </div>
+
         </div>
 
-        <div class="div3 shadow">
-            <!-- X-Ray image -->
+        <div class="div3">
+            <div>
+                <h2>Firmware</h2>
+                <hr>
+                <p>We ensure that <b>firmware design starts from day one</b> of the hardware design, to ensure all
+                    possibilities are covered.</p>
+                <p>Our multidliciplinary team are experienced in writing firmware for major <b>ARM Cortex-M</b>,
+                    <b>Cortex-A</b> and <b>RISC-V</b> devices. We are also able to provide software running on
+                    <b>embedded
+                        linux</b> and other popular RTOS platforms such as <b>FreeRTOS</b>, <b>Zephyr</b> and <b>Azure
+                        RTOS</b>.</p>
+            </div>
+
+            <p><a href="https://github.com/siliconwitchery" class="btn" target="_blank">Visit our Github</a></p>
         </div>
 
         <div class="div4">
-            <style>
+            <div></div>
+            <div>
+                <h2>Control & Signal Processing</h2>
+                <hr>
+                <p>To really push hardware to the limit, we've adopted state of the art signal processing workflows.
+                    Using
+                    <b>model based design</b> techniques, we're able to develop realtime systems in a matter of days
+                    rather
+                    than months. By incorporating graphical math and simulation tools, we can develop extensive
+                    algorithms
+                    for RF, sensor fusion and machine learning on the edge.</p>
+                <p>Deployed code can also be configured according to various industry standard for safety and
+                    reliability
+                    such as <b>MISRA</b>. Our team can advise on such standards if required.</p>
 
-            </style>
-            <p>Capabilities</p>
-            <h2>Embedded Software</h2>
-            <p>We ensure that <b>firmware design starts from day one</b> of the hardware design, to ensure all
-                possibilities are covered.</p>
-            <p>Our multidliciplinary team are experienced in writing firmware for major <b>ARM Cortex-M</b>,
-                <b>Cortex-A</b> and <b>RISC-V</b> devices. We are also able to provide software running on <b>embedded
-                    linux</b> and other popular RTOS platforms such as <b>FreeRTOS</b>, <b>Zephyr</b> and <b>Azure
-                    RTOS</b>.</p>
-            <a href="https://github.com/siliconwitchery" class="btn" target="_blank">Visit our Github</a>
+            </div>
+            <p><a href="https://se.mathworks.com/solutions/model-based-design.html" class="btn" target="_blank">Why Use
+                    Model Based Design?</a></p>
         </div>
 
-        <div class="div5 light shadow">
-            <p>Advanced Capabilities</p>
-            <h2>Control & Signal Processnig</h2>
-            <p>To really push hardware to the limit, we've adopted state of the art signal processing workflows. Using
-                <b>model based design</b> techniques, we're able to develop realtime systems in a matter of days rather
-                than months. By incorporating graphical math and simulation tools, we can develop extensive algorithms
-                for RF, sensor fusion and machine learning on the edge.</p>
-            <p>Deployed code can also be configured according to various industry standard for safety and reliability
-                such as <b>MISRA</b>. Our team can advise on such standards if required.</p>
-            <a href="https://se.mathworks.com/solutions/model-based-design.html" class="btn" target="_blank">Why Use
-                Model Based Design?</a>
+        <div class="div5 light">
+            <div style="text-align: center;">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
 
-        <div class="div6">
+        <div class="div6 light">
+            <div class="light">
+                <h2>About Us</h2>
+                <hr>
+                <p>Silicon Witchery was founded in 2019 by Raj Nakarja, an ex-wireless systems engineer of Silicon Labs
+                    Inc.
+                    After years of experience developing devices for Wearables and IoT, he found many customers were
+                    struggling to integrate the advanced features of many of today's modern silicon devices into their
+                    products. With a unique
+                    background of both chip and product, he has formed a team of expert designers to help companies big
+                    and
+                    small bring their products to market.</p>
+                <p>Today, Silicon Witchery works with customers large and small across the globe, as well as develops
+                    it's
+                    own module based products for accelerating wearable and IoT products to market.</p>
+            </div>
+
+        </div>
+
+        <div class="div7 light">
+            <div>
+                <h2>Contact Information</h2>
+                <hr>
+                <p>Based in central Stockholm. The capital of Sweden.</p>
+                <p><b>Silicon Witchery AB,<br>Alma Nybrogatan 8,<br>114 34 Stockholm,<br>Sweden</b></p>
+                <p><a href="mailto:info@siliconwitchery.com" class="btn">Email Us</a></p>
+            </div>
+
+        </div>
+
+        <!-- <div class="div6">
+
             <p>Expertise</p>
             <h2>RF Design</h2>
             <p>We employ advanced RF tools to ensure top wireless performance. We're able to able to test and measure
@@ -240,62 +272,34 @@
                 of security vulnerabilities using the same tools bad actors employ to break into systems.</p>
             <p>We can also check for hardware vulnerabilities that may exist between devices on the same board. What do
                 you send over that I2C line, and what would happen if someone were to exploit it? We can check.</p>
-        </div>
+        </div> -->
 
-        <div class="div8">
 
-        </div>
 
-        <div class="div9 shadow light">
-            <h2>About Us</h2>
-            <p>Silicon Witchery was founded in 2019 by Raj Nakarja, an ex-wireless systems engineer of Silicon Labs Inc.
-                After years of experience developing devices for Wearables and IoT, he found many customers were
-                struggling to integrate the advanced features of many of today's modern silicon devices into their
-                products. With a unique
-                background of both chip and product, he has formed a team of expert designers to help companies big and
-                small bring their products to market.</p>
-            <p>Today, Silicon Witchery works with customers large and small across the globe, as well as develops it's
-                own module based products for accelerating wearable and IoT products to market.</p>
-
-            <div style="text-align: center;">
-                <iframe
-                    src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1"
-                    allowfullscreen>
-                </iframe>
+        <div class="footer">
+            <div>
+                <p>2021 © Silicon Witchery AB</p>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <p><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw"
+                                target="_blank">YouTube.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
+                                Policy.</a></p>
+                    </li>
+                </ul>
             </div>
         </div>
-
-        <div class="div10">
-            <p>Come find us</p>
-            <h2>Contact Information</h2>
-            <p>Based in central Stockholm. The capital of Sweden.</p>
-            <p><b>Silicon Witchery AB,<br>Alma Nybrogatan 8,<br>114 34 Stockholm,<br>Sweden</b></p>
-            <a href="mailto:info@siliconwitchery.com" class="btn">Email Us</a>
-        </div>
-
-        <div class="div11 shadow">
-            <!-- Map -->
-        </div>
-
     </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <div>
-            <p>2021 © <b>Silicon Witchery AB</b>.</p>
-        </div>
-        <div>
-            <ul>
-                <li><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></li>
-                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">YouTube.</a>
-                </li>
-                <li><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></li>
-                <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
-                        Policy.</a></li>
-            </ul>
-        </div>
-    </div>
-
 </body>
 
 </html>

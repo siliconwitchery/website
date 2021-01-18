@@ -39,29 +39,16 @@
 <style>
     .grid {
         grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: 7rem 1fr 1fr 1fr 1fr 1fr 14rem;
+        grid-template-rows: 7rem 1fr 1fr 1fr 1fr 1fr 1fr 14rem;
         grid-template-areas:
             "nav nav"
             "heading heading"
-            "hardware software"
+            "hardware firmware"
             "advanced advanced"
+            "rf pen-testing"
             "video video"
             "about contact"
             "footer footer";
-    }
-
-    @media (max-width: 960px) {
-        .grid {
-            grid-template-rows: 7rem 1fr 1fr 1fr 1fr 1fr 4rem;
-            grid-template-areas:
-                "nav"
-                "heading"
-                "s1"
-                "dev-kit"
-                "docs"
-                "services"
-                "footer";
-        }
     }
 
     .nav {
@@ -72,10 +59,10 @@
         grid-area: heading;
         background: url(images/circuit.png) no-repeat;
         background-size: auto 60% !important;
-        background-position: 90% 35%;
+        background-position: 90% 20%;
         background-color: var(--color-bg-grey);
-        padding-right: 60% !important;
-        justify-content: space-between !important;
+        padding-right: 55% !important;
+        justify-content: flex-end !important;
     }
 
     .div2 {
@@ -84,11 +71,10 @@
         background-size: auto 100% !important;
         background-position: 120% center;
         padding-right: 60% !important;
-        justify-content: space-between !important;
     }
 
     .div3 {
-        grid-area: software;
+        grid-area: firmware;
         background-color: var(--color-bg-green);
         justify-content: space-between !important;
     }
@@ -104,24 +90,83 @@
     }
 
     .div5 {
-        grid-area: video;
-        justify-content: space-between !important;
+        grid-area: rf;
+        background: url(images/rf-connector.jpg) no-repeat;
+        background-size: auto 100% !important;
+        background-position: 120% center;
+        padding-right: 50% !important;
+        background-color: var(--color-bg-red);
     }
 
-    .div5 iframe {
+    .div6 {
+        grid-area: pen-testing;
+        background-color: var(--color-type-dark);
+    }
+
+    .div7 {
+        grid-area: video;
+    }
+
+    .div7 iframe {
         /* Anamorphic ratio */
         margin-top: 5rem;
         height: calc(50vw / 2.36);
     }
 
-    .div6 {
+    .div8 {
         grid-area: about;
-        justify-content: space-between !important;
     }
 
-    .div7 {
+    .div9 {
         grid-area: contact;
-        justify-content: space-between !important;
+    }
+
+    @media (max-width: 1600px) {
+        .grid {
+            grid-template-columns: 3fr 2fr !important;
+        }
+    }
+
+    @media (max-width: 960px) {
+        .grid {
+            grid-template-columns: 1fr !important;
+            grid-template-rows: 6rem 1fr 1fr 1fr 1.2fr 1fr 1fr 1fr 1fr 1fr 18rem;
+            grid-template-areas:
+                "nav"
+                "heading"
+                "hardware"
+                "firmware"
+                "advanced"
+                "rf"
+                "pen-testing"
+                "video"
+                "about"
+                "contact"
+                "footer";
+        }
+
+        .div1 {
+            padding-right: 2rem !important;
+            background-size: 90% auto !important;
+            background-position: center 20%;
+        }
+
+        .div2 {
+            padding-right: 2rem !important;
+            background-size: auto 50% !important;
+            background-position: center 130%;
+        }
+
+        .div4 {
+            padding-right: 2rem !important;
+            background-size: 110% auto !important;
+            background-position: center 86%;
+        }
+
+        .div5 {
+            padding-right: 2rem !important;
+            /* background: none; */
+        }
     }
 </style>
 
@@ -154,127 +199,79 @@
         </div>
 
         <div class="div1">
-            <div></div>
-            <h1>Helping you build for every uncertainty</h1>
-            <div>
-                <hr>
-                <p><b>Embedded hardware and systems engineers</b></p>
-            </div>
-
+            <h1>Helping you build for every uncertainty.</h1>
+            <hr>
+            <p><b>Your R&D team of embedded experts</b></p>
         </div>
 
         <div class="div2 light">
-            <div>
-                <h2>Hardware</h2>
-                <hr>
-                <p>Experienced in <b>HDI</b>, <b>RF</b> and <b>high speed</b> layout. Our team is able to design
-                    production
-                    ready boards and fully assemble prototypes in house.</p>
-                <p>We specialize in ultra-small features for wearables and tiny edge IoT devices. Our designs often
-                    incorporate the leading-edge of integrated components including <b>chip scale packages</b> and
-                    <b>01005
-                        passives</b>.</p>
-            </div>
-
+            <h2>Hardware</h2>
+            <hr>
+            <p>We specialize in building ultra-small devices for wearables and tiny IoT applications.</p>
+            <p>Experienced in <b>HDI</b>, <b>RF</b> and <b>high speed</b> layout. Our team is able to design production ready boards and fully assemble prototypes in house.</p>
         </div>
 
         <div class="div3">
             <div>
                 <h2>Firmware</h2>
                 <hr>
-                <p>We ensure that <b>firmware design starts from day one</b> of the hardware design, to ensure all
-                    possibilities are covered.</p>
-                <p>Our multidliciplinary team are experienced in writing firmware for major <b>ARM Cortex-M</b>,
-                    <b>Cortex-A</b> and <b>RISC-V</b> devices. We are also able to provide software running on
-                    <b>embedded
-                        linux</b> and other popular RTOS platforms such as <b>FreeRTOS</b>, <b>Zephyr</b> and <b>Azure
-                        RTOS</b>.</p>
+                <p>Our firmware planning starts from day one, to make sure you get the most efficient design possible.</p>
+                <p>Our multidisciplinary team are experienced in writing code for all major <b>ARM</b>, and <b>RISC-V</b> devices. Everything from bare metal to Embedded Linux / RTOS.</p>
             </div>
-
             <p><a href="https://github.com/siliconwitchery" class="btn" target="_blank">Visit our Github</a></p>
         </div>
 
         <div class="div4">
-            <div></div>
+            <!-- <div></div> -->
             <div>
-                <h2>Control & Signal Processing</h2>
+                <h2>Realtime systems, built in real time</h2>
                 <hr>
-                <p>To really push hardware to the limit, we've adopted state of the art signal processing workflows.
-                    Using
-                    <b>model based design</b> techniques, we're able to develop realtime systems in a matter of days
-                    rather
-                    than months. By incorporating graphical math and simulation tools, we can develop extensive
-                    algorithms
-                    for RF, sensor fusion and machine learning on the edge.</p>
-                <p>Deployed code can also be configured according to various industry standard for safety and
-                    reliability
-                    such as <b>MISRA</b>. Our team can advise on such standards if required.</p>
-
+                <p>We employ state of the art workflows to develop algorithms in a matter of days rather than months.</p>
+                <p>Using model based design, we can quickly solve complex problems in Sensor Fusion, and Deep Machine Learning. Deployed code can also be configured to strict industry standards such as <b>MISRA</b> if required.</p>
             </div>
-            <p><a href="https://se.mathworks.com/solutions/model-based-design.html" class="btn" target="_blank">Why Use
-                    Model Based Design?</a></p>
+            <p><a href="https://se.mathworks.com/solutions/model-based-design.html" class="btn" target="_blank">Why Use Model Based Design?</a></p>
         </div>
 
-        <div class="div5 light">
-            <div style="text-align: center;">
-                <iframe
-                    src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1"
-                    allowfullscreen>
-                </iframe>
-            </div>
+        <div class="div5">
+            <h2>RF in house</h2>
+            <hr>
+            <p>We can help you ensure top wireless performance with in house tooling for tuning antennas and testing RF circuits.</p>
+            <p>We can also advise on EMC testing and have great access to certification partners to make sure you meet regulations for global market access.</p>
         </div>
 
-        <div class="div6 light">
-            <div class="light">
-                <h2>About Us</h2>
-                <hr>
-                <p>Silicon Witchery was founded in 2019 by Raj Nakarja, an ex-wireless systems engineer of Silicon Labs
-                    Inc.
-                    After years of experience developing devices for Wearables and IoT, he found many customers were
-                    struggling to integrate the advanced features of many of today's modern silicon devices into their
-                    products. With a unique
-                    background of both chip and product, he has formed a team of expert designers to help companies big
-                    and
-                    small bring their products to market.</p>
-                <p>Today, Silicon Witchery works with customers large and small across the globe, as well as develops
-                    it's
-                    own module based products for accelerating wearable and IoT products to market.</p>
-            </div>
-
+        <div class="div6">
+            <h2>Penetration testing</h2>
+            <hr>
+            <p>Don't leave it to chance. Remote devices can become a dangerous entry point into your secure infrastructure.</p>
+            <p>We can check a magnitude of security vulnerabilities using the same tools bad actors, as well as more obscure side channel attacks such as power or timing analysis.</p>
         </div>
 
         <div class="div7 light">
-            <div>
-                <h2>Contact Information</h2>
+            <div style="text-align: center;">
+                <iframe src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="div8 light">
+            <div class="light">
+                <h2>About Us</h2>
                 <hr>
-                <p>Based in central Stockholm. The capital of Sweden.</p>
+                <p>Silicon Witchery was founded in 2019 by Raj Nakarja, an ex-wireless engineer of Silicon Labs Inc. and Bristol Robotics Lab. After many years of developing devices for Wearable and IoT customers, he started Silicon Witchery with a vision to help embedded designers integrate advanced devices and software into their products.</p>
+                <p>Today, the Silicon Witchery team works with customers large and small across the globe, and develops it's own module based products for accelerating wearable and IoT products to market.</p>
+            </div>
+
+        </div>
+
+        <div class="div9 light">
+            <div>
+                <h2>Contact</h2>
+                <hr>
+                <p>Headquartered in central Stockholm, Sweden.</p>
                 <p><b>Silicon Witchery AB,<br>Alma Nybrogatan 8,<br>114 34 Stockholm,<br>Sweden</b></p>
                 <p><a href="mailto:info@siliconwitchery.com" class="btn">Email Us</a></p>
             </div>
 
         </div>
-
-        <!-- <div class="div6">
-
-            <p>Expertise</p>
-            <h2>RF Design</h2>
-            <p>We employ advanced RF tools to ensure top wireless performance. We're able to able to test and measure
-                parameters such as as antenna VSWR and tune antennas fully in house.</p>
-            <p>We also have great access to EMI testing partners and can advise on regulation and compliance
-                requirements before going for testing. With experience of testing in over 46 countries, we can ensure
-                your product will reach global markets.</p>
-        </div>
-
-        <div class="div7">
-            <p>Expertise</p>
-            <h2>IoT Penetration Testing</h2>
-            <p>Remote devices can become a dangerous entry point into your secure infrastructure. We check a magnitude
-                of security vulnerabilities using the same tools bad actors employ to break into systems.</p>
-            <p>We can also check for hardware vulnerabilities that may exist between devices on the same board. What do
-                you send over that I2C line, and what would happen if someone were to exploit it? We can check.</p>
-        </div> -->
-
-
 
         <div class="footer">
             <div>

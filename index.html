@@ -47,20 +47,6 @@
             "footer footer footer";
     }
 
-    @media (max-width: 960px) {
-        .grid {
-            grid-template-rows: 6rem 1fr 1fr 1fr 1fr 1fr 18rem;
-            grid-template-areas:
-                "nav"
-                "heading"
-                "s1"
-                "dev-kit"
-                "docs"
-                "services"
-                "footer";
-        }
-    }
-
     .nav {
         background-color: var(--color-bg-grey);
     }
@@ -97,8 +83,33 @@
         grid-area: services;
         padding-bottom: 0 !important;
         padding-right: 50% !important;
-        background: url(images/soldering.jpg);
+        background: url(images/soldering.png) no-repeat;
         background-size: auto 60% !important;
+    }
+
+    @media (max-width: 960px) {
+        .grid {
+            grid-template-rows: 6rem 1.2fr 1fr 1fr 1fr 1fr 18rem;
+            grid-template-areas:
+                "nav"
+                "heading"
+                "s1"
+                "dev-kit"
+                "docs"
+                "services"
+                "footer";
+        }
+
+        .div1 {
+            padding-right: 2rem !important;
+            background-size: 60% auto !important;
+            background-position: 90% 70%;
+        }
+
+        .div5 {
+            padding-right: 2rem !important;
+            background: none;
+        }
     }
 </style>
 
@@ -132,40 +143,45 @@
 
         <div class="div1">
             <div></div>
-            <h1>Pushing the limits of embedded devices</h1>
+            <h1>Pushing the limits of embedded devices.</h1>
             <div>
                 <hr>
-                <p><b>Cutting edge wireless, sensing and signal processing</b></p>
+                <p><b>Wireless, sensing and signal processing</b></p>
             </div>
-
         </div>
 
-        <div class="div2">
-            <div>
-                <h2>FPGA / BLE module</h2>
-                <hr>
+        <a href="https://www.siliconwitchery.com/module">
+            <div class="div2">
+                <div>
+                    <h2>FPGA / BLE module</h2>
+                    <hr>
+                </div>
+                <img src="images/dev-kit.png" alt="Silicon Witchery S1 System on Module">
+                <p><a href="https://www.siliconwitchery.com/module">S1 System on Module</a></p>
             </div>
-            <img src="images/dev-kit.png" alt="Silicon Witchery S1 System on Module">
-            <p><a href="https://www.siliconwitchery.com/module">Learn more</a></p>
-        </div>
+        </a>
 
-        <div class="div3">
-            <div>
-                <h2>Development kit</h2>
-                <hr>
+        <a href="#">
+            <div class="div3">
+                <div>
+                    <h2>Development kit</h2>
+                    <hr>
+                </div>
+                <img src="images/dev-kit.png" alt="Silicon Witchery S1 Development Kit">
+                <p><a href="#">Coming soon to Tindie</a></p>
             </div>
-            <img src="images/dev-kit.png" alt="Silicon Witchery S1 Development Kit">
-            <p><a href="#">Coming soon on Tindie</a></p>
-        </div>
+        </a>
 
-        <div class="div4">
-            <div>
-                <h2>Docs & examples</h2>
-                <hr>
+        <a href="https://docs.siliconwitchery.com/" target="_blank">
+            <div class="div4">
+                <div>
+                    <h2>Docs & examples</h2>
+                    <hr>
+                </div>
+                <img src="images/devkit-wired.png" alt="Silicon Witchery S1 Development Kit Example">
+                <p><a href="https://docs.siliconwitchery.com/" target="_blank">Visit the Docs Center</a></p>
             </div>
-            <img src="images/devkit-wired.png" alt="Silicon Witchery S1 Development Kit Example">
-            <p><a href="https://docs.siliconwitchery.com/" target="_blank">Visit the Docs Center</a></p>
-        </div>
+        </a>
 
         <div class="div5 light">
             <h2>Specialized engineering services</h2>

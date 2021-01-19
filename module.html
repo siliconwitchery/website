@@ -43,8 +43,8 @@
         grid-template-areas:
             "nav nav"
             "heading heading"
-            "ble-fpga ble-fpga"
-            "pmic-io pmic-io"
+            "ble-pmic ble-pmic"
+            "fpga-io fpga-io"
             "applications applications"
             "dev-kit dev-kit"
             "video video"
@@ -58,7 +58,7 @@
 
     .div1 {
         grid-area: heading;
-        background: url(images/circuit.png) no-repeat;
+        background: url(images/s1-hand.png) no-repeat;
         background-size: auto 60% !important;
         background-position: 90% 20%;
         background-color: var(--color-bg-red);
@@ -67,14 +67,20 @@
     }
 
     .div2 {
-        grid-area: ble-fpga;
-        padding-right: 55% !important;
+        grid-area: ble-pmic;
+        background: url(images/s1-close-right.png) no-repeat;
+        background-size: auto 60% !important;
+        background-position: left center;
+        padding-left: 40% !important;
         justify-content: space-around !important;
     }
 
     .div3 {
-        grid-area: pmic-io;
-        padding-left: 55% !important;
+        grid-area: fpga-io;
+        background: url(images/s1-close-left.png) no-repeat;
+        background-size: auto 60% !important;
+        background-position: right center;
+        padding-right: 40% !important;
         justify-content: space-around !important;
     }
 
@@ -167,7 +173,7 @@
             </div>
 
             <div>
-                <h2>FPGA</h2>
+                <h2>Power Management</h2>
                 <hr>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium placeat veritatis! Debitis.</p>
             </div>
@@ -175,7 +181,7 @@
 
         <div class="div3 light">
             <div>
-                <h2>Power Management</h2>
+                <h2>FPGA</h2>
                 <hr>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium placeat veritatis! Debitis.</p>
             </div>

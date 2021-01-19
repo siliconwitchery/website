@@ -38,7 +38,7 @@
 
 <style>
     .grid {
-        grid-template-rows: 7rem 1fr 1fr 1fr 14rem;
+        grid-template-rows: 7rem 45rem 45rem 45rem 14rem;
         grid-template-areas:
             "nav nav nav"
             "heading heading heading"
@@ -54,29 +54,36 @@
     .div1 {
         grid-area: heading;
         background: url(images/fpc.png) no-repeat;
-        background-size: auto 40% !important;
-        background-position: -250% center;
+        background-size: 60% auto !important;
+        background-position: right 80%;
         background-color: var(--color-bg-grey);
         padding-right: 60% !important;
-        justify-content: space-between !important;
+        justify-content: flex-start !important;
     }
 
     .div2 {
         grid-area: s1;
         background: url(images/s1-module.png) no-repeat;
-        background-position: center center;
+        background-size: 100% auto !important;
+        background-position: center 70%;
         background-color: var(--color-bg-red);
         justify-content: space-between !important;
     }
 
     .div3 {
         grid-area: dev-kit;
+        background: url(images/devkit.png) no-repeat;
+        background-size: 70% auto !important;
+        background-position: center 70%;
         background-color: var(--color-bg-green);
         justify-content: space-between !important;
     }
 
     .div4 {
         grid-area: docs;
+        background: url(images/devkit-wired.png) no-repeat;
+        background-size: 70% auto !important;
+        background-position: center 70%;
         background-color: var(--color-bg-blue);
         justify-content: space-between !important;
     }
@@ -150,40 +157,38 @@
             <h1>Pushing the limits of embedded devices.</h1>
             <div>
                 <hr>
-                <p><b>Wireless, sensing and signal processing</b></p>
+                <p><b>Wireless / Sensing / Signal Processing</b></p>
             </div>
         </div>
 
         <a href="https://www.siliconwitchery.com/module">
             <div class="div2">
                 <div>
-                    <h2>FPGA / BLE module</h2>
+                    <h2>The New<br>S1 Module</h2>
                     <hr>
+                    <p>Bluetooth, FPGA and battery management in just 7 x 12mm.</p>
                 </div>
-                <!-- <img src="images/devkit.png" width="" alt="Silicon Witchery S1 System on Module"> -->
-                <p><a href="https://www.siliconwitchery.com/module">S1 System on Module</a></p>
+                <p><a href="https://www.siliconwitchery.com/module">Learn More</a></p>
             </div>
         </a>
 
-        <a href="#">
-            <div class="div3">
-                <div>
-                    <h2>Development kit</h2>
-                    <hr>
-                </div>
-                <img src="images/devkit.png" alt="Silicon Witchery S1 Development Kit">
-                <p><a href="#">Coming soon to Tindie</a></p>
+        <div class="div3">
+            <div>
+                <h2>S1 Module<br>Dev kit</h2>
+                <hr>
+                <p>Here to help you quickly get started with the S1 Module.</p>
             </div>
-        </a>
+            <p><b>Available soon</b></p>
+        </div>
 
         <a href="https://docs.siliconwitchery.com/" target="_blank">
             <div class="div4">
                 <div>
-                    <h2>Docs & examples</h2>
+                    <h2>Docs &<br>Examples</h2>
                     <hr>
+                    <p>Visit the documentation center for specs, examples and tutorials.</p>
                 </div>
-                <img src="images/devkit-wired.png" alt="Silicon Witchery S1 Development Kit Example">
-                <p><a href="https://docs.siliconwitchery.com/" target="_blank">Visit the Docs Center</a></p>
+                <p><a href="https://docs.siliconwitchery.com/" target="_blank">Resources</a></p>
             </div>
         </a>
 
@@ -191,10 +196,13 @@
             <div></div>
             <div>
                 <h2>Specialized engineering services</h2>
-                <p>We can provide specialized assistance at any stage in your design. From schematic and layout, all the way
-                    to RF and signal processing. Get in touch today, and let's transform your next product into something
-                    groundbreaking.</p>
-                <p><a href="https://www.siliconwitchery.com/services" target="_blank">What we offer</a></p>
+                <p>Need something special? Our engineering team can help you with your wearable and IoT designs.</p>
+                <p>Get in touch today and find out what we can do for you.</p>
+                <p>
+                    <a href="https://www.siliconwitchery.com/services" target="_blank">What we offer</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="mailto:info@siliconwitchery.com" class="btn">Email Us</a>
+                </p>
             </div>
 
             <hr>

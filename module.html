@@ -38,8 +38,7 @@
 
 <style>
     .grid {
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: 7rem 1fr 2fr 2fr 1fr 1fr 1fr 1fr 14rem;
+        grid-template-rows: 7rem 20rem 55rem 65rem 45rem 45rem 30vw 35rem 14rem;
         grid-template-areas:
             "nav nav"
             "heading heading"
@@ -58,65 +57,75 @@
 
     .div1 {
         grid-area: heading;
-        background: url(images/s1-hand.png) no-repeat;
-        background-size: auto 60% !important;
-        background-position: 90% 20%;
         background-color: var(--color-bg-red);
         padding-right: 55% !important;
-        justify-content: space-between !important;
+        justify-content: flex-end;
     }
 
     .div2 {
         grid-area: ble-pmic;
         background: url(images/s1-close-right.png) no-repeat;
-        background-size: auto 60% !important;
+        background-size: auto 90%;
         background-position: left center;
         padding-left: 40% !important;
-        justify-content: space-around !important;
+        justify-content: space-between;
     }
 
     .div3 {
         grid-area: fpga-io;
         background: url(images/s1-close-left.png) no-repeat;
-        background-size: auto 60% !important;
+        background-size: auto 90%;
         background-position: right center;
         padding-right: 40% !important;
-        justify-content: space-around !important;
+        justify-content: space-between;
     }
 
     .div4 {
-        grid-area: dev-kit;
+        grid-area: applications;
+        background: url(images/cgm.png) no-repeat;
+        background-size: 40% auto;
+        background-position: left center;
         background-color: var(--color-bg-blue);
+        padding-left: 55% !important;
+        justify-content: flex-end;
+    }
+
+    .div5 {
+        grid-area: dev-kit;
+        background: url(images/devkit-wired.png) no-repeat;
+        background-size: 50% auto;
+        background-position: 120% center;
+        background-color: var(--color-bg-green);
         padding-right: 55% !important;
         justify-content: space-between !important;
     }
 
-    .div5 {
+    .div6 {
         grid-area: video;
     }
 
-    .div6 {
+    .div7 {
         grid-area: order;
     }
 
-    .div7 {
+    .div8 {
         grid-area: docs;
     }
 
-    .div8 {
-        grid-area: applications;
-        background-color: var(--color-bg-green);
+    @media (min-width: 1201px) {
+        .grid {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 1200px) {
         .grid {
-            grid-template-columns: 1fr !important;
-            grid-template-rows: 6rem 1fr 1fr 1fr 1.2fr 1fr 1fr 1fr 1fr 1fr 18rem;
+            grid-template-rows: 7rem 0.5fr 1fr 1fr 1.2fr 1fr 1fr 1fr 1fr 18rem;
             grid-template-areas:
                 "nav"
                 "heading"
-                "ble-fpga"
-                "pmic-io"
+                "ble-pmic"
+                "fpga-io"
                 "applications"
                 "dev-kit"
                 "video"
@@ -201,14 +210,14 @@
             </div>
         </div>
 
-        <div class="div8">
+        <div class="div4">
             <h2>Applications</h2>
             <hr>
             <p>The S1 is targeted for Wearables and IoT devices with tight form factors. The 7x12mm footprint makes it perfect for where space is a concern.</p>
             <p>Save months of development and avoid HDI PCBs or RF tuning in your design. It's already done for you within the S1. It is a pick-and-place compatible module, suitable for standard FR4 or FPC based designs.</p>
         </div>
 
-        <div class="div4">
+        <div class="div5">
             <div>
                 <h2>Development Kit</h2>
                 <hr>
@@ -228,7 +237,7 @@
 
         </div>
 
-        <div class="div5 light">
+        <div class="div6 light">
             <div style="text-align: center;">
                 <iframe
                     src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1"
@@ -236,7 +245,7 @@
             </div>
         </div>
 
-        <div class="div6 light">
+        <div class="div7 light">
             <h2>Order</h2>
             <hr>
             <p>The S1 and S1 Development Kit will be available from general distributors soon.</p>
@@ -245,7 +254,7 @@
             <p><a href="mailto:info@siliconwitchery.com">Contact our sales</a></p>
         </div>
 
-        <div class="div7 light">
+        <div class="div8 light">
             <h2>Documentation</h2>
             <hr>
             <p>Detailed specifications are available on our Documentation Center.</p>

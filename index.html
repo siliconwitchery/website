@@ -38,7 +38,7 @@
 
 <style>
     .grid {
-        grid-template-rows: 7rem 45rem 45rem 45rem 14rem;
+        grid-template-rows: 7rem 45rem 50rem 45rem 14rem;
         grid-template-areas:
             "nav nav nav"
             "heading heading heading"
@@ -83,7 +83,7 @@
         grid-area: docs;
         background: url(images/devkit-wired.png) no-repeat;
         background-size: 70% auto !important;
-        background-position: center 70%;
+        background-position: center 75%;
         background-color: var(--color-bg-green);
         justify-content: space-between !important;
     }
@@ -98,9 +98,21 @@
         justify-content: space-between !important;
     }
 
-    @media (max-width: 960px) {
+    
+    @media (max-width: 1650px) {
         .grid {
-            grid-template-rows: 6rem 1.2fr 1fr 1fr 1fr 1fr 18rem;
+            grid-template-rows: 7rem 45rem 45rem 45rem 14rem;
+        }
+
+        .div1 {
+            padding-right: 40% !important;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .grid {
+            grid-template-columns: 1fr !important;
+            grid-template-rows: 7rem 1.2fr 100vw 100vw 100vw 1fr 18rem;
             grid-template-areas:
                 "nav"
                 "heading"
@@ -112,14 +124,33 @@
         }
 
         .div1 {
+            background-size: 70% auto !important;
+        }
+    }
+
+    @media (max-width: 960px) {
+        .grid {
+            grid-template-rows: 7rem 70vw 100vw 100vw 100vw 110vw 18rem;
+        }
+
+        .div1 {
             padding-right: 2rem !important;
-            background-size: 60% auto !important;
-            background-position: 90% 70%;
         }
 
         .div5 {
             padding-right: 2rem !important;
-            background: none;
+            background-size: auto 55% !important;
+            justify-content: flex-end !important;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .grid {
+            grid-template-rows: 7rem 130vw 130vw 130vw 130vw 185vw 18rem;
+        }
+
+        .div1 {
+            padding-right: 2rem !important;
         }
     }
 </style>
@@ -154,7 +185,7 @@
 
         <div class="div1">
             <div></div>
-            <h1>Pushing the limits of embedded devices.</h1>
+            <h1>Pushing the limits<br>of embedded devices.</h1>
             <div>
                 <hr>
                 <p><b>Wireless / Sensing / Signal Processing</b></p>

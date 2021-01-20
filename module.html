@@ -8,17 +8,17 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 
     <!-- SEO title & description -->
-    <title>Ultra-small Bluetooth 5 & FPGA Module | Silicon Witchery</title>
+    <title>A Tiny Wireless FPGA Module – for Wearables & IoT | Silicon Witchery</title>
     <meta name="description"
-        content="Drop into your product and enjoy Bluetooth 5.2, Battery Management, and DSP / ML readiness for your Wearable or IoT application.">
+        content="An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, direction finding, FPGA acceleration, battery management & flexible connectivity.">
     <link rel="canonical" href="https://www.siliconwitchery.com/" />
 
     <!-- Facebook & Twitter card meta -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@SiliconWitchery" />
-    <meta property="og:title" content="Ultra-small Bluetooth 5 & FPGA Module | Silicon Witchery" />
+    <meta property="og:title" content="A Tiny Wireless FPGA Module – for Wearables & IoT | Silicon Witchery" />
     <meta property="og:description"
-        content="Drop into your product and enjoy Bluetooth 5.2, Battery Management, and DSP / ML readiness for your Wearable or IoT application." />
+        content="An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, direction finding, FPGA acceleration, battery management & flexible connectivity." />
     <meta property="og:image" content="https://www.siliconwitchery.com/images/share.jpg" />
     <meta property="og:url" content="https://www.siliconwitchery.com/" />
     <meta property="og:type" content="website" />
@@ -36,13 +36,100 @@
     </script>
 </head>
 
-<body style="background-color:#111111;">
+<style>
+    .grid {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 7rem 1fr 2fr 2fr 1fr 1fr 1fr 1fr 14rem;
+        grid-template-areas:
+            "nav nav"
+            "heading heading"
+            "ble-pmic ble-pmic"
+            "fpga-io fpga-io"
+            "applications applications"
+            "dev-kit dev-kit"
+            "video video"
+            "order docs"
+            "footer footer";
+    }
 
-    <!-- Section 1 -->
-    <div class="content" style="background-image:url(images/module-bg.jpg); background-position:20% 0%;">
+    .nav {
+        background-color: var(--color-bg-red);
+    }
 
-        <!-- Logo & Navigation Bar -->
-        <nav>
+    .div1 {
+        grid-area: heading;
+        background: url(images/s1-hand.png) no-repeat;
+        background-size: auto 60% !important;
+        background-position: 90% 20%;
+        background-color: var(--color-bg-red);
+        padding-right: 55% !important;
+        justify-content: space-between !important;
+    }
+
+    .div2 {
+        grid-area: ble-pmic;
+        background: url(images/s1-close-right.png) no-repeat;
+        background-size: auto 60% !important;
+        background-position: left center;
+        padding-left: 40% !important;
+        justify-content: space-around !important;
+    }
+
+    .div3 {
+        grid-area: fpga-io;
+        background: url(images/s1-close-left.png) no-repeat;
+        background-size: auto 60% !important;
+        background-position: right center;
+        padding-right: 40% !important;
+        justify-content: space-around !important;
+    }
+
+    .div4 {
+        grid-area: dev-kit;
+        background-color: var(--color-bg-blue);
+        padding-right: 55% !important;
+        justify-content: space-between !important;
+    }
+
+    .div5 {
+        grid-area: video;
+    }
+
+    .div6 {
+        grid-area: order;
+    }
+
+    .div7 {
+        grid-area: docs;
+    }
+
+    .div8 {
+        grid-area: applications;
+        background-color: var(--color-bg-green);
+    }
+
+    @media (max-width: 960px) {
+        .grid {
+            grid-template-columns: 1fr !important;
+            grid-template-rows: 6rem 1fr 1fr 1fr 1.2fr 1fr 1fr 1fr 1fr 1fr 18rem;
+            grid-template-areas:
+                "nav"
+                "heading"
+                "ble-fpga"
+                "pmic-io"
+                "applications"
+                "dev-kit"
+                "video"
+                "order"
+                "docs"
+                "footer";
+        }
+    }
+</style>
+
+<body>
+    <div class="grid">
+        <div class="nav">
             <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
             <input class="menu-btn" type="checkbox" />
             <div class="hamburger">
@@ -52,114 +139,140 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="https://www.siliconwitchery.com/module">Module</a></li>
-                    <li><a href="https://www.siliconwitchery.com/devkit">DevKit</a></li>
-                    <!-- <li><a href="https://www.siliconwitchery.com/rtos">RTOS</a></li> -->
-                    <li><a href="https://www.siliconwitchery.com/services">Services</a></li>
-                    <li><a href="https://docs.siliconwitchery.com/">Docs</a></li>
-                    <li><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs">Jobs</a></li>
+                    <li>
+                        <p><a href="https://www.siliconwitchery.com/module">Module.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.siliconwitchery.com/services">Services.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://docs.siliconwitchery.com/">Docs.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs" target="_blank">Jobs.</a></p>
+                    </li>
                 </ul>
             </div>
-        </nav>
-
-        <!-- Masthead, Sub-masthead & Video -->
-        <h1><b>S1 Module – Designed to empower the smallest wireless devices.</b> Drop into your design and rest assured
-            your product will be low power, AI-ready, and avoid complicated HDI boards.</h1>
-
-        <div>
-            <a href="https://docs.siliconwitchery.com/#get-in-the-know-" target="_blank" class="btn">Order Soon</a>
-            <a href="https://docs.siliconwitchery.com/hardware/s1-module/" target="_blank" class="btn">Datasheet</a>
         </div>
 
-    </div>
+        <div class="div1">
+            <div></div>
+            <h1>The new S1 Bluetooth / FPGA Module.</h1>
+            <div>
+                <hr>
+                <p><b>Ultra-small and ultra low power</b></p>
+            </div>
 
-    <!-- Section 2 -->
-    <div class="content narrow-row" style="background:#111111;">
-        <div>
+        </div>
 
-            <div class="video" style="width: auto;">
+        <div class="div2 light">
+            <div>
+                <h2>Bluetooth</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste
+                    tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium
+                    placeat veritatis! Debitis.</p>
+            </div>
+
+            <div>
+                <h2>Power Management</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste
+                    tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium
+                    placeat veritatis! Debitis.</p>
+            </div>
+        </div>
+
+        <div class="div3 light">
+            <div>
+                <h2>FPGA</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste
+                    tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium
+                    placeat veritatis! Debitis.</p>
+            </div>
+
+            <div>
+                <h2>IO Connectivity</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste
+                    tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium
+                    placeat veritatis! Debitis.</p>
+            </div>
+        </div>
+
+        <div class="div4">
+            <div></div>
+
+            <div>
+                <h2>Development Kit</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste
+                    tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium
+                    placeat veritatis! Debitis.</p>
+            </div>
+
+            <p><a href="#" target="_blank">Coming soon to Tindie</a></p>
+        </div>
+
+        <div class="div5 light">
+            <div style="text-align: center;">
                 <iframe
-                    src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=0&mute=1&color=white&cc_load_policy=1"
+                    src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1"
                     allowfullscreen></iframe>
             </div>
-
-            <p><b>Bluetooth 5.2 enabled out of the box.</b><br>Based on the Nordic nRF52811, the S1 module is future
-                proof with support for Bluetooth direction finding, long-range, and Thread.</p><br>
-
-            <p><b>User FPGA fabric.</b><br>Re-configurable over the air and perfect for evolving algorithms. The FPGA
-                features dedicated DSP and serial IO for aggregating many sensors, real-time filtering, and ML
-                inferencing.</p><br>
-
-            <p><b>Complete battery management.</b><br>For all single-cell Lithium technologies as well as several
-                user-adjustable voltage rails letting you maximize in battery life reduce component count. </p><br>
-
-            <p><b>Tiny 6x12mm footprint.</b><br>With the integrated antenna, memory, and decoupling, your design
-                footprint remains tiny. Simply provide power and connect your sensors.</p><br>
-
-            <p><b>Get to market fast.</b><br>Spin fewer board revisions with a known working platform and let your
-                software team start developing today.</p><br>
-
-            <a href="https://www.siliconwitchery.com/devkit" class="btn">Check out the Dev Kit</a>
         </div>
 
-    </div>
+        <div class="div6 light">
+            <h2>Order</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laboriosam assumenda itaque neque debitis
+                quidem voluptate dolores animi iusto ullam. Mollitia harum dolore repudiandae neque corrupti, temporibus
+                rerum sapiente veritatis!</p>
+            <p><a href="mailto:info@siliconwitchery.com" class="btn">Email Us</a></p>
+        </div>
 
-    <!-- Section 3 -->
-    <div class="content narrow-row" style="background-image:url(images/clouds-bg.jpg);">
-        <div>
+        <div class="div7 light">
+            <h2>Documentation</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laboriosam assumenda itaque neque debitis
+                quidem voluptate dolores animi iusto ullam. Mollitia harum dolore repudiandae neque corrupti, temporibus
+                rerum sapiente veritatis!</p>
+            <p><a href="mailto:info@siliconwitchery.com" class="btn">Email Us</a></p>
+        </div>
 
-            <h2>What people are saying...</h2>
+        <div class="div8">
+            <h2>Applications</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laboriosam assumenda itaque neque debitis
+                quidem voluptate dolores animi iusto ullam. Mollitia harum dolore repudiandae neque corrupti, temporibus
+                rerum sapiente veritatis!</p>
+        </div>
 
-            <div class="article-thumbnail">
-                <div style="flex-grow: 1;">
-                    <p>Hackster's Gareth Halfacree talks about the S1 hardware and its capabilities.</p><br>
-                    <b><a href="https://www.hackster.io/news/siliconwitchery-s-raj-nakarja-pushes-the-envelope-on-hand-assembly-with-an-ultra-tiny-bluetooth-fpga-61753f283384"
-                            target="_blank">> read the article</a></b>
-                </div>
-                <img src="images/hackster-io-article.png" alt="Article about S1 Module on Hackster">
+        <div class="footer">
+            <div>
+                <p>2021 © Silicon Witchery AB</p>
             </div>
-
-            <div class="article-thumbnail">
-                <div style="flex-grow: 1;">
-                    <p>The r/electronics community of Reddit discusses potential applications for the S1 module.</p><br>
-                    <b><a href="https://www.reddit.com/r/electronics/comments/it9ekh/hand_assembled_some_tiny_bluetooth_fpga_modules/"
-                            target="_blank">> Join the discussion</a></b>
-                </div>
-                <img src="images/reddit-post.png" alt="Reddit discussion thread about the S1 Module">
+            <div>
+                <ul>
+                    <li>
+                        <p><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw"
+                                target="_blank">YouTube.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
+                                Policy.</a></p>
+                    </li>
+                </ul>
             </div>
-
-            <div class="article-thumbnail">
-                <div style="flex-grow: 1;">
-                    <p>Our principal engineer, Rajesh Nakarja, details the build process on his Twitter.</p><br>
-                    <b><a href="https://twitter.com/siliconwitch/status/1305850253485121539?s=20" target="_blank">>
-                            Follow
-                            the post</a></b>
-                </div>
-                <img src="images/raj-twitter-post.png" alt="Raj Nakarja describes the S1 Module build process">
-            </div>
-
         </div>
     </div>
-
-    <!-- Footer Area -->
-    <div class="content footer">
-        <div>
-            <p>Nybrogaten 8</p>
-            <p>114 34 Stockholm</p>
-        </div>
-        <div>
-            <p style="text-align: right;">info@siliconwitchery.com</p>
-            <ul>
-                <li><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></li>
-                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">YouTube.</a>
-                </li>
-                <li><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></li>
-                <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
-                        Policy.</a></li>
-            </ul>
-        </div>
-    </div>
-
 </body>
 
 </html>

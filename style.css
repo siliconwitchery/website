@@ -1,7 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab&display=swap');
+
+:root {
+    --color-bg-grey: #B4BECB;
+    --color-bg-gold: #D5B795;
+    --color-bg-blue: #A7CEEF;
+    --color-bg-green: #ACB5AC;
+    --color-bg-red: #C9A3A4;
+    --color-bg-light: #F2F7F7;
+    --color-type-dark: #0B2436;
+    --color-type-grey: #858585;
+    --color-type-light: white;
+}
 
 * {
-    /* Clear default settings */
     padding: 0;
     margin: 0;
     border: 0;
@@ -9,339 +20,202 @@
     outline: none;
 
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     list-style: none;
     text-decoration: none;
-    color: white;
+    color: var(--color-type-light);
 }
 
-h1 {
-    /* Masthead */
-    font-size: 2rem;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid>div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 4rem;
+}
+
+.grid img {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+hr {
+    border-top: 2px solid var(--color-type-light);
+    margin-top: 1rem;
+}
+
+h1,
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
     text-transform: capitalize;
-    line-height: 3rem;
-    padding-top: 14rem;
-    padding-bottom: 5rem;
-}
-
-h3 {
-    /* Sub-mast */
-    font-size: 2rem;
-    font-family: 'Unica One', sans-serif;
-    text-transform: uppercase;
-    text-align: right;
-    margin-bottom: 5rem;
+    letter-spacing: 0.08rem;
 }
 
 h2 {
-    /* Headings */
-    font-size: 3rem;
-    font-family: 'Unica One', sans-serif;
-    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
 }
 
-p,
-.footer ul {
-    /* Main body text slightly bigger than normal */
+b {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+p {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-top: 1rem;
 }
 
-b {
-    /* Bold and coloured text */
-    font-weight: 500;
-    color: white;
-}
-
-a {
-    /* Link is heavy */
-    font-weight: 700;
+p a {
+    position: relative;
     text-transform: capitalize;
-    color: rgb(215, 220, 220);
-    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
 }
 
-.light-text p,
-.light-text p a,
-.light-text b,
-.light-text h1,
-.light-text h2,
-.light-text h3 {
-    color: black;
+p a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    left: 0;
+    background: var(--color-type-light);
+    transition: width .2s ease-in-out;
+    -webkit-transition: width .2s ease-in-out;
 }
 
-a:hover {
-    /* Link glows white */
-    color: white !important;
-    transition: 0.2s;
+p a:hover:after {
+    width: 2rem;
 }
 
-.light-text p a:hover {
-    color: #666666 !important;
+.nav,
+.footer {
+    grid-area: nav;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
 }
 
-.btn {
-    /* Clear button with white box */
-    font-size: 1rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.19rem;
-    color: white !important;
-    border: solid 2px white;
-    padding: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    float: right;
+.footer {
+    grid-area: footer;
+    background-color: var(--color-bg-white);
 }
 
-.light-text .btn {
-    color: black !important;
-    border: solid 2px black;
+.footer p {
+    padding-bottom: 1rem;
 }
 
-.btn:hover {
-    /* Button becomes black on white */
-    color: black !important;
-    background-color: white;
-    border: solid 2px white;
-    transition: 0.2s;
-}
-
-.light-text .btn:hover {
-    /* Button becomes white on black */
-    color: white !important;
-    background-color: black;
-    border: solid 2px black;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1rem;
-}
-
-nav img {
+.nav img {
     /* Logo size */
     height: 4rem;
+    width: auto;
 }
 
-nav a {
-    /* Nav links are bigger with different font */
-    font-family: 'Unica One', sans-serif;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-}
-
-nav li {
-    /* Align the nav links right */
+.nav li,
+.footer li {
     float: left;
-    padding-left: 1rem;
+    padding-left: 1.2rem;
 }
 
-nav .menu-btn {
+.nav .menu-btn {
     /* Hide hamburger checkbox in desktop mode */
     visibility: hidden;
 }
 
-.content {
-    /* Main content width and layout */
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    min-height: 100vh;
-
-    padding-left: 10vw;
-    padding-right: 10vw;
-
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.light h1,
+.light h2,
+.light p,
+.light p a,
+.light b,
+.footer p,
+.footer b,
+.footer a {
+    color: var(--color-type-dark);
 }
 
-.narrow-row {
-    /* Narrow content width and layout */
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-
-    padding: 20vh 20vw;
+.light p a:after,
+.footer p a:after {
+    background: var(--color-type-dark);
 }
 
-.narrow-row img {
-    /* Images inside content areas */
-    align-self: center;
-    width: 30%;
-    margin-left: 2rem;
+.light hr {
+    border-top: 2px solid var(--color-type-dark);
 }
 
-.article-thumbnail {
-    display: flex;
-    justify-content: stretch;
-    align-items: center;
+iframe {
+    width: 50vw;
+    height: calc(50vw / 16 * 9);
 }
 
-.article-thumbnail img {
-    align-self: flex-end;
-    width: 40%;
-    margin: 1rem 0 1rem 2rem;
-}
+/* Make video bigger for small laptops */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 
-.video {
-    /* Video aspect ratio is anamorphic */
-    margin-bottom: 8rem;
-    align-self: center;
-    position: relative;
-    width: 65vw;
-    padding-bottom: 36.56%;
-    /* 2.39:1 */
-}
-
-.video iframe {
-    /* Make sure video scales with screen size */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.footer {
-    /* Footer spacing and alignment */
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-
-    min-height: auto;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-}
-
-.footer li {
-    /* Align social links right */
-    float: left;
-    padding-left: 1rem;
+    iframe {
+        width: 100%;
+        height: calc((100vw - 4rem) / 16 * 9);
+    }
 }
 
 /* Settings for mobile view */
-@media (max-width: 900px) {
-
-    h1 {
-        /* Smaller masthead */
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-
-        padding-top: 7rem;
-        padding-bottom: 7rem;
+@media (max-width: 960px) {
+    .grid>div {
+        padding: 2rem 2rem;
     }
 
-    h3 {
-        /* Smaller sub-mast and left align */
-        font-size: 1.5rem;
-        text-align: left;
-
-        padding-bottom: 1rem;
-        margin-bottom: 2rem;
-    }
-
+    h1,
     h2 {
-        /* Smaller headings */
         font-size: 2.5rem;
     }
 
-    p,
-    .footer ul {
-        /* Standard main body text */
+    p {
         font-size: 1rem;
-    }
-
-    .btn {
-        font-size: 0.8rem;
-        padding: 0.8rem;
-    }
-
-    nav img {
-        /* Smaller logo */
-        height: 3rem;
-    }
-
-    .content {
-        /* Content width is wider */
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-
-    .narrow-row {
-        /* Narrow content also wider */
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        padding: 10vh 10vw;
-    }
-
-    .narrow-row img {
-        /* Side images bigger */
-        width: 70%;
-        margin-left: 0;
-        margin-top: 2rem;
-    }
-
-    .article-thumbnail {
-        flex-direction: column;
-    }
-
-    .narrow-row img {
-        width: 100%;
-        margin-left: 0;
-    }
-    
-    .video {
-        /* Video set to better aspect ratio */
-        margin-bottom: 3rem;
-        width: 100%;
-        padding-bottom: 56.27%;
     }
 
     .footer {
         /* Footer becomes center justified */
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        flex-direction: column-reverse !important;
+        justify-content: flex-start !important;
+        align-items: flex-end !important;
     }
 
-    .footer li {
+    .footer ul {
+        padding-bottom: 1rem;
+    }
+
+    .footer li,
+    .footer p {
         /* Get rid of right align and space apart */
+        text-align: right !important;
         float: none;
-        padding-left: 0rem;
-        padding-top: 1rem;
+        padding: 0;
+        line-height: 1;
     }
 
-    /* Things related to navigation hamburger menu */
-    nav li {
-        float: none;
-        padding: 1rem;
-        text-align: center;
+    .nav img {
+        height: 3rem;
     }
 
-    nav .hamburger {
+    .nav li {
+        float: none;
+        padding: 0.5rem;
+        text-align: right;
+    }
+
+    .nav .hamburger {
         position: absolute;
-        top: 1rem;
-        right: 5vw;
+        top: 2rem;
+        right: 2rem;
 
         width: 3rem;
         height: 3rem;
@@ -355,16 +229,16 @@ nav .menu-btn {
         z-index: 2;
     }
 
-    nav .hamburger .bar {
+    .nav .hamburger .bar {
         background: white;
         height: 4px;
         width: 2rem;
     }
 
-    nav .menu-btn {
+    .nav .menu-btn {
         position: absolute;
-        top: 1rem;
-        right: 5vw;
+        top: 2rem;
+        right: 2rem;
 
         z-index: 3;
         opacity: 0;
@@ -375,7 +249,7 @@ nav .menu-btn {
         cursor: pointer;
     }
 
-    nav .menu {
+    .nav .menu {
         position: fixed;
         top: 0;
         left: 0;
@@ -384,19 +258,19 @@ nav .menu-btn {
 
         z-index: 1;
         opacity: 0;
-        padding: 2rem;
-        transition: all 0.1s;
+        padding: 5rem 2rem 0 0;
+        transition: ease-in-out 0.2s;
 
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-end;
 
-        background: black;
+        background: #B4BECB;
 
         visibility: hidden;
     }
 
-    nav .menu-btn:checked~.menu {
+    .nav .menu-btn:checked~.menu {
         visibility: visible;
         opacity: 1;
     }

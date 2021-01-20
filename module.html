@@ -157,10 +157,10 @@
 
         <div class="div1">
             <div></div>
-            <h1>The new S1 Bluetooth / FPGA Module.</h1>
+            <h1>S1 System on Module.</h1>
             <div>
                 <hr>
-                <p><b>Ultra-small and ultra low power</b></p>
+                <p><b>Bluetooth, FPGA, and Battery Management, all in one</b></p>
             </div>
 
         </div>
@@ -169,17 +169,15 @@
             <div>
                 <h2>Bluetooth</h2>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste
-                    tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium
-                    placeat veritatis! Debitis.</p>
+                <p>Based on Nordic's nRF52, the S1 features leading support for Bluetooth 5.2 with extensibility for direction finding, and thread.</p>
+                <p>Here you can run your wireless application, and have full control over the state of the module. You can easily control power and manage the FPGA. The nRF52 is design for ultra-low power, and we've made that a focus of the S1 Module.</p>
             </div>
 
             <div>
                 <h2>Power Management</h2>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste
-                    tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium
-                    placeat veritatis! Debitis.</p>
+                <p>Great power management starts from the core. The power controller features buck-boot regulation and LDOs for flexible routing of power. There's also a built in battery charger and monitor which supports all single cell lithium technologies.</p>
+                <p>Three separate power rails are broken out from the module, one of which can boost to 5.5V from a single lithium cell. This allow for a wide range of applications where power management is critical.</p>
             </div>
         </div>
 
@@ -187,32 +185,47 @@
             <div>
                 <h2>FPGA</h2>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste
-                    tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium
-                    placeat veritatis! Debitis.</p>
-            </div>
+                <p>The Lattice iCE40 FPGA lets you deploy hardware acceleration into a tiny, and wireless form factor. Applications can include fast signal processing logic, neural network models, or even additional general purpose CPU cores.</p>
+                <p>The FPGA contains 5k LUTs with 8 DSP blocks, 1Mb of SPRAM, PLL and two built in oscillators.</p>
+                <p>An additional 32Mb flash allows automatic configuration of the FPGA, as well as serves as user memory space for logging data or other information. The Bluetooth IC, Flash and FPGA are all connected over SPI for easy communication.</p>
+                <p>The iCE40 series features an extensive open source toolchain with numerous examples which make writing FPGA applications easier than ever.</p>
+                <p><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Quick start tutorial video coming soon.</a></p>
+        </div>
 
             <div>
                 <h2>IO Connectivity</h2>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste
-                    tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium
-                    placeat veritatis! Debitis.</p>
+                <p>8 high speed pins are broken out from the FPGA. Supported interfaces include digital IO, SPI, I2C, I3C and USB.</p>
+                <p>2 standard pins are broken out from the Bluetooth chip. Supported interfaces include I2C, digital IO or analog inputs.</p>
+                <p>Power pins include, 5V power/charge input, 3.7V battery pin, 1.8V rail, configurable LDO rail, and a 0.8V-5.5V buck-boost rail</p>
             </div>
         </div>
 
-        <div class="div4">
-            <div></div>
+        <div class="div8">
+            <h2>Applications</h2>
+            <hr>
+            <p>The S1 is targeted for Wearables and IoT devices with tight form factors. The 7x12mm footprint makes it perfect for where space is a concern.</p>
+            <p>Save months of development and avoid HDI PCBs or RF tuning in your design. It's already done for you within the S1. It is a pick-and-place compatible module, suitable for standard FR4 or FPC based designs.</p>
+        </div>
 
+        <div class="div4">
             <div>
                 <h2>Development Kit</h2>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repudiandae possimus nemo in iste
-                    tempora earum distinctio voluptatum, magnam vel, atque est? Doloribus impedit amet vitae laudantium
-                    placeat veritatis! Debitis.</p>
+                <p>Quickly get started with the S1 Popout board. The board breaks out all the pins of the S1, as well as a few handy connectors to help you quickly build your application.</p>
+                <p>Include are JST battery connector, USB-C power/data, QWICC/StemmaQT I2C sensor header, 10-Pin Cortex Debug Connector.</p>
             </div>
 
-            <p><a href="#" target="_blank">Coming soon to Tindie</a></p>
+            <p><b>Available Soon on tindie.com</b></p>
+
+            <p>
+                <!-- <a href="#" target="_blank">Tindie store</a> -->
+                <!-- &nbsp;&nbsp;&nbsp; -->
+                <a href="https://www.sparkfun.com/qwiic" target="_blank">QWICC Sensors</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="https://www.adafruit.com/?q=StemmaQT&sort=RecentlyAdded" target="_blank">StemmaQT Sensors</a>
+            </p>
+
         </div>
 
         <div class="div5 light">
@@ -226,27 +239,22 @@
         <div class="div6 light">
             <h2>Order</h2>
             <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laboriosam assumenda itaque neque debitis
-                quidem voluptate dolores animi iusto ullam. Mollitia harum dolore repudiandae neque corrupti, temporibus
-                rerum sapiente veritatis!</p>
-            <p><a href="mailto:info@siliconwitchery.com" class="btn">Email Us</a></p>
+            <p>The S1 and S1 Development Kit will be available from general distributors soon.</p>
+            <p><b>Planned Delivery Q2 2021</b></p>
+            <p>Contact our sales for samples and more information about how to get your hands on some parts.</p>
+            <p><a href="mailto:info@siliconwitchery.com">Contact our sales</a></p>
         </div>
 
         <div class="div7 light">
             <h2>Documentation</h2>
             <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laboriosam assumenda itaque neque debitis
-                quidem voluptate dolores animi iusto ullam. Mollitia harum dolore repudiandae neque corrupti, temporibus
-                rerum sapiente veritatis!</p>
-            <p><a href="mailto:info@siliconwitchery.com" class="btn">Email Us</a></p>
-        </div>
-
-        <div class="div8">
-            <h2>Applications</h2>
-            <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laboriosam assumenda itaque neque debitis
-                quidem voluptate dolores animi iusto ullam. Mollitia harum dolore repudiandae neque corrupti, temporibus
-                rerum sapiente veritatis!</p>
+            <p>Detailed specifications are available on our Documentation Center.</p>
+            <p>Video tutorials and examples coming soon to our YouTube channel.</p>
+            <p><a href="https://docs.siliconwitchery.com">Docs Center</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw"
+                target="_blank">YouTube.</a>
+            </p>
         </div>
 
         <div class="footer">

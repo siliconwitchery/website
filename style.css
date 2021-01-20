@@ -36,8 +36,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    background-size: contain;
     padding: 4rem 4rem;
 }
 
@@ -160,6 +158,10 @@ iframe {
 
 /* Make video bigger for small laptops */
 @media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
     iframe {
         width: 100%;
         height: calc((100vw - 4rem) / 16 * 9);
@@ -168,11 +170,6 @@ iframe {
 
 /* Settings for mobile view */
 @media (max-width: 960px) {
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
     .grid>div {
         padding: 2rem 2rem;
     }

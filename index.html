@@ -54,38 +54,38 @@
     .div1 {
         grid-area: heading;
         background: url(images/fpc.png) no-repeat;
-        background-size: 60% auto !important;
+        background-size: 60% auto;
         background-position: right 80%;
         background-color: var(--color-bg-grey);
         padding-right: 60% !important;
-        justify-content: flex-start !important;
+        justify-content: flex-start;
     }
 
     .div2 {
         grid-area: s1;
         background: url(images/s1-module.png) no-repeat;
-        background-size: 100% auto !important;
+        background-size: 100% auto;
         background-position: center 70%;
         background-color: var(--color-bg-red);
-        justify-content: space-between !important;
+        justify-content: space-between;
     }
 
     .div3 {
         grid-area: dev-kit;
         background: url(images/devkit.png) no-repeat;
-        background-size: 70% auto !important;
+        background-size: 70% auto;
         background-position: center 70%;
         background-color: var(--color-bg-blue);
-        justify-content: space-between !important;
+        justify-content: space-between;
     }
 
     .div4 {
         grid-area: docs;
         background: url(images/devkit-wired.png) no-repeat;
-        background-size: 70% auto !important;
+        background-size: 70% auto;
         background-position: center 75%;
         background-color: var(--color-bg-green);
-        justify-content: space-between !important;
+        justify-content: space-between;
     }
 
     .div5 {
@@ -93,9 +93,9 @@
         padding-bottom: 0 !important;
         padding-right: 60% !important;
         background: url(images/probe.png) no-repeat;
-        background-size: auto 100% !important;
+        background-size: auto 100%;
         background-position: right top;
-        justify-content: space-between !important;
+        justify-content: space-between;
     }
 
     
@@ -111,7 +111,6 @@
 
     @media (max-width: 1200px) {
         .grid {
-            grid-template-columns: 1fr !important;
             grid-template-rows: 7rem 1.2fr 100vw 100vw 100vw 1fr 18rem;
             grid-template-areas:
                 "nav"
@@ -124,7 +123,7 @@
         }
 
         .div1 {
-            background-size: 70% auto !important;
+            background-size: 70% auto;
         }
     }
 
@@ -139,8 +138,8 @@
 
         .div5 {
             padding-right: 2rem !important;
-            background-size: auto 55% !important;
-            justify-content: flex-end !important;
+            background-size: auto 55%;
+            justify-content: flex-end;
         }
     }
 

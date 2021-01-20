@@ -154,9 +154,16 @@ p a:hover:after {
 }
 
 iframe {
-    /* 16:9 aspect ratio */
     width: 50vw;
     height: calc(50vw / 16 * 9);
+}
+
+/* Make video bigger for small laptops */
+@media (max-width: 1200px) {
+    iframe {
+        width: 100%;
+        height: calc((100vw - 4rem) / 16 * 9);
+    }
 }
 
 /* Settings for mobile view */
@@ -175,10 +182,8 @@ iframe {
         font-size: 2.5rem;
     }
 
-    iframe {
-        /* 16:9 aspect ratio */
-        width: 100%;
-        height: calc((100vw - 4rem) / 16 * 9);
+    p {
+        font-size: 1rem;
     }
 
     .footer {

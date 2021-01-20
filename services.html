@@ -39,13 +39,12 @@
 <style>
     .grid {
         grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: 7rem 45rem 45rem 45rem 45rem 30rem 35rem 14rem;
+        grid-template-rows: 7rem 45rem 45rem 45rem 30vw 35rem 14rem;
         grid-template-areas:
             "nav nav"
             "heading heading"
             "hardware firmware"
             "advanced advanced"
-            "rf pen-testing"
             "video video"
             "about contact"
             "footer footer";
@@ -69,8 +68,8 @@
         grid-area: hardware;
         background: url(images/s1-xray.png) no-repeat;
         background-size: auto 100% !important;
-        background-position: 110% center;
-        padding-right: 60% !important;
+        background-position: right center;
+        padding-right: 50% !important;
     }
 
     .div3 {
@@ -90,28 +89,14 @@
     }
 
     .div5 {
-        grid-area: rf;
-        background: url(images/rf.png) no-repeat;
-        background-size: auto 120% !important;
-        background-position: 170% center;
-        padding-right: 50% !important;
-        background-color: var(--color-bg-red);
-    }
-
-    .div6 {
-        grid-area: pen-testing;
-        background-color: var(--color-type-dark);
-    }
-
-    .div7 {
         grid-area: video;
     }
 
-    .div8 {
+    .div6 {
         grid-area: about;
     }
 
-    .div9 {
+    .div7 {
         grid-area: contact;
     }
 
@@ -121,18 +106,16 @@
         }
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 1200px) {
         .grid {
             grid-template-columns: 1fr !important;
-            grid-template-rows: 6rem 1fr 1fr 1fr 1.2fr 1fr 1fr 1fr 1fr 1fr 18rem;
+            grid-template-rows: 6rem 1fr 1fr 1fr 1.5fr 60vw 1fr 0.7fr 18rem;
             grid-template-areas:
                 "nav"
                 "heading"
                 "hardware"
                 "firmware"
                 "advanced"
-                "rf"
-                "pen-testing"
                 "video"
                 "about"
                 "contact"
@@ -146,22 +129,29 @@
         }
 
         .div2 {
-            padding-right: 2rem !important;
-            background-size: auto 50% !important;
-            background-position: center 130%;
+            background-position: 110% center;
+            padding-right: 30% !important;
         }
 
         .div4 {
             padding-right: 2rem !important;
             background-size: 110% auto !important;
-            background-position: center 86%;
-        }
-
-        .div5 {
-            padding-right: 2rem !important;
-            /* background: none; */
+            background-position: center 80%;
         }
     }
+
+    @media (max-width: 700px) {
+        .div2 {
+            background-image: none;
+            padding-right: 2rem !important;
+        }
+
+        .div4 {
+            background-size: auto 30% !important;
+            background-position: center 80%;
+        }
+    }
+
 </style>
 
 <body>
@@ -195,24 +185,29 @@
         <div class="div1">
             <h1>Helping you build for every uncertainty.</h1>
             <hr>
-            <p><b>Your R&D team of embedded experts</b></p>
+            <p><b>An R&D team of embedded experts</b></p>
         </div>
 
         <div class="div2 light">
             <h2>Hardware</h2>
             <hr>
-            <p>We specialize in building ultra-small devices for wearables and tiny IoT applications.</p>
-            <p>Experienced in <b>HDI</b>, <b>RF</b> and <b>high speed</b> layout. Our team is able to design production ready boards and fully assemble prototypes in house.</p>
+            <p>Specialized in designing ultra-small circuits for wearbles and IoT, our team can help you with all of your <b>HDI</b>, <b>RF</b> and <b>high speed</b> layout.</p>
+            <p>We can assemble and test prototypes fully in house, as well as verify RF circuits and tune antennas.</p>
+            <p>With great access to certification partners, we can help advise on EMC testing and help to make sure you meet regulations for global market access.</p>
         </div>
 
         <div class="div3">
             <div>
                 <h2>Firmware</h2>
                 <hr>
-                <p>Our firmware planning starts from day one, to make sure you get the most efficient design possible.</p>
-                <p>Our multidisciplinary team are experienced in writing code for all major <b>ARM</b>, and <b>RISC-V</b> devices. Everything from bare metal to Embedded Linux / RTOS.</p>
+                <p>Our multidisciplinary team can help you build code for all major <b>ARM</b>, and <b>RISC-V</b> chipsets. We can also help with application development targeted to embedded Linux and RTOS based systems.</p>
             </div>
-            <p><a href="https://github.com/siliconwitchery" target="_blank">Visit our Github</a></p>
+            <div>
+                <h2>Pen Testing</h2>
+                <hr>
+                <p>Don't leave leave it to chance. We can check for a magnitude of vulnerabilities using the same tools as bad actors. We can also test for more sophisticated side channel attacks such as power or timing analysis.</p>
+            </div>
+            <p><a href="https://github.com/siliconwitchery" target="_blank">See our codebase on Github</a></p>
         </div>
 
         <div class="div4">
@@ -226,27 +221,13 @@
             <p><a href="https://se.mathworks.com/solutions/model-based-design.html" target="_blank">Why Use Model Based Design?</a></p>
         </div>
 
-        <div class="div5">
-            <h2>RF in house</h2>
-            <hr>
-            <p>We can help you ensure top wireless performance with in house tooling for tuning antennas and testing RF circuits.</p>
-            <p>We can also advise on EMC testing and have great access to certification partners to make sure you meet regulations for global market access.</p>
-        </div>
-
-        <div class="div6">
-            <h2>Penetration testing</h2>
-            <hr>
-            <p>Don't leave it to chance. Remote devices can become a dangerous entry point into your secure infrastructure.</p>
-            <p>We can check a magnitude of security vulnerabilities using the same tools bad actors, as well as more obscure side channel attacks such as power or timing analysis.</p>
-        </div>
-
-        <div class="div7 light">
+        <div class="div5 light">
             <div style="text-align: center;">
                 <iframe src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1" allowfullscreen></iframe>
             </div>
         </div>
 
-        <div class="div8 light">
+        <div class="div6 light">
             <div class="light">
                 <h2>About Us</h2>
                 <hr>
@@ -256,7 +237,7 @@
 
         </div>
 
-        <div class="div9 light">
+        <div class="div7 light">
             <div>
                 <h2>Contact</h2>
                 <hr>

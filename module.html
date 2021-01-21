@@ -38,7 +38,7 @@
 
 <style>
     .grid {
-        grid-template-rows: 7rem 20rem 55rem 70rem 40vw 50vw 30vw 35rem 14rem;
+        grid-template-rows: 7rem 45rem 55rem 70rem 40vw 50vw 30vw 35rem 14rem;
         grid-template-areas:
             "nav nav"
             "heading heading"
@@ -52,12 +52,15 @@
     }
 
     .nav {
-        background-color: var(--color-bg-red);
+        background-color: var(--color-bg-blue);
     }
 
     .div1 {
         grid-area: heading;
-        background-color: var(--color-bg-red);
+        background: url(images/s1-micro-sd.png) no-repeat;
+        background-size: 40% auto;
+        background-position: 90% center ;
+        background-color: var(--color-bg-blue);
         padding-right: 55% !important;
         justify-content: flex-end;
     }
@@ -65,7 +68,7 @@
     .div2 {
         grid-area: ble-pmic;
         background: url(images/s1-close-right.png) no-repeat;
-        background-size: 35% auto;
+        background-size: auto 90%;
         background-position: left center;
         padding-left: 40% !important;
         justify-content: space-between;
@@ -74,7 +77,7 @@
     .div3 {
         grid-area: fpga-io;
         background: url(images/s1-close-left.png) no-repeat;
-        background-size: 35% auto;
+        background-size: auto 90%;
         background-position: right center;
         padding-right: 40% !important;
         justify-content: space-between;
@@ -83,7 +86,7 @@
     .div4 {
         grid-area: applications;
         background: url(images/cgm.png) no-repeat;
-        background-size: 40% auto;
+        background-size: auto 100%;
         background-position: left center;
         background-color: var(--color-bg-blue);
         padding-left: 55% !important;
@@ -92,12 +95,18 @@
 
     .div5 {
         grid-area: dev-kit;
-        background: url(images/devkit-wired.png) no-repeat;
-        background-size: 50% auto;
-        background-position: 120% center;
+        background: url(images/devkit-annotated.png) no-repeat;
+        background-size: 40% auto;
+        background-position: 90% center;
         background-color: var(--color-bg-green);
         padding-right: 55% !important;
-        justify-content: space-between !important;
+        justify-content: space-between;
+    }
+
+    .div5 iframe {
+        padding-top: 1rem;
+        width: 40vw;
+        height: calc(40vw / 16 * 9);
     }
 
     .div6 {
@@ -120,7 +129,6 @@
 
     @media (max-width: 1200px) {
         .grid {
-            /* grid-template-rows: 7rem 0.5fr 1fr 1fr 1.2fr 1fr 1fr 1fr 1fr 18rem; */
             grid-template-rows: 7rem 20rem 55rem 70rem 45rem 45rem 30vw 35rem 35rem 18rem;
             grid-template-areas:
                 "nav"
@@ -186,44 +194,56 @@
             <h1>S1 System on Module.</h1>
             <div>
                 <hr>
-                <p><b>Bluetooth, FPGA, and Battery Management, all in one</b></p>
+                <p><b>Bluetooth, FPGA, and Battery Management, all in one. Perfect for deploying hardware accelerated algorithms onto tiny form factor IoT devices.</b></p>
             </div>
 
         </div>
 
         <div class="div2 light">
             <div>
-                <h2>Bluetooth</h2>
+                <h2>Bluetooth 5.2</h2>
                 <hr>
-                <p>Based on Nordic's nRF52, the S1 features leading support for Bluetooth 5.2 with extensibility for direction finding, and thread.</p>
-                <p>Here you can run your wireless application, and have full control over the state of the module. You can easily control power and manage the FPGA. The nRF52 is design for ultra-low power, and we've made that a focus of the S1 Module.</p>
+                <p>Based on Nordic's nRF52, the S1 features Bluetooth 5.2 with extensibility for direction finding, and thread. With on board antenna, you don't need to worry about designing RF hardware into your product. Simply connect power, and the module will be up and running.</p>
+                <p>The S1 Module is designed for ultimate efficiency. The nRF52 runs your core application, and you will have access to a host of low power modes which can be switched on the fly.</p>
+                <p><a href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52811" target="_blank">nRF52 Features</a></p>
             </div>
 
             <div>
-                <h2>Power Management</h2>
+                <h2>Battery Management</h2>
                 <hr>
-                <p>Great power management starts from the core. The power controller features buck-boot regulation and LDOs for flexible routing of power. There's also a built in battery charger and monitor which supports all single cell lithium technologies.</p>
-                <p>Three separate power rails are broken out from the module, one of which can boost to 5.5V from a single lithium cell. This allow for a wide range of applications where power management is critical.</p>
+                <p>To reduce component count in your design. The S1 Module features complete power and battery management. Charge any single cell lithium with the built in battery charger, and make use of four user configurable voltage rails which are broken out. One of which is a buck-boost up to 5.5V.</p>
+                <p>The power management IC is highly user configurable with software control, so you can dial in your power requirements, or shut down rails when not needed to save energy.</p>
             </div>
         </div>
 
         <div class="div3 light">
             <div>
-                <h2>FPGA</h2>
+                <h2>FPGA + DSP</h2>
                 <hr>
-                <p>The Lattice iCE40 FPGA lets you deploy hardware acceleration into a tiny, and wireless form factor. Applications can include fast signal processing logic, neural network models, or even additional general purpose CPU cores.</p>
-                <p>The FPGA contains 5k LUTs with 8 DSP blocks, 1Mb of SPRAM, PLL and two built in oscillators.</p>
-                <p>An additional 32Mb flash allows automatic configuration of the FPGA, as well as serves as user memory space for logging data or other information. The Bluetooth IC, Flash and FPGA are all connected over SPI for easy communication.</p>
-                <p>The iCE40 series features an extensive open source toolchain with numerous examples which make writing FPGA applications easier than ever.</p>
-                <p><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Quick start tutorial video coming soon.</a></p>
+                <p>Deploy hardware acceleration wireless with the S1 Module. Save on computation demand that would otherwise need to be done in the cloud. With the FPGA you can deploy realtime signal processing for sensor fusion applications, or run machine learning models.</p>
+                <p>The iCE40 features 5k LUTs with 8 hardware DSP blocks. There's also 1Mb of SRAM, PLL and two built in oscillators, so you can deploy applications without any external components.</p>
+                <p>32Mb of user flash serve has boot ROM for the FPGA, as well as user storage. Perfect for in-field updates which can be done wirelessly to enable new FPGA applications on the fly.</p>
+                <p>An extensive open source toolchain is available for the iCE40, making it easier than ever to get started with FPGA.</p>
+                <p>
+                    <a href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus" target="_blank">iCE40 Features</a>    
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Tutorials coming soon</a>
+                </p>
         </div>
 
             <div>
                 <h2>IO Connectivity</h2>
                 <hr>
-                <p>8 high speed pins are broken out from the FPGA. Supported interfaces include digital IO, SPI, I2C, I3C and USB.</p>
-                <p>2 standard pins are broken out from the Bluetooth chip. Supported interfaces include I2C, digital IO or analog inputs.</p>
-                <p>Power pins include, 5V power/charge input, 3.7V battery pin, 1.8V rail, configurable LDO rail, and a 0.8V-5.5V buck-boost rail</p>
+                <p>Easily connect sensors and peripherals for your IoT application. 8 high speed digital IO allow for fast data processing, as well several power rails for flexible power configurations.</p>
+                <p><b>
+                    ‣ 8 digital IO (supporting I3C / I2C / SPI)<br>
+                    ‣ 2 analog inputs<br>
+                    ‣ 5V Charging input<br>
+                    ‣ Lithium cell input<br>
+                    ‣ 0.8 - 1.8V LDO output<br>
+                    ‣ 0.8 - 3.9V LDO output<br>
+                    ‣ 0.8 - 5.5V Buck-Boost output
+                </b></p>
             </div>
         </div>
 
@@ -232,18 +252,19 @@
             <hr>
             <p>The S1 is targeted for Wearables and IoT devices with tight form factors. The 7x12mm footprint makes it perfect for where space is a concern.</p>
             <p>Save months of development and avoid HDI PCBs or RF tuning in your design. It's already done for you within the S1. It is a pick-and-place compatible module, suitable for standard FR4 or FPC based designs.</p>
+            <p><a href="https://github.com/siliconwitchery/s1-module-kicad-libraryp" target="_blank">Kicad Footprint & Symbol Library</a></p>
         </div>
 
         <div class="div5">
             <div>
                 <h2>Development Kit</h2>
                 <hr>
-                <p>Quickly get started with the S1 Popout board. The board breaks out all the pins of the S1, as well as a few handy connectors to help you quickly build your application.</p>
-                <p>Include are JST battery connector, USB-C power/data, QWICC/StemmaQT I2C sensor header, 10-Pin Cortex Debug Connector.</p>
+                <p><b>Available Soon on tindie.com</b></p>
+                <p>The S1 Popout board is a development kit that breaks out all the pins of the S1 Module. There's also a few handy connectors to help you get started.</p>
+                <p>The Sparkfun QWICC / Adafruit StemmaQT I2C header lets you quickly connect sensors and prototype applications without any soldering.</p> 
             </div>
 
-            <p><b>Available Soon on tindie.com</b></p>
-
+            <iframe src="https://www.youtube.com/embed/x0RDEHqFIF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p>
                 <!-- <a href="#" target="_blank">Tindie store</a> -->
                 <!-- &nbsp;&nbsp;&nbsp; -->
@@ -266,20 +287,20 @@
             <h2>Order</h2>
             <hr>
             <p>The S1 and S1 Development Kit will be available from general distributors soon.</p>
-            <p><b>Planned Delivery Q2 2021</b></p>
-            <p>Contact our sales for samples and more information about how to get your hands on some parts.</p>
+            <p><b>Available for order Q2 2021</b></p>
+            <p>Contact our sales for samples today as well as more information regarding pricing and delivery.</p>
             <p><a href="mailto:info@siliconwitchery.com">Contact our sales</a></p>
         </div>
 
         <div class="div8 light">
             <h2>Documentation</h2>
             <hr>
-            <p>Detailed specifications are available on our Documentation Center.</p>
-            <p>Video tutorials and examples coming soon to our YouTube channel.</p>
-            <p><a href="https://docs.siliconwitchery.com">Docs Center</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw"
-                target="_blank">YouTube.</a>
+            <p>Links to technical resources and examples.</p>
+            <br>
+            <p>
+                ‣ <a href="https://docs.siliconwitchery.com/hardware/s1-module/" target="_blank">Product Specification / Datasheet</a><br><br>
+                ‣ <a href="https://docs.siliconwitchery.com" target="_blank">Documentation Center</a><br><br>
+                ‣ <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Tutorials on YouTube.</a><br><br>
             </p>
         </div>
 

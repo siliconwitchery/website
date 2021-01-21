@@ -38,17 +38,19 @@
 
 <style>
     .grid {
-        grid-template-rows: 7rem 45rem 55rem 70rem 40vw 50vw 30vw 35rem 14rem;
+        /* grid-template-rows: 7rem 45rem 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr 0.25fr 14rem; */
+        grid-template-rows: 7rem 45rem 25rem 25rem 35rem 30rem 40rem 60rem 35rem 14rem;
         grid-template-areas:
-            "nav nav"
-            "heading heading"
-            "video video"
-            "ble-pmic ble-pmic"
-            "fpga-io fpga-io"
-            "applications applications"
-            "dev-kit dev-kit"
-            "order docs"
-            "footer footer";
+            "nav nav nav"
+            "heading heading heading"
+            "right-module ble ble"
+            "right-module pmic pmic"
+            "fpga fpga left-module"
+            "io io left-module"
+            "cgm cgm applications"
+            "devkit-img devkit devkit"
+            "order order ."
+            "footer footer footer";
     }
 
     .nav {
@@ -58,104 +60,163 @@
     .div1 {
         grid-area: heading;
         background: url(images/s1-micro-sd.png) no-repeat;
-        background-size: 40% auto;
-        background-position: 90% center ;
+        background-size: 45% auto;
+        background-position: right 40%;
         background-color: var(--color-bg-blue);
-        padding-right: 55% !important;
-        justify-content: flex-end;
+        padding-left: 18rem !important;
+        padding-right: 18rem !important;
+        justify-content: center;
+    }
+
+    .div1 h1,
+    .div1 p {
+        padding-right: 50% !important;
     }
 
     .div2 {
-        grid-area: ble-pmic;
+        grid-area: right-module;
         background: url(images/s1-close-right.png) no-repeat;
         background-size: auto 90%;
         background-position: left center;
-        padding-left: 40% !important;
-        justify-content: space-between;
     }
 
     .div3 {
-        grid-area: fpga-io;
-        background: url(images/s1-close-left.png) no-repeat;
-        background-size: auto 90%;
-        background-position: right center;
-        padding-right: 40% !important;
-        justify-content: space-between;
+        grid-area: ble;
+        justify-content: flex-start;
     }
 
     .div4 {
-        grid-area: applications;
-        background: url(images/cgm.png) no-repeat;
-        background-size: auto 100%;
-        background-position: left center;
-        background-color: var(--color-bg-blue);
-        padding-left: 55% !important;
+        grid-area: pmic;
         justify-content: flex-end;
     }
 
     .div5 {
-        grid-area: dev-kit;
-        background: url(images/devkit-annotated.png) no-repeat;
-        background-size: 40% auto;
-        background-position: 90% center;
-        background-color: var(--color-bg-green);
-        padding-right: 55% !important;
-        justify-content: space-between;
-    }
-
-    .div5 iframe {
-        padding-top: 1rem !important;
-        width: 40vw !important;
-        height: calc(40vw / 16 * 9) !important;
+        grid-area: fpga;
+        justify-content: flex-start;
     }
 
     .div6 {
-        grid-area: video;
+        grid-area: io;
+        justify-content: flex-end;
     }
 
     .div7 {
-        grid-area: order;
+        grid-area: left-module;
+        background: url(images/s1-close-left.png) no-repeat;
+        background-size: auto 70%;
+        background-position: right center;
     }
 
     .div8 {
-        grid-area: docs;
+        grid-area: cgm;
+        background: url(images/cgm.png) no-repeat;
+        background-size: auto 100%;
+        background-position: left center;
+        background-color: var(--color-bg-gold);
     }
 
-    @media (min-width: 1201px) {
+    .div9 {
+        grid-area: applications;
+        justify-content: flex-end;
+        background-color: var(--color-bg-gold);
+    }
+
+    .div10 {
+        grid-area: devkit-img;
+        background: url(images/devkit-annotated.png) no-repeat;
+        background-size: 90% auto;
+        background-position: center center;
+    }
+
+    .div11 {
+        grid-area: devkit;
+        justify-content: center;
+    }
+
+    .div12 {
+        grid-area: order;
+    }
+
+    @media (max-width: 1500px) {
         .grid {
-            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 7rem 45rem 30rem 30rem 37rem 32rem 40rem 60rem 35rem 14rem;
+        }
+
+        .div2 {
+            background-position: right center;
+        }
+
+        .div7 {
+            background-position: left center;
         }
     }
 
     @media (max-width: 1200px) {
         .grid {
-            grid-template-rows: 7rem 20rem 55rem 70rem 45rem 45rem 30vw 35rem 35rem 18rem;
+            grid-template-rows: 7rem 1.2fr 1fr 90vw 1fr 1.2fr 90vw 1.2fr 0.7fr 1fr 75vw 1fr 0.8fr 18rem;
             grid-template-areas:
                 "nav"
                 "heading"
-                "ble-pmic"
-                "fpga-io"
+                "ble"
+                "right-module"
+                "pmic"
+                "fpga"
+                "left-module"
+                "io"
+                "cgm"
                 "applications"
-                "dev-kit"
-                "video"
+                "devkit-img" 
+                "devkit"
                 "order"
-                "docs"
                 "footer";
         }
 
         .div1 {
-            padding-right: 40% !important;
+            padding-left: 4rem !important;
+            padding-right: 4rem !important;
         }
 
-        .div3 {
-            grid-area: fpga-io;
-            
-            background-position: right 70%;
+        .div2 {
+            background-position: left center;
+            background-size: 60% auto;
+        }
+
+        .div3,
+        .div5 {
+            justify-content: flex-end;
+        }
+
+        .div4,
+        .div6 {
+            justify-content: flex-start;
+        }
+
+        .div7 {
+            background-position: right center;
+            background-size: 60% auto;
+        }
+
+        .div9 {
+            background-color: var(--color-bg-green);
+            justify-content: flex-start;
+            padding-left: 30% !important;
+        }
+
+        .div10 {
+            background-size: 80% auto;
+            background-position: 35% center;
+        }
+
+        .div11 {
+            justify-content: flex-start;
         }
     }
 
+
     @media (max-width: 960px) {
-        .div1 {
+        .div1,
+        .div9 {
+            padding-left: 2rem !important;
             padding-right: 2rem !important;
         }
     }
@@ -191,65 +252,71 @@
 
         <div class="div1">
             <div></div>
-            <h1>S1 System on Module.</h1>
+            <h1><br><br>S1 System on Module.</h1>
             <div>
                 <hr>
-                <p><b>Bluetooth, FPGA, and Battery Management, all in one. Perfect for deploying hardware accelerated algorithms onto tiny form factor IoT devices.</b></p>
-            </div>
-
-        </div>
-
-        <div class="div6 light">
-            <div style="text-align: center;">
-                <iframe
-                    src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1"
-                    allowfullscreen></iframe>
+                <p>Bluetooth, FPGA, and Battery Management, all in one. Perfect for deploying hardware accelerated
+                    algorithms onto tiny form factor IoT devices.</p>
+                <p><a href="https://docs.siliconwitchery.com/hardware/s1-module/" target="_blank">Online Datasheet</a></p>
             </div>
         </div>
 
         <div class="div2 light">
-            <div>
-                <h2>Bluetooth 5.2</h2>
-                <hr>
-                <p>Based on Nordic's nRF52, the S1 features Bluetooth 5.2 with extensibility for direction finding, and thread. With an onboard antenna, you don't need to worry about designing RF hardware for your product. Simply connect power, and the module will be up and running.</p>
-                <p>The S1 Module is designed for ultimate efficiency. The nRF52 runs your core application, and you will have access to a host of low power modes that can be switched on the fly.</p>
-                <p><a href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52811" target="_blank">nRF52 Features</a></p>
-            </div>
-
-            <div>
-                <h2>Battery Management</h2>
-                <hr>
-                <p>To reduce component count within your design. The S1 Module features advanced power and battery management. </p>
-                <p>Charge any single cell lithium with the built-in battery charger, and power your application with up to four user-configurable voltage rails, one of which features buck-boost conversion up to 5.5V.</p>
-                <p>With a high degree of software control, you can dial in your power requirements, as needed, on the fly.</p>
-            </div>
         </div>
 
         <div class="div3 light">
-            <div>
-                <h2>FPGA + DSP</h2>
-                <hr>
-                <p>Deploy hardware acceleration wirelessly with the S1 Module, and save on computation demand that would otherwise need to be done in the cloud. The built-in FPGA is perfect for real-time signal processing and machine learning workloads.</p>
-                <p><b>
+            <h2>Bluetooth 5.2</h2>
+            <hr>
+            <p>Based on Nordic's nRF52, the S1 features Bluetooth 5.2 with extensibility for direction finding, and
+                thread. With an onboard antenna, you don't need to worry about designing RF hardware for your product.
+                Simply connect power, and the module will be up and running.</p>
+            <p>The S1 Module is designed for ultimate efficiency. The nRF52 runs your core application, and you will
+                have access to a host of low power modes that can be switched on the fly.</p>
+            <p><a href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52811"
+                    target="_blank">nRF52 Features</a></p>
+        </div>
+
+        <div class="div4 light">
+            <h2>Battery Management</h2>
+            <hr>
+            <p>To reduce component count within your design. The S1 Module features advanced power and battery
+                management. </p>
+            <p>Charge any single cell lithium with the built-in battery charger, and power your application with up to
+                four user-configurable voltage rails, one of which features buck-boost conversion up to 5.5V.</p>
+            <p>With a high degree of software control, you can dial in your power requirements, as needed, on the fly.
+            </p>
+        </div>
+
+        <div class="div5 light">
+            <h2>FPGA + DSP</h2>
+            <hr>
+            <p>Deploy hardware acceleration wirelessly with the S1 Module, and save on computation demand that would
+                otherwise need to be done in the cloud. The built-in FPGA is perfect for real-time signal processing and
+                machine learning workloads.</p>
+            <p><b>
                     ‣ 5k LUTs<br>
                     ‣ 8 DSP blocks<br>
                     ‣ 1M SRAM<br>
                     ‣ 32Mb Boot / User Flash<br>
                     ‣ HF Osc / LF Osc / PLL
                 </b></p>
-                <p>An extensive open-source toolchain available for the S1's iCE40 FPGA makes FPGA development easier than ever.</p>
-                <p>
-                    <a href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus" target="_blank">iCE40 Features</a>    
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Tutorials coming soon</a>
-                </p>
+            <p>An extensive open-source toolchain available for the S1's iCE40 FPGA makes FPGA development easier than
+                ever.</p>
+            <p>
+                <a href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus" target="_blank">iCE40
+                    Features</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Tutorials coming
+                    soon</a>
+            </p>
         </div>
 
-            <div>
-                <h2>IO Connectivity</h2>
-                <hr>
-                <p>Easily connect sensors and peripherals for your IoT application. Eight high-speed digital IO allows for fast interfacing, as well as several voltage rails for flexible power.</p>
-                <p><b>
+        <div class="div6 light">
+            <h2>IO Connectivity</h2>
+            <hr>
+            <p>Easily connect sensors and peripherals for your IoT application. Eight high-speed digital IO allows for
+                fast interfacing, as well as several voltage rails for flexible power.</p>
+            <p><b>
                     ‣ 8 digital IO (supporting I3C / I2C / SPI)<br>
                     ‣ 2 analog inputs<br>
                     ‣ 5V Charging input<br>
@@ -258,61 +325,64 @@
                     ‣ 0.8 - 3.9V LDO output<br>
                     ‣ 0.8 - 5.5V Buck-Boost output
                 </b></p>
-            </div>
         </div>
 
-        <div class="div4">
+        <div class="div7 light">
+        </div>
+
+        <div class="div8">
+        </div>
+
+        <div class="div9">
             <h2>Applications</h2>
             <hr>
-            <p>The S1 module is perfect for wearables or IoT devices requiring compact form factors. The small footprint allows easy integration into the tightest designs, saving engineers months of development around HDI and RF layout.</p>
+            <p>The S1 module is perfect for wearables or IoT devices requiring compact form factors. The small footprint
+                allows easy integration into the tightest designs, saving engineers months of development around HDI and
+                RF layout.</p>
             <p><b>
-                ‣ 6mm × 12mm footprint<br>
-                ‣ 1.6mm thickness<br>
-                ‣ Tuned antenna<br>
-                ‣ Pick and Place safe
-            </b></p>
-            <p><a href="https://github.com/siliconwitchery/s1-module-kicad-libraryp" target="_blank">Footprint & Symbol Libraries</a></p>
+                    ‣ 6mm × 12mm footprint<br>
+                    ‣ 1.6mm thickness<br>
+                    ‣ Tuned antenna<br>
+                    ‣ Pick and Place safe
+                </b></p>
+            <p><a href="https://github.com/siliconwitchery/s1-module-kicad-libraryp" target="_blank">Footprint & Symbol
+                    Libraries</a></p>
         </div>
 
-        <div class="div5">
+        <div class="div10 light">
+
+        </div>
+
+        <div class="div11 light">
             <div>
                 <h2>Development Kit</h2>
                 <hr>
                 <p><b>Available Soon on tindie.com</b></p>
-                <p>The S1 Popout board is a development kit that breaks out all the pins of the S1 Module. There are also a few handy connectors to help you get started.</p>
-                <p>The Sparkfun QWICC / Adafruit StemmaQT I2C header lets you quickly connect sensors and prototype applications without any soldering.</p> 
             </div>
 
-            <iframe src="https://www.youtube.com/embed/x0RDEHqFIF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>
-                <!-- <a href="#" target="_blank">Tindie store</a> -->
-                <!-- &nbsp;&nbsp;&nbsp; -->
-                <a href="https://www.sparkfun.com/qwiic" target="_blank">QWICC Sensors</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="https://www.adafruit.com/?q=StemmaQT&sort=RecentlyAdded" target="_blank">StemmaQT Sensors</a>
-            </p>
+            <p>The S1 Popout board is a development kit that breaks out all the pins of the S1 Module. There are
+                also a few handy connectors to help you get started.</p>
 
+            <div>
+                <p>The Sparkfun QWICC / Adafruit StemmaQT I2C header lets you quickly connect sensors and prototype
+                    applications without any soldering.</p>
+                <p>
+                    <!-- <a href="#" target="_blank">Tindie store</a> -->
+                    <!-- &nbsp;&nbsp;&nbsp; -->
+                    <a href="https://www.sparkfun.com/qwiic" target="_blank">QWICC Sensors</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="https://www.adafruit.com/?q=StemmaQT&sort=RecentlyAdded" target="_blank">StemmaQT Sensors</a>
+                </p>
+            </div>
         </div>
 
-        <div class="div7 light">
+        <div class="div12 light">
             <h2>Order</h2>
             <hr>
             <p>The S1 and S1 Development Kit will be available from general distributors soon.</p>
             <p><b>Available for order Q2 2021</b></p>
             <p>Contact our sales for samples today, as well as more information regarding pricing and delivery.</p>
             <p><a href="mailto:info@siliconwitchery.com">Contact our sales</a></p>
-        </div>
-
-        <div class="div8 light">
-            <h2>Documentation</h2>
-            <hr>
-            <p>Links to technical resources and examples.</p>
-            <br>
-            <p>
-                ‣ <a href="https://docs.siliconwitchery.com/hardware/s1-module/" target="_blank">Product Specification / Datasheet</a><br><br>
-                ‣ <a href="https://docs.siliconwitchery.com" target="_blank">Documentation Center</a><br><br>
-                ‣ <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Tutorials on YouTube.</a><br><br>
-            </p>
         </div>
 
         <div class="footer">

@@ -153,7 +153,7 @@
 
     @media (max-width: 1200px) {
         .grid {
-            grid-template-rows: 7rem 1.2fr 1fr 90vw 1fr 1.2fr 90vw 1.2fr 0.7fr 1fr 75vw 1fr 0.8fr 18rem;
+            grid-template-rows: 7rem 1.2fr 0.7fr 45vw 0.8fr 1fr 45vw 1fr 0.5fr 0.9fr 40vw 0.7fr 0.8fr 18rem;
             grid-template-areas:
                 "nav"
                 "heading"
@@ -172,28 +172,43 @@
         }
 
         .div1 {
+            background-position: right 35%;
             padding-left: 4rem !important;
             padding-right: 4rem !important;
         }
 
         .div2 {
             background-position: left center;
-            background-size: 60% auto;
+            background-size: 30% auto;
         }
 
-        .div3,
+        .div3 {
+            justify-content: flex-end;
+            padding-left: 30% !important;
+            padding-bottom: 1rem !important;
+        }
+
+        .div4 {
+            justify-content: flex-start;
+            padding-left: 30% !important;
+            padding-top: 0 !important;
+        }
+
         .div5 {
             justify-content: flex-end;
+            padding-right: 30% !important;
+            padding-bottom: 1rem !important;
         }
 
-        .div4,
         .div6 {
             justify-content: flex-start;
+            padding-right: 30% !important;
+            padding-top: 0 !important;
         }
 
         .div7 {
             background-position: right center;
-            background-size: 60% auto;
+            background-size: 30% auto;
         }
 
         .div9 {
@@ -203,11 +218,12 @@
         }
 
         .div10 {
-            background-size: 80% auto;
-            background-position: 35% center;
+            background-size: 40% auto;
+            background-position: 90% bottom;
         }
 
         .div11 {
+            padding-top: 0 !important;
             justify-content: flex-start;
         }
     }
@@ -273,7 +289,7 @@
             <p>The S1 Module is designed for ultimate efficiency. The nRF52 runs your core application, and you will
                 have access to a host of low power modes that can be switched on the fly.</p>
             <p><a href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52811"
-                    target="_blank">nRF52 Features</a></p>
+                    target="_blank">nRF52 Specification</a></p>
         </div>
 
         <div class="div4 light">
@@ -304,10 +320,7 @@
                 ever.</p>
             <p>
                 <a href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus" target="_blank">iCE40
-                    Features</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Tutorials coming
-                    soon</a>
+                    Specification</a>
             </p>
         </div>
 

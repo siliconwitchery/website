@@ -42,11 +42,11 @@
         grid-template-areas:
             "nav nav"
             "heading heading"
+            "video video"
             "ble-pmic ble-pmic"
             "fpga-io fpga-io"
             "applications applications"
             "dev-kit dev-kit"
-            "video video"
             "order docs"
             "footer footer";
     }
@@ -104,9 +104,9 @@
     }
 
     .div5 iframe {
-        padding-top: 1rem;
-        width: 40vw;
-        height: calc(40vw / 16 * 9);
+        padding-top: 1rem !important;
+        width: 40vw !important;
+        height: calc(40vw / 16 * 9) !important;
     }
 
     .div6 {
@@ -199,20 +199,29 @@
 
         </div>
 
+        <div class="div6 light">
+            <div style="text-align: center;">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
         <div class="div2 light">
             <div>
                 <h2>Bluetooth 5.2</h2>
                 <hr>
-                <p>Based on Nordic's nRF52, the S1 features Bluetooth 5.2 with extensibility for direction finding, and thread. With on board antenna, you don't need to worry about designing RF hardware into your product. Simply connect power, and the module will be up and running.</p>
-                <p>The S1 Module is designed for ultimate efficiency. The nRF52 runs your core application, and you will have access to a host of low power modes which can be switched on the fly.</p>
+                <p>Based on Nordic's nRF52, the S1 features Bluetooth 5.2 with extensibility for direction finding, and thread. With an onboard antenna, you don't need to worry about designing RF hardware for your product. Simply connect power, and the module will be up and running.</p>
+                <p>The S1 Module is designed for ultimate efficiency. The nRF52 runs your core application, and you will have access to a host of low power modes that can be switched on the fly.</p>
                 <p><a href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52811" target="_blank">nRF52 Features</a></p>
             </div>
 
             <div>
                 <h2>Battery Management</h2>
                 <hr>
-                <p>To reduce component count in your design. The S1 Module features complete power and battery management. Charge any single cell lithium with the built in battery charger, and make use of four user configurable voltage rails which are broken out. One of which is a buck-boost up to 5.5V.</p>
-                <p>The power management IC is highly user configurable with software control, so you can dial in your power requirements, or shut down rails when not needed to save energy.</p>
+                <p>To reduce component count within your design. The S1 Module features advanced power and battery management. </p>
+                <p>Charge any single cell lithium with the built-in battery charger, and power your application with up to four user-configurable voltage rails, one of which features buck-boost conversion up to 5.5V.</p>
+                <p>With a high degree of software control, you can dial in your power requirements, as needed, on the fly.</p>
             </div>
         </div>
 
@@ -220,10 +229,15 @@
             <div>
                 <h2>FPGA + DSP</h2>
                 <hr>
-                <p>Deploy hardware acceleration wireless with the S1 Module. Save on computation demand that would otherwise need to be done in the cloud. With the FPGA you can deploy realtime signal processing for sensor fusion applications, or run machine learning models.</p>
-                <p>The iCE40 features 5k LUTs with 8 hardware DSP blocks. There's also 1Mb of SRAM, PLL and two built in oscillators, so you can deploy applications without any external components.</p>
-                <p>32Mb of user flash serve has boot ROM for the FPGA, as well as user storage. Perfect for in-field updates which can be done wirelessly to enable new FPGA applications on the fly.</p>
-                <p>An extensive open source toolchain is available for the iCE40, making it easier than ever to get started with FPGA.</p>
+                <p>Deploy hardware acceleration wirelessly with the S1 Module, and save on computation demand that would otherwise need to be done in the cloud. The built-in FPGA is perfect for real-time signal processing and machine learning workloads.</p>
+                <p><b>
+                    ‣ 5k LUTs<br>
+                    ‣ 8 DSP blocks<br>
+                    ‣ 1M SRAM<br>
+                    ‣ 32Mb Boot / User Flash<br>
+                    ‣ HF Osc / LF Osc / PLL
+                </b></p>
+                <p>An extensive open-source toolchain available for the S1's iCE40 FPGA makes FPGA development easier than ever.</p>
                 <p>
                     <a href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus" target="_blank">iCE40 Features</a>    
                     &nbsp;&nbsp;&nbsp;
@@ -234,7 +248,7 @@
             <div>
                 <h2>IO Connectivity</h2>
                 <hr>
-                <p>Easily connect sensors and peripherals for your IoT application. 8 high speed digital IO allow for fast data processing, as well several power rails for flexible power configurations.</p>
+                <p>Easily connect sensors and peripherals for your IoT application. Eight high-speed digital IO allows for fast interfacing, as well as several voltage rails for flexible power.</p>
                 <p><b>
                     ‣ 8 digital IO (supporting I3C / I2C / SPI)<br>
                     ‣ 2 analog inputs<br>
@@ -250,9 +264,14 @@
         <div class="div4">
             <h2>Applications</h2>
             <hr>
-            <p>The S1 is targeted for Wearables and IoT devices with tight form factors. The 7x12mm footprint makes it perfect for where space is a concern.</p>
-            <p>Save months of development and avoid HDI PCBs or RF tuning in your design. It's already done for you within the S1. It is a pick-and-place compatible module, suitable for standard FR4 or FPC based designs.</p>
-            <p><a href="https://github.com/siliconwitchery/s1-module-kicad-libraryp" target="_blank">Kicad Footprint & Symbol Library</a></p>
+            <p>The S1 module is perfect for wearables or IoT devices requiring compact form factors. The small footprint allows easy integration into the tightest designs, saving engineers months of development around HDI and RF layout.</p>
+            <p><b>
+                ‣ 6mm × 12mm footprint<br>
+                ‣ 1.6mm thickness<br>
+                ‣ Tuned antenna<br>
+                ‣ Pick and Place safe
+            </b></p>
+            <p><a href="https://github.com/siliconwitchery/s1-module-kicad-libraryp" target="_blank">Footprint & Symbol Libraries</a></p>
         </div>
 
         <div class="div5">
@@ -260,7 +279,7 @@
                 <h2>Development Kit</h2>
                 <hr>
                 <p><b>Available Soon on tindie.com</b></p>
-                <p>The S1 Popout board is a development kit that breaks out all the pins of the S1 Module. There's also a few handy connectors to help you get started.</p>
+                <p>The S1 Popout board is a development kit that breaks out all the pins of the S1 Module. There are also a few handy connectors to help you get started.</p>
                 <p>The Sparkfun QWICC / Adafruit StemmaQT I2C header lets you quickly connect sensors and prototype applications without any soldering.</p> 
             </div>
 
@@ -275,20 +294,12 @@
 
         </div>
 
-        <div class="div6 light">
-            <div style="text-align: center;">
-                <iframe
-                    src="https://www.youtube-nocookie.com/embed/CAA9-zdG31Q?autoplay=1&mute=1&color=white&cc_load_policy=1"
-                    allowfullscreen></iframe>
-            </div>
-        </div>
-
         <div class="div7 light">
             <h2>Order</h2>
             <hr>
             <p>The S1 and S1 Development Kit will be available from general distributors soon.</p>
             <p><b>Available for order Q2 2021</b></p>
-            <p>Contact our sales for samples today as well as more information regarding pricing and delivery.</p>
+            <p>Contact our sales for samples today, as well as more information regarding pricing and delivery.</p>
             <p><a href="mailto:info@siliconwitchery.com">Contact our sales</a></p>
         </div>
 

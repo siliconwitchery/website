@@ -58,11 +58,14 @@ b {
     font-size: 1.2rem;
     line-height: 1.6rem;
     margin-top: 1rem;
+    text-transform: capitalize;
     letter-spacing: 0.1rem;
 }
 
 ul:not(.footer ul, .nav ul) {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    /* padding-left: 1.2rem; */
 }
 
 li {
@@ -75,7 +78,7 @@ a {
     display: block;
     font-size: 1.2rem;
     line-height: 1.6rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 0.08rem;

@@ -41,6 +41,7 @@
         background-color: var(--color-grey);
     }
 
+    /* Masthead */
     .div1 {
         height: 45rem;
         background: url(images/fpc.png) no-repeat;
@@ -50,6 +51,7 @@
         padding-right: 40% !important;
     }
 
+    /* S1 Module */
     .div2 {
         height: 55rem;
         background: url(images/s1-micro-sd.png) no-repeat;
@@ -58,24 +60,27 @@
         padding-right: 50% !important;
     }
 
+    /* ECG demo board */
     .div3 {
         height: 55rem;
         background: url(images/devkit.png) no-repeat;
+        background-color: var(--color-gold);
         background-size: 45% auto;
         background-position: 4rem 75%;
         padding-right: 50% !important;
     }
 
+    /* Telescope */
     .div4 {
         height: 55rem;
-        background: url(images/telescope.png) no-repeat;
-        background-color: var(--color-black);
-        background-size: 60% auto;
+        background: url(images/radio-telescope.jpg) no-repeat;
+        background-size: 100% auto;
         background-position: right 80%;
     }
 
+    /* Services & social */
     .div5 {
-        height: 45rem;
+        height: 55rem;
         padding-bottom: 0 !important;
         padding-right: 60% !important;
         background: url(images/probe.png) no-repeat;
@@ -104,7 +109,8 @@
 
 <body>
     <div class="nav">
-        <a href="https://www.siliconwitchery.com"><img src="images/logo.png" alt="Silicon Witchery Logo"></a>
+        <a href="https://www.siliconwitchery.com" class="logo"><img src="images/logo.png"
+                alt="Silicon Witchery Logo"></a>
         <input class="menu-btn" type="checkbox" />
         <div class="hamburger">
             <div class="bar"></div>
@@ -117,16 +123,16 @@
                     <p><a href="https://www.siliconwitchery.com/module">Module.</a></p>
                 </li>
                 <li>
-                    <p><a href="https://docs.siliconwitchery.com/">Docs.</a></p>
+                    <p><a href="https://docs.siliconwitchery.com">Docs.</a></p>
                 </li>
                 <li>
-                    <p><a href="https://github.com/siliconwitchery/">Code.</a></p>
+                    <p><a href="https://github.com/siliconwitchery">GitHub.</a></p>
                 </li>
                 <li>
-                    <p><a href="https://www.siliconwitchery.com/services">Space/STEM.</a></p>
+                    <p><a href="https://www.siliconwitchery.com/space">Space/STEM.</a></p>
                 </li>
                 <li>
-                    <p><a href="https://se.indeed.com/cmp/Silicon-Witchery-1/jobs">Jobs.</a></p>
+                    <p><a href="https://www.linkedin.com/company/siliconwitchery/jobs">Jobs.</a></p>
                 </li>
             </ul>
         </div>
@@ -137,37 +143,11 @@
         <hr>
         <p>When off-the-shelf isn't an option, we seek to innovate solutions so that you can take on the challenges that
             really matter.</p>
-        <!-- <p>Bringing embedded expertise across a wide range of applications.</p> -->
-        <!-- <p>Embedded systems for:</p> -->
-        <!-- <p>Our active areas include</p>
-        <ul>
-            <li>RF networks, direction finding and radar</li>
-            <li>FPGA based high bandwidth processing </li>
-            <li>Advanced sensing and mixed signal</li>
-            <li>Edge AI and power efficient inferencing</li>
-            <li>Distributed signal processing networks</li>
-        </ul> -->
-        <!-- <p>As well as industries.</p>
-        <ul>
-            <li>Consumer</li>
-            <li>Industrial</li>
-            <li>Medical</li>
-            <li>Space</li>
-        </ul> -->
-        <!-- <ul>
-            <li>Performance Embedded Systems</li>
-            <li>Specialized Sensing</li>
-            <li>Machine Vision</li>
-            <li>Embedded AI</li>
-            <li>Antennas & Arrays</li>
-            <li>Distributed Processing</li>
-        </ul>
-        <b>Embedded systems for wireless, edge AI, sensing & distributed processing.</b> -->
     </div>
 
     <div class="div2 light">
         <b>Always on inferencing from as little as 75µA.</b>
-        <h2>Our core product | The S1 Module.</h2>
+        <h2>Introducing the S1 Module.</h2>
         <ul>
             <li>Bluetooth 5.2 SoC</li>
             <li>Industry lowest power FPGA</li>
@@ -182,45 +162,52 @@
         <p>Smaller than a MicroSD card, the S1 aims to simplify your next tiny battery
             powered product, without compromising on performance.</p>
 
-        <a href="https://www.siliconwitchery.com/module">Learn More.</a>
+        <a href="https://www.siliconwitchery.com/module">Learn more.</a>
     </div>
 
-    <div class="div3 light">
+    <div class="div3">
         <b>Supporting heart research.</b>
-        <h2>Application Demo | S1 ECG kit.</h2>
-        <p>A convenient platform for developing ML algorithms for two, and three probe measurements. The S1 ECG kit is
-            available as a low cost, easy to use battery powered board aimed at research, academia and teaching.</p>
-        <a href="https://github.com/siliconwitchery/s1-popout-board" target="_blank">Reference Design</a>
+        <h2>S1 ECG reference kit.</h2>
+        <p>An open source platform for developing ML algorithms for realtime heart monitoring. Supporting both two and
+            three probe measurements, the S1 ECG kit is available as a low cost development board aimed at research,
+            academia and teaching.</p>
+        <a href="https://github.com/siliconwitchery/s1-ecg-demo" target="_blank">Reference design & ordering info.</a>
     </div>
 
     <div class="div4">
-        <b>Initiatives in STEM and Space Education.</b>
+        <b>Initiatives in STEM and space education.</b>
         <h2>Building Stockholm’s first<br>open radio telescope.</h2>
         <hr>
         <p>Together with enthusiasts, and science community volunteers, we are helping to advanced STEM education
             initiatives in the heart of Stockholm City.</p>
-        <p>As lead system integrators, we're working closely with both space industry experts to build a robust platform,
-            while also working closely with cultural and educational experts to ensure the device can become an effective
-            open platform anyone can come and use in order to learn something new about space.</p>
-        <p>Come and visit us in Frihamnstorget to see the telescope in action, and join us in inspiring a new generation.</p>
-        <a href="https://docs.siliconwitchery.com/" target="_blank">Learn More</a>
+        <p>As lead system integrators, we're working closely with both space industry experts to build a robust
+            platform,
+            while also working closely with cultural and educational experts to ensure the device can become an
+            effective open platform anyone can come and use in order to learn something new about space.</p>
+        <p>Come and visit us in Frihamnstorget to see the telescope in action, and join us in inspiring a new
+            generation.</p>
+        <a href="https://www.siliconwitchery.com/space">Learn more about the systems.</a>
     </div>
 
     <div class="div5 light">
-        <b>Local activities.</b>
-        <h2>Building Stockholm’s first<br>public radio telescope.</h2>
+
+        <h2>Need something special?</h2>
+        <p>We're always glad to share our knowledge so feel free to give us a poke.</p>
+        <p>We specialize in several key areas:</p>
+        <ul>
+            <li>Wireless & RF</li>
+            <li>Sensing & mixed signal</li>
+            <li>Embedded AI</li>
+            <li>Machine vision</li>
+            <li>Distributed signal processing</li>
+        </ul>
+        <a href="mailto:info@siliconwitchery.com" class="btn">Email us.</a>
         <hr>
-        <p>Visit the documentation center for specs, examples, and tutorials.</p>
-        <a href="https://docs.siliconwitchery.com/" target="_blank">Resources</a>
-    </div>
-
-    <div class="div5 light">
-        <h2>Engineering<br>services</h2>
-        <p>Need something special? Our team will gladly assist you in your next wearable or IoT design. We
-            specialize in ultra-small hardware, and advanced software for machine learning and signal
-            processing.</p>
-        <p>Get in touch today and find out what we can offer.</p>
-        <p><a href="mailto:info@siliconwitchery.com" class="btn">Email Us</a></p>
+        <!-- <b>Come hang out with us on YouTube and TikTok</b> -->
+        <h2><br>Socials</h2>
+        <p>We're actively engaging with the community on social media. Both providing resources for engineers, as well
+            as those who are just starting their journey into electronics.</p>
+        <p>Join us on TikTok and YouTube, and let's learn together!</p>
     </div>
 
     <div class="footer light">
@@ -229,17 +216,11 @@
         </div>
         <div>
             <ul>
-                <li>
-                    <p><a href="https://twitter.com/SiliconWitchery" target="_blank">Twitter.</a></p>
-                </li>
-                <li>
-                    <p><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">YouTube.</a>
-                    </p>
-                </li>
-                <li>
-                    <p><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
-                            Policy.</a></p>
-                </li>
+                <li><a href="https://goo.gl/maps/DxHxU2tSU37g5QFt9" target="_blank">Visit Us.</a></li>
+                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">YouTube.</a></li>
+                <li><a href="https://www.tiktok.com/@silicon.witchery" target="_blank">TikTok.</a></li>
+                <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
+                        Policy.</a></li>
             </ul>
         </div>
     </div>

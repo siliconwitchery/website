@@ -53,11 +53,11 @@
 
     /* S1 Module */
     .div2 {
-        height: 55rem;
+        height: 45rem;
         padding-right: 50%;
-        background: url(images/s1-modules.png) no-repeat;
-        background-size: 45% auto;
-        background-position: right 75%;
+        background: url(images/s1-module-back.jpg) no-repeat;
+        background-size: auto 50%;
+        background-position: right bottom;
     }
 
     /* ECG demo board */
@@ -89,13 +89,18 @@
 
     @media (max-width: 1200px) {
         .div1 {
+            padding-right: 30%;
             background-size: 70% auto;
+        }
+
+        .div5 {
+            padding-right: 50%;
         }
     }
 
     @media (max-width: 960px) {
         .div1 {
-            padding-right: 4rem !important;
+            /* padding-right: 4rem !important; */
         }
 
         .div5 {
@@ -146,20 +151,17 @@
 
     <div class="div2 light">
         <b>Always on inferencing from as little as 75µA.</b>
-        <h2>Introducing the S1 Module.</h2>
+        <h2>S1 Module.</h2>
         <ul>
-            <li>Bluetooth 5.2 SoC</li>
-            <li>Industry lowest power FPGA</li>
+            <li>Bluetooth</li>
+            <li>FPGA</li>
             <li>Li-cell charger</li>
             <li>Buck-boost & LDO outputs</li>
-            <li>Remotely controlled low power & sleep</li>
-            <li>Flexible ADC inputs</li>
-            <li>SPI / I2C / I3C</li>
-            <li>Long range & Thread support</li>
-            <li>Integrated antenna, crystals and passives</li>
+            <li>GPIO incl. ADC / SPI / I2C / I3C</li>
+            <li>Long range & direction finding support</li>
         </ul>
-        <p>Smaller than a MicroSD card, the S1 aims to simplify your next tiny battery
-            powered product, without compromising on performance.</p>
+        <p>Designed for efficient AI on the smallest edge devices. The S1 aims to simplify, and save you months of HDI
+            and RF layouts.</p>
 
         <a href="https://www.siliconwitchery.com/module">Learn more.</a>
     </div>
@@ -192,13 +194,12 @@
 
         <h2>Need something special?</h2>
         <p>We're always glad to share our knowledge so feel free to give us a poke.</p>
-        <p>We specialize in several key areas:</p>
         <ul>
-            <li>Wireless & RF</li>
-            <li>Sensing & mixed signal</li>
+            <li>Wireless</li>
+            <li>Sensing</li>
             <li>Embedded AI</li>
-            <li>Machine vision</li>
-            <li>Distributed signal processing</li>
+            <li>Vision</li>
+            <li>Distributed processing</li>
         </ul>
         <a href="mailto:info@siliconwitchery.com" class="btn">Email us.</a>
         <hr>

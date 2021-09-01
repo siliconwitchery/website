@@ -1,55 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --color-bg-grey: #B4BECB;
-    --color-bg-gold: #D5B795;
-    --color-bg-blue: #A7CEEF;
-    --color-bg-green: #ACB5AC;
-    --color-bg-red: #C9A3A4;
-    --color-bg-light: #F2F7F7;
-    --color-type-dark: #0B2436;
-    --color-type-grey: #858585;
-    --color-type-light: white;
+    /* --color-white: white; */
+    --color-white: #f2f7f7;
+    --color-black: #0B2436;
+    --color-grey: #B4BECB;
+    --color-gold: #D5B795;
 }
 
 * {
-    padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box;
     outline: none;
-
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    list-style: none;
     text-decoration: none;
-    color: var(--color-type-light);
+    color: var(--color-white);
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.grid>div {
-    height: 100%;
+body>div {
     display: flex;
     flex-direction: column;
     padding: 4rem 4rem;
 }
 
-.grid img {
-    margin-top: 1rem;
-    width: 100%;
-}
-
 hr {
-    border-top: 2px solid var(--color-type-light);
-    margin-top: 1rem;
+    border-top: 2px solid var(--color-white);
+    margin-top: 2rem;
 }
 
-h1,
-h2 {
+
+/***********************/
+/* General font styles */
+
+h1 {
     font-size: 3rem;
     font-weight: 700;
     text-transform: capitalize;
@@ -57,145 +42,161 @@ h2 {
 }
 
 h2 {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 400;
-}
-
-b {
+    font-size: 2rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
+    margin-top: 1rem;
+    text-transform: capitalize;
 }
 
 p {
     font-size: 1.2rem;
-    line-height: 1.6;
-    margin-top: 1rem;
+    line-height: 1.6rem;
+    margin-top: 2rem;
 }
 
-p a {
-    position: relative;
-    text-transform: capitalize;
+b {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-top: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+ul:not(.footer ul, .nav ul) {
+    margin-top: 2rem;
+}
+
+li {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+a {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-top: 2rem;
     font-weight: 700;
     letter-spacing: 0.08rem;
+    position: relative;
 }
 
-p a:after {
+
+/**************************/
+/* Hover effect for links */
+
+a:not(.logo):after {
     content: '';
-    position: absolute;
     width: 0;
     height: 2px;
     display: block;
-    left: 0;
-    background: var(--color-type-light);
+    background: var(--color-white);
     transition: width .2s ease-in-out;
     -webkit-transition: width .2s ease-in-out;
 }
 
-p a:hover:after {
+a:hover:after {
     width: 2rem;
 }
 
+
+/*****************************/
+/* Nav bar and footer styles */
+
 .nav,
 .footer {
-    grid-area: nav;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-}
-
-.footer {
-    grid-area: footer;
-    background-color: var(--color-bg-white);
-}
-
-.footer p {
-    padding-bottom: 1rem;
-}
-
-.nav img {
-    /* Logo size */
-    height: 4rem;
-    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
 }
 
 .nav li,
 .footer li {
     float: left;
     padding-left: 1.2rem;
+    list-style: none;
+}
+
+.nav img {
+    height: 4rem;
+    width: auto;
 }
 
 .nav .menu-btn {
-    /* Hide hamburger checkbox in desktop mode */
     visibility: hidden;
 }
+
+
+/********************************/
+/* Things for light backgrounds */
 
 .light h1,
 .light h2,
 .light p,
-.light p a,
 .light b,
-.footer p,
-.footer b,
-.footer a {
-    color: var(--color-type-dark);
+.light li,
+.light a {
+    color: var(--color-black);
 }
 
-.light p a:after,
-.footer p a:after {
-    background: var(--color-type-dark);
+.light a:after {
+    background: var(--color-black);
 }
 
 .light hr {
-    border-top: 2px solid var(--color-type-dark);
+    border-top: 2px solid var(--color-black);
 }
 
-iframe {
-    width: 50vw;
-    height: calc(50vw / 16 * 9);
-}
 
-/* Make video bigger for small laptops */
-@media (max-width: 1200px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+/**************************/
+/* Changes for 4k screens */
 
-    iframe {
-        width: 100%;
-        height: calc((100vw - 4rem) / 16 * 9);
+@media (min-width: 2000px) {
+    body>div {
+        padding: 4rem 24rem;
     }
 }
 
-/* Settings for mobile view */
+
+/***************************/
+/* Changes for mobile view */
+
 @media (max-width: 960px) {
-    .grid>div {
+
+    body>div {
         padding: 2rem 2rem;
     }
+
+    /*****************/
+    /* Smaller fonts */
 
     h1,
     h2 {
         font-size: 2.5rem;
     }
 
-    p {
+    p,
+    b,
+    li,
+    a {
         font-size: 1rem;
     }
 
+
+    /*******************************************/
+    /* Nav bar and footer are smaller/centered */
+
     .footer {
-        /* Footer becomes center justified */
         flex-direction: column-reverse !important;
         justify-content: flex-start !important;
         align-items: flex-end !important;
     }
 
-    .footer ul {
-        padding-bottom: 1rem;
-    }
-
     .footer li,
     .footer p {
-        /* Get rid of right align and space apart */
         text-align: right !important;
         float: none;
         padding: 0;
@@ -212,19 +213,20 @@ iframe {
         text-align: right;
     }
 
+
+    /*****************************/
+    /* Navigation hamburger menu */
+
     .nav .hamburger {
         position: absolute;
         top: 2rem;
         right: 2rem;
-
         width: 3rem;
         height: 3rem;
-
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
-
         visibility: visible;
         z-index: 2;
     }
@@ -239,11 +241,9 @@ iframe {
         position: absolute;
         top: 2rem;
         right: 2rem;
-
         z-index: 3;
         opacity: 0;
         visibility: visible;
-
         width: 3rem;
         height: 3rem;
         cursor: pointer;
@@ -255,18 +255,14 @@ iframe {
         left: 0;
         width: 100vw;
         height: 100vh;
-
         z-index: 1;
         opacity: 0;
         padding: 5rem 2rem 0 0;
         transition: ease-in-out 0.2s;
-
         display: flex;
         align-items: flex-start;
         justify-content: flex-end;
-
-        background: #B4BECB;
-
+        background: var(--color-grey);
         visibility: hidden;
     }
 

@@ -55,8 +55,8 @@
     .div2 {
         height: 45rem;
         padding-right: 50%;
-        background: url(images/s1-module-back.jpg) no-repeat;
-        background-size: auto 50%;
+        background: url(images/s1-module-back.png) no-repeat;
+        background-size: auto 65%;
         background-position: right bottom;
     }
 
@@ -73,9 +73,10 @@
     /* Telescope */
     .div4 {
         height: 55rem;
+        padding-right: 50%;
         background: url(images/radio-telescope.jpg) no-repeat;
-        background-size: 100% auto;
-        background-position: right 80%;
+        background-size: 110% auto;
+        background-position: center 80%;
     }
 
     /* Services & social */
@@ -93,20 +94,51 @@
             background-size: 70% auto;
         }
 
+        .div2 {
+            padding-right: 50%;
+            background-size: 70% auto;
+        }
+
+        .div4 {
+            background-size: auto 100%;
+        }
+
         .div5 {
             padding-right: 50%;
+            background-size: 50% auto;
         }
     }
 
     @media (max-width: 960px) {
         .div1 {
-            /* padding-right: 4rem !important; */
+            padding-right: 4rem;
+        }
+
+        .div2 {
+            height: 50rem;
+            padding-right: 4rem;
+        }
+
+        .div4 {
+            height: 50rem;
+            padding-right: 4rem;
         }
 
         .div5 {
-            padding-right: 2rem !important;
-            background-size: auto 55%;
-            justify-content: flex-end;
+            height: 90rem;
+            padding-top: 30rem;
+            padding-right: 4rem;
+            background-size: auto 35rem;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .div4 {
+            height: 60rem;
+        }
+        
+        .div5 {
+            height: 100rem;
         }
     }
 </style>
@@ -123,30 +155,20 @@
         </div>
         <div class="menu">
             <ul>
-                <li>
-                    <p><a href="https://www.siliconwitchery.com/module">Module.</a></p>
-                </li>
-                <li>
-                    <p><a href="https://docs.siliconwitchery.com">Docs.</a></p>
-                </li>
-                <li>
-                    <p><a href="https://github.com/siliconwitchery">GitHub.</a></p>
-                </li>
-                <li>
-                    <p><a href="https://www.siliconwitchery.com/space">Space/STEM.</a></p>
-                </li>
-                <li>
-                    <p><a href="https://www.linkedin.com/company/siliconwitchery/jobs">Jobs.</a></p>
-                </li>
+                <li><a href="https://www.siliconwitchery.com/module">Module.</a></li>
+                <li><a href="https://docs.siliconwitchery.com">Docs.</a></li>
+                <li><a href="https://github.com/siliconwitchery">GitHub.</a></li>
+                <!-- <li><a href="https://www.siliconwitchery.com/space">Space/STEM.</a></li> -->
+                <li><a href="https://www.linkedin.com/company/siliconwitchery/jobs">Jobs.</a></li>
             </ul>
         </div>
     </div>
 
     <div class="div1">
-        <h1>Helping you push the<br>boundaries of modern silicon.</h1>
+        <h1>Helping you push the boundaries of modern silicon.</h1>
         <hr>
-        <p>When off-the-shelf isn't an option, we seek to innovate solutions so that you can take on the challenges that
-            really matter.</p>
+        <p>When off-the-shelf isn't an option, we seek to innovate solutions such that you can take on the challenges
+            that matter.</p>
     </div>
 
     <div class="div2 light">
@@ -155,58 +177,55 @@
         <ul>
             <li>Bluetooth</li>
             <li>FPGA</li>
-            <li>Li-cell charger</li>
+            <li>Lithium cell charger</li>
             <li>Buck-boost & LDO outputs</li>
-            <li>GPIO incl. ADC / SPI / I2C / I3C</li>
+            <li>GPIO including ADC, SPI, I2C & I3C</li>
             <li>Long range & direction finding support</li>
         </ul>
-        <p>Designed for efficient AI on the smallest edge devices. The S1 aims to simplify, and save you months of HDI
-            and RF layouts.</p>
-
+        <p>Designed for efficient AI on the smallest edge devices. The S1 aims to simplify your design and save you
+            months of RF HDI layout.</p>
         <a href="https://www.siliconwitchery.com/module">Learn more.</a>
     </div>
 
-    <div class="div3">
+    <!-- <div class="div3">
         <b>Supporting heart research.</b>
         <h2>S1 ECG reference kit.</h2>
-        <p>An open source platform for developing ML algorithms for realtime heart monitoring. Supporting both two and
-            three probe measurements, the S1 ECG kit is available as a low cost development board aimed at research,
-            academia and teaching.</p>
+        <p>Low cost and open-source, the S1 ECG kit is here to make heart research more accessible. The powerful analog
+            frontend makes this board is an all-in-one kit to deploy and test algorithms with ease. Be that for teaching
+            or research.</p>
         <a href="https://github.com/siliconwitchery/s1-ecg-demo" target="_blank">Reference design & ordering info.</a>
-    </div>
+    </div> -->
 
     <div class="div4">
         <b>Initiatives in STEM and space education.</b>
-        <h2>Building Stockholm’s first<br>open radio telescope.</h2>
+        <h2>Building Stockholm's first open radio telescope.</h2>
         <hr>
-        <p>Together with enthusiasts, and science community volunteers, we are helping to advanced STEM education
-            initiatives in the heart of Stockholm City.</p>
-        <p>As lead system integrators, we're working closely with both space industry experts to build a robust
-            platform,
-            while also working closely with cultural and educational experts to ensure the device can become an
-            effective open platform anyone can come and use in order to learn something new about space.</p>
-        <p>Come and visit us in Frihamnstorget to see the telescope in action, and join us in inspiring a new
-            generation.</p>
-        <a href="https://www.siliconwitchery.com/space">Learn more about the systems.</a>
+        <p>Along with volunteers and the science community, we are helping to advance STEM initiatives in the heart of
+            Stockholm City.</p>
+        <p>As lead system integrators, we're working closely with the astrophysics community and educators to build
+            something that hundreds can learn from. Come and visit the site in Frihamnstorget and join us in inspiring a
+            new generation.</p>
+        <a href="https://www.frihamnstorget.se/home">Visit us.</a>
+        <!-- <a href="https://www.siliconwitchery.com/space">Learn about our systems.</a> -->
     </div>
 
     <div class="div5 light">
 
         <h2>Need something special?</h2>
-        <p>We're always glad to share our knowledge so feel free to give us a poke.</p>
+        <p>We're always glad to share our knowledge, so why not give us a poke.</p>
         <ul>
             <li>Wireless</li>
             <li>Sensing</li>
+            <li>Signal processing</li>
             <li>Embedded AI</li>
             <li>Vision</li>
-            <li>Distributed processing</li>
+            <li>Distributed systems</li>
         </ul>
         <a href="mailto:info@siliconwitchery.com" class="btn">Email us.</a>
         <hr>
-        <!-- <b>Come hang out with us on YouTube and TikTok</b> -->
-        <h2><br>Socials</h2>
-        <p>We're actively engaging with the community on social media. Both providing resources for engineers, as well
-            as those who are just starting their journey into electronics.</p>
+        <h2><br>Socials.</h2>
+        <p>We're actively engaging with the community on social media, providing resources for engineers and those just
+            starting their electronics journey.</p>
         <p>Join us on TikTok and YouTube, and let's learn together!</p>
     </div>
 

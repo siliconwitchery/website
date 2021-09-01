@@ -150,16 +150,24 @@ a:hover:after {
 }
 
 
+/**************************/
+/* Changes for 4k screens */
+
 @media (min-width: 2000px) {
     body>div {
         padding: 4rem 24rem;
     }
 }
 
+
 /***************************/
 /* Changes for mobile view */
 
 @media (max-width: 960px) {
+
+    body>div {
+        padding: 2rem 2rem;
+    }
 
     /*****************/
     /* Smaller fonts */
@@ -171,6 +179,7 @@ a:hover:after {
 
     p,
     b,
+    li,
     a {
         font-size: 1rem;
     }
@@ -183,10 +192,6 @@ a:hover:after {
         flex-direction: column-reverse !important;
         justify-content: flex-start !important;
         align-items: flex-end !important;
-    }
-
-    .footer ul {
-        padding-bottom: 1rem;
     }
 
     .footer li,

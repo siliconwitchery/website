@@ -185,6 +185,9 @@ a:hover:after {
         font-size: 1rem;
     }
 
+    a.logo {
+        margin-top: 0rem;
+    }
 
     /*******************************************/
     /* Nav bar and footer are smaller/centered */

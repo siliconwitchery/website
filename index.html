@@ -55,6 +55,9 @@
     .div2 {
         height: 45rem;
         padding-right: 50%;
+        /* background: url(images/s1-module-back.png) no-repeat; */
+        /* background-size: auto 50%; */
+        /* background-position: right bottom; */
         background: url(images/s1-module-back.png) no-repeat;
         background-size: auto 50%;
         background-position: right bottom;
@@ -63,12 +66,21 @@
 
     /* ECG demo board */
     .div3 {
-        height: 55rem;
-        padding-right: 50%;
-        background: url(images/s1-ecg-kit.png) no-repeat;
-        background-size: 45% auto;
-        background-position: 4rem 75%;
+        /* background: url(images/s1-ecg-kit-front.png) no-repeat; */
+        /* background-size: auto 30%; */
+        /* background-position: 35% 75%; */
+        background: url(images/s1-ecg-kit-front.png) no-repeat;
+        background-size: auto 30%;
+        background-position: 35% 75%;
         background-color: var(--color-gold);
+    }
+
+    .div3-overlay {
+        height: 45rem;
+        padding-right: 50%;
+        background: url(images/s1-ecg-kit-back.png) no-repeat;
+        background-size: auto 100%;
+        background-position: right top;
     }
 
     /* Telescope */
@@ -196,14 +208,19 @@
         <a href="https://www.siliconwitchery.com/module">Learn more.</a>
     </div>
 
-    <!-- <div class="div3">
-        <b>Supporting heart research.</b>
-        <h2>S1 ECG reference kit.</h2>
-        <p>Low cost and open-source, the S1 ECG kit is here to make heart research more accessible. The powerful analog
-            frontend makes this board is an all-in-one kit to deploy and test algorithms with ease. Be that for teaching
-            or research.</p>
-        <a href="https://github.com/siliconwitchery/s1-ecg-demo" target="_blank">Reference design & ordering info.</a>
-    </div> -->
+    <div class="div3">
+        <div class="div3-overlay">
+            <b>Supporting heart research.</b>
+            <h2>S1 ECG reference kit.</h2>
+            <p>Low cost and open-source, the S1 ECG kit is here to make heart research more accessible. The powerful
+                analog
+                frontend makes this board is an all-in-one kit to deploy and test algorithms with ease. Be that for
+                teaching
+                or research.</p>
+            <a href="https://github.com/siliconwitchery/s1-ecg-demo" target="_blank">Reference design & ordering
+                info.</a>
+        </div>
+    </div>
 
     <div class="div4">
         <b>Initiatives in STEM and space education.</b>

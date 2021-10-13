@@ -53,11 +53,8 @@
 
     /* S1 Module */
     .div2 {
-        height: 45rem;
+        height: 55rem;
         padding-right: 50%;
-        /* background: url(images/s1-module-back.png) no-repeat; */
-        /* background-size: auto 50%; */
-        /* background-position: right bottom; */
         background: url(images/s1-module-back.png) no-repeat;
         background-size: auto 50%;
         background-position: right bottom;
@@ -66,21 +63,12 @@
 
     /* ECG demo board */
     .div3 {
-        /* background: url(images/s1-ecg-kit-front.png) no-repeat; */
-        /* background-size: auto 30%; */
-        /* background-position: 35% 75%; */
-        background: url(images/s1-ecg-kit-front.png) no-repeat;
-        background-size: auto 30%;
-        background-position: 35% 75%;
+        height: 50rem;
+        padding-right: 55%;
+        background: url(images/ecg-kit-front-and-back.png) no-repeat;
+        background-size: auto 103%;
+        background-position: 95% -1rem;
         background-color: var(--color-gold);
-    }
-
-    .div3-overlay {
-        height: 45rem;
-        padding-right: 50%;
-        background: url(images/s1-ecg-kit-back.png) no-repeat;
-        background-size: auto 100%;
-        background-position: right top;
     }
 
     /* Telescope */
@@ -106,6 +94,13 @@
         background-color: var(--color-white);
     }
 
+    @media (min-width: 2000px) {
+        .div3 {
+            padding-right: 50%;
+            background-position: 80% -1rem;
+        }
+    }
+
     @media (max-width: 1200px) {
         .div1 {
             padding-right: 30%;
@@ -113,8 +108,12 @@
         }
 
         .div2 {
-            padding-right: 50%;
             background-size: 80% auto;
+        }
+
+        .div3 {
+            height: 45rem;
+            background-position: 120% -1rem;
         }
 
         .div4 {
@@ -138,6 +137,12 @@
             background-size: 110% auto;
         }
 
+        .div3 {
+            padding-right: 35%;
+            background-size: auto 70%;
+            background-position: 115% 150%;
+        }
+
         .div4 {
             height: 50rem;
             padding-right: 4rem;
@@ -152,6 +157,14 @@
     }
 
     @media (max-width: 650px) {
+        .div3 {
+            height: 65rem;
+            padding-right: 4rem;
+
+            background-size: 85% auto;
+            background-position: center 115%;
+        }
+
         .div4 {
             height: 60rem;
         }
@@ -209,17 +222,17 @@
     </div>
 
     <div class="div3">
-        <div class="div3-overlay">
-            <b>Supporting heart research.</b>
-            <h2>S1 ECG reference kit.</h2>
-            <p>Low cost and open-source, the S1 ECG kit is here to make heart research more accessible. The powerful
-                analog
-                frontend makes this board is an all-in-one kit to deploy and test algorithms with ease. Be that for
-                teaching
-                or research.</p>
-            <a href="https://github.com/siliconwitchery/s1-ecg-demo" target="_blank">Reference design & ordering
-                info.</a>
-        </div>
+        <b>Making heart research more accessible.</b>
+        <h2>S1 ECG reference kit.</h2>
+        <ul>
+            <li>Single chip frontend based on AD8233</li>
+            <li>Integrated 150mAh lithium battery</li>
+            <li>Open source design</li>
+        </ul>
+        <p>A powerful analog frontend combined with the S1 Module makes this an all-in-one kit to deploy and test
+            algorithms with ease. Be that for learning, research, or as the starting point for your next product.
+        </p>
+        <a href="https://github.com/siliconwitchery/s1-ecg-demo" target="_blank">Reference design & ordering.</a>
     </div>
 
     <div class="div4">

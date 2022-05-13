@@ -38,51 +38,71 @@
 
 <style>
     .nav {
-        background-color: var(--color-grey);
+        background-color: var(--color-blue);
     }
 
     /* Masthead */
-    .div1 {
+    .div-masthead {
         height: 45rem;
         padding-right: 50%;
         background: url(images/s1-module-back.png) no-repeat;
         background-size: 85% auto;
         background-position: right bottom;
-        background-color: var(--color-grey);
+        background-color: var(--color-blue);
     }
 
     /* Block diagram */
-    .div2 {
-        height: 55rem;
-        padding-right: 50%;
+    .div-block-diagram {
+        height: 45rem;
+        padding-left: 50%;
         background: url(images/s1-block-diagram.png) no-repeat;
-        background-size: auto 50%;
-        background-position: 90% 80%;
+        background-size: 50% auto;
+        background-position: 4rem 100%;
         background-color: var(--color-white);
     }
 
-    /* Power management */
-    .div3 {
-        height: 45rem;
-        padding-right: 60%;
-        padding-top: 8rem;
-        background: url(images/s1-power-testing.jpg) no-repeat;
-        background-size: 100% auto;
-        background-position: right 70%;
+    /* Video */
+    .div-video {
+        height: 70rem;
+        background-color: var(--color-white);
     }
 
-    /* Software stack */
-    .div4 {
-        height: 55rem;
-        padding-right: 50%;
-        background: url(images/s1-software-stack.png) no-repeat;
-        background-size: auto 50%;
-        background-position: 90% 75%;
-        background-color: var(--color-black);
+    /* Video framing */
+    iframe {
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+        align-self: flex-end;
+    }
+
+    /* Software masthead */
+    .div-software-masthead {
+        height: 15rem;
+        padding-top: 4rem;
+        background-color: var(--color-code);
+    }
+
+    /* MicroPython */
+    .div-micropython {
+        height: 35rem;
+        padding-right: 55%;
+        background: url(images/micropython-code.png) no-repeat;
+        background-size: auto 75%;
+        background-position: right 4rem top 5rem;
+        background-color: var(--color-code);
+    }
+
+    /* C SDK */
+    .div-c-sdk {
+        height: 45rem;
+        padding-left: 55%;
+        background: url(images/c-code.png) no-repeat;
+        background-size: auto 70%;
+        background-position: 4rem 5.5rem;
+        background-color: var(--color-code);
     }
 
     /* Dev kit */
-    .div5 {
+    .div-dev-kit {
         height: 55rem;
         padding-left: 55%;
         background: url(images/s1-thermal-camera.jpg) no-repeat;
@@ -91,7 +111,7 @@
     }
 
     /* Ordering */
-    .div6 {
+    .div-ordering {
         height: 40rem;
         padding-right: 40%;
         background-color: var(--color-black);
@@ -101,95 +121,177 @@
         background-color: var(--color-black);
     }
 
+    /* 4K screens */
     @media (min-width: 2000px) {
-        .div5 {
+
+        /* Block diagram */
+        .div-block-diagram {
+            background-size: 35% auto;
+            background-position: 24rem 100%;
+        }
+
+        /* MicroPython */
+        .div-micropython {
+            background-size: auto 85%;
+            background-position: right 24rem top 5rem;
+        }
+
+        /* C SDK */
+        .div-c-sdk {
+            background-size: auto 72%;
+            background-position: 24rem 5.5rem;
+        }
+
+        /* Dev kit */
+        .div-dev-kit {
             height: 55rem;
             padding-left: 35%;
         }
     }
 
+    /* iPad screens in landscape */
     @media (max-width: 1200px) {
-        .div1 {
+
+        /* Masthead */
+        .div-masthead {
             height: 40rem;
             padding-right: 30%;
             background-size: 100% auto;
         }
 
-        .div2,
-        .div4 {
-            background-size: auto 45%;
+        /* Block diagram */
+        .div-block-diagram {
+            background-size: 55% auto;
         }
 
-        .div3 {
-            height: 30rem;
+        /* Video */
+        .div-video {
+            height: 55rem;
         }
 
-        .div5 {
+        /* Video framing */
+        iframe {
+            width: 720px;
+            height: 408px;
+            align-self: center;
+        }
+
+        /* Dev kit */
+        .div-dev-kit {
             height: 45rem;
             background-position: -20% center;
         }
     }
 
+    /* iPad screens in portrait */
     @media (max-width: 960px) {
-        .div1 {
+
+        /* Masthead */
+        .div-masthead {
             height: 35rem;
             padding-right: 4rem;
         }
 
-        .div2 {
-            height: 50rem;
-            padding-right: 2rem;
-            background-size: 93% auto;
-            background-position: center 75%;
+        /* Block diagram */
+        .div-block-diagram {
+            height: 40rem;
+            background-size: 75% auto;
+            background-position: 2rem 100%;
         }
 
-        .div3 {
+        /* Video */
+        .div-video {
+            height: 45rem;
+        }
+
+        /* Video framing */
+        iframe {
+            width: 480px;
+            height: 270px;
+        }
+
+        /* Software masthead */
+        .div-software-masthead {
             padding-top: 2rem;
-            padding-right: 40%;
         }
 
-        .div4 {
-            height: 55rem;
-            padding-right: 4rem;
-            background-size: 80% auto;
-            background-position: center 80%;
+        /* MicroPython */
+        .div-micropython {
+            padding-top: 4rem;
+            background-size: auto 50%;
+            background-position: right 2rem top 5.5rem;
         }
 
-        .div5 {
+        /* C SDK */
+        .div-c-sdk {
+            height: 40rem;
+            background-size: auto 50%;
+            background-position: 2rem 3.5rem;
+        }
+
+        /* Dev kit */
+        .div-dev-kit {
             height: 65rem;
             padding-left: 2rem;
             background-size: auto 50%;
             background-position: -7rem bottom;
         }
 
-        .div6 {
+        /* Ordering */
+        .div-ordering {
             height: 45rem;
             padding-right: 2rem;
         }
     }
 
+    /* Mobile screens */
     @media (max-width: 650px) {
-        .div2 {
-            height: 45rem;
-            background-position: center 85%;
+
+        /* Block diagram */
+        .div-block-diagram {
+            height: 35rem;
+            padding-left: 2rem;
+            background-size: 80% auto;
+            background-position: center bottom;
         }
 
-        .div3 {
-            height: 25rem;
+        /* Video */
+        .div-video {
+            height: 40rem;
+        }
+
+        /* Video framing */
+        iframe {
+            width: 320px;
+            height: 180px;
+            margin-top: 4rem;
+        }
+
+        /* MicroPython */
+        .div-micropython {
+            height: 55rem;
+            padding-top: 28rem;
             padding-right: 2rem;
-            background-size: auto 130%;
+            background-size: 80% auto;
+            background-position: 2rem 8rem;
         }
 
-        .div4 {
-            height: 45rem;
-            background-position: center 85%;
+        /* C SDK */
+        .div-c-sdk {
+            height: 58rem;
+            padding-top: 22rem;
+            padding-left: 2rem;
+            background-size: 80% auto;
+            background-position: 2rem top;
         }
 
-        .div5 {
+        /* Dev kit */
+        .div-dev-kit {
             background-position: -7rem 125%;
         }
 
-        .div6 {
+        /* Ordering */
+        .div-ordering {
             height: 55rem;
         }
     }
@@ -207,75 +309,120 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="https://www.siliconwitchery.com/module">Module.</a></li>
+                <li><a href="https://www.siliconwitchery.com/module">S1 Module.</a></li>
+                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Tutorials.</a>
+                </li>
+                <!-- TODO enable this -->
+                <!-- <li><a href="https://www.siliconwitchery.com/services">Services.</a></li> -->
                 <li><a href="https://docs.siliconwitchery.com">Docs.</a></li>
                 <li><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></li>
-                <!-- <li><a href="https://www.siliconwitchery.com/space">Space/STEM.</a></li> -->
-                <li><a href="https://www.linkedin.com/company/siliconwitchery/jobs" target="_blank">Jobs.</a></li>
             </ul>
         </div>
     </div>
 
-    <div class="div1">
-        <h1>S1 Bluetooth-FPGA system on module.</h1>
+    <div class="div-masthead">
+        <h1>S1 system on module</h1>
+        <b>Bluetooth – FPGA – Battery management</b>
         <hr>
-        <p>Delivering unparalleled compute in an ultra-small form factor with wireless and integrated battery
-            management.</p>
+        <p>Unparalleled compute in an ultra-small form factor. All RF
+            components, power and passives are fully built in. Simply apply
+            power, and the S1 is up and running.</p>
     </div>
 
-    <div class="div2 light">
-        <h2>Block diagram.</h2>
-        <p>The S1 is a union of four key components that are critical to developing tiny battery-powered products. It
-            targets applications requiring demanding algorithms while consuming as little energy as possible.</p>
-        <a href="https://docs.siliconwitchery.com/s1-module/s1-module" target="_blank">Full datasheet.</a>
+    <div class="div-block-diagram light">
+        <h2>Block diagram</h2>
+        <hr>
+        <p>The S1 is a union of four key components critical to developing
+            tiny battery-powered products. It targets applications requiring
+            demanding algorithms while consuming as little energy as
+            possible.</p>
     </div>
 
-    <div class="div3">
-        <h2>Always on inferencing from as little as 75µA.</h2>
+    <div class="div-video light">
+        <hr>
+        <iframe width="1080" height="608" src="https://www.youtube.com/embed/AhB6ToPnEqY" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <h2>Deep dives</h2>
+        <p>We're creating lots of content to get you started. Check out our
+            YouTube channel for more deep dives and tutorials.</p>
+        <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Visit the channel.</a>
     </div>
 
-    <div class="div4">
-        <h2>Software stack.</h2>
-        <p>Built on an extensive library of software resources and examples, we've provided a lightweight SDK for you to
-            get started without getting in the way of your application.</p>
-        <a href="https://github.com/siliconwitchery/s1-sdk" target="_blank">Download the SDK.</a>
+    <div class="div-software-masthead">
+        <h2>Pick your poison</h2>
+        <p>Choose how you want to develop your applications. Our open source
+            tools are designed to get you up and running fast.</p>
+        <hr>
     </div>
 
-    <div class="div5 light">
-        <h2>Get started with the S1 Popout board.</h2>
+    <div class="div-micropython">
+        <h2>MicroPython</h2>
+        <p>Download and test your FPGA binaries quickly using MicroPython
+            running on the S1.</p>
+        <p>For those needing to build algorithms and focus on data first,
+            MicroPython is a perfect way to interact with your data and make
+            changes on the fly. Connect wirelessly and access the S1 using our
+            Web Bluetooth based REPL.</p>
+        <a href="https://docs.siliconwitchery.com/micropython/micropython/" target="_blank">Get started with
+            MicroPython.</a>
+    </div>
+
+    <div class="div-c-sdk">
+        <h2>C SDK</h2>
+        <p>Do you need ultimate customization?</p>
+        <p>Designed for efficiency and minimal overhead, our C SDK gives you
+            straightforward access to key peripherals on the S1, without getting
+            in the way.</p>
+        <p>Need a hand getting started? Check out the examples on our GitHub
+            page, and use them as a starting point for your next project.</p>
+        <a href="https://github.com/siliconwitchery" target="_blank">Visit our GitHub.</a>
+    </div>
+
+    <div class="div-dev-kit light">
+        <h2>Meet the S1 Popout board</h2>
         <hr>
         <p>A straightforward development board that exposes everything needed for rapid prototyping.</p>
         <ul>
             <li>Pre-soldered S1 Module</li>
             <li>USB-C charging & data</li>
             <li>StemmaQT / QWICC I2C port</li>
-            <li>Lithium cell header</li>
+            <li>Lithium cell port</li>
             <li>ARM debug port</li>
             <li>User button & LED</li>
         </ul>
-        <a href="https://github.com/siliconwitchery" target="_blank">Documentation and examples.</a>
+        <a href="https://docs.siliconwitchery.com/" target="_blank">Full datasheet &
+            documentation.</a>
     </div>
 
-    <div class="div6">
-        <b>Ordering info.</b>
-        <h2>Buy now on Digi-Key</h2>
+    <div class="div-ordering">
+        <h2>Order now via Digi-Key</h2>
         <hr>
-        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-MODULE/15926537" target="_blank">- S1 Module – DK P/N: 4103-S1MODULE-ND</a>
-        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-POPOUT-BOARD/15926536" target="_blank">- S1 Popout Board – DK P/N: 4103-S1POPOUTBOARD-ND</a>
-        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-ECG-KIT/15926538" target="_blank">- S1 ECG Kit – DK P/N: 4103-S1ECGKIT-ND</a>
-        <p>Currently our parts are only available outside the EU. For European sales, please contact us directly.</p>
-        <a href="mailto:info@siliconwitchery.com">Email our sales.</a>
+        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-MODULE/15926537" target="_blank">S1
+            Module – 4103-S1MODULE-ND</a>
+        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-POPOUT-BOARD/15926536"
+            target="_blank">S1 Popout Board - 4103-S1POPOUTBOARD-ND</a>
+        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-ECG-KIT/15926538" target="_blank">S1 ECG
+            Kit - 4103-S1ECGKIT-ND</a>
+        <hr>
+        <br>
+        <b>Something not available in your region?</b>
+        <p>We're working closely with Digi-Key to expand the regions that we
+            ship to. In the meantime, feel free to contact us directly for
+            orders.</p>
+        <a href="mailto:info@siliconwitchery.com?subject=Ordering">Email our sales.</a>
     </div>
 
     <div class="footer">
         <div>
-            <p>2021 © Silicon Witchery AB</p>
+            <p>2022 © Silicon Witchery AB</p>
         </div>
         <div>
             <ul>
+                <li><a href="https://www.linkedin.com/company/siliconwitchery/jobs" target="_blank">Jobs.</a></li>
                 <li><a href="https://goo.gl/maps/DxHxU2tSU37g5QFt9" target="_blank">Visit Us.</a></li>
-                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">YouTube.</a></li>
-                <li><a href="https://www.tiktok.com/@silicon.witchery" target="_blank">TikTok.</a></li>
                 <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
                         Policy.</a></li>
             </ul>

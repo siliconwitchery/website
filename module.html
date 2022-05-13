@@ -37,6 +37,7 @@
 </head>
 
 <style>
+    /* Nav bar */
     .nav {
         background-color: var(--color-blue);
     }
@@ -117,6 +118,7 @@
         background-color: var(--color-black);
     }
 
+    /* Footer */
     .footer {
         background-color: var(--color-black);
     }
@@ -298,9 +300,12 @@
 </style>
 
 <body>
+
+    <!-- Nav bar -->
     <div class="nav">
-        <a href="https://www.siliconwitchery.com" class="logo"><img src="images/logo.png"
-                alt="Silicon Witchery Logo"></a>
+        <a href="https://www.siliconwitchery.com" class="logo">
+            <img src="images/logo.png" alt="Silicon Witchery Logo">
+        </a>
         <input class="menu-btn" type="checkbox" />
         <div class="hamburger">
             <div class="bar"></div>
@@ -309,26 +314,37 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="https://www.siliconwitchery.com/module">S1 Module.</a></li>
-                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Tutorials.</a>
-                </li>
+                <li><a href="https://www.siliconwitchery.com/module">
+                        S1 Module.
+                    </a></li>
+                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">
+                        Tutorials.
+                    </a></li>
                 <!-- TODO enable this -->
-                <!-- <li><a href="https://www.siliconwitchery.com/services">Services.</a></li> -->
-                <li><a href="https://docs.siliconwitchery.com">Docs.</a></li>
-                <li><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></li>
+                <!-- <li><a href="https://www.siliconwitchery.com/services">
+                        Services.
+                    </a></li> -->
+                <li><a href="https://docs.siliconwitchery.com">
+                        Docs.
+                    </a></li>
+                <li><a href="https://github.com/siliconwitchery" target="_blank">
+                        GitHub.
+                    </a></li>
             </ul>
         </div>
     </div>
 
+    <!-- Masthead -->
     <div class="div-masthead">
         <h1>S1 system on module</h1>
         <b>Bluetooth – FPGA – Battery management</b>
         <hr>
-        <p>Unparalleled compute in an ultra-small form factor. All RF
-            components, power and passives are fully built in. Simply apply
-            power, and the S1 is up and running.</p>
+        <p>Unparalleled compute in an ultra-small form factor. All the RF,
+            power and passive components are built right in. Simply add
+            batteries, and the S1 is up and running.</p>
     </div>
 
+    <!-- Block diagram -->
     <div class="div-block-diagram light">
         <h2>Block diagram</h2>
         <hr>
@@ -338,19 +354,22 @@
             possible.</p>
     </div>
 
+    <!-- Video -->
     <div class="div-video light">
         <hr>
         <iframe width="1080" height="608" src="https://www.youtube.com/embed/AhB6ToPnEqY" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
-
-        <h2>Deep dives</h2>
-        <p>We're creating lots of content to get you started. Check out our
+        <h2>Video tutorials</h2>
+        <p>We're creating lots of content to help get you started. Check out our
             YouTube channel for more deep dives and tutorials.</p>
-        <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Visit the channel.</a>
+        <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">
+            Visit the channel.
+        </a>
     </div>
 
+    <!-- Software -->
     <div class="div-software-masthead">
         <h2>Pick your poison</h2>
         <p>Choose how you want to develop your applications. Our open source
@@ -358,6 +377,7 @@
         <hr>
     </div>
 
+    <!-- MicroPython -->
     <div class="div-micropython">
         <h2>MicroPython</h2>
         <p>Download and test your FPGA binaries quickly using MicroPython
@@ -366,10 +386,12 @@
             MicroPython is a perfect way to interact with your data and make
             changes on the fly. Connect wirelessly and access the S1 using our
             Web Bluetooth based REPL.</p>
-        <a href="https://docs.siliconwitchery.com/micropython/micropython/" target="_blank">Get started with
-            MicroPython.</a>
+        <a href="https://docs.siliconwitchery.com/micropython/micropython/" target="_blank">
+            Get started with MicroPython.
+        </a>
     </div>
 
+    <!-- C SDK -->
     <div class="div-c-sdk">
         <h2>C SDK</h2>
         <p>Do you need ultimate customization?</p>
@@ -378,13 +400,17 @@
             in the way.</p>
         <p>Need a hand getting started? Check out the examples on our GitHub
             page, and use them as a starting point for your next project.</p>
-        <a href="https://github.com/siliconwitchery" target="_blank">Visit our GitHub.</a>
+        <a href="https://github.com/siliconwitchery" target="_blank">
+            Visit our GitHub.
+        </a>
     </div>
 
+    <!-- Dev kit -->
     <div class="div-dev-kit light">
         <h2>Meet the S1 Popout board</h2>
         <hr>
-        <p>A straightforward development board that exposes everything needed for rapid prototyping.</p>
+        <p>A straightforward development board that exposes everything needed
+            for rapid prototyping.</p>
         <ul>
             <li>Pre-soldered S1 Module</li>
             <li>USB-C charging & data</li>
@@ -393,38 +419,50 @@
             <li>ARM debug port</li>
             <li>User button & LED</li>
         </ul>
-        <a href="https://docs.siliconwitchery.com/" target="_blank">Full datasheet &
-            documentation.</a>
+        <a href="https://docs.siliconwitchery.com/" target="_blank">
+            Full datasheet & documentation.
+        </a>
     </div>
 
+    <!-- Ordering -->
     <div class="div-ordering">
         <h2>Order now via Digi-Key</h2>
         <hr>
-        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-MODULE/15926537" target="_blank">S1
-            Module – 4103-S1MODULE-ND</a>
-        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-POPOUT-BOARD/15926536"
-            target="_blank">S1 Popout Board - 4103-S1POPOUTBOARD-ND</a>
-        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-ECG-KIT/15926538" target="_blank">S1 ECG
-            Kit - 4103-S1ECGKIT-ND</a>
+        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-MODULE/15926537" target="_blank">
+            S1 Module – 4103-S1MODULE-ND</a>
+        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-POPOUT-BOARD/15926536" target="_blank">
+            S1 Popout Board - 4103-S1POPOUTBOARD-ND
+        </a>
+        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-ECG-KIT/15926538" target="_blank">
+            S1 ECG Kit - 4103-S1ECGKIT-ND
+        </a>
         <hr>
         <br>
         <b>Something not available in your region?</b>
         <p>We're working closely with Digi-Key to expand the regions that we
             ship to. In the meantime, feel free to contact us directly for
             orders.</p>
-        <a href="mailto:info@siliconwitchery.com?subject=Ordering">Email our sales.</a>
+        <a href="mailto:info@siliconwitchery.com?subject=Ordering">
+            Email our sales.
+        </a>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
         <div>
             <p>2022 © Silicon Witchery AB</p>
         </div>
         <div>
             <ul>
-                <li><a href="https://www.linkedin.com/company/siliconwitchery/jobs" target="_blank">Jobs.</a></li>
-                <li><a href="https://goo.gl/maps/DxHxU2tSU37g5QFt9" target="_blank">Visit Us.</a></li>
-                <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
-                        Policy.</a></li>
+                <li><a href="https://www.linkedin.com/company/siliconwitchery/jobs" target="_blank">
+                        Jobs.
+                    </a></li>
+                <li><a href="https://goo.gl/maps/DxHxU2tSU37g5QFt9" target="_blank">
+                        Visit Us.
+                    </a></li>
+                <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">
+                        Privacy Policy.
+                    </a></li>
             </ul>
         </div>
     </div>

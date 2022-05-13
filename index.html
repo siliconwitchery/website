@@ -37,6 +37,7 @@
 </head>
 
 <style>
+    /* Nav bar */
     .nav {
         background-color: var(--color-grey);
     }
@@ -92,6 +93,7 @@
         background-color: var(--color-white);
     }
 
+    /* Footer */
     .footer {
         background-color: var(--color-white);
     }
@@ -206,9 +208,12 @@
 </style>
 
 <body>
+
+    <!-- Nav bar -->
     <div class="nav">
-        <a href="https://www.siliconwitchery.com" class="logo"><img src="images/logo.png"
-                alt="Silicon Witchery Logo"></a>
+        <a href="https://www.siliconwitchery.com" class="logo">
+            <img src="images/logo.png" alt="Silicon Witchery Logo">
+        </a>
         <input class="menu-btn" type="checkbox" />
         <div class="hamburger">
             <div class="bar"></div>
@@ -217,75 +222,91 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="https://www.siliconwitchery.com/module">S1 Module.</a></li>
-                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">Tutorials.</a>
-                </li>
+                <li><a href="https://www.siliconwitchery.com/module">
+                        S1 Module.
+                    </a></li>
+                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">
+                        Tutorials.
+                    </a></li>
                 <!-- TODO enable this -->
-                <!-- <li><a href="https://www.siliconwitchery.com/services">Services.</a></li> -->
-                <li><a href="https://docs.siliconwitchery.com">Docs.</a></li>
-                <li><a href="https://github.com/siliconwitchery" target="_blank">GitHub.</a></li>
+                <!-- <li><a href="https://www.siliconwitchery.com/services">
+                        Services.
+                    </a></li> -->
+                <li><a href="https://docs.siliconwitchery.com">
+                        Docs.
+                    </a></li>
+                <li><a href="https://github.com/siliconwitchery" target="_blank">
+                        GitHub.
+                    </a></li>
             </ul>
         </div>
     </div>
 
+    <!-- Masthead -->
     <div class="div-masthead">
         <h1>What do you want to build?</h1>
         <hr>
         <p>We provide IoT ecosystems built on cutting-edge silicon. Once you buy
-            our hardware, let our open source tools guide you the rest of the
+            our hardware, our open source tools will guide you the rest of the
             way.</p>
         <br>
         <a href="#s1">Let the S1 inspire you.</a>
     </div>
 
+    <!-- S1 Module -->
     <div id="s1" class="div-s1-module light">
         <h2>FPGAs just got easier</h2>
         <b>Bluetooth – FPGA – Battery management</b>
         <ul>
             <li>Quad wafer SoM</li>
             <li>6 x 12mm footprint</li>
-            <li>High speed IO incl. I3C</li>
+            <li>High speed IO including I3C</li>
             <li>Long range & direction finding support</li>
         </ul>
         <p>The S1 Module is perfect for running efficient AI on the edge.</p>
         <p>Simplify not only what you send to the cloud, but also your design
-            with fully integrated RF, memory and power management.</p>
+            with fully integrated RF, memory, and power management.</p>
         <a href="https://www.siliconwitchery.com/module">Learn more.</a>
     </div>
 
+    <!-- Software -->
     <div class="div-software">
         <b>Open source tooling</b>
         <h2>Develop your applications faster</h2>
-        <p>Choose how you want to build</p>
+        <p>Choose how you want to build:</p>
         <ul>
             <li>Open source FPGA tools</li>
             <li>MicroPython remote shell</li>
             <li>C SDK</li>
         </ul>
-        <p>Write FPGA binaries in SystemVerilog using mature open source tools –
-            Test them quickly over MicroPython – Develop a cutting edge application that does
-            exactly what you need, using our C SDK.</p>
-        <a href="https://github.com/siliconwitchery">Visit out GitHub.</a>
+        <p>Write FPGA applications in SystemVerilog and test them quickly over
+            MicroPython. Once you're ready, develop a cutting edge Bluetooth
+            endpoint that does exactly what you need, using our C SDK.</p>
+        <a href="https://github.com/siliconwitchery">Visit our GitHub.</a>
     </div>
 
+    <!-- ECG kit -->
     <div class="div-ecg">
         <b>A perfect example of what the S1 is capable of</b>
         <h2>S1 ECG reference kit</h2>
         <p>Making heart research more accessible</p>
         <ul>
-            <li>Log heart data wirelessly</li>
+            <li>Log data wirelessly</li>
             <li>Develop AI models</li>
             <li>Load your FPGA algorithms over the air</li>
             <li>Test and iterate</li>
         </ul>
-        <p>A powerful analog frontend combined with the S1 Module makes this an all-in-one kit to deploy and test
-            algorithms with ease. Be that for learning, research, or as the starting point for your next product.
+        <p>A powerful analog frontend combined with the S1 Module makes this an
+            all-in-one kit to deploy and test algorithms with ease. Be that for
+            learning, research, or as the starting point for your next product.
         </p>
         <p>Open source, and now available from Digi-Key</p>
-        <a href="https://docs.siliconwitchery.com/s1-ecg-kit/s1-ecg-kit/" target="_blank">Reference manual &
-            ordering.</a>
+        <a href="https://docs.siliconwitchery.com/s1-ecg-kit/s1-ecg-kit/" target="_blank">
+            Reference manual & ordering.
+        </a>
     </div>
 
+    <!-- Services -->
     <div class="div-services light">
         <b>Need something special?</b>
         <h2>We're always happy to provide our services</h2>
@@ -298,20 +319,30 @@
             <li>Scientific</li>
         </ul>
         <!-- TODO change this link -->
-        <a href="mailto:info@siliconwitchery.com" class="btn">Speak to an engineer.</a>
-        <!-- <a href="https://www.siliconwitchery.com/services" class="btn">Read about our projects.</a> -->
+        <a href="mailto:info@siliconwitchery.com" class="btn">
+            Speak to an engineer.
+        </a>
+        <!-- <a href="https://www.siliconwitchery.com/services" class="btn">
+            Read about our projects.
+        </a> -->
     </div>
 
+    <!-- Footer -->
     <div class="footer light">
         <div>
             <p>2022 © Silicon Witchery AB</p>
         </div>
         <div>
             <ul>
-                <li><a href="https://www.linkedin.com/company/siliconwitchery/jobs" target="_blank">Jobs.</a></li>
-                <li><a href="https://goo.gl/maps/DxHxU2tSU37g5QFt9" target="_blank">Visit Us.</a></li>
-                <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">Privacy
-                        Policy.</a></li>
+                <li><a href="https://www.linkedin.com/company/siliconwitchery/jobs" target="_blank">
+                        Jobs.
+                    </a></li>
+                <li><a href="https://goo.gl/maps/DxHxU2tSU37g5QFt9" target="_blank">
+                        Visit Us.
+                    </a></li>
+                <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">
+                        Privacy Policy.
+                    </a></li>
             </ul>
         </div>
     </div>

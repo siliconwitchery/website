@@ -50,6 +50,13 @@ h2 {
     text-transform: capitalize;
 }
 
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
 p {
     font-size: 1.2rem;
     line-height: 1.6rem;
@@ -74,7 +81,8 @@ li {
     font-weight: 700;
 }
 
-a {
+a,
+summary {
     display: block;
     font-size: 1.2rem;
     line-height: 1.6rem;
@@ -88,7 +96,8 @@ a {
 /**************************/
 /* Hover effect for links */
 
-a:not(.logo):after {
+a:not(.logo):after,
+summary:after {
     content: '';
     width: 0;
     height: 2px;
@@ -98,7 +107,8 @@ a:not(.logo):after {
     -webkit-transition: width .2s ease-in-out;
 }
 
-a:hover:after {
+a:hover:after,
+summary:hover:after {
     width: 2rem;
 }
 
@@ -137,14 +147,17 @@ a:hover:after {
 
 .light h1,
 .light h2,
+.light h3,
 .light p,
 .light b,
 .light li,
-.light a {
+.light a,
+.light summary {
     color: var(--color-black);
 }
 
-.light a:after {
+.light a:after,
+.light summary:after {
     background: var(--color-black);
 }
 
@@ -183,7 +196,8 @@ a:hover:after {
     p,
     b,
     li,
-    a {
+    a,
+    summary {
         font-size: 1rem;
     }
 

@@ -38,10 +38,9 @@
     .div-s2-superstack {
         height: 45rem;
         padding-right: 50%;
-        /* TODO change this image to two S2 modules */
-        background: url(images/fpc.png) no-repeat;
-        background-size: 60% auto;
-        background-position: right 80%;
+        background: url(images/s2-front.png) no-repeat;
+        background-size: auto 70%;
+        background-position: right 4rem bottom 4rem;
         background-color: var(--color-grey);
     }
 
@@ -93,6 +92,11 @@
     /* 4K screens */
     @media (min-width: 2000px) {
 
+        /* S2 & Superstack */
+        .div-s2-superstack {
+            background-position: right 24rem bottom 4rem;
+        }
+
         /* Software */
         .div-software {
             background-size: auto 70%;
@@ -140,6 +144,11 @@
             padding-right: 4rem;
         }
 
+        /* S2 & Superstack */
+        .div-s2-superstack {
+            background-size: auto 60%;
+        }
+
         /* S1 Module */
         .div-s1-module {
             height: 50rem;
@@ -173,6 +182,14 @@
 
     /* Mobile screens */
     @media (max-width: 650px) {
+
+        /* S2 & Superstack */
+        .div-s2-superstack {
+            height: 50rem;
+            padding-right: 2rem;
+            background-size: 80% auto;
+            background-position: right 2rem bottom 2rem;
+        }
 
         /* Software */
         .div-software {
@@ -299,7 +316,7 @@
     <div class="div-services light">
         <b>Need something special?</b>
         <h2>We're always happy to provide our services</h2>
-        <p>Developing the S1 has taught us excellence in systems engineering.
+        <p>Developing our products have taught us excellence in systems engineering.
             Let us bring that knowledge to your team.</p>
         <ul>
             <li>Consumer products</li>

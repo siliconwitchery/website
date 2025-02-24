@@ -30,25 +30,25 @@
 
 <style>
     .nav {
-        background-color: var(--color-grey);
+        background-color: var(--color-white);
     }
 
     .div-masthead {
         height: 45rem;
         padding-right: 50%;
-        background: url(images/fpc.png) no-repeat;
+        background: url(images/connected-system.png) no-repeat;
         background-size: 60% auto;
         background-position: right 80%;
-        background-color: var(--color-grey);
+        background-color: var(--color-white);
     }
 
     .div-s2-module {
         height: 50rem;
-        padding-right: 50%;
-        background: url(images/s1-module-back.png) no-repeat;
-        background-size: auto 50%;
-        background-position: right bottom;
-        background-color: var(--color-white);
+        padding-left: 50%;
+        background: url(images/s2-alt.png) no-repeat;
+        background-size: 100% auto;
+        background-position: left bottom;
+        background-color: #1a1724;
     }
 
     .div-superstack {
@@ -74,6 +74,10 @@
 
     /* 4K screens */
     @media (min-width: 2000px) {
+
+        .div-s2-module {
+            background-position: left 50%;
+        }
 
         .div-superstack {
             background-size: auto 70%;
@@ -152,9 +156,9 @@
 <body>
 
     <!-- Nav bar -->
-    <div class="nav">
+    <div class="nav light">
         <a href="https://www.siliconwitchery.com" class="logo">
-            <img src="images/logo.png" alt="Silicon Witchery Logo">
+            <img src="images/logo-dark.png" alt="Silicon Witchery Logo">
         </a>
         <input class="menu-btn" type="checkbox" />
         <div class="hamburger">
@@ -184,7 +188,7 @@
     </div>
 
     <!-- Masthead -->
-    <div class="div-masthead">
+    <div class="div-masthead light">
         <h1>Build AI-Powered IoT Systems Without the Complexity</h1>
         <hr>
         <p>Pre-configured hardware + intelligent cloud platform = autonomous systems in minutes</p>
@@ -193,7 +197,7 @@
     </div>
 
     <!-- S2 Module -->
-    <div class="div-s2-module light">
+    <div class="div-s2-module">
         <h2>Hardware That Just Works</h2>
         <p>The S2 is an LTE-enabled IoT module that's ready to deploy straight out of the box. Program it remotely
             through Superstack to handle sensor data, run preprocessing algorithms, and seamlessly sync with the cloud -

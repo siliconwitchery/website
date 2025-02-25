@@ -96,20 +96,24 @@
 
         .div-masthead {
             padding-right: 30%;
-            background-size: 70% auto;
+            background-size: auto 80%;
+            background-position: right 4rem bottom -2rem;
         }
 
         .div-s2-module {
-            background-size: 80% auto;
+            height: 60rem;
         }
 
         .div-superstack {
+            height: 60rem;
+            padding-left: 50%;
             background-size: auto 50%;
+            background-position: left -16rem bottom 8rem;
         }
 
         .div-signup {
-            padding-right: 50%;
-            background-size: 50% auto;
+            padding-left: 4rem;
+            padding-right: 4rem;
         }
     }
 
@@ -117,44 +121,51 @@
     @media (max-width: 960px) {
 
         .div-masthead {
-            padding-right: 4rem;
+            height: 40rem;
+            padding-right: 2rem;
+            background-size: auto 60%;
+            background-position: right 8rem bottom -1rem;
         }
 
         .div-s2-module {
-            height: 50rem;
-            padding-right: 4rem;
+            height: 55rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
             background-size: 110% auto;
         }
 
         .div-superstack {
-            height: 60rem;
-            padding-left: 4rem;
+            height: 55rem;
+            padding-left: 2rem;
             background-size: 50% auto;
             background-position: right 4rem bottom 4rem;
         }
 
         .div-signup {
-            height: 66rem;
-            padding-top: 30rem;
-            padding-right: 4rem;
-            background-size: auto 35rem;
+            padding-bottom: 12rem;
         }
     }
 
     /* Mobile screens */
     @media (max-width: 650px) {
 
+        .div-masthead {
+            background-size: auto 40%;
+            background-position: right 2rem bottom -2rem;
+        }
+
+        .div-s2-module {
+            height: 58rem;
+        }
+
         .div-superstack {
-            height: 65rem;
-            padding-left: 2rem;
-            background-size: 80% auto;
-            background-position: left 2rem bottom 4rem;
+            height: 66rem;
+            background-image: none;
         }
 
         .div-signup {
-            height: 75rem;
-            padding-top: 25rem;
-            background-size: auto 25rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
     }
 </style>

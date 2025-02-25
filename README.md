@@ -1,8 +1,8 @@
 # Privacy Policy
 
-We don't store your personal data anywhere on our website. You can check out the source code above.
+We don't store your personal data on our www.siliconwitchery.com pages. You can check out the source code above.
 
-However, we use Google Analytics to monitor visitor count and demographics.
+However, we use Umami.is to monitor visitor count and demographics.
 
 If you choose to give us your email. It's safely stored within Mailchimp which is an industry-standard marketing tool. You can easily unsubscribe at any time by re-entering your email into the collection box and it will take you to a page where you can unsubscribe.
 

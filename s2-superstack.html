@@ -338,32 +338,106 @@
 
         <h3>Frequently Asked Questions</h3>
 
-        <!-- TODO add FAQs -->
+        <details>
+            <summary>
+                <img class="link-icon" src="images/link-icon.svg">
+                What is the setup process?
+            </summary>
+            <p>The S2 module comes pre-configured with a data plan and is ready to use out of the box. Simply enter the
+                IMEI into the Superstack platform and press the connect button on the S2 hardware to complete the setup.
+            </p>
+        </details>
+
+        <details>
+            <summary>
+                <img class="link-icon" src="images/link-icon.svg">
+                How do I program the S2?
+            </summary>
+            <p>The S2 module features our real-time Lua scripting engine that can be programmed and debugged remotely
+                through the Superstack code editor. You can update code and fix bugs from the cloud, even after your S2
+                is deployed in the field.</p>
+        </details>
+
+        <details>
+            <summary>
+                <img class="link-icon" src="images/link-icon.svg">
+                What types of sensors can I connect?
+            </summary>
+            <p>The S2 module provides four simultaneous serial interfaces, including two high-speed SPI interfaces
+                suitable for cameras and displays. Pins can be configured for various functions including GPIO, I2C,
+                PWM, and analog input, enabling connection to a wide range of sensors, actuators, and other
+                peripherals.</p>
+        </details>
+
+        <details>
+            <summary>
+                <img class="link-icon" src="images/link-icon.svg">
+                How is the device powered?
+            </summary>
+            <p>The S2 can be powered via USB-C, an external 5V power supply, or an optional 4.2V lithium battery. It
+                features an advanced power management IC for battery charging and provides two adjustable voltage rails
+                for powering external peripherals.</p>
+        </details>
+
+        <details>
+            <summary>
+                <img class="link-icon" src="images/link-icon.svg">
+                How much data can I transmit?
+            </summary>
+            <p>The S2 module uses LTE Cat-M1 with speeds up to 1Mbps. Typical messages include sensor readings formatted
+                as JSON strings, where the message size in bytes corresponds to the total character count. Data
+                transmission is limited only by your Superstack usage tier, which determines the overall data allowance
+                across all your devices.</p>
+        </details>
+
+        <details>
+            <summary>
+                <img class="link-icon" src="images/link-icon.svg">
+                What security features are included?
+            </summary>
+            <p>The S2 module establishes secure cellular connections to the Superstack cloud platform via LTE-M, with
+                data encrypted using DTLS 1.2. All data is stored in a secure cloud database and is accessible only
+                through authorized Superstack accounts or via API keys.</p>
+        </details>
+
+        <details>
+            <summary>
+                <img class="link-icon" src="images/link-icon.svg">
+                What AI capabilities are available?
+            </summary>
+            <p>The Superstack platform's AI can analyze your aggregated data through natural language queries. For
+                example, you can ask "What is the average temperature across all field sensors right now?" or "How many
+                trucks entered the factory in the last hour?" The AI interprets these questions based on available data,
+                sensor types, log messages, and data labels. These queries are also accessible via the Superstack API
+                for integration with your own applications.</p>
+        </details>
+
         <details>
             <summary>
                 <img class="link-icon" src="images/link-icon.svg">
                 When will the S2 be available?
             </summary>
-            <p>The S2 module will be available through Digi-Key in summer 2025. Join our waitlist to be notified when
-                orders open.</p>
+            <p>The S2 module will be available through Digi-Key in summer 2025. Sign up for our mailing list above to
+                receive availability notifications.</p>
         </details>
 
         <details>
             <summary>
                 <img class="link-icon" src="images/link-icon.svg">
-                What's included in the data plan?
+                Where is my data stored?
             </summary>
-            <p>Each S2 comes with global LTE connectivity and a pre-configured data plan. Pricing details will be
-                announced closer to launch.</p>
+            <p>All data is securely stored in the Superstack cloud database. Enterprise users have the option to forward
+                all data to their private cloud infrastructure using REST hooks.</p>
         </details>
 
         <details>
             <summary>
                 <img class="link-icon" src="images/link-icon.svg">
-                Can I try Superstack before ordering hardware?
+                Can I create dashboards in Superstack?
             </summary>
-            <p>Yes! You can explore Superstack's features through our online demo. Experience the interface and API
-                capabilities today.</p>
+            <p>While Superstack focuses on device fleet management, programming, and AI analysis rather than dashboard
+                creation, you can easily integrate your data into custom dashboard applications using our API for
+                real-time metrics.</p>
         </details>
     </div>
 

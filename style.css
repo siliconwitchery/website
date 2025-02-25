@@ -91,6 +91,13 @@ summary {
     position: relative;
 }
 
+.link-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-right: 0.1rem;
+    vertical-align: sub;
+    filter: invert(96%) sepia(46%) saturate(6179%) hue-rotate(179deg) brightness(117%) contrast(93%);
+}
 
 /**************************/
 /* Hover effect for links */
@@ -164,6 +171,9 @@ summary:hover:after {
     border-top: 2px solid var(--color-black);
 }
 
+.light .link-icon {
+    filter: invert(11%) sepia(12%) saturate(3662%) hue-rotate(164deg) brightness(96%) contrast(95%);
+}
 
 /**************************/
 /* Changes for 4k screens */

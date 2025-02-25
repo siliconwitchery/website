@@ -36,9 +36,9 @@
     .div-masthead {
         height: 45rem;
         padding-right: 50%;
-        /* background: url(images/connected-system.png) no-repeat; */
-        /* background-size: 60% auto; */
-        /* background-position: right 80%; */
+        background: url(images/iot-graphic.png) no-repeat;
+        background-size: auto 100%;
+        background-position: right 12rem bottom -2rem;
         background-color: var(--color-white);
     }
 
@@ -54,9 +54,9 @@
     .div-superstack {
         height: 50rem;
         padding-left: 55%;
-        background: url(images/micropython-code.png) no-repeat;
-        background-size: auto 60%;
-        background-position: left 4rem bottom 4rem;
+        background: url(images/chat-graphic.png) no-repeat;
+        background-size: auto 70%;
+        background-position: left -12rem bottom 8rem;
         background-color: var(--color-code);
     }
 
@@ -73,13 +73,16 @@
     /* 4K screens */
     @media (min-width: 2000px) {
 
+        .div-masthead {
+            background-position: right 32rem bottom -2rem;
+        }
+
         .div-s2-module {
             background-position: left 50%;
         }
 
         .div-superstack {
-            background-size: auto 70%;
-            background-position: left 24rem bottom 4rem;
+            background-position: left 20% bottom 8rem;
         }
 
         .div-signup {

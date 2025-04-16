@@ -42,11 +42,22 @@
 
     .div-masthead {
         height: 45rem;
-        padding-right: 50%;
-        background: url(images/iot-graphic.png) no-repeat;
-        background-size: auto 100%;
-        background-position: right 12rem bottom -2rem;
+        display: flex;
+        flex-direction: row;
         background-color: var(--color-white);
+    }
+
+    .div-masthead-text {
+        width: 120%;
+        padding-right: 5rem;
+    }
+
+    .div-masthead-video {
+        width: 100%;
+        padding-top: 4rem;
+        align-self: center;
+        /* min-width: 400px; */
+        max-width: 800px;
     }
 
     .div-s2-module {
@@ -61,7 +72,7 @@
     .div-superstack {
         height: 50rem;
         padding-left: 55%;
-        background: url(images/chat-graphic.png) no-repeat;
+        background: url(images/superstack.gif) no-repeat;
         background-size: auto 70%;
         background-position: left -12rem bottom 8rem;
         background-color: var(--color-gold);
@@ -79,10 +90,6 @@
 
     /* 4K screens */
     @media (min-width: 2000px) {
-
-        .div-masthead {
-            background-position: right 32rem bottom -2rem;
-        }
 
         .div-s2-module {
             background-position: left 50%;
@@ -102,9 +109,13 @@
     @media (max-width: 1200px) {
 
         .div-masthead {
-            padding-right: 30%;
-            background-size: auto 80%;
-            background-position: right 4rem bottom -2rem;
+            flex-direction: column;
+            height: 64rem;
+        }
+
+        .div-masthead-text {
+            width: 100%;
+            padding-right: 0rem;
         }
 
         .div-s2-module {
@@ -128,10 +139,7 @@
     @media (max-width: 960px) {
 
         .div-masthead {
-            height: 40rem;
-            padding-right: 2rem;
-            background-size: auto 60%;
-            background-position: right 8rem bottom -1rem;
+            height: 58rem;
         }
 
         .div-s2-module {
@@ -157,8 +165,7 @@
     @media (max-width: 650px) {
 
         .div-masthead {
-            background-size: auto 40%;
-            background-position: right 2rem bottom -2rem;
+            height: 58rem;
         }
 
         .div-s2-module {
@@ -213,14 +220,31 @@
 
     <!-- Masthead -->
     <div class="div-masthead light">
-        <h1>Build AI-Powered IoT Systems Without the Complexity</h1>
-        <hr>
-        <p>Pre-configured hardware + intelligent cloud platform = autonomous systems in minutes</p>
-        <br>
-        <a href="#sign-up">
-            <img class="link-icon" src="images/link-icon.svg">
-            Get notified once available
-        </a>
+        <div class="div-masthead-text">
+            <h1>Deploy AI-Powered IoT Systems in Days, Not Months</h1>
+            <hr>
+            <p>Pre-configured LTE hardware + intelligent cloud platform that lets you build and manage autonomous
+                systems from anywhere. No complex setup, no infrastructure headaches.</p>
+            <br>
+            <a href="#sign-up">
+                <img class="link-icon" src="images/link-icon.svg">
+                Join Pilot Program
+            </a>
+            <a
+                href="mailto:projects@siliconwitchery.com?subject=IoT Project Support&body=Hi Silicon Witchery team,%0D%0A%0D%0AI'm interested in implementation support for:%0D%0A%0D%0A- Project type:%0D%0A- Timeline:%0D%0A- Company:%0D%0A%0D%0ABest regards,">
+                <img class="link-icon" src="images/link-icon.svg">
+                Get Implementation Support
+            </a>
+        </div>
+        <div class="div-masthead-video">
+            <div style="position: relative; width: 100%; overflow: hidden; padding-top: 56.25%;">
+                <iframe style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; border: none;"
+                    src="https://www.youtube.com/embed/3L_OU-fMW_w" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
     </div>
 
     <!-- S2 Module -->
@@ -262,8 +286,17 @@
 
     <!-- Sign up -->
     <div id="sign-up" class="div-signup light">
-        <h2>Get notified once available</h2>
-        <p>Be the first to experience the future of IoT development.</p>
+        <h2>Join Our Exclusive Pilot Program</h2>
+        <p>Get early access to S2 hardware and Superstack platform, plus direct implementation support from our team.
+            Limited spots available for qualified companies.</p>
+        <div class="pilot-benefits">
+            <ul>
+                <li>✓ Priority access to first production units</li>
+                <li>✓ Dedicated technical support</li>
+                <li>✓ Influence feature development</li>
+                <li>✓ Special pilot pricing</li>
+            </ul>
+        </div>
 
         <!-- Mailchimp signup form -->
         <div id="mc_embed_shell">
@@ -342,6 +375,9 @@
             <script
                 type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[6] = 'COMPANY'; ftypes[6] = 'text'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
         </div>
+
+        <br>
+        <br>
 
         <h3>Frequently Asked Questions</h3>
 

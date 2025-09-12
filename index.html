@@ -43,10 +43,15 @@
     .div-s2-superstack {
         height: 45rem;
         padding-right: 50%;
-        background: url(images/s2-front.png) no-repeat;
-        background-size: auto 70%;
-        background-position: right 4rem bottom 4rem;
+        background: url(images/s2-front.jpg) no-repeat;
+        background-size: 100% auto;
+        background-position: left bottom;
         background-color: var(--color-grey);
+        /* Add these properties to extend the background upward */
+        margin-top: -7rem;
+        /* Negative margin equal to nav height */
+        padding-top: 11rem;
+        /* Add padding to compensate for the negative margin (4rem original + 7rem nav) */
     }
 
     .div-s1-module {

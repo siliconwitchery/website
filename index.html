@@ -36,17 +36,16 @@
 </head>
 
 <style>
-    .nav {
-        background-color: var(--color-grey);
-    }
-
     .div-s2-superstack {
         height: 45rem;
         padding-right: 50%;
-        background: url(images/s2-front.png) no-repeat;
-        background-size: auto 70%;
-        background-position: right 4rem bottom 4rem;
-        background-color: var(--color-grey);
+        background: url(images/s2-front.jpg) no-repeat;
+        background-size: 100% auto;
+        background-position: right bottom;
+        background-color: #000000;
+        /* Overflows the background upward to cover the nav bar */
+        margin-top: -8rem;
+        padding-top: 12rem;
     }
 
     .div-s1-module {
@@ -80,11 +79,19 @@
         background-color: var(--color-white);
     }
 
-    /* 4K screens */
+    /* 1080p screens */
+    @media (min-width: 1750px) {
+
+        .div-s2-superstack {
+            background-position: right bottom -10rem;
+        }
+    }
+
+    /* 2 & 4K screens */
     @media (min-width: 2000px) {
 
         .div-s2-superstack {
-            background-position: right 24rem bottom 4rem;
+            background-position: right bottom -18rem;
         }
     }
 
@@ -92,7 +99,7 @@
     @media (max-width: 1200px) {
 
         .div-s2-superstack {
-            background-size: auto 60%;
+            background-size: auto 100%;
         }
 
         .div-s1-module {
@@ -112,6 +119,10 @@
 
     /* iPad screens in portrait */
     @media (max-width: 960px) {
+
+        .div-s2-superstack {
+            background-position: right -5rem bottom -2rem;
+        }
 
         .div-s1-module {
             height: 50rem;
@@ -139,8 +150,7 @@
         .div-s2-superstack {
             height: 50rem;
             padding-right: 2rem;
-            background-size: 80% auto;
-            background-position: right 2rem bottom 2rem;
+            background-position: right -12rem bottom -13rem;
         }
 
         .div-ecg {

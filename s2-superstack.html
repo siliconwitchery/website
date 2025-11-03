@@ -306,8 +306,8 @@
             Enter your email below, and we'll contact you within 24 hours to discuss
             your project and prove value to your stakeholders.</p>
 
-        <!-- Mailchimp signup form -->
-        <div id="mc_embed_shell">
+        <!-- Signup form -->
+        <div>
             <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
             <style type="text/css">
                 #mc_embed_signup {
@@ -324,64 +324,44 @@
                 #mc_embed_signup * {
                     all: revert;
                 }
-
-                #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
-                    background-color: transparent;
-                    margin-bottom: 0;
-                }
             </style>
             <div id="mc_embed_signup">
-                <form
-                    action="https://siliconwitchery.us22.list-manage.com/subscribe/post?u=437cc9ab684708cae27195ebc&amp;id=1ad447473f&amp;f_id=00f7c2e1f0"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                    target="_blank">
 
-                    <div id="mc_embed_signup_scroll">
+                <form action="https://super.siliconwitchery.com/platform/feedback" method="POST"
+                    onsubmit="this.submit(); this.reset(); document.getElementById('form-success-message').style.display = 'block'; return false;">
+                    <div>
 
                         <div class="indicates-required">
                             <span class="asterisk">*</span> indicates required
                         </div>
 
                         <div class="mc-field-group">
-                            <label for="mce-EMAIL">Email Address
-                                <span class="asterisk">*</span>
-                            </label>
-
-                            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                            <label>Name<span class="asterisk">*</span></label>
+                            <input type="text" name="name" required>
                         </div>
 
                         <div class="mc-field-group">
-                            <label for="mce-COMPANY">Company </label>
-
-                            <input type="text" name="COMPANY" class=" text" id="mce-COMPANY" value="">
+                            <label>Company</label>
+                            <input type="text" name="company">
                         </div>
 
-                        <div id="mce-responses" class="clear foot">
-                            <div class="response" id="mce-error-response" style="display: none;"></div>
-                            <div class="response" id="mce-success-response" style="display: none;"></div>
+                        <div class="mc-field-group">
+                            <label>Email Address<span class="asterisk">*</span></label>
+                            <input type="email" name="email" required>
                         </div>
 
-                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                            <!-- bot protection -->
-                            <input type="text" name="b_437cc9ab684708cae27195ebc_1ad447473f" tabindex="-1" value="">
+                        <input type="hidden" name="type" value="Project discussion">
+
+                        <div id="form-success-message" style="text-align: right; padding-right: 1.5rem; display: none;">
+                            Thank you for your details. We'll be in touch soon.
                         </div>
 
-                        <div class="optionalParent">
-                            <div class="clear foot">
-                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"
-                                    value="Subscribe">
-                            </div>
-                        </div>
+                        <input type="submit" class="button" value="Send">
 
-                        <p>Don't worry, we won't spam you, and you can easily unsubscribe at any time from the link in
-                            the email.</p>
                     </div>
 
                 </form>
             </div>
-            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-            <script
-                type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[6] = 'COMPANY'; ftypes[6] = 'text'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
         </div>
 
         <br>

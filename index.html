@@ -129,10 +129,51 @@
                 Ask your shipments if they're on time.
             </p>
 
-            <form>
+            <form
+                onsubmit="
+                    const data = {
+                        company: 'unspecified',
+                        type: 'Landing page request',
+                        feedback:
+                            'Thanks for getting in touch. We\'ll get back to you very soon. In the meantime, you\'re welcome to reply with any further details relating to your request here.',
+                    };
+
+                    const form = new FormData(this);
+
+                    form.forEach((value, key) => {
+                        data[key] = value;
+                    });
+
+                    fetch(
+                        'https://super.siliconwitchery.com/api/sidebar/feedback',
+                        {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data),
+                        },
+                    );
+
+                    this.reset();
+
+                    this.getElementsByTagName('p')[0].innerText =
+                        'Thanks! We\'ll be in touch soon';
+
+                    return false;
+                "
+            >
                 <div>
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Name"
+                        required
+                    />
+                    <input
+                        name="email"
+                        type="email"
+                        placeholder="Email"
+                        required
+                    />
                 </div>
                 <button class="button-cta" type="submit">
                     Schedule a Demo
@@ -146,7 +187,7 @@
             <p>© Silicon Witchery AB</p>
             <div style="width: 100%"></div>
             <a href="">Privacy Policy.</a>
-            <a href="" style="padding-left: 1.2rem">Terms.</a>
+            <a href="">Terms.</a>
         </footer>
     </body>
 </html>

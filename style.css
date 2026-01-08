@@ -1,13 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
 :root {
-    --color-white: #f2f7f7;
-    --color-black: #0b2436;
-    --color-code: #272a37;
-    --color-grey: #212129;
-    --color-blue: #5247c8;
-    --color-gold: #d2a454;
-    /* --color-gold: #d3a46f; */
+    --text-color-white: #f2f7f7;
+    --text-color-black: #0b2436;
 }
 
 * {
@@ -15,26 +10,66 @@
     border: 0;
     box-sizing: border-box;
     outline: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--text-color-white);
 }
 
-body>div {
+header,
+footer {
+    padding: 4rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    text-wrap: nowrap;
+}
+
+header .logo {
+    height: 3rem;
+    width: auto;
+    cursor: pointer;
+}
+
+header .menu-button {
+    padding-left: 1.2rem;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 3;
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 40;
+}
+
+header /* menu */ dialog {
+    padding: 8rem 4rem;
+    top: 0%;
+    z-index: 2;
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
+}
+
+body > div {
+    padding: 4rem 4rem;
     display: flex;
     flex-direction: column;
-    padding: 4rem 4rem;
+    gap: 2.4rem;
 }
 
-hr {
-    border-top: 2px solid var(--color-white);
-    margin-top: 2rem;
+body:has(dialog[open]) /* menu open */ {
+    overflow: hidden;
 }
 
-
-/***********************/
-/* General font styles */
+/******************/
+/* General styles */
 
 h1 {
     font-size: 3rem;
@@ -46,32 +81,78 @@ h1 {
 h2 {
     font-size: 2rem;
     font-weight: 700;
-    margin-top: 1rem;
-    text-transform: capitalize;
-}
-
-h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-top: 1rem;
     text-transform: capitalize;
 }
 
 p {
     font-size: 1.2rem;
     line-height: 1.6rem;
-    margin-top: 2rem;
 }
 
-b {
-    display: block;
+a,
+summary {
     font-size: 1.2rem;
     line-height: 1.6rem;
-    margin-top: 1rem;
-    letter-spacing: 0.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    position: relative;
 }
 
-ul:not(.footer ul, .nav ul) {
+button {
+    background-color: transparent;
+    outline: solid 1px;
+    font-size: 1rem;
+    text-wrap: nowrap;
+    padding: 0.5rem 0.75rem;
+    margin: 0.6rem 0;
+}
+
+button:hover {
+    background-color: transparent;
+    outline: solid 2px;
+    transition: all 0.1s;
+}
+
+.button-cta {
+    background-color: #f78d60;
+    color: var(--text-color-white) !important;
+    outline: solid 1px #f78d60;
+}
+
+.button-cta:hover {
+    color: #f78d60 !important;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 28rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+}
+
+form p {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+form input {
+    background-color: transparent;
+    outline: solid 1px;
+    font-size: 0.9rem;
+    text-wrap: nowrap;
+    padding: 0.5rem 0.75rem;
+    margin: 0.6rem 0;
+    width: 50%;
+}
+
+/*
+ul {
     margin-top: 2rem;
 }
 
@@ -81,37 +162,24 @@ li {
     font-weight: 700;
 }
 
-a,
-summary {
-    display: block;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+hr {
+    border-top: 2px solid var(--text-color-white);
     margin-top: 2rem;
-    font-weight: 700;
-    letter-spacing: 0.08rem;
-    position: relative;
 }
-
-.link-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    padding-right: 0.1rem;
-    vertical-align: sub;
-    filter: invert(96%) sepia(46%) saturate(6179%) hue-rotate(179deg) brightness(117%) contrast(93%);
-}
+*/
 
 /**************************/
 /* Hover effect for links */
 
-a:not(.logo):after,
+a:after,
 summary:after {
-    content: '';
+    content: "";
     width: 0;
     height: 2px;
     display: block;
-    background: var(--color-white);
-    transition: width .2s ease-in-out;
-    -webkit-transition: width .2s ease-in-out;
+    background: var(--text-color-white);
+    transition: width 0.2s ease-in-out;
+    -webkit-transition: width 0.2s ease-in-out;
 }
 
 a:hover:after,
@@ -119,192 +187,24 @@ summary:hover:after {
     width: 2rem;
 }
 
-
-/*****************************/
-/* Nav bar and footer styles */
-
-.nav,
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 7rem;
-}
-
-.nav li,
-.footer li {
-    float: left;
-    padding-left: 1.2rem;
-    list-style: none;
-}
-
-.nav img {
-    height: 4rem;
-    width: auto;
-}
-
-.nav .menu-btn {
-    visibility: hidden;
-}
-
-
-/********************************/
-/* Things for light backgrounds */
+/************************************/
+/* Color swap for light backgrounds */
 
 .light h1,
 .light h2,
-.light h3,
 .light p,
-.light b,
-.light li,
 .light a,
-.light summary {
-    color: var(--color-black);
+.light summary,
+.light button {
+    color: var(--text-color-black);
 }
 
 .light a:after,
 .light summary:after {
-    background: var(--color-black);
+    background: var(--text-color-black);
 }
 
+/*
 .light hr {
-    border-top: 2px solid var(--color-black);
-}
-
-.light .link-icon {
-    filter: invert(11%) sepia(12%) saturate(3662%) hue-rotate(164deg) brightness(96%) contrast(95%);
-}
-
-/**************************/
-/* Changes for 4k screens */
-
-@media (min-width: 2000px) {
-    body>div {
-        padding: 4rem 24rem;
-    }
-}
-
-
-/***************************/
-/* Changes for mobile view */
-
-@media (max-width: 960px) {
-
-    body>div {
-        padding: 2rem 2rem;
-    }
-
-    /*****************/
-    /* Smaller fonts */
-
-    h1,
-    h2 {
-        font-size: 2.5rem;
-    }
-
-    p,
-    b,
-    li,
-    a,
-    summary {
-        font-size: 1rem;
-    }
-
-    a.logo {
-        margin-top: 0rem;
-    }
-
-    /*******************************************/
-    /* Nav bar and footer are smaller/centered */
-
-    .footer {
-        flex-direction: column-reverse !important;
-        justify-content: flex-start !important;
-        align-items: flex-end !important;
-    }
-
-    .footer li,
-    .footer p {
-        text-align: right !important;
-        float: none;
-        padding: 0;
-        line-height: 1;
-    }
-
-    .nav img {
-        height: 3rem;
-    }
-
-    .nav li {
-        float: none;
-        padding: 0.5rem;
-        text-align: right;
-    }
-
-
-    /*****************************/
-    /* Navigation hamburger menu */
-
-    .nav .hamburger {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        width: 3rem;
-        height: 3rem;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        visibility: visible;
-        z-index: 2;
-    }
-
-    .nav .hamburger .bar {
-        background: var(--color-white);
-        height: 4px;
-        width: 2rem;
-    }
-
-    .light .hamburger .bar {
-        background: var(--color-black);
-    }
-
-    .nav .menu-btn {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        z-index: 3;
-        opacity: 0;
-        visibility: visible;
-        width: 3rem;
-        height: 3rem;
-        cursor: pointer;
-    }
-
-    .nav .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 1;
-        opacity: 0;
-        padding: 5rem 2rem 0 0;
-        transition: ease-in-out 0.2s;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-end;
-        background: var(--color-grey);
-        visibility: hidden;
-    }
-
-    .light .menu {
-        background: var(--color-white);
-    }
-
-    .nav .menu-btn:checked~.menu {
-        visibility: visible;
-        opacity: 1;
-    }
-}
+    border-top: 2px solid var(--text-color-black);
+}*/

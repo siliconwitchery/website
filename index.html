@@ -1,297 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="shortcut icon"
+            href="images/favicon.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+        <!-- SEO title & description -->
+        <title>
+            Talk To Things Just Like You Would A Person | Silicon Witchery
+        </title>
+        <meta
+            name="description"
+            content="Hardware and AI that translates sensor data into conversion. Ask your warehouse if it's secure. Ask your shipments if they're on time."
+        />
+        <link rel="canonical" href="https://www.siliconwitchery.com" />
 
-    <!-- SEO title & description -->
-    <title>Wireless Modules and Embedded Engineering | Silicon Witchery</title>
-    <meta name="description"
-        content="Modules and software for Wearables and IoT products. Specializing in ultra-small circuits, embedded sensing, machine learning, and signal processing.">
-    <link rel="canonical" href="https://www.siliconwitchery.com" />
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://www.siliconwitchery.com" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="Talk To Things Just Like You Would A Person | Silicon Witchery"
+        />
+        <meta
+            property="og:description"
+            content="Hardware and AI that translates sensor data into conversion. Ask your warehouse if it's secure. Ask your shipments if they're on time."
+        />
+        <meta
+            property="og:image"
+            content="https://www.siliconwitchery.com/images/share.jpg"
+        />
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://www.siliconwitchery.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Wireless Modules and Embedded Engineering | Silicon Witchery">
-    <meta property="og:description"
-        content="Modules and software for Wearables and IoT products. Specializing in ultra-small circuits, embedded sensing, machine learning, and signal processing.">
-    <meta property="og:image" content="https://www.siliconwitchery.com/images/share.jpg">
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="siliconwitchery.com" />
+        <meta
+            property="twitter:url"
+            content="https://www.siliconwitchery.com"
+        />
+        <meta
+            name="twitter:title"
+            content="Talk To Things Just Like You Would A Person | Silicon Witchery"
+        />
+        <meta
+            name="twitter:description"
+            content="Hardware and AI that translates sensor data into conversion. Ask your warehouse if it's secure. Ask your shipments if they're on time."
+        />
+        <meta
+            name="twitter:image"
+            content="https://www.siliconwitchery.com/images/share.jpg"
+        />
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="siliconwitchery.com">
-    <meta property="twitter:url" content="https://www.siliconwitchery.com">
-    <meta name="twitter:title" content="Wireless Modules and Embedded Engineering | Silicon Witchery">
-    <meta name="twitter:description"
-        content="Modules and software for Wearables and IoT products. Specializing in ultra-small circuits, embedded sensing, machine learning, and signal processing.">
-    <meta name="twitter:image" content="https://www.siliconwitchery.com/images/share.jpg">
+        <!-- Umami analytics -->
+        <script
+            defer
+            src="https://cloud.umami.is/script.js"
+            data-website-id="d53dbb7f-a7d9-409a-b97b-637d2995e232"
+        ></script>
+    </head>
 
-    <!-- Umami analytics -->
-    <script defer src="https://cloud.umami.is/script.js"
-        data-website-id="d53dbb7f-a7d9-409a-b97b-637d2995e232"></script>
-</head>
+    <body>
+        <!-- Header -->
+        <header style="background-color: #000000">
+            <!-- Logo -->
+            <img
+                class="logo"
+                src="images/logo.png"
+                alt="Silicon Witchery Logo"
+                onclick="window.open('/', '_self')"
+            />
 
-<style>
-    .div-s2-superstack {
-        height: 45rem;
-        padding-right: 50%;
-        background: url(images/s2-front.jpg) no-repeat;
-        background-size: 100% auto;
-        background-position: right bottom;
-        background-color: #000000;
-        /* Overflows the background upward to cover the nav bar */
-        margin-top: -8rem;
-        padding-top: 12rem;
-    }
+            <!-- Spacer -->
+            <div style="width: 100%"></div>
 
-    .div-s1-module {
-        height: 50rem;
-        padding-right: 50%;
-        background: url(images/s1-module-back.png) no-repeat;
-        background-size: auto 50%;
-        background-position: right bottom;
-        background-color: var(--color-white);
-    }
+            <!-- Launch superstack button -->
+            <button
+                onclick="
+                    window.open('https://super.siliconwitchery.com', '_blank')
+                "
+            >
+                Launch Superstack
+            </button>
 
-    .div-ecg {
-        height: 50rem;
-        padding-right: 55%;
-        background: url(images/ecg-kit-front-and-back.png) no-repeat;
-        background-size: auto 103%;
-        background-position: 95% -1rem;
-        background-color: var(--color-gold);
-    }
+            <!-- Menu button -->
+            <i
+                class="material-icons menu-button"
+                onclick="
+                    document.getElementById('menu').toggleAttribute('open')
+                "
+                >menu</i
+            >
 
-    .div-services {
-        height: 45rem;
-        padding-right: 60%;
-        background: url(images/probing.png) no-repeat;
-        background-size: auto 100%;
-        background-position: right top;
-        background-color: var(--color-white);
-    }
+            <!-- Navigation menu -->
+            <dialog id="menu" style="background-color: #000000">
+                <a href="https://docs.siliconwitchery.com">Pricing.</a>
+                <br />
+                <a href="https://docs.siliconwitchery.com">Docs.</a>
+                <br />
+                <a href="">Bluetooth Products.</a>
+            </dialog>
+        </header>
 
-    .footer {
-        background-color: var(--color-white);
-    }
+        <!-- Masthead -->
+        <div
+            style="
+                height: 40rem;
+                padding-right: 50%;
+                background: url(images/superstack-chat.png) no-repeat;
+                background-size: auto 100%;
+                background-position: right 9rem;
+                background-color: #000000;
+            "
+        >
+            <h1>Talk to things just like you would a person</h1>
 
-    /* 1080p screens */
-    @media (min-width: 1750px) {
+            <p>
+                Hardware and AI that translates sensor data into conversion. Ask
+                your crops how they're doing. Ask your warehouse if it's secure.
+                Ask your shipments if they're on time.
+            </p>
 
-        .div-s2-superstack {
-            background-position: right bottom -10rem;
-        }
-    }
-
-    /* 2 & 4K screens */
-    @media (min-width: 2000px) {
-
-        .div-s2-superstack {
-            background-position: right bottom -18rem;
-        }
-    }
-
-    /* iPad screens in landscape */
-    @media (max-width: 1200px) {
-
-        .div-s2-superstack {
-            background-size: auto 100%;
-        }
-
-        .div-s1-module {
-            background-size: 80% auto;
-        }
-
-        .div-ecg {
-            height: 52rem;
-            background-position: 140% -1rem;
-        }
-
-        .div-services {
-            padding-right: 50%;
-            background-size: 50% auto;
-        }
-    }
-
-    /* iPad screens in portrait */
-    @media (max-width: 960px) {
-
-        .div-s2-superstack {
-            background-position: right -5rem bottom -2rem;
-        }
-
-        .div-s1-module {
-            height: 50rem;
-            padding-right: 4rem;
-            background-size: 110% auto;
-        }
-
-        .div-ecg {
-            padding-right: 35%;
-            background-size: auto 70%;
-            background-position: 115% 150%;
-        }
-
-        .div-services {
-            height: 66rem;
-            padding-top: 30rem;
-            padding-right: 4rem;
-            background-size: auto 35rem;
-        }
-    }
-
-    /* Mobile screens */
-    @media (max-width: 650px) {
-
-        .div-s2-superstack {
-            height: 50rem;
-            padding-right: 2rem;
-            background-position: right -12rem bottom -13rem;
-        }
-
-        .div-ecg {
-            height: 75rem;
-            padding-right: 4rem;
-            background-size: 85% auto;
-            background-position: center 112%;
-        }
-
-        .div-services {
-            height: 75rem;
-            padding-top: 25rem;
-            background-size: auto 25rem;
-        }
-    }
-</style>
-
-<body>
-
-    <!-- Nav bar -->
-    <div class="nav">
-        <a href="https://www.siliconwitchery.com" class="logo">
-            <img src="images/logo.png" alt="Silicon Witchery Logo">
-        </a>
-        <input class="menu-btn" type="checkbox" />
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <form>
+                <div>
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                </div>
+                <button class="button-cta" type="submit">
+                    Schedule a Demo
+                </button>
+                <p>We'll never share your data with anyone</p>
+            </form>
         </div>
-        <div class="menu">
-            <ul>
-                <li><a href="https://www.siliconwitchery.com/s2-superstack">
-                        S2 & Superstack.
-                    </a></li>
-                <li><a href="https://www.siliconwitchery.com/s1-module">
-                        S1 Module.
-                    </a></li>
-                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">
-                        Tutorials.
-                    </a></li>
-                <li><a href="https://docs.siliconwitchery.com">
-                        Docs.
-                    </a></li>
-                <li><a href="https://github.com/siliconwitchery" target="_blank">
-                        GitHub.
-                    </a></li>
-            </ul>
-        </div>
-    </div>
 
-    <!-- S2 & Superstack -->
-    <div class="div-s2-superstack">
-        <h1>LTE Connected Agentic Hardware</h1>
-        <hr>
-        <p>Deploy sensors to anywhere in the world and start iterating on real data using AI.</p>
-        <br>
-        <a href="https://www.siliconwitchery.com/s2-superstack">
-            <img class="link-icon" src="images/link-icon.svg">
-            Dive into the stack.
-        </a>
-    </div>
-
-    <!-- S1 Module -->
-    <div id="s1" class="div-s1-module light">
-        <h2>FPGAs just got easier</h2>
-        <b>Bluetooth – FPGA – Battery management</b>
-        <ul>
-            <li>Quad wafer SoM</li>
-            <li>6 x 12mm footprint</li>
-            <li>High speed IO including I3C</li>
-            <li>Long range & direction finding support</li>
-        </ul>
-        <p>The S1 Module is perfect for running efficient AI on the edge.</p>
-        <p>Simplify not only what you send to the cloud, but also your design
-            with fully integrated RF, memory, and power management.</p>
-        <a href="https://www.siliconwitchery.com/module">
-            <img class="link-icon" src="images/link-icon.svg">
-            Learn more.
-        </a>
-    </div>
-
-    <!-- ECG kit -->
-    <div class="div-ecg">
-        <b>A perfect example of what the S1 is capable of</b>
-        <h2>S1 ECG reference kit</h2>
-        <p>Making heart research more accessible</p>
-        <ul>
-            <li>Log data wirelessly</li>
-            <li>Develop AI models</li>
-            <li>Switch FPGA algorithms over the air</li>
-            <li>Test and iterate</li>
-        </ul>
-        <p>A powerful analog frontend combined with the S1 Module makes this an
-            all-in-one kit to deploy and test algorithms with ease. Be that for
-            learning, research, or as the starting point for your next product.
-        </p>
-        <p>Open source, and now available from Digi-Key</p>
-        <a href="https://docs.siliconwitchery.com/s1-ecg-kit/s1-ecg-kit/" target="_blank">
-            <img class="link-icon" src="images/link-icon.svg">
-            Reference manual & ordering.
-        </a>
-    </div>
-
-    <!-- Services -->
-    <div class="div-services light">
-        <b>Need something special?</b>
-        <h2>We're always happy to provide our services</h2>
-        <p>Developing our products have taught us excellence in systems engineering.
-            Let us bring that knowledge to your team.</p>
-        <ul>
-            <li>Consumer products</li>
-            <li>Industrial systems</li>
-            <li>Medical</li>
-            <li>Scientific</li>
-        </ul>
-        <a href="mailto:info@siliconwitchery.com" class="btn">
-            <img class="link-icon" src="images/link-icon.svg">
-            Speak to an engineer.
-        </a>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer light">
-        <div>
-            <p>Copyright © 2025 Silicon Witchery AB</p>
-        </div>
-        <div>
-            <ul>
-                <li><a href="https://www.linkedin.com/company/siliconwitchery/jobs" target="_blank">
-                        Jobs.
-                    </a></li>
-                <li><a href="https://goo.gl/maps/DxHxU2tSU37g5QFt9" target="_blank">
-                        Visit Us.
-                    </a></li>
-                <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">
-                        Privacy Policy.
-                    </a></li>
-            </ul>
-        </div>
-    </div>
-</body>
-
+        <!-- Footer -->
+        <footer class="light" style="background-color: #f2f7f7">
+            <p>© Silicon Witchery AB</p>
+            <div style="width: 100%"></div>
+            <a href="">Privacy Policy.</a>
+            <a href="" style="padding-left: 1.2rem">Terms.</a>
+        </footer>
+    </body>
 </html>

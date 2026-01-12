@@ -57,16 +57,25 @@ header > dialog /* menu */ {
 }
 
 body > div {
-    padding: 4rem 4rem;
+    padding: 6rem 4rem;
     display: flex;
     flex-direction: column;
-    gap: 2.4rem;
+    gap: 3.6rem;
 }
 
 div.row {
     display: flex;
     flex-direction: row;
+}
+
+div.inline {
+    display: flex;
+    flex-direction: row;
     gap: 1.2rem;
+}
+
+div.spacer {
+    width: 100%;
 }
 
 body:has(dialog[open]) /* menu open */ {
@@ -75,9 +84,13 @@ body:has(dialog[open]) /* menu open */ {
 
 article {
     flex: 1;
-    text-align: center;
     display: flex;
     flex-direction: column;
+    gap: 2.4rem;
+}
+
+article.small {
+    text-align: center;
     gap: 1.2rem;
 }
 
@@ -145,24 +158,30 @@ button.cta {
 }
 
 button.cta:hover {
-    color: #f78d60 !important;
+    outline: solid 2px var(--text-color-white);
 }
 
 form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     max-width: 28rem;
 }
 
 form input {
     background-color: transparent;
     outline: solid 1px;
+    border: none;
     font-size: 0.9rem;
     text-wrap: nowrap;
     padding: 0.5rem 0.75rem;
     margin: 0.6rem 0;
     width: 50%;
+}
+
+form input:focus {
+    outline: solid 2px;
+    outline-offset: 0px;
+    transition: all 0.1s;
 }
 
 i:not(i.menu) {
@@ -176,22 +195,6 @@ i.large {
         "wght" 400,
         "GRAD" 0,
         "opsz" 40;
-}
-
-/*
-ul {
-    margin-top: 2rem;
-}
-
-li {
-    font-size: 1.2rem;
-    line-height: 2rem;
-    font-weight: 700;
-}
-*/
-hr {
-    border-top: 2px solid var(--text-color-white);
-    margin-top: 2rem;
 }
 
 /**************************/
@@ -229,8 +232,4 @@ summary:hover:after {
 .light a:after,
 .light summary:after {
     background: var(--text-color-black);
-}
-
-.light hr {
-    border-top: 2px solid var(--text-color-black);
 }

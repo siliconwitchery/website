@@ -1,10 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
+/*************/
+/* Variables */
+
 :root {
     --text-color-white: #f2f7f7;
     --text-color-black: #0b2436;
+
+    --padding-left-right: 4rem;
+    --padding-top-bottom-header-footer: 4rem;
+    --padding-top-bottom-content: 6rem;
+
+    --font-size-heading: 3rem;
+    --font-size-sub-heading: 1.8rem;
+    --font-size-text: 1.2rem;
+    --font-size-footnote: 0.9rem;
 }
+
+@media (width < 960px) {
+    :root {
+        --padding-left-right: 2rem;
+        --padding-top-bottom-header-footer: 1rem;
+        --padding-top-bottom-content: 3rem;
+
+        --font-size-heading: 2.5rem;
+        --font-size-sub-heading: 1.5rem;
+        --font-size-text: 1rem;
+        --font-size-footnote: 0.75rem;
+    }
+}
+
+/************/
+/* Defaults */
 
 * {
     margin: 0;
@@ -22,18 +50,25 @@
 
 header,
 footer {
-    padding: 4rem 4rem;
+    padding: var(--padding-top-bottom-header-footer) var(--padding-left-right);
     display: flex;
     flex-direction: row;
-    gap: 1.2rem;
+    gap: var(--font-size-text);
     justify-content: space-between;
     align-items: center;
     height: 7rem;
     text-wrap: nowrap;
 }
 
+@media (width < 960px) {
+    footer {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
 header > img.logo {
-    height: 3rem;
+    height: var(--font-size-heading);
     width: auto;
     cursor: pointer;
 }
@@ -47,8 +82,8 @@ header > i.menu {
     z-index: 3;
 }
 
-header > dialog /* menu */ {
-    padding: 8rem 4rem;
+header > dialog {
+    padding: 8rem var(--padding-left-right);
     top: 0%;
     z-index: 2;
     width: 100%;
@@ -56,22 +91,46 @@ header > dialog /* menu */ {
     overflow: hidden;
 }
 
-body > div {
-    padding: 6rem 4rem;
+header > dialog > div {
     display: flex;
     flex-direction: column;
-    gap: 3.6rem;
+    gap: var(--font-size-text);
+    align-items: flex-end;
 }
 
-div.row {
+body > div > img {
+    object-fit: contain;
+}
+
+@media (width < 960px) {
+    body > div > img {
+        align-self: center;
+    }
+}
+
+body > div {
+    padding: var(--padding-top-bottom-content) var(--padding-left-right);
     display: flex;
+    flex: 1;
     flex-direction: row;
+    gap: calc(var(--font-size-text) * 3);
+}
+
+@media (width < 960px) {
+    body > div.reverse,
+    body > div {
+        flex-direction: column;
+    }
+}
+
+body > div.vertical {
+    flex-direction: column;
 }
 
 div.inline {
     display: flex;
     flex-direction: row;
-    gap: 1.2rem;
+    gap: var(--font-size-text);
 }
 
 div.spacer {
@@ -86,37 +145,37 @@ article {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 2.4rem;
+    gap: calc(var(--font-size-text) * 2);
 }
 
 article.small {
     text-align: center;
-    gap: 1.2rem;
+    gap: var(--font-size-text);
 }
 
 /******************/
 /* Content styles */
 
 h1 {
-    font-size: 3rem;
+    font-size: var(--font-size-heading);
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 0.08rem;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: var(--font-size-sub-heading);
     font-weight: 700;
     text-transform: capitalize;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: var(--font-size-text);
     line-height: 1.8rem;
 }
 
 p.note {
-    font-size: 0.9rem;
+    font-size: var(--font-size-footnote);
     font-weight: 300;
 }
 
@@ -130,7 +189,7 @@ p.thin {
 
 a,
 summary {
-    font-size: 1.2rem;
+    font-size: var(--font-size-text);
     font-weight: 700;
     letter-spacing: 0.08rem;
     position: relative;
@@ -143,6 +202,7 @@ button {
     text-wrap: nowrap;
     padding: 0.5rem 0.75rem;
     margin: 0.6rem 0;
+    cursor: pointer;
 }
 
 button:hover {
@@ -165,6 +225,12 @@ form {
     display: flex;
     flex-direction: column;
     max-width: 28rem;
+}
+
+@media (width < 960px) {
+    form {
+        align-self: center;
+    }
 }
 
 form input {

@@ -80,12 +80,20 @@
 
             <!-- Launch superstack button -->
             <button
+                id="launch-superstack-button"
                 onclick="
                     window.open('https://super.siliconwitchery.com', '_blank')
                 "
             >
                 Launch Superstack
             </button>
+            <style>
+                @media (width < 960px) {
+                    #launch-superstack-button {
+                        display: none;
+                    }
+                }
+            </style>
 
             <!-- Menu button -->
             <i
@@ -98,34 +106,36 @@
 
             <!-- Navigation menu -->
             <dialog id="menu" style="background-color: #000000">
-                <a href="https://docs.siliconwitchery.com">Pricing.</a>
-                <br />
-                <a href="https://docs.siliconwitchery.com">Docs.</a>
-                <br />
-                <a href="">Bluetooth Products.</a>
+                <div>
+                    <button
+                        onclick="
+                            window.open(
+                                'https://super.siliconwitchery.com',
+                                '_blank',
+                            )
+                        "
+                    >
+                        Launch Superstack
+                    </button>
+                    <br />
+                    <a href="https://docs.siliconwitchery.com" target="_blank"
+                        >Pricing.</a
+                    >
+                    <a href="https://docs.siliconwitchery.com">Docs.</a>
+                    <a href="">Bluetooth Products.</a>
+                </div>
             </dialog>
         </header>
 
         <!-- Value proposition -->
-        <div
-            style="
-                height: 40rem;
-                padding-right: 50%;
-                background: url(images/superstack-chat.png) no-repeat;
-                background-color: #000000;
-                background-size: auto 100%;
-                background-position: right 4rem bottom 2rem;
-            "
-        >
+        <div style="background-color: #000000">
             <article>
                 <h1>Talk to things just like you would a person</h1>
-
                 <p>
                     Hardware and AI that translates sensor data into conversion.
                     Ask your crops how they're doing. Ask your warehouse if it's
                     secure. Ask your shipments if they're on time.
                 </p>
-
                 <form
                     onsubmit="
                         const data = {
@@ -180,15 +190,19 @@
                     </p>
                 </form>
             </article>
+
+            <img
+                style="width: clamp(300px, 40%, 500px)"
+                src="images/superstack-example-chat.png"
+                alt="Superstack farm assistant WhatsApp chat and S2 Module"
+            />
         </div>
 
         <!-- Benefits -->
-        <div class="light row" style="background-color: #f2f7f7">
+        <div class="light" style="background-color: #f2f7f7">
             <article class="small">
                 <i class="material-icons large">cable</i>
-
                 <h2>Connect any sensor or actuator</h2>
-
                 <p>
                     Industry standard IO. Configured with a few lines of code.
                     No complex frameworks or boilerplate needed.
@@ -197,9 +211,7 @@
 
             <article class="small">
                 <i class="material-icons large">forum</i>
-
                 <h2>Uses an interface your users understand</h2>
-
                 <p>
                     Ask about your data using SMS or WhatsApp. Drive actions
                     using natural language. No apps needed.
@@ -208,9 +220,7 @@
 
             <article class="small">
                 <i class="material-icons large">build</i>
-
                 <h2>5G infrastructure. Completely included</h2>
-
                 <p>
                     Global data out of the box. Easy to set up and no need to
                     set up additional servers or databases.
@@ -278,17 +288,7 @@
         </div>
 
         <!-- Hardware -->
-        <div
-            style="
-                height: 40rem;
-                height: min-content;
-                padding-right: 40%;
-                background: url(images/s2-front.jpg) no-repeat;
-                background-color: #000000;
-                background-size: 100% auto;
-                background-position: right bottom;
-            "
-        >
+        <div style="background-color: #000000">
             <article>
                 <h2>Hardware that just works</h2>
 
@@ -359,23 +359,20 @@
                             )
                         "
                     >
-                        Order Your S2 Module
+                        Order S2 Modules
                     </button>
                 </div>
             </article>
+
+            <!--<img
+                height="600px"
+                src="images/s2-front.jpg"
+                alt="Silicon Witchery S2 Modules"
+            />-->
         </div>
 
         <!-- Platform -->
-        <div
-            class="light"
-            style="
-                height: 50rem;
-                background: url(images/superstack-screenshots.png) no-repeat;
-                background-color: #f2f7f7;
-                background-size: 70% auto;
-                background-position: right 5rem bottom;
-            "
-        >
+        <div class="light vertical" style="background-color: #f2f7f7">
             <article>
                 <h2>Build applications, not tech stacks</h2>
                 <p>
@@ -384,21 +381,128 @@
                     data and build autonomous agents all from one place.
                 </p>
             </article>
+
+            <img
+                style="width: 100%"
+                src="images/superstack-screenshots.png"
+                alt="Silicon Witchery S2 Modules"
+            />
         </div>
 
-        <!-- AI and FAQ-->
-        <div style="background-color: #18191b">
+        <!-- FAQs -->
+        <div style="background-color: #18191b; align-items: flex-start">
+            <!--<img src="images/superstack-compute.png" />-->
             <article>
-                <h2>Your data stays protected</h2>
-                <p>Superstack never sends your data to AI companies</p>
+                <h2>Frequently Asked Questions</h2>
+
+                <details>
+                    <summary>What is the setup process?</summary>
+                    <p>
+                        The S2 module comes pre-configured with a data plan and
+                        is ready to use out of the box. Simply enter the IMEI
+                        into the Superstack platform and press the connect
+                        button on the S2 hardware to complete the setup.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>How do I program the S2?</summary>
+                    <p>
+                        The S2 module features our real-time Lua scripting
+                        engine that can be programmed and debugged remotely
+                        through the Superstack code editor. You can update code
+                        and fix bugs from the cloud, even after your S2 is
+                        deployed in the field.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>What types of sensors can I connect?</summary>
+                    <p>
+                        The S2 module provides four simultaneous serial
+                        interfaces, including two high-speed SPI interfaces
+                        suitable for cameras and displays. Pins can be
+                        configured for various functions including GPIO, I2C,
+                        PWM, and analog input, enabling connection to a wide
+                        range of sensors, actuators, and other peripherals.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>How is the device powered?</summary>
+                    <p>
+                        The S2 can be powered via USB-C, an external 5V power
+                        supply, or an optional 4.2V lithium battery. It features
+                        an advanced power management IC for battery charging and
+                        provides two adjustable voltage rails for powering
+                        external peripherals.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>How much data can I transmit?</summary>
+                    <p>
+                        The S2 module uses LTE Cat-M1 with speeds up to 1Mbps.
+                        Typical messages include sensor readings formatted as
+                        JSON strings, where the message size in bytes
+                        corresponds to the total character count. Data
+                        transmission is limited only by your Superstack usage
+                        tier, which determines the overall data allowance across
+                        all your devices.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>What security features are included?</summary>
+                    <p>
+                        The S2 module establishes secure cellular connections to
+                        the Superstack cloud platform via LTE-M, with data
+                        encrypted using DTLS 1.2. All data is stored in a secure
+                        cloud database and is accessible only through authorized
+                        Superstack accounts or via API keys.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>What AI capabilities are available?</summary>
+                    <p>
+                        The Superstack platform's AI can analyze your aggregated
+                        data through natural language queries. For example, you
+                        can ask "What is the average temperature across all
+                        field sensors right now?" or "How many trucks entered
+                        the factory in the last hour?" The AI interprets these
+                        questions based on available data, sensor types, log
+                        messages, and data labels. These queries are also
+                        accessible via the Superstack API for integration with
+                        your own applications.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Where is my data stored?</summary>
+                    <p>
+                        All data is securely stored in the Superstack cloud
+                        database. Enterprise users have the option to forward
+                        all data to their private cloud infrastructure using
+                        REST hooks.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Can I create dashboards in Superstack?</summary>
+                    <p>
+                        While Superstack focuses on device fleet management,
+                        programming, and AI analysis rather than dashboard
+                        creation, you can easily integrate your data into custom
+                        dashboard applications using our API for real-time
+                        metrics.
+                    </p>
+                </details>
             </article>
         </div>
 
         <!-- CTA -->
-        <div
-            class="row"
-            style="background-color: #000000; align-items: flex-end"
-        >
+        <div style="background-color: #000000; align-items: flex-end">
             <article>
                 <h2>Ready to see Superstack in action?</h2>
                 <p>

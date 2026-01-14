@@ -2,15 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+
+        <!-- Styling & favicon -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-        <link
-            rel="shortcut icon"
-            href="images/favicon.png"
-            type="image/x-icon"
-        />
+        <link rel="icon" type="image/png" href="images/favicon.png" />
 
-        <!-- SEO title & description -->
+        <!-- Title, description & SEO -->
         <title>
             Bluetooth & FPGA Modules for tiny IoT devices | Silicon Witchery
         </title>
@@ -20,14 +18,11 @@
         />
         <link
             rel="canonical"
-            href="https://www.siliconwitchery.com/s1-module"
+            href="https://www.siliconwitchery.com/s1-module.html"
         />
+        <meta name="robots" content="index, follow" />
 
-        <!-- Facebook Meta Tags -->
-        <meta
-            property="og:url"
-            content="https://www.siliconwitchery.com/s1-module"
-        />
+        <!-- Open Graph & Twitter meta tags -->
         <meta property="og:type" content="website" />
         <meta
             property="og:title"
@@ -38,17 +33,15 @@
             content="An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, FPGA acceleration & battery management, all in one tiny module."
         />
         <meta
+            property="og:url"
+            content="https://www.siliconwitchery.com/s1-module.html"
+        />
+        <meta
             property="og:image"
             content="https://www.siliconwitchery.com/images/share.png"
         />
 
-        <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="siliconwitchery.com" />
-        <meta
-            property="twitter:url"
-            content="https://www.siliconwitchery.com/s1-module"
-        />
         <meta
             name="twitter:title"
             content="Bluetooth & FPGA Modules for tiny IoT devices | Silicon Witchery"
@@ -57,6 +50,7 @@
             name="twitter:description"
             content="An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, FPGA acceleration & battery management, all in one tiny module."
         />
+        <meta name="twitter:site" content="@siliconwitchery" />
         <meta
             name="twitter:image"
             content="https://www.siliconwitchery.com/images/share.png"
@@ -294,51 +288,65 @@
     </style>
 
     <body>
-        <!-- Nav bar -->
-        <div class="nav">
-            <a href="https://www.siliconwitchery.com" class="logo">
-                <img src="images/logo.png" alt="Silicon Witchery Logo" />
-            </a>
-            <input class="menu-btn" type="checkbox" />
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li>
-                        <a href="https://www.siliconwitchery.com/s2-superstack">
-                            S2 & Superstack.
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.siliconwitchery.com/s1-module">
-                            S1 Module.
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw"
-                            target="_blank"
-                        >
-                            Tutorials.
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://docs.siliconwitchery.com"> Docs. </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://github.com/siliconwitchery"
-                            target="_blank"
-                        >
-                            GitHub.
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <!-- Header -->
+        <header style="background-color: #000000">
+            <!-- Logo -->
+            <img
+                class="logo"
+                src="images/logo.png"
+                alt="Silicon Witchery Logo"
+                onclick="window.open('/', '_self')"
+            />
+
+            <!-- Spacer -->
+            <div class="spacer"></div>
+
+            <!-- Launch superstack button -->
+            <button
+                id="launch-superstack-button"
+                onclick="
+                    window.open('https://super.siliconwitchery.com', '_blank')
+                "
+            >
+                Launch Superstack
+            </button>
+            <style>
+                @media (width < 960px) {
+                    #launch-superstack-button {
+                        display: none;
+                    }
+                }
+            </style>
+
+            <!-- Menu button -->
+            <i
+                class="material-icons menu"
+                onclick="
+                    document.getElementById('menu').toggleAttribute('open')
+                "
+                >menu</i
+            >
+
+            <!-- Navigation menu -->
+            <dialog id="menu" style="background-color: #000000">
+                <div>
+                    <button
+                        onclick="
+                            window.open(
+                                'https://super.siliconwitchery.com',
+                                '_blank',
+                            )
+                        "
+                    >
+                        Launch Superstack
+                    </button>
+                    <br />
+                    <a href="/pricing.html" target="_blank">Pricing.</a>
+                    <a href="https://docs.siliconwitchery.com">Docs.</a>
+                    <a href="/s1-module.html">Bluetooth Products.</a>
+                </div>
+            </dialog>
+        </header>
 
         <!-- Masthead -->
         <div class="div-masthead">

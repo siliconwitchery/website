@@ -2,15 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+
+        <!-- Styling & favicon -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-        <link
-            rel="shortcut icon"
-            href="images/favicon.png"
-            type="image/x-icon"
-        />
+        <link rel="icon" type="image/png" href="images/favicon.png" />
 
-        <!-- SEO title & description -->
+        <!-- Title, description & SEO -->
         <title>
             Talk To Things Just Like You Would A Person | Silicon Witchery
         </title>
@@ -19,9 +17,9 @@
             content="Hardware and AI that translates sensor data into conversion. Ask your warehouse if it's secure. Ask your shipments if they're on time."
         />
         <link rel="canonical" href="https://www.siliconwitchery.com" />
+        <meta name="robots" content="index, follow" />
 
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://www.siliconwitchery.com" />
+        <!-- Open Graph & Twitter meta tags -->
         <meta property="og:type" content="website" />
         <meta
             property="og:title"
@@ -31,18 +29,13 @@
             property="og:description"
             content="Hardware and AI that translates sensor data into conversion. Ask your warehouse if it's secure. Ask your shipments if they're on time."
         />
+        <meta property="og:url" content="https://www.siliconwitchery.com" />
         <meta
             property="og:image"
             content="https://www.siliconwitchery.com/images/share.png"
         />
 
-        <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="siliconwitchery.com" />
-        <meta
-            property="twitter:url"
-            content="https://www.siliconwitchery.com"
-        />
         <meta
             name="twitter:title"
             content="Talk To Things Just Like You Would A Person | Silicon Witchery"
@@ -51,6 +44,7 @@
             name="twitter:description"
             content="Hardware and AI that translates sensor data into conversion. Ask your warehouse if it's secure. Ask your shipments if they're on time."
         />
+        <meta name="twitter:site" content="@siliconwitchery" />
         <meta
             name="twitter:image"
             content="https://www.siliconwitchery.com/images/share.png"
@@ -171,12 +165,14 @@
                             name="name"
                             type="text"
                             placeholder="Name"
+                            autocomplete="name"
                             required
                         />
                         <input
                             name="email"
                             type="email"
                             placeholder="Email"
+                            autocomplete="email"
                             required
                         />
                     </div>
@@ -555,12 +551,14 @@
                         name="name"
                         type="text"
                         placeholder="Name"
+                        autocomplete="name"
                         required
                     />
                     <input
                         name="email"
                         type="email"
                         placeholder="Email"
+                        autocomplete="email"
                         required
                     />
                 </div>

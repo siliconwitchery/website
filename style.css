@@ -201,13 +201,19 @@ p.thin {
 }
 
 details > summary {
+    list-style-type: "▸";
     list-style-position: outside;
-    margin-left: var(--font-size-text);
+    padding-left: var(--font-size-text);
+    margin-left: 0.85rem;
+}
+
+details[open] > summary {
+    list-style-type: "▾";
 }
 
 details > p {
     margin-top: var(--font-size-text);
-    margin-left: var(--font-size-text);
+    margin-left: calc(var(--font-size-text) + 0.85rem);
     font-weight: var(--font-weight-light);
 }
 

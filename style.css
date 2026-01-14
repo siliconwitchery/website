@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 /*************/
@@ -7,6 +7,10 @@
 :root {
     --text-color-white: #f2f7f7;
     --text-color-black: #0b2436;
+
+    --font-weight-bold: 700;
+    --font-weight-normal: 400;
+    --font-weight-light: 200;
 
     --padding-left-right: 4rem;
     --padding-top-bottom-header-footer: 4rem;
@@ -20,6 +24,8 @@
 
 @media (width < 960px) {
     :root {
+        --font-weight-light: 300;
+
         --padding-left-right: 2rem;
         --padding-top-bottom-header-footer: 1rem;
         --padding-top-bottom-content: 3rem;
@@ -28,6 +34,12 @@
         --font-size-sub-heading: 1.5rem;
         --font-size-text: 1rem;
         --font-size-footnote: 0.75rem;
+    }
+}
+
+@media (width > 1800px) {
+    :root {
+        --padding-left-right: 24rem;
     }
 }
 
@@ -40,7 +52,7 @@
     box-sizing: border-box;
     outline: none;
     font-family: "Montserrat", sans-serif;
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     text-decoration: none;
     color: var(--text-color-white);
 }
@@ -56,7 +68,7 @@ footer {
     gap: var(--font-size-text);
     justify-content: space-between;
     align-items: center;
-    height: 7rem;
+    height: 6rem;
     text-wrap: nowrap;
 }
 
@@ -159,14 +171,14 @@ article.small {
 
 h1 {
     font-size: var(--font-size-heading);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     text-transform: capitalize;
     letter-spacing: 0.08rem;
 }
 
 h2 {
     font-size: var(--font-size-sub-heading);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     text-transform: capitalize;
 }
 
@@ -177,21 +189,32 @@ p {
 
 p.note {
     font-size: var(--font-size-footnote);
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
 }
 
 p.bold {
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 
 p.thin {
-    font-weight: 100;
+    font-weight: var(--font-weight-light);
+}
+
+details > summary {
+    list-style-position: outside;
+    margin-left: var(--font-size-text);
+}
+
+details > p {
+    margin-top: var(--font-size-text);
+    margin-left: var(--font-size-text);
+    font-weight: var(--font-weight-light);
 }
 
 a,
 summary {
     font-size: var(--font-size-text);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     letter-spacing: 0.08rem;
     position: relative;
 }

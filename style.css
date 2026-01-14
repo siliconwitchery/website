@@ -76,6 +76,7 @@ footer {
     footer {
         flex-direction: column-reverse;
         align-items: center;
+        height: 10rem;
     }
 }
 
@@ -127,6 +128,10 @@ body > div {
     flex: 1;
     flex-direction: row;
     gap: calc(var(--font-size-text) * 3);
+}
+
+body > div.reverse {
+    flex-direction: row-reverse;
 }
 
 @media (width < 960px) {
@@ -233,6 +238,10 @@ button {
     padding: 0.5rem 0.75rem;
     margin: 0.6rem 0;
     cursor: pointer;
+}
+
+button.tight {
+    width: min-content;
 }
 
 button:hover {

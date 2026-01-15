@@ -173,6 +173,31 @@ article.small {
     gap: var(--font-size-text);
 }
 
+/* table */
+
+table {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--text-color-black);
+    border-radius: 1rem;
+}
+
+table tr {
+    border-bottom: 1px solid #000000;
+}
+
+table tr:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+table tr:last-of-type {
+    border-bottom: 2px solid #f4f4;
+}
+
+table td {
+    padding-bottom: var(--font-size-text);
+    text-align: center;
+}
+
 /******************/
 /* Content styles */
 
@@ -183,13 +208,15 @@ h1 {
     letter-spacing: 0.08rem;
 }
 
-h2 {
+h2,
+th {
     font-size: var(--font-size-sub-heading);
     font-weight: var(--font-weight-bold);
     text-transform: capitalize;
 }
 
-p {
+p,
+td {
     font-size: var(--font-size-text);
     line-height: 1.8rem;
 }
@@ -199,6 +226,8 @@ p.note {
     font-weight: var(--font-weight-light);
 }
 
+th,
+tr > td:first-child,
 p.bold {
     font-weight: var(--font-weight-bold);
 }

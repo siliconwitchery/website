@@ -1,134 +1,16 @@
+---
+title: Terms & Conditions
+description: This page details Silicon Witchery's terms & conditions.
+image: /images/share.png
+---
+
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-
-        <!-- Styling & favicon -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="icon" type="image/png" href="images/favicon.png" />
-
-        <!-- Title, description & SEO -->
-        <title>Terms & Conditions | Silicon Witchery</title>
-        <meta
-            name="description"
-            content="This page details Silicon Witchery's terms & conditions."
-        />
-        <link
-            rel="canonical"
-            href="https://www.siliconwitchery.com/terms.html"
-        />
-        <meta name="robots" content="index, follow" />
-
-        <!-- Open Graph & Twitter meta tags -->
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:title"
-            content="Terms & Conditions | Silicon Witchery"
-        />
-        <meta
-            property="og:description"
-            content="This page details Silicon Witchery's terms & conditions."
-        />
-        <meta
-            property="og:url"
-            content="https://www.siliconwitchery.com/terms.html"
-        />
-        <meta
-            property="og:image"
-            content="https://www.siliconwitchery.com/images/share.png"
-        />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            name="twitter:title"
-            content="Terms & Conditions | Silicon Witchery"
-        />
-        <meta
-            name="twitter:description"
-            content="This page details Silicon Witchery's terms & conditions."
-        />
-        <meta name="twitter:site" content="@siliconwitchery" />
-        <meta
-            name="twitter:image"
-            content="https://www.siliconwitchery.com/images/share.png"
-        />
-
-        <!-- Umami analytics -->
-        <script
-            defer
-            src="https://cloud.umami.is/script.js"
-            data-website-id="d53dbb7f-a7d9-409a-b97b-637d2995e232"
-        ></script>
-    </head>
+    {% include head.html %}
 
     <body>
-        <!-- Header -->
-        <header
-            class="light"
-            style="background-color: var(--background-color-white)"
-        >
-            <!-- Logo -->
-            <img
-                class="logo"
-                src="images/logo-dark.png"
-                alt="Silicon Witchery Logo"
-                onclick="window.open('/', '_self')"
-            />
-
-            <!-- Spacer -->
-            <div class="spacer"></div>
-
-            <!-- Launch superstack button -->
-            <button
-                id="launch-superstack-button"
-                onclick="
-                    window.open('https://super.siliconwitchery.com', '_blank')
-                "
-            >
-                Launch Superstack
-            </button>
-            <style>
-                @media (width < 960px) {
-                    #launch-superstack-button {
-                        display: none;
-                    }
-                }
-            </style>
-
-            <!-- Menu button -->
-            <i
-                class="material-icons menu"
-                onclick="
-                    document.getElementById('menu').toggleAttribute('open')
-                "
-                >menu</i
-            >
-
-            <!-- Navigation menu -->
-            <dialog
-                id="menu"
-                style="background-color: var(--background-color-white)"
-            >
-                <div>
-                    <button
-                        onclick="
-                            window.open(
-                                'https://super.siliconwitchery.com',
-                                '_blank',
-                            )
-                        "
-                    >
-                        Launch Superstack
-                    </button>
-                    <br />
-                    <a href="/pricing.html" target="_blank">Pricing.</a>
-                    <a href="https://docs.siliconwitchery.com">Docs.</a>
-                    <a href="https://github.com/siliconwitchery">GitHub.</a>
-                    <a href="/s1-module.html">Bluetooth Products.</a>
-                </div>
-            </dialog>
-        </header>
+        {% include header.html class="light"
+        background="var(--background-color-white)" %}
 
         <!-- Content -->
         <div
@@ -141,12 +23,6 @@
             </article>
         </div>
 
-        <!-- Footer -->
-        <footer style="background-color: var(--background-color-black)">
-            <p>© Silicon Witchery AB</p>
-            <div class="spacer"></div>
-            <a href="/privacy.html">Privacy Policy.</a>
-            <a href="/terms.html">Terms.</a>
-        </footer>
+        {% include footer.html %}
     </body>
 </html>

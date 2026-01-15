@@ -332,7 +332,9 @@ summary:hover:after {
 .light a,
 .light summary,
 .light button,
-.light i {
+.light i,
+.light th,
+.light td {
     color: var(--text-color-black);
 }
 

@@ -1,138 +1,22 @@
+---
+title: Bluetooth & FPGA Modules for tiny IoT devices
+description: An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, FPGA acceleration & battery management, all in one tiny module.
+image: /images/share.png
+redirect_from:
+    - /module.html
+---
+
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-
-        <!-- Styling & favicon -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="icon" type="image/png" href="images/favicon.png" />
-
-        <!-- Title, description & SEO -->
-        <title>
-            Bluetooth & FPGA Modules for tiny IoT devices | Silicon Witchery
-        </title>
-        <meta
-            name="description"
-            content="An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, FPGA acceleration & battery management, all in one tiny module."
-        />
-        <link
-            rel="canonical"
-            href="https://www.siliconwitchery.com/s1-module.html"
-        />
-        <meta name="robots" content="index, follow" />
-
-        <!-- Open Graph & Twitter meta tags -->
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:title"
-            content="Bluetooth & FPGA Modules for tiny IoT devices | Silicon Witchery"
-        />
-        <meta
-            property="og:description"
-            content="An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, FPGA acceleration & battery management, all in one tiny module."
-        />
-        <meta
-            property="og:url"
-            content="https://www.siliconwitchery.com/s1-module.html"
-        />
-        <meta
-            property="og:image"
-            content="https://www.siliconwitchery.com/images/share.png"
-        />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            name="twitter:title"
-            content="Bluetooth & FPGA Modules for tiny IoT devices | Silicon Witchery"
-        />
-        <meta
-            name="twitter:description"
-            content="An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, FPGA acceleration & battery management, all in one tiny module."
-        />
-        <meta name="twitter:site" content="@siliconwitchery" />
-        <meta
-            name="twitter:image"
-            content="https://www.siliconwitchery.com/images/share.png"
-        />
-
-        <!-- Umami analytics -->
-        <script
-            defer
-            src="https://cloud.umami.is/script.js"
-            data-website-id="d53dbb7f-a7d9-409a-b97b-637d2995e232"
-        ></script>
-    </head>
+    {% include head.html %}
 
     <body>
-        <!-- Header -->
-        <header style="background-color: #5247c8">
-            <!-- Logo -->
-            <img
-                class="logo"
-                src="images/logo.png"
-                alt="Silicon Witchery Logo"
-                onclick="window.open('/', '_self')"
-            />
-
-            <!-- Spacer -->
-            <div class="spacer"></div>
-
-            <!-- Launch superstack button -->
-            <button
-                id="launch-superstack-button"
-                onclick="
-                    window.open('https://super.siliconwitchery.com', '_blank')
-                "
-            >
-                Launch Superstack
-            </button>
-            <style>
-                @media (width < 960px) {
-                    #launch-superstack-button {
-                        display: none;
-                    }
-                }
-            </style>
-
-            <!-- Menu button -->
-            <i
-                class="material-icons menu"
-                onclick="
-                    document.getElementById('menu').toggleAttribute('open')
-                "
-                >menu</i
-            >
-
-            <!-- Navigation menu -->
-            <dialog
-                id="menu"
-                style="background-color: var(--background-color-black)"
-            >
-                <div>
-                    <button
-                        onclick="
-                            window.open(
-                                'https://super.siliconwitchery.com',
-                                '_blank',
-                            )
-                        "
-                    >
-                        Launch Superstack
-                    </button>
-                    <br />
-                    <a href="/pricing.html" target="_blank">Pricing.</a>
-                    <a href="https://docs.siliconwitchery.com">Docs.</a>
-                    <a href="https://github.com/siliconwitchery">GitHub.</a>
-                    <a href="/s1-module.html">Bluetooth Products.</a>
-                </div>
-            </dialog>
-        </header>
+        {% include header.html background="#5247c8" %}
 
         <!-- Value proposition -->
         <div
             style="
-                background: url(images/s1-modules.png) no-repeat;
+                background: url(/images/s1-modules.png) no-repeat;
                 background-color: #5247c8;
                 background-size: clamp(800px, 85%, 1200px) auto;
                 background-position: right bottom;
@@ -182,7 +66,7 @@
         >
             <img
                 style="width: clamp(350px, 50%, 600px)"
-                src="images/s1-block-diagram.png"
+                src="/images/s1-block-diagram.png"
                 alt="Silicon Witchery S1 Module block diagram"
             />
 
@@ -256,7 +140,7 @@
             </article>
             <img
                 style="width: min(350px, 80%)"
-                src="images/s1-micropython-code.png"
+                src="/images/s1-micropython-code.png"
                 alt="Silicon Witchery S1 Micropython SDK"
             />
         </div>
@@ -295,7 +179,7 @@
             </article>
             <img
                 style="width: min(350px, 80%)"
-                src="images/s1-c-code.png"
+                src="/images/s1-c-code.png"
                 alt="Silicon Witchery S1 C SDK"
             />
         </div>
@@ -304,7 +188,7 @@
         <div
             class="light reverse"
             style="
-                background: url(images/s1-popout-board.jpg) no-repeat;
+                background: url(/images/s1-popout-board.jpg) no-repeat;
                 background-color: #ffffff;
                 background-size: clamp(400px, 50%, 540px) auto;
                 background-position: left bottom -2rem;
@@ -409,17 +293,11 @@
                         0rem - var(--padding-top-bottom-content)
                     );
                 "
-                src="images/s1-ecg-kit.png"
+                src="/images/s1-ecg-kit.png"
                 alt="Silicon Witchery S1 ECG kit"
             />
         </div>
 
-        <!-- Footer -->
-        <footer style="background-color: var(--background-color-black)">
-            <p>© Silicon Witchery AB</p>
-            <div class="spacer"></div>
-            <a href="/privacy.html">Privacy Policy.</a>
-            <a href="/terms.html">Terms.</a>
-        </footer>
+        {% include footer.html %}
     </body>
 </html>

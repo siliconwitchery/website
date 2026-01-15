@@ -1,0 +1,62 @@
+<!-- Header -->
+<header
+    class="{{ include.class }}"
+    style="background-color: {{ include.background }}"
+>
+    <!-- Logo -->
+    <img
+        class="logo"
+        src="
+            {% if include.class == 'light' %}
+                /images/logo-dark.png
+            {% else %}
+                /images/logo.png
+            {% endif %}
+        "
+        alt="Silicon Witchery Logo"
+        onclick="window.open('/', '_self')"
+    />
+
+    <!-- Spacer -->
+    <div class="spacer"></div>
+
+    <!-- Launch superstack button -->
+    <button
+        id="launch-superstack-button"
+        onclick="window.open('https://super.siliconwitchery.com', '_blank')"
+    >
+        Launch Superstack
+    </button>
+    <style>
+        @media (width < 960px) {
+            #launch-superstack-button {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- Menu button -->
+    <i
+        class="material-icons menu"
+        onclick="document.getElementById('menu').toggleAttribute('open')"
+        >menu</i
+    >
+
+    <!-- Navigation menu -->
+    <dialog id="menu" style="background-color: {{ include.background }}">
+        <div>
+            <button
+                onclick="
+                    window.open('https://super.siliconwitchery.com', '_blank')
+                "
+            >
+                Launch Superstack
+            </button>
+            <br />
+            <a href="/pricing" target="_blank">Pricing.</a>
+            <a href="https://docs.siliconwitchery.com">Docs.</a>
+            <a href="https://github.com/siliconwitchery">GitHub.</a>
+            <a href="/s1-module">Bluetooth Products.</a>
+        </div>
+    </dialog>
+</header>

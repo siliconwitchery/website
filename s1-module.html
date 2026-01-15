@@ -1,433 +1,303 @@
-<!DOCTYPE html>
+---
+title: Bluetooth & FPGA Modules for tiny IoT devices
+description: An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, FPGA acceleration & battery management, all in one tiny module.
+image: /images/share.png
+redirect_from:
+    - /module.html
+---
+
+<!doctype html>
 <html lang="en">
+    {% include head.html %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <body>
+        {% include header.html background="#5247c8" %}
 
-    <!-- SEO title & description -->
-    <title>Bluetooth & FPGA Modules for tiny IoT devices | Silicon Witchery</title>
-    <meta name="description"
-        content="An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, FPGA acceleration & battery management, all in one tiny module.">
-    <link rel="canonical" href="https://www.siliconwitchery.com/s1-module" />
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://www.siliconwitchery.com/s1-module">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Bluetooth & FPGA Modules for tiny IoT devices | Silicon Witchery">
-    <meta property="og:description"
-        content="An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, FPGA acceleration & battery management, all in one tiny module.">
-    <meta property="og:image" content="https://www.siliconwitchery.com/images/share.jpg">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="siliconwitchery.com">
-    <meta property="twitter:url" content="https://www.siliconwitchery.com/s1-module">
-    <meta name="twitter:title" content="Bluetooth & FPGA Modules for tiny IoT devices | Silicon Witchery">
-    <meta name="twitter:description"
-        content="An all-in-one solution for the tightest form factors. Featuring Bluetooth 5.2, FPGA acceleration & battery management, all in one tiny module.">
-    <meta name="twitter:image" content="https://www.siliconwitchery.com/images/share.jpg">
-
-    <!-- Umami analytics -->
-    <script defer src="https://cloud.umami.is/script.js"
-        data-website-id="d53dbb7f-a7d9-409a-b97b-637d2995e232"></script>
-</head>
-
-<style>
-    .nav {
-        background-color: var(--color-blue);
-    }
-
-    .div-masthead {
-        height: 45rem;
-        padding-right: 50%;
-        background: url(images/s1-module-back.png) no-repeat;
-        background-size: 85% auto;
-        background-position: right bottom;
-        background-color: var(--color-blue);
-    }
-
-    .div-block-diagram {
-        height: 45rem;
-        padding-left: 50%;
-        background: url(images/s1-block-diagram.png) no-repeat;
-        background-size: 50% auto;
-        background-position: 4rem 100%;
-        background-color: var(--color-white);
-    }
-
-    .div-video {
-        height: 70rem;
-        background-color: var(--color-white);
-    }
-
-    iframe {
-        margin-top: 6rem;
-        margin-bottom: 4rem;
-        align-self: flex-end;
-    }
-
-    .div-software-masthead {
-        height: 15rem;
-        padding-top: 4rem;
-        background-color: var(--color-code);
-    }
-
-    .div-micropython {
-        height: 35rem;
-        padding-right: 55%;
-        background: url(images/micropython-code.png) no-repeat;
-        background-size: auto 75%;
-        background-position: right 4rem top 5rem;
-        background-color: var(--color-code);
-    }
-
-    .div-c-sdk {
-        height: 45rem;
-        padding-left: 55%;
-        background: url(images/c-code.png) no-repeat;
-        background-size: auto 70%;
-        background-position: 4rem 5.5rem;
-        background-color: var(--color-code);
-    }
-
-    .div-dev-kit {
-        height: 55rem;
-        padding-left: 55%;
-        background: url(images/s1-thermal-camera.jpg) no-repeat;
-        background-size: auto 100%;
-        background-position: left center;
-    }
-
-    .div-ordering {
-        height: 40rem;
-        padding-right: 40%;
-        background-color: var(--color-black);
-    }
-
-    .footer {
-        background-color: var(--color-black);
-    }
-
-    /* 4K screens */
-    @media (min-width: 2000px) {
-
-        .div-block-diagram {
-            background-size: 35% auto;
-            background-position: 24rem 100%;
-        }
-
-        .div-micropython {
-            background-size: auto 85%;
-            background-position: right 24rem top 5rem;
-        }
-
-        .div-c-sdk {
-            background-size: auto 72%;
-            background-position: 24rem 5.5rem;
-        }
-
-        .div-dev-kit {
-            height: 55rem;
-            padding-left: 35%;
-        }
-    }
-
-    /* iPad screens in landscape */
-    @media (max-width: 1200px) {
-
-        .div-masthead {
-            height: 40rem;
-            padding-right: 30%;
-            background-size: 100% auto;
-        }
-
-        .div-block-diagram {
-            background-size: 55% auto;
-        }
-
-        .div-video {
-            height: 55rem;
-        }
-
-        iframe {
-            width: 720px;
-            height: 408px;
-            align-self: center;
-        }
-
-        .div-dev-kit {
-            height: 45rem;
-            background-position: -20% center;
-        }
-    }
-
-    /* iPad screens in portrait */
-    @media (max-width: 960px) {
-
-        .div-masthead {
-            height: 35rem;
-            padding-right: 4rem;
-        }
-
-        .div-block-diagram {
-            height: 40rem;
-            background-size: 75% auto;
-            background-position: 2rem 100%;
-        }
-
-        .div-video {
-            height: 45rem;
-        }
-
-        iframe {
-            width: 480px;
-            height: 270px;
-        }
-
-        .div-software-masthead {
-            padding-top: 2rem;
-        }
-
-        .div-micropython {
-            padding-top: 4rem;
-            background-size: auto 50%;
-            background-position: right 2rem top 5.5rem;
-        }
-
-        .div-c-sdk {
-            height: 40rem;
-            background-size: auto 50%;
-            background-position: 2rem 3.5rem;
-        }
-
-        .div-dev-kit {
-            height: 65rem;
-            padding-left: 2rem;
-            background-size: auto 50%;
-            background-position: -7rem bottom;
-        }
-
-        .div-ordering {
-            height: 45rem;
-            padding-right: 2rem;
-        }
-    }
-
-    /* Mobile screens */
-    @media (max-width: 650px) {
-
-        .div-block-diagram {
-            height: 35rem;
-            padding-left: 2rem;
-            background-size: 80% auto;
-            background-position: center bottom;
-        }
-
-        .div-video {
-            height: 40rem;
-        }
-
-        iframe {
-            width: 320px;
-            height: 180px;
-            margin-top: 4rem;
-        }
-
-        .div-micropython {
-            height: 55rem;
-            padding-top: 28rem;
-            padding-right: 2rem;
-            background-size: 80% auto;
-            background-position: 2rem 8rem;
-        }
-
-        .div-c-sdk {
-            height: 58rem;
-            padding-top: 22rem;
-            padding-left: 2rem;
-            background-size: 80% auto;
-            background-position: 2rem top;
-        }
-
-        .div-dev-kit {
-            background-position: -7rem 125%;
-        }
-
-        .div-ordering {
-            height: 55rem;
-        }
-    }
-</style>
-
-<body>
-
-    <!-- Nav bar -->
-    <div class="nav">
-        <a href="https://www.siliconwitchery.com" class="logo">
-            <img src="images/logo.png" alt="Silicon Witchery Logo">
-        </a>
-        <input class="menu-btn" type="checkbox" />
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <!-- Value proposition -->
+        <div
+            style="
+                background: url(/images/s1-modules.png) no-repeat;
+                background-color: #5247c8;
+                background-size: clamp(800px, 85%, 1200px) auto;
+                background-position: right bottom;
+                min-height: 40rem;
+            "
+        >
+            <article>
+                <h1>S1 system on module</h1>
+                <p>
+                    Wireless AI compute in an ultra-small form factor. The brain
+                    for your next Bluetooth enabled wearable.
+                </p>
+                <div class="inline">
+                    <button
+                        class="tight"
+                        onclick="
+                            window.open(
+                                'https://docs.siliconwitchery.com/pages/s1-module/',
+                                '_blank',
+                            )
+                        "
+                    >
+                        Datasheet
+                    </button>
+                    <button
+                        class="tight"
+                        onclick="
+                            window.open(
+                                'https://www.digikey.com/short/jhbt98j5',
+                                '_blank',
+                            )
+                        "
+                    >
+                        Order S1 Modules
+                    </button>
+                </div>
+            </article>
+            <article>
+                <!-- Empty -->
+            </article>
         </div>
-        <div class="menu">
-            <ul>
-                <li><a href="https://www.siliconwitchery.com/s2-superstack">
-                        S2 & Superstack.
-                    </a></li>
-                <li><a href="https://www.siliconwitchery.com/s1-module">
-                        S1 Module.
-                    </a></li>
-                <li><a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">
-                        Tutorials.
-                    </a></li>
-                <li><a href="https://docs.siliconwitchery.com">
-                        Docs.
-                    </a></li>
-                <li><a href="https://github.com/siliconwitchery" target="_blank">
-                        GitHub.
-                    </a></li>
-            </ul>
+
+        <!-- Hardware -->
+        <div
+            class="light"
+            style="background-color: var(--background-color-white)"
+        >
+            <img
+                style="width: clamp(350px, 50%, 600px)"
+                src="/images/s1-block-diagram.png"
+                alt="Silicon Witchery S1 Module block diagram"
+            />
+
+            <article>
+                <h2>Block diagram</h2>
+                <p>
+                    The S1 is a union of four key components critical to
+                    developing tiny battery-powered products. It targets
+                    applications requiring demanding algorithms while consuming
+                    as little energy as possible.
+                </p>
+            </article>
         </div>
-    </div>
 
-    <!-- Masthead -->
-    <div class="div-masthead">
-        <h1>S1 system on module</h1>
-        <b>Bluetooth – FPGA – Battery management</b>
-        <hr>
-        <p>Unparalleled compute in an ultra-small form factor. All the RF,
-            power and passive components are built right in. Simply add
-            batteries, and the S1 is up and running.</p>
-    </div>
+        <!-- Video -->
+        <div class="" style="background-color: #18191b">
+            <article>
+                <h2>Video tutorials</h2>
+                <p>
+                    We're creating lots of content to help get you started.
+                    Check out our YouTube channel for more deep dives and
+                    tutorials.
+                </p>
+                <button
+                    class="tight"
+                    onclick="
+                        window.open(
+                            'https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw',
+                            '_blank',
+                        )
+                    "
+                >
+                    Visit the channel
+                </button>
+            </article>
 
-    <!-- Block diagram -->
-    <div class="div-block-diagram light">
-        <h2>Block diagram</h2>
-        <hr>
-        <p>The S1 is a union of four key components critical to developing
-            tiny battery-powered products. It targets applications requiring
-            demanding algorithms while consuming as little energy as
-            possible.</p>
-    </div>
-
-    <!-- Video -->
-    <div class="div-video light">
-        <hr>
-        <iframe width="1080" height="608" src="https://www.youtube.com/embed/AhB6ToPnEqY" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <h2>Video tutorials</h2>
-        <p>We're creating lots of content to help get you started. Check out our
-            YouTube channel for more deep dives and tutorials.</p>
-        <a href="https://www.youtube.com/channel/UCIThq9I8dlz9rRT46Q0q9qw" target="_blank">
-            <img class="link-icon" src="images/link-icon.svg">
-            Visit the channel.
-        </a>
-    </div>
-
-    <!-- Software -->
-    <div class="div-software-masthead">
-        <h2>Pick your poison</h2>
-        <p>Choose how you want to develop your applications. Our open source
-            tools are designed to get you up and running fast.</p>
-        <hr>
-    </div>
-
-    <!-- MicroPython -->
-    <div class="div-micropython">
-        <h2>MicroPython</h2>
-        <p>Download and test your FPGA binaries quickly using MicroPython
-            running on the S1.</p>
-        <p>For those needing to build algorithms and focus on data first,
-            MicroPython is a perfect way to interact with your data and make
-            changes on the fly. Connect wirelessly and access the S1 using our
-            Web Bluetooth based REPL.</p>
-        <a href="https://docs.siliconwitchery.com/micropython/micropython/" target="_blank">
-            <img class="link-icon" src="images/link-icon.svg">
-            Get started with MicroPython.
-        </a>
-    </div>
-
-    <!-- C SDK -->
-    <div class="div-c-sdk">
-        <h2>C SDK</h2>
-        <p>Do you need ultimate customization?</p>
-        <p>Designed for efficiency and minimal overhead, our C SDK gives you
-            straightforward access to key peripherals on the S1, without getting
-            in the way.</p>
-        <p>Need a hand getting started? Check out the examples on our GitHub
-            page, and use them as a starting point for your next project.</p>
-        <a href="https://github.com/siliconwitchery" target="_blank">
-            <img class="link-icon" src="images/link-icon.svg">
-            Visit our GitHub.
-        </a>
-    </div>
-
-    <!-- Dev kit -->
-    <div class="div-dev-kit light">
-        <h2>Meet the S1 Popout board</h2>
-        <hr>
-        <p>A straightforward development board that exposes everything needed
-            for rapid prototyping.</p>
-        <ul>
-            <li>Pre-soldered S1 Module</li>
-            <li>USB-C charging & data</li>
-            <li>StemmaQT / QWICC I2C port</li>
-            <li>Lithium cell port</li>
-            <li>ARM debug port</li>
-            <li>User button & LED</li>
-        </ul>
-        <a href="https://docs.siliconwitchery.com/" target="_blank">
-            <img class="link-icon" src="images/link-icon.svg">
-            Full datasheet & documentation.
-        </a>
-    </div>
-
-    <!-- Ordering -->
-    <div class="div-ordering">
-        <h2>Order now from Digi-Key</h2>
-        <p>Ready to start building? Get your S1 modules and development tools delivered within a couple of days from
-            Digi-Key.</p>
-        <hr>
-        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-MODULE/16580539" target="_blank">
-            <img class="link-icon" src="images/link-icon.svg">
-            S1 Module – Bluetooth & FPGA module</a>
-        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-POPOUT-BOARD/15926536" target="_blank">
-            <img class="link-icon" src="images/link-icon.svg">
-            S1 Popout Board – Breakout board for the S1
-        </a>
-        <a href="https://www.digikey.com/en/products/detail/silicon-witchery/S1-ECG-KIT/15926538" target="_blank">
-            <img class="link-icon" src="images/link-icon.svg">
-            S1 ECG Kit – Stream heart data using the S1
-        </a>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <div>
-            <p>Copyright © 2025 Silicon Witchery AB</p>
+            <article>
+                <iframe
+                    style="
+                        width: min(100%, 720px);
+                        height: auto;
+                        aspect-ratio: 1.77;
+                        align-self: center;
+                    "
+                    src="https://www.youtube.com/embed/AhB6ToPnEqY"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                    "
+                    allowfullscreen
+                ></iframe>
+            </article>
         </div>
-        <div>
-            <ul>
-                <li><a href="https://www.linkedin.com/company/siliconwitchery/jobs" target="_blank">
-                        Jobs.
-                    </a></li>
-                <li><a href="https://goo.gl/maps/DxHxU2tSU37g5QFt9" target="_blank">
-                        Visit Us.
-                    </a></li>
-                <li><a href="https://github.com/siliconwitchery/website#privacy-policy" target="_blank">
-                        Privacy Policy.
-                    </a></li>
-            </ul>
-        </div>
-    </div>
-</body>
 
+        <!-- Software -->
+        <div style="background-color: #272a37; padding-bottom: 0">
+            <article>
+                <h2>MicroPython or C SDK</h2>
+                <p>
+                    For those needing to build algorithms and focus on data
+                    first, MicroPython is a perfect way to interact with your
+                    data and make changes on the fly. Connect wirelessly and
+                    access the S1 using our Web Bluetooth based REPL.
+                </p>
+            </article>
+            <img
+                style="width: min(350px, 80%)"
+                src="/images/s1-micropython-code.png"
+                alt="Silicon Witchery S1 Micropython SDK"
+            />
+        </div>
+
+        <div class="reverse" style="background-color: #272a37">
+            <article>
+                <p>
+                    Alternatively, for those who need fine grained control, our
+                    minimal C SDK gives you a bare-bones configuration you can
+                    quickly start building on.
+                </p>
+                <div class="inline">
+                    <button
+                        class="tight"
+                        onclick="
+                            window.open(
+                                'https://github.com/siliconwitchery/s1-micropython',
+                                '_blank',
+                            )
+                        "
+                    >
+                        MicroPython for S1
+                    </button>
+                    <button
+                        class="tight"
+                        onclick="
+                            window.open(
+                                'https://github.com/siliconwitchery/s1-sdk',
+                                '_blank',
+                            )
+                        "
+                    >
+                        C/C++ SDK
+                    </button>
+                </div>
+            </article>
+            <img
+                style="width: min(350px, 80%)"
+                src="/images/s1-c-code.png"
+                alt="Silicon Witchery S1 C SDK"
+            />
+        </div>
+
+        <!-- Dev kit -->
+        <div
+            class="light reverse"
+            style="
+                background: url(/images/s1-popout-board.jpg) no-repeat;
+                background-color: #ffffff;
+                background-size: clamp(400px, 50%, 540px) auto;
+                background-position: left bottom -2rem;
+            "
+        >
+            <article>
+                <h2>Meet the S1 Popout board</h2>
+                <p>
+                    A straightforward development board for the S1 Module that
+                    exposes everything you need for rapid prototyping.
+                </p>
+                <div class="inline">
+                    <i class="material-icons">build</i>
+                    <div>
+                        <p class="bold">Pre-soldered S1 Module</p>
+                    </div>
+                </div>
+                <div class="inline">
+                    <i class="material-icons">cable</i>
+                    <div>
+                        <p class="bold">All IO exposed</p>
+                    </div>
+                </div>
+                <div class="inline">
+                    <i class="material-icons">battery_charging_full</i>
+                    <div>
+                        <p class="bold">Lithium cell ready</p>
+                    </div>
+                </div>
+                <div class="inline">
+                    <button
+                        class="tight"
+                        onclick="
+                            window.open(
+                                'https://docs.siliconwitchery.com/pages/s1-popout-board/',
+                                '_blank',
+                            )
+                        "
+                    >
+                        Datasheet
+                    </button>
+                    <button
+                        class="tight"
+                        onclick="
+                            window.open(
+                                'https://www.digikey.com/short/w5vpdmfd',
+                                '_blank',
+                            )
+                        "
+                    >
+                        Order S1 Popout
+                    </button>
+                </div>
+            </article>
+            <article style="min-height: 25rem">
+                <!-- Empty -->
+            </article>
+        </div>
+
+        <!-- ECG kit-->
+        <div style="background-color: #d2a454">
+            <article>
+                <h2>S1 ECG Reference Kit</h2>
+                <p>Making heart research more accessible.</p>
+                <p>
+                    A powerful analog frontend combined with the S1 Module makes
+                    this an all-in-one kit to deploy and test algorithms with
+                    ease. Be that for learning, research, or as the starting
+                    point for your next product.
+                </p>
+                <p>Open source, and now available from Digi-Key.</p>
+                <div class="inline">
+                    <button
+                        class="tight"
+                        onclick="
+                            window.open(
+                                'https://docs.siliconwitchery.com/pages/s1-ecg-kit/',
+                                '_blank',
+                            )
+                        "
+                    >
+                        Datasheet
+                    </button>
+                    <button
+                        class="tight"
+                        onclick="
+                            window.open(
+                                'https://www.digikey.com/short/p2w9nph5',
+                                '_blank',
+                            )
+                        "
+                    >
+                        Order S1 ECG Kit
+                    </button>
+                </div>
+            </article>
+
+            <img
+                style="
+                    width: min(500px, 80%);
+                    margin-bottom: calc(
+                        0rem - var(--padding-top-bottom-content)
+                    );
+                "
+                src="/images/s1-ecg-kit.png"
+                alt="Silicon Witchery S1 ECG kit"
+            />
+        </div>
+
+        {% include footer.html %}
+    </body>
 </html>

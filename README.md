@@ -1,15 +1,28 @@
-# Privacy Policy
+# Silicon Witchery Website
 
-We don't store your personal data on our www.siliconwitchery.com pages. You can check out the source code above.
+Built with Jekyll and hosted on GitHub pages.
 
-However, we use Umami.is to monitor visitor count and demographics.
+## Setup for local development
 
-If you choose to give us your email. It's safely stored within Mailchimp which is an industry-standard marketing tool. You can easily unsubscribe at any time by re-entering your email into the collection box and it will take you to a page where you can unsubscribe.
+1. Set up Ruby environment:
 
-If you choose to interact with us over social media, that will of course be public. We do though regularly moderate our feed and content so that it does not infringe on any personal data.
+    ```sh
+    brew install rbenv
+    rbenv init
+    rbenv install 3.3.4
+    rbenv local 3.3.4
+    ```
 
-If you choose to publish bugs or issues on our GitHub page, then these are also public.
+1. Restart your shell.
 
-If you choose to interact with us directly over email then those records are kept future assignments and legal purposes. These emails are encrypted and we limit access to only those that need to see it.
+1. Install dependencies:
 
-If at any time you wish for us to copy, modify or remove your information, you may do so by sending us an email through info@siliconwitchery.com
+    ```sh
+    bundle update
+    ```
+
+1. Run:
+
+    ```sh
+    bundle exec jekyll serve --livereload --open-url
+    ```

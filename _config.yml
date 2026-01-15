@@ -1,0 +1,26 @@
+# Site settings
+url: "https://www.siliconwitchery.com"
+title: "Silicon Witchery"
+theme: null
+plugins:
+    - jekyll-redirect-from
+    - jekyll-seo-tag
+    - jekyll-sitemap
+exclude:
+    - .gitignore
+    - .ruby-version
+    - CNAME
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
+
+# SEO
+logo: /images/logo.png
+twitter:
+    username: siliconwitchery
+social:
+    name: Silicon Witchery
+    links:
+        - https://twitter.com/siliconwitchery
+        - https://github.com/siliconwitchery

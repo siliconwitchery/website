@@ -14,7 +14,7 @@ Built with Jekyll and hosted on GitHub pages.
     ```
 
 1. Restart your shell.
-2. 
+
 1. Install dependencies:
 
     ```sh

@@ -6,6 +6,8 @@ plugins:
     - jekyll-redirect-from
     - jekyll-seo-tag
     - jekyll-sitemap
+include:
+    - _redirects
 exclude:
     - .gitignore
     - .ruby-version

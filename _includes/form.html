@@ -1,0 +1,53 @@
+<!-- Contact form -->
+<form
+    onsubmit="
+        const data = {
+            company: 'unspecified',
+            type: 'Landing page request',
+            feedback:
+                'Thanks for getting in touch. We\'ll get back to you very soon. In the meantime, you\'re welcome to reply with any further details relating to your request here.',
+        };
+
+        const form = new FormData(this);
+
+        form.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        fetch('https://super.siliconwitchery.com/api/sidebar/feedback', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+
+        this.reset();
+
+        this.getElementsByTagName('p')[0].innerText =
+            'Thanks! We\'ll be in touch soon';
+
+        return false;
+    "
+>
+    <div class="inline">
+        <input
+            name="name"
+            type="text"
+            placeholder="Name"
+            autocomplete="name"
+            required
+        />
+        <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            autocomplete="email"
+            required
+        />
+    </div>
+
+    <button class="cta" type="submit">Schedule a Demo</button>
+
+    <p class="note" style="text-align: center">
+        We'll never share your data with anyone
+    </p>
+</form>

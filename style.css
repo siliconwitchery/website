@@ -22,6 +22,8 @@
     --font-size-sub-heading: 1.8rem;
     --font-size-text: 1.2rem;
     --font-size-footnote: 0.9rem;
+
+    --font-line-height: 1.8rem;
 }
 
 @media (width < 960px) {
@@ -36,6 +38,8 @@
         --font-size-sub-heading: 1.5rem;
         --font-size-text: 1rem;
         --font-size-footnote: 0.75rem;
+
+        --font-line-height: 1.6rem;
     }
 }
 
@@ -191,7 +195,7 @@ h2 {
 
 p {
     font-size: var(--font-size-text);
-    line-height: 1.8rem;
+    line-height: var(--font-line-height);
 }
 
 p.note {
@@ -199,7 +203,8 @@ p.note {
     font-weight: var(--font-weight-light);
 }
 
-p.bold {
+p.bold,
+strong {
     font-weight: var(--font-weight-bold);
 }
 
@@ -292,7 +297,7 @@ form input:focus {
 }
 
 i:not(i.menu) {
-    line-height: 1.8rem !important;
+    line-height: var(--font-line-height) !important;
 }
 
 i.large {
@@ -329,12 +334,11 @@ summary:hover:after {
 .light h1,
 .light h2,
 .light p,
+.light strong,
 .light a,
 .light summary,
 .light button,
-.light i,
-.light th,
-.light td {
+.light i {
     color: var(--text-color-black);
 }
 

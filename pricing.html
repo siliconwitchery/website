@@ -9,18 +9,275 @@ image: /images/share.png
     {% include head.html %}
 
     <body>
-        {% include header.html class="light"
-        background="var(--background-color-white)" %}
+        {% include header.html background="var(--background-color-black)" %}
 
-        <!-- Content -->
+        <!-- Masthead -->
+        <div style="background-color: var(--background-color-black)">
+            <article>
+                <h1>Hardware and plans that fit your rollout</h1>
+                <p>
+                    Pick up modules today to get started with a free plan.
+                    Experience what the S2 Module and Superstack can do for you,
+                    then upgrade to deploy at scale.
+                </p>
+            </article>
+        </div>
+
+        <!-- Hardware pricing -->
+        <div
+            class="light"
+            style="
+                background-color: var(--background-color-white);
+                padding-bottom: 0;
+            "
+        >
+            <article>
+                <h2>S2 MODULE</h2>
+                <p>
+                    Everything built in to help you go fast. The S2 Module with
+                    integrated antenna covers LTE bands 791MHz and up, ideal for
+                    mounting within plastic enclosures, or deployments within
+                    <strong>Europe</strong>.
+                </p>
+                <p>
+                    • Global SoftSIM with data included<br />
+                    • Built in LTE-M antenna<br />
+                    • Built in GPS antenna<br />
+                    • Superstack OS pre-installed<br />
+                    • Lithium cell charging and monitoring<br />
+                    • GPIO incl. ADC, Serial, I2C & SPI
+                </p>
+                <button
+                    class="tight"
+                    onclick="
+                        window.open(
+                            'https://www.digikey.com/en/products/detail/silicon-witchery/S2-MODULE/27621234',
+                            '_blank',
+                        )
+                    "
+                >
+                    Order from DigiKey
+                </button>
+                <img
+                    src="/images/s2-module.png"
+                    style="width: min(80%, 400px); align-self: center"
+                />
+            </article>
+
+            <article>
+                <h2>S2 MODULE EXT ANT</h2>
+                <p>
+                    The S2 Module with external antenna connectors allows LTE
+                    coverage across worldwide bands. Ideal for mounting within
+                    sealed metal enclosures, or deployments within the
+                    <strong>US</strong>.
+                </p>
+                <p>
+                    • Global SoftSIM with data included<br />
+                    • External U.FL connector for LTE-M<br />
+                    • External U.FL connector for GPS<br />
+                    • Superstack OS pre-installed<br />
+                    • Lithium cell charging and monitoring<br />
+                    • GPIO incl. ADC, Serial, I2C & SPI
+                </p>
+                <button
+                    class="tight"
+                    onclick="
+                        window.open(
+                            'https://www.digikey.com/en/products/detail/silicon-witchery/S2-MODULE-EXT-ANT/27621233',
+                            '_blank',
+                        )
+                    "
+                >
+                    Order from DigiKey
+                </button>
+                <img
+                    src="/images/s2-module-ext-ant.png"
+                    style="width: min(80%, 400px); align-self: center"
+                />
+            </article>
+        </div>
+
+        <!-- Platform pricing -->
         <div
             class="light"
             style="background-color: var(--background-color-white)"
         >
             <article>
-                <h2>Pricing</h2>
-                <p>Details coming soon</p>
+                <h2>Superstack platform pricing</h2>
+                <style>
+                    .pricing-table-wrapper {
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                        overflow-x: auto;
+                        width: 100%;
+                        -webkit-overflow-scrolling: touch;
+                    }
+
+                    .pricing-table-wrapper td:first-child {
+                        position: sticky;
+                        left: 0;
+                        background-color: inherit;
+                        z-index: 1;
+                    }
+
+                    .pricing-table {
+                        border-collapse: collapse;
+                        width: 100%;
+                        min-width: 600px;
+                    }
+
+                    .pricing-table tr:nth-of-type(odd) {
+                        background-color: var(--background-color-white);
+                    }
+
+                    .pricing-table tr:nth-of-type(even) {
+                        background-color: #ffffff;
+                    }
+
+                    .pricing-table td {
+                        color: var(--text-color-black);
+                        font-size: var(--font-size-text);
+                        line-height: var(--font-line-height);
+                        padding: 12px;
+                        text-align: center;
+                    }
+
+                    .pricing-table .plan {
+                        font-size: var(--font-size-sub-heading);
+                        font-weight: var(--font-weight-bold);
+                    }
+
+                    .pricing-table .price {
+                        font-size: var(--font-size-text);
+                        font-weight: var(--font-weight-bold);
+                    }
+
+                    .pricing-table .feature {
+                        font-weight: var(--font-weight-bold);
+                        text-align: left;
+                    }
+                </style>
+                <div class="pricing-table-wrapper">
+                    <table class="pricing-table">
+                        <colgroup>
+                            <col />
+                            <col style="width: 33%" />
+                            <col style="width: 33%" />
+                            <col style="width: 33%" />
+                        </colgroup>
+                        <tr>
+                            <td class="feature"></td>
+                            <td class="plan">Free</td>
+                            <td class="plan">Pro</td>
+                            <td class="plan">Enterprise</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Price</td>
+                            <td class="price">Free / month</td>
+                            <td class="price">€429 / month</td>
+                            <td class="price">€2149 / month</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Max devices</td>
+                            <td>2</td>
+                            <td>40</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Fleet management</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Remote programming</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">AI agent builder</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">AI allowance</td>
+                            <td>
+                                Limited<br />
+                                50 kTok / month
+                            </td>
+                            <td>
+                                Unlimited<br />
+                                €0.02 / 1 kTok / month
+                            </td>
+                            <td>
+                                Unlimited<br />
+                                €0.02 / 1 kTok / month
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Data / Logs allowance</td>
+                            <td>
+                                Limited<br />
+                                1MB / month
+                            </td>
+                            <td>
+                                Unlimited<br />
+                                €0.05 / MB / month
+                            </td>
+                            <td>
+                                Unlimited<br />
+                                €0.05 / MB / month
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Data / Logs retention</td>
+                            <td>30 days</td>
+                            <td>6 months</td>
+                            <td>2 years</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Users</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Support</td>
+                            <td>Standard</td>
+                            <td>Standard</td>
+                            <td>Dedicated</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">API Access</td>
+                            <td>Full</td>
+                            <td>Full</td>
+                            <td>Full</td>
+                        </tr>
+                    </table>
+                </div>
             </article>
+        </div>
+
+        <!-- CTA -->
+        <div
+            style="
+                background-color: var(--background-color-black);
+                align-items: flex-end;
+            "
+        >
+            <article>
+                <h2>Ready to see Superstack in action?</h2>
+                <p>
+                    Hardware and agents that delivers simplicity to your users
+                    at any scale. Whether you're deploying 10 devices, or 1000,
+                    we can help you get started.
+                </p>
+                <p>Get in touch for a free consultation today.</p>
+            </article>
+
+            {% include form.html %}
         </div>
 
         {% include footer.html %}

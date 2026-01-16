@@ -22,61 +22,7 @@ redirect_from:
                     Ask your crops how they're doing. Ask your warehouse if it's
                     secure. Ask your shipments if they're on time.
                 </p>
-                <form
-                    onsubmit="
-                        const data = {
-                            company: 'unspecified',
-                            type: 'Landing page request',
-                            feedback:
-                                'Thanks for getting in touch. We\'ll get back to you very soon. In the meantime, you\'re welcome to reply with any further details relating to your request here.',
-                        };
-
-                        const form = new FormData(this);
-
-                        form.forEach((value, key) => {
-                            data[key] = value;
-                        });
-
-                        fetch(
-                            'https://super.siliconwitchery.com/api/sidebar/feedback',
-                            {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify(data),
-                            },
-                        );
-
-                        this.reset();
-
-                        this.getElementsByTagName('p')[0].innerText =
-                            'Thanks! We\'ll be in touch soon';
-
-                        return false;
-                    "
-                >
-                    <div class="inline">
-                        <input
-                            name="name"
-                            type="text"
-                            placeholder="Name"
-                            autocomplete="name"
-                            required
-                        />
-                        <input
-                            name="email"
-                            type="email"
-                            placeholder="Email"
-                            autocomplete="email"
-                            required
-                        />
-                    </div>
-
-                    <button class="cta" type="submit">Schedule a Demo</button>
-
-                    <p class="note" style="text-align: center">
-                        We'll never share your data with anyone
-                    </p>
-                </form>
+                {% include form.html %}
             </article>
 
             <img
@@ -237,12 +183,12 @@ redirect_from:
                     <button
                         onclick="
                             window.open(
-                                'https://www.digikey.com/short/fcr743pz',
+                                'https://docs.siliconwitchery.com/pages/s2-module/',
                                 '_blank',
                             )
                         "
                     >
-                        Explore Sensors
+                        Datasheet
                     </button>
 
                     <button
@@ -282,6 +228,22 @@ redirect_from:
                     on bringing value to your users. Manage devices, acquire
                     data and build autonomous agents all from one place.
                 </p>
+                <div class="inline">
+                    <button
+                        onclick="
+                            window.open(
+                                'https://www.digikey.com/short/fcr743pz',
+                                '_blank',
+                            )
+                        "
+                    >
+                        Explore Sensors
+                    </button>
+
+                    <button onclick="window.open('/pricing', '_blank')">
+                        See Pricing
+                    </button>
+                </div>
             </article>
 
             <img
@@ -419,61 +381,7 @@ redirect_from:
                 <p>Get in touch for a free consultation today.</p>
             </article>
 
-            <form
-                onsubmit="
-                    const data = {
-                        company: 'unspecified',
-                        type: 'Landing page request',
-                        feedback:
-                            'Thanks for getting in touch. We\'ll get back to you very soon. In the meantime, you\'re welcome to reply with any further details relating to your request here.',
-                    };
-
-                    const form = new FormData(this);
-
-                    form.forEach((value, key) => {
-                        data[key] = value;
-                    });
-
-                    fetch(
-                        'https://super.siliconwitchery.com/api/sidebar/feedback',
-                        {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(data),
-                        },
-                    );
-
-                    this.reset();
-
-                    this.getElementsByTagName('p')[0].innerText =
-                        'Thanks! We\'ll be in touch soon';
-
-                    return false;
-                "
-            >
-                <div class="inline">
-                    <input
-                        name="name"
-                        type="text"
-                        placeholder="Name"
-                        autocomplete="name"
-                        required
-                    />
-                    <input
-                        name="email"
-                        type="email"
-                        placeholder="Email"
-                        autocomplete="email"
-                        required
-                    />
-                </div>
-
-                <button class="cta" type="submit">Schedule a Demo</button>
-
-                <p class="note" style="text-align: center">
-                    We'll never share your data with anyone
-                </p>
-            </form>
+            {% include form.html %}
         </div>
 
         {% include footer.html %}

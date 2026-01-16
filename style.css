@@ -203,7 +203,8 @@ p.note {
     font-weight: var(--font-weight-light);
 }
 
-p.bold {
+p.bold,
+strong {
     font-weight: var(--font-weight-bold);
 }
 
@@ -333,6 +334,7 @@ summary:hover:after {
 .light h1,
 .light h2,
 .light p,
+.light strong,
 .light a,
 .light summary,
 .light button,

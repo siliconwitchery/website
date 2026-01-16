@@ -20,98 +20,158 @@ image: /images/share.png
             <article>
                 <h1>Pricing</h1>
                 <p>Details coming soon</p>
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>Free</th>
-                        <th>Pro</th>
-                        <th>Enterprise</th>
-                    </tr>
-                    <tr>
-                        <td>Price</td>
-                        <td>Free / month</td>
-                        <td>$499 / month</td>
-                        <td>$2499 / month</td>
-                    </tr>
-                    <tr>
-                        <td>Max devices</td>
-                        <td>2</td>
-                        <td>8</td>
-                        <td>Unlimited</td>
-                    </tr>
-                    <tr>
-                        <td>Fleet management</td>
-                        <td>✓</td>
-                        <td>✓</td>
-                        <td>✓</td>
-                    </tr>
-                    <tr>
-                        <td>Remote programming</td>
-                        <td>✓</td>
-                        <td>✓</td>
-                        <td>✓</td>
-                    </tr>
-                    <tr>
-                        <td>AI agent builder</td>
-                        <td>✓</td>
-                        <td>✓</td>
-                        <td>✓</td>
-                    </tr>
-                    <tr>
-                        <td>AI allowance</td>
-                        <td>
-                            Limited<br />
-                            50 kTok / month
-                        </td>
-                        <td>
-                            Unlimited<br />
-                            $2.1 / 1M / month
-                        </td>
-                        <td>
-                            Unlimited<br />
-                            @ $2.1 / 1M / month
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Data / Logs allowance</td>
-                        <td>
-                            Limited<br />
-                            1MB / month
-                        </td>
-                        <td>
-                            Unlimited<br />
-                            @ $0.1 / MB / month
-                        </td>
-                        <td>
-                            Unlimited<br />
-                            @ $0.1 / MB / month
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Data / Logs retention</td>
-                        <td>30 days</td>
-                        <td>6 months</td>
-                        <td>2 years</td>
-                    </tr>
-                    <tr>
-                        <td>Users</td>
-                        <td>1</td>
-                        <td>3</td>
-                        <td>Unlimited</td>
-                    </tr>
-                    <tr>
-                        <td>Support</td>
-                        <td>Standard</td>
-                        <td>Standard</td>
-                        <td>Dedicated</td>
-                    </tr>
-                    <tr>
-                        <td>API Access</td>
-                        <td>Full</td>
-                        <td>Full</td>
-                        <td>Full</td>
-                    </tr>
-                </table>
+                <style>
+                    .pricing-table-wrapper {
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                        overflow-x: auto;
+                        width: 100%;
+                        -webkit-overflow-scrolling: touch;
+                    }
+
+                    .pricing-table-wrapper td:first-child {
+                        position: sticky;
+                        left: 0;
+                        background-color: inherit;
+                        z-index: 1;
+                    }
+
+                    .pricing-table {
+                        border-collapse: collapse;
+                        width: 100%;
+                        min-width: 600px;
+                    }
+
+                    .pricing-table tr:nth-of-type(odd) {
+                        background-color: var(--background-color-white);
+                    }
+
+                    .pricing-table tr:nth-of-type(even) {
+                        background-color: #ffffff;
+                    }
+
+                    .pricing-table td {
+                        color: var(--text-color-black);
+                        font-size: var(--font-size-text);
+                        line-height: var(--font-line-height);
+                        padding: 12px;
+                        text-align: center;
+                    }
+
+                    .pricing-table .plan {
+                        font-size: var(--font-size-sub-heading);
+                        font-weight: var(--font-weight-bold);
+                    }
+
+                    .pricing-table .price {
+                        font-size: var(--font-size-text);
+                        font-weight: var(--font-weight-bold);
+                    }
+
+                    .pricing-table .feature {
+                        font-weight: var(--font-weight-bold);
+                        text-align: left;
+                    }
+                </style>
+                <div class="pricing-table-wrapper">
+                    <table class="pricing-table">
+                        <colgroup>
+                            <col />
+                            <col style="width: 33%" />
+                            <col style="width: 33%" />
+                            <col style="width: 33%" />
+                        </colgroup>
+                        <tr>
+                            <td class="feature"></td>
+                            <td class="plan">Free</td>
+                            <td class="plan">Pro</td>
+                            <td class="plan">Enterprise</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Price</td>
+                            <td class="price">Free / month</td>
+                            <td class="price">$499 / month</td>
+                            <td class="price">$2499 / month</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Max devices</td>
+                            <td>2</td>
+                            <td>8</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Fleet management</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Remote programming</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">AI agent builder</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">AI allowance</td>
+                            <td>
+                                Limited<br />
+                                50 kTok / month
+                            </td>
+                            <td>
+                                Unlimited<br />
+                                $2.1 / 1M / month
+                            </td>
+                            <td>
+                                Unlimited<br />
+                                @ $2.1 / 1M / month
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Data / Logs allowance</td>
+                            <td>
+                                Limited<br />
+                                1MB / month
+                            </td>
+                            <td>
+                                Unlimited<br />
+                                @ $0.1 / MB / month
+                            </td>
+                            <td>
+                                Unlimited<br />
+                                @ $0.1 / MB / month
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Data / Logs retention</td>
+                            <td>30 days</td>
+                            <td>6 months</td>
+                            <td>2 years</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Users</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Support</td>
+                            <td>Standard</td>
+                            <td>Standard</td>
+                            <td>Dedicated</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">API Access</td>
+                            <td>Full</td>
+                            <td>Full</td>
+                            <td>Full</td>
+                        </tr>
+                    </table>
+                </div>
             </article>
         </div>
 

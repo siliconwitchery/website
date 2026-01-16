@@ -22,6 +22,8 @@
     --font-size-sub-heading: 1.8rem;
     --font-size-text: 1.2rem;
     --font-size-footnote: 0.9rem;
+
+    --font-line-height: 1.8rem;
 }
 
 @media (width < 960px) {
@@ -36,6 +38,8 @@
         --font-size-sub-heading: 1.5rem;
         --font-size-text: 1rem;
         --font-size-footnote: 0.75rem;
+
+        --font-line-height: 1.6rem;
     }
 }
 
@@ -173,31 +177,6 @@ article.small {
     gap: var(--font-size-text);
 }
 
-/* table */
-
-table {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    border: 1px solid var(--text-color-black);
-    border-radius: 1rem;
-}
-
-table tr {
-    border-bottom: 1px solid #000000;
-}
-
-table tr:nth-of-type(even) {
-    background-color: #ffffff;
-}
-
-table tr:last-of-type {
-    border-bottom: 2px solid #f4f4;
-}
-
-table td {
-    padding-bottom: var(--font-size-text);
-    text-align: center;
-}
-
 /******************/
 /* Content styles */
 
@@ -208,17 +187,15 @@ h1 {
     letter-spacing: 0.08rem;
 }
 
-h2,
-th {
+h2 {
     font-size: var(--font-size-sub-heading);
     font-weight: var(--font-weight-bold);
     text-transform: capitalize;
 }
 
-p,
-td {
+p {
     font-size: var(--font-size-text);
-    line-height: 1.8rem;
+    line-height: var(--font-line-height);
 }
 
 p.note {
@@ -226,8 +203,6 @@ p.note {
     font-weight: var(--font-weight-light);
 }
 
-th,
-tr > td:first-child,
 p.bold {
     font-weight: var(--font-weight-bold);
 }
@@ -321,7 +296,7 @@ form input:focus {
 }
 
 i:not(i.menu) {
-    line-height: 1.8rem !important;
+    line-height: var(--font-line-height) !important;
 }
 
 i.large {
@@ -361,9 +336,7 @@ summary:hover:after {
 .light a,
 .light summary,
 .light button,
-.light i,
-.light th,
-.light td {
+.light i {
     color: var(--text-color-black);
 }
 
